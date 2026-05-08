@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromptNova — Tu universo de prompts IA</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07071a;--bg2:#0d0d2b;
+  --purple:#7c5cfc;--purple-light:#a78bfa;
+  --cyan:#22d3ee;--pink:#e879f9;--green:#4ade80;
+  --text:#f0f0ff;--muted:#8b8bad;
+  --card:#111130;--card2:#0f0f28;
+  --border:rgba(124,92,252,0.18);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--d,3s) ease-in-out infinite var(--delay,0s)}
+@keyframes twinkle{0%,100%{opacity:var(--min,0.1)}50%{opacity:var(--max,0.8)}}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:32px;padding:0 40px;height:68px;background:rgba(7,7,26,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;text-decoration:none;color:var(--text);white-space:nowrap;margin-right:16px}
+.nav-logo .accent{color:var(--purple-light)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--muted);font-size:14px;font-weight:500;text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-links a.active{position:relative}
+.nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--purple);border-radius:2px}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:12px}
+.btn-search-nav{background:linear-gradient(135deg,var(--purple),#9d5cfc);border:none;border-radius:50px;padding:9px 20px;color:#fff;font-family:inherit;font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .2s;box-shadow:0 4px 20px rgba(124,92,252,0.35)}
+.btn-search-nav:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(124,92,252,0.5)}
+
+/* HERO */
+.hero{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:70px 80px 60px;max-width:1400px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.3);border-radius:50px;padding:6px 16px;font-size:12px;font-weight:600;color:var(--purple-light);margin-bottom:24px;letter-spacing:.5px}
+.hero h1{font-size:clamp(36px,4.2vw,62px);font-weight:800;line-height:1.08;margin-bottom:20px;letter-spacing:-1.5px}
+.hero h1 .ia{color:var(--cyan)}
+.hero h1 .func{color:var(--purple-light)}
+.hero-sub{font-size:15px;color:var(--muted);max-width:420px;margin-bottom:36px;line-height:1.7}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--purple),#9d5cfc);border:none;border-radius:12px;padding:14px 28px;color:#fff;font-family:inherit;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 8px 30px rgba(124,92,252,0.4)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(124,92,252,0.55)}
+.btn-secondary{background:transparent;border:1.5px solid rgba(255,255,255,0.18);border-radius:12px;padding:14px 28px;color:var(--text);font-family:inherit;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .3s}
+.btn-secondary:hover{border-color:var(--purple);background:rgba(124,92,252,0.08)}
+
+/* HERO VISUAL */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;height:480px}
+.hero-glow{position:absolute;width:500px;height:500px;background:radial-gradient(ellipse,rgba(124,92,252,0.22) 0%,transparent 70%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.hero-planet{width:400px;height:400px;border-radius:50%;background:radial-gradient(ellipse at 35% 35%,#1c1c50,#07071a);box-shadow:0 0 80px rgba(124,92,252,0.28),inset 0 0 60px rgba(124,92,252,0.1);position:absolute}
+.hero-planet::before{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse at 65% 70%,rgba(34,211,238,0.12),transparent 55%)}
+.hero-glow-ground{position:absolute;bottom:-20px;width:380px;height:60px;background:radial-gradient(ellipse,rgba(124,92,252,0.35),transparent 70%);filter:blur(15px)}
+.astronaut-emoji{position:absolute;font-size:110px;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(124,92,252,0.7));z-index:2}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-22px) rotate(6deg)}}
+.hero-card-popup{position:absolute;right:-10px;top:50px;background:rgba(15,15,40,0.92);border:1px solid var(--border);border-radius:16px;padding:16px 20px;backdrop-filter:blur(14px);z-index:4;min-width:185px;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.hcp-logo{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800;margin-bottom:5px}
+.hcp-logo .accent{color:var(--purple-light)}
+.hcp-sub{color:var(--muted);font-size:12px;line-height:1.5}
+.fi{position:absolute;background:rgba(15,15,40,0.9);border:1px solid var(--border);border-radius:12px;padding:10px;font-size:26px;box-shadow:0 10px 30px rgba(0,0,0,0.4);backdrop-filter:blur(10px);animation:floatI var(--fd,5s) ease-in-out infinite var(--fdel,0s)}
+@keyframes floatI{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.fi-1{left:0;top:90px;--fd:4s;--fdel:0s}
+.fi-2{right:0;top:210px;--fd:5s;--fdel:1s}
+.fi-3{right:30px;bottom:60px;--fd:6s;--fdel:2s}
+
+/* SEARCH */
+.search-section{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:0 40px 64px}
+.search-bar{display:flex;align-items:center;gap:12px;background:rgba(15,15,40,0.8);border:1px solid var(--border);border-radius:50px;padding:14px 24px;backdrop-filter:blur(10px);transition:all .3s}
+.search-bar:focus-within{border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,92,252,0.18)}
+.search-bar input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-family:inherit;font-size:15px}
+.search-bar input::placeholder{color:var(--muted)}
+
+/* SECTIONS */
+section{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:0 40px 70px}
+.sec-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.sec-title{font-size:20px;font-weight:800;display:flex;align-items:center;gap:8px}
+.see-all{color:var(--purple-light);font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:4px;transition:gap .2s}
+.see-all:hover{gap:8px}
+
+/* CATEGORIES */
+.cats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.cat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 16px;text-align:center;cursor:pointer;transition:all .3s;text-decoration:none;display:block}
+.cat-card:hover{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 14px 40px rgba(124,92,252,0.2)}
+.cat-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 14px}
+.cat-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.cat-count{font-size:12px;color:var(--muted)}
+
+/* BLOGGER POSTS GRID */
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.post-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;transition:all .3s;text-decoration:none;display:flex;flex-direction:column;animation:fadeUp .6s ease both}
+.post-card:hover{transform:translateY(-5px);border-color:rgba(124,92,252,0.45);box-shadow:0 18px 50px rgba(0,0,0,0.5)}
+.post-thumb{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;transition:transform .4s}
+.post-card:hover .post-thumb{transform:scale(1.04)}
+.post-thumb-placeholder{width:100%;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#1a0a3a,#2d1060)}
+.post-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.post-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.post-label{font-size:10px;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(124,92,252,0.16);color:var(--purple-light)}
+.post-date{font-size:11px;color:var(--muted);margin-left:auto}
+.post-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.35;flex:1}
+.post-desc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.post-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border)}
+.post-read{font-size:12px;font-weight:600;color:var(--purple-light);display:flex;align-items:center;gap:4px;transition:gap .2s}
+.post-card:hover .post-read{gap:8px}
+
+/* LOADING / ERROR */
+.loader{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 20px;gap:20px;grid-column:1/-1}
+.spinner{width:48px;height:48px;border:3px solid var(--border);border-top-color:var(--purple);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loader-text{color:var(--muted);font-size:14px}
+.error-box{grid-column:1/-1;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:16px;padding:32px;text-align:center}
+.error-box h3{color:#f87171;margin-bottom:8px}
+.error-box p{color:var(--muted);font-size:14px}
+.no-posts{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)}
+
+/* STATS */
+.stats-wrap{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:0 40px 70px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding:48px 60px;background:var(--card);border:1px solid var(--border);border-radius:24px}
+.stat-item{display:flex;align-items:center;gap:20px}
+.stat-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.stat-number{font-size:32px;font-weight:800;letter-spacing:-1px;background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:13px;color:var(--muted);margin-top:2px}
+
+/* CTA */
+.cta-wrap{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:0 40px 80px}
+.cta-card{background:linear-gradient(135deg,#13133a,#1a0f3a);border:1px solid rgba(124,92,252,0.3);border-radius:24px;padding:60px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;position:relative;overflow:hidden}
+.cta-card::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;background:radial-gradient(ellipse,rgba(124,92,252,0.18),transparent 70%);border-radius:50%;pointer-events:none}
+.cta-text h2{font-size:30px;font-weight:800;margin-bottom:12px;letter-spacing:-.5px}
+.cta-text h2 span{color:var(--purple-light)}
+.cta-text p{font-size:15px;color:var(--muted);margin-bottom:28px}
+.cta-form{display:flex;gap:12px}
+.cta-input{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:14px 20px;color:var(--text);font-family:inherit;font-size:14px;outline:none;width:260px;transition:border-color .2s}
+.cta-input::placeholder{color:var(--muted)}
+.cta-input:focus{border-color:var(--purple)}
+.cta-robot{font-size:92px;position:relative;z-index:1;animation:float 3s ease-in-out infinite}
+
+/* FOOTER */
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48px 80px 36px;background:rgba(7,7,26,0.85)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;max-width:1220px;margin:0 auto 40px}
+.footer-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;text-decoration:none;color:var(--text);margin-bottom:10px}
+.footer-brand .accent{color:var(--purple-light)}
+.footer-tagline{font-size:13px;color:var(--muted);margin-bottom:20px}
+.socials{display:flex;gap:12px}
+.soc{width:36px;height:36px;border-radius:10px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:14px;color:var(--muted);transition:all .2s}
+.soc:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
+.footer-col h4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:16px;letter-spacing:.5px}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:10px}
+.footer-col a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}
+.footer-col a:hover{color:var(--text)}
+.footer-bottom{display:flex;align-items:center;justify-content:center;padding-top:28px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);max-width:1220px;margin:0 auto}
+
+/* PAGINATION */
+.pagination{display:flex;align-items:center;justify-content:center;gap:12px;padding:20px 0 40px;position:relative;z-index:1}
+.page-btn{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 20px;color:var(--text);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s}
+.page-btn:hover:not(:disabled){border-color:var(--purple);background:rgba(124,92,252,0.1)}
+.page-btn:disabled{opacity:0.3;cursor:not-allowed}
+.page-info{font-size:13px;color:var(--muted)}
+
+/* UTILS */
+.fade-in{animation:fadeUp .7s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.bg-p{background:rgba(124,92,252,0.14)} .bg-g{background:rgba(74,222,128,0.12)} .bg-o{background:rgba(251,146,60,0.12)} .bg-c{background:rgba(34,211,238,0.12)} .bg-pk{background:rgba(232,121,249,0.12)} .bg-y{background:rgba(250,204,21,0.12)}
+
+@media(max-width:1100px){.hero{grid-template-columns:1fr;padding:60px 40px}.hero-visual{display:none}.cats-grid{grid-template-columns:repeat(3,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.cta-card{grid-template-columns:1fr}}
+@media(max-width:700px){nav{padding:0 20px}.nav-links{display:none}section,.stats-wrap,.cta-wrap{padding-left:20px;padding-right:20px}.hero{padding:40px 20px}.cats-grid{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-column:1fr 1fr;padding:32px}footer{padding:40px 20px 24px}.footer-grid{grid-template-columns:1fr}.search-section{padding:0 20px 40px}}
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">🪐 Prompt<span class="accent">Nova</span></a>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Inicio</a></li>
+    <li><a href="#posts">Prompts</a></li>
+    <li><a href="#categorias">Categorías</a></li>
+    <li><a href="#">Favoritos</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Sobre mí</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="btn-search-nav" onclick="document.getElementById('search-input').focus()">🔍 Buscar ↗</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero fade-in">
+  <div>
+    <div class="hero-badge">✨ +100 PROMPTS IA LISTOS PARA USAR</div>
+    <h1>Desata el poder<br>de la <span class="ia">IA</span> con<br>Prompts que<br>realmente <span class="func">funcionan.</span></h1>
+    <p class="hero-sub">Encuentra, copia y usa los mejores prompts para ChatGPT, Gemini, Claude y más.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('posts').scrollIntoView({behavior:'smooth'})">🚀 Explorar Prompts</button>
+      <button class="btn-secondary" onclick="document.getElementById('categorias').scrollIntoView({behavior:'smooth'})">⊞ Ver categorías</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-glow"></div>
+    <div class="hero-planet"></div>
+    <div class="hero-glow-ground"></div>
+    <div class="astronaut-emoji">🧑‍🚀</div>
+    <div class="hero-card-popup">
+      <div class="hcp-logo">🪐 Prompt<span class="accent">nova</span></div>
+      <p class="hcp-sub">Tu copiloto en el universo<br>de la inteligencia artificial.</p>
+    </div>
+    <div class="fi fi-1">🧠</div>
+    <div class="fi fi-2">💬</div>
+    <div class="fi fi-3">✨</div>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-section">
+  <div class="search-bar">
+    <span>🔍</span>
+    <input id="search-input" type="text" placeholder="Buscar prompts (ej: CV, marketing, estudiar...)" oninput="filterPosts(this.value)">
+  </div>
+</div>
+
+<!-- CATEGORÍAS -->
+<section id="categorias">
+  <div class="sec-header">
+    <h2 class="sec-title">⭐ Explora por categorías</h2>
+    <a href="#" class="see-all" onclick="loadPosts();return false">Ver todas →</a>
+  </div>
+  <div class="cats-grid" id="cats-grid">
+    <!-- Se llenan dinámicamente con las etiquetas del blog -->
+    <a href="#" class="cat-card fade-in" onclick="filterByLabel('Trabajo');return false">
+      <div class="cat-icon bg-p">💼</div>
+      <div class="cat-name">Trabajo</div><div class="cat-count">Cargando...</div>
+    </a>
+    <a href="#" class="cat-card fade-in" style="animation-delay:.07s" onclick="filterByLabel('Estudio');return false">
+      <div class="cat-icon bg-g">📚</div>
+      <div class="cat-name">Estudio</div><div class="cat-count">Cargando...</div>
+    </a>
+    <a href="#" class="cat-card fade-in" style="animation-delay:.14s" onclick="filterByLabel('Marketing');return false">
+      <div class="cat-icon bg-o">📣</div>
+      <div class="cat-name">Marketing</div><div class="cat-count">Cargando...</div>
+    </a>
+    <a href="#" class="cat-card fade-in" style="animation-delay:.21s" onclick="filterByLabel('Programación');return false">
+      <div class="cat-icon bg-c" style="font-size:17px;font-weight:800;color:var(--cyan)">&lt;/&gt;</div>
+      <div class="cat-name">Programación</div><div class="cat-count">Cargando...</div>
+    </a>
+    <a href="#" class="cat-card fade-in" style="animation-delay:.28s" onclick="filterByLabel('Desarrollo Personal');return false">
+      <div class="cat-icon bg-pk">❤️</div>
+      <div class="cat-name">Desarrollo Personal</div><div class="cat-count">Cargando...</div>
+    </a>
+    <a href="#" class="cat-card fade-in" style="animation-delay:.35s" onclick="filterByLabel('Emprendimiento');return false">
+      <div class="cat-icon bg-y">🚀</div>
+      <div class="cat-name">Emprendimiento</div><div class="cat-count">Cargando...</div>
+    </a>
+  </div>
+</section>
+
+<!-- POSTS DE BLOGGER -->
+<section id="posts">
+  <div class="sec-header">
+    <h2 class="sec-title">✦ <span id="posts-section-title">Todos los Prompts</span></h2>
+    <a href="#" class="see-all" onclick="loadPosts();return false" id="clear-filter" style="display:none">✕ Ver todos →</a>
+  </div>
+  <div class="posts-grid" id="posts-grid">
+    <div class="loader">
+      <div class="spinner"></div>
+      <div class="loader-text">Cargando prompts desde Blogger...</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGINACIÓN -->
+<div class="pagination" id="pagination" style="display:none">
+  <button class="page-btn" id="btn-prev" onclick="changePage(-1)" disabled>← Anterior</button>
+  <span class="page-info" id="page-info">Página 1</span>
+  <button class="page-btn" id="btn-next" onclick="changePage(1)">Siguiente →</button>
+</div>
+
+<!-- STATS -->
+<div class="stats-wrap">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-icon bg-p">🪐</div>
+      <div><div class="stat-number" id="stat-total">+0</div><div class="stat-label">Prompts disponibles</div></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon bg-c">👥</div>
+      <div><div class="stat-number">+5K</div><div class="stat-label">Usuarios activos</div></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon bg-y">⭐</div>
+      <div><div class="stat-number">4.9/5</div><div class="stat-label">Valoración promedio</div></div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon bg-pk">🚀</div>
+      <div><div class="stat-number">+50K</div><div class="stat-label">Prompts copiados</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-card">
+    <div class="cta-text">
+      <h2>Únete a la comunidad <span>PromptNova</span></h2>
+      <p>Recibe nuevos prompts, tips y recursos exclusivos cada semana.</p>
+      <div class="cta-form">
+        <input class="cta-input" type="email" placeholder="Tu correo electrónico">
+        <button class="btn-primary">Suscribirme →</button>
+      </div>
+    </div>
+    <div class="cta-robot">🤖</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="footer-brand">🪐 Prompt<span class="accent">Nova</span></a>
+      <p class="footer-tagline">Tu universo de prompts IA.</p>
+      <div class="socials">
+        <a href="#" class="soc">𝕏</a>
+        <a href="#" class="soc">♪</a>
+        <a href="#" class="soc">📷</a>
+        <a href="#" class="soc">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Sígueme</h4>
+      <ul><li><a href="#">Twitter / X</a></li><li><a href="#">TikTok</a></li><li><a href="#">Instagram</a></li><li><a href="#">YouTube</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Enlaces</h4>
+      <ul><li><a href="#">Inicio</a></li><li><a href="#">Blog</a></li><li><a href="#">Categorías</a></li><li><a href="#">Sobre mí</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul><li><a href="#">Términos</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Aviso Legal</a></li><li><a href="#">Contacto</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 PromptNova — Todos los derechos reservados. Hecho con ✨ para la comunidad IA.</div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast" style="position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--purple);color:#fff;padding:12px 24px;border-radius:50px;font-size:14px;font-weight:600;opacity:0;transition:all .35s;z-index:9999;box-shadow:0 8px 30px rgba(124,92,252,0.5);pointer-events:none">✅ ¡Copiado!</div>
+
+<script>
+// ─── CONFIG ───────────────────────────────────────────
+const API_KEY  = 'AIzaSyAxxuFikdZ4jiDhQjElM7KNfn_u9MdX-08';
+const BLOG_ID  = '7381691511260662000';
+const PER_PAGE = 12;
+// ──────────────────────────────────────────────────────
+
+let allPosts      = [];
+let filteredPosts = [];
+let currentPage   = 1;
+let nextPageToken = null;
+let prevTokens    = [];
+let totalPosts    = 0;
+let currentLabel  = null;
+
+const emojis = ['🚀','🧠','💡','✨','🎯','🔥','⚡','🌟','💎','🤖','🪄','🎨'];
+const gradients = [
+  'linear-gradient(135deg,#1a0a3a,#2d1060)',
+  'linear-gradient(135deg,#0a2a1a,#103020)',
+  'linear-gradient(135deg,#2a1a0a,#3a1800)',
+  'linear-gradient(135deg,#0a1a2a,#001030)',
+  'linear-gradient(135deg,#2a0a2a,#38003a)',
+  'linear-gradient(135deg,#1a1a0a,#2a2200)',
+  'linear-gradient(135deg,#0a2a2a,#004030)',
+];
+
+// Stars
+(function(){
+  const c=document.getElementById('stars');
+  for(let i=0;i<200;i++){
+    const s=document.createElement('div');s.className='star';
+    const sz=Math.random()*2.5+0.4;
+    s.style.cssText=`width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--min:${(Math.random()*0.15).toFixed(2)};--max:${(Math.random()*0.7+0.2).toFixed(2)};--d:${(Math.random()*4+2).toFixed(1)}s;--delay:-${(Math.random()*8).toFixed(1)}s`;
+    c.appendChild(s);
+  }
+})();
+
+// Extract image from post content
+function extractImage(content) {
+  if (!content) return null;
+  const match = content.match(/<img[^>]+src=["']([^"']+)["']/i);
+  return match ? match[1] : null;
+}
+
+// Strip HTML tags
+function stripHtml(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || '';
+}
+
+// Format date
+function formatDate(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('es-ES', {day:'numeric', month:'short', year:'numeric'});
+}
+
+// Build post card HTML
+function buildCard(post, index) {
+  const img    = post.images?.[0]?.url || extractImage(post.content);
+  const title  = post.title || 'Sin título';
+  const desc   = stripHtml(post.content || '').slice(0, 120) + '...';
+  const date   = formatDate(post.published);
+  const label  = post.labels?.[0] || 'Prompt';
+  const url    = post.url || '#';
+  const emoji  = emojis[index % emojis.length];
+  const grad   = gradients[index % gradients.length];
+  const delay  = (index % PER_PAGE) * 0.05;
+
+  const thumb = img
+    ? `<img class="post-thumb" src="${img}" alt="${title}" loading="lazy" onerror="this.outerHTML='<div class=\\'post-thumb-placeholder\\'>${emoji}</div>'">`
+    : `<div class="post-thumb-placeholder" style="background:${grad}">${emoji}</div>`;
+
+  return `
+    <a href="${url}" target="_blank" rel="noopener" class="post-card" style="animation-delay:${delay}s">
+      ${thumb}
+      <div class="post-body">
+        <div class="post-meta">
+          <span class="post-label">${label}</span>
+          <span class="post-date">${date}</span>
+        </div>
+        <div class="post-title">${title}</div>
+        <div class="post-desc">${desc}</div>
+        <div class="post-footer">
+          <span class="post-read">Leer prompt →</span>
+        </div>
+      </div>
+    </a>`;
+}
+
+// Render posts
+function renderPosts(posts) {
+  const grid = document.getElementById('posts-grid');
+  if (!posts.length) {
+    grid.innerHTML = '<div class="no-posts">😕 No se encontraron prompts para esta búsqueda.</div>';
+    document.getElementById('pagination').style.display = 'none';
+    return;
+  }
+  grid.innerHTML = posts.map((p, i) => buildCard(p, i)).join('');
+}
+
+// Load posts from Blogger API
+async function loadPosts(pageToken = null, label = null) {
+  const grid = document.getElementById('posts-grid');
+  grid.innerHTML = '<div class="loader"><div class="spinner"></div><div class="loader-text">Cargando prompts...</div></div>';
+
+  let url = `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}&maxResults=${PER_PAGE}&fetchImages=true&fetchBodies=true`;
+  if (pageToken) url += `&pageToken=${pageToken}`;
+  if (label)     url += `&labels=${encodeURIComponent(label)}`;
+
+  try {
+    const res  = await fetch(url);
+    const data = await res.json();
+
+    if (data.error) throw new Error(data.error.message);
+
+    const posts = data.items || [];
+    nextPageToken = data.nextPageToken || null;
+
+    // Update total stat
+    if (data.totalItems) {
+      totalPosts = data.totalItems;
+      document.getElementById('stat-total').textContent = '+' + totalPosts;
+    }
+
+    renderPosts(posts);
+
+    // Pagination
+    const pag     = document.getElementById('pagination');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const info    = document.getElementById('page-info');
+
+    pag.style.display    = 'flex';
+    btnPrev.disabled     = currentPage === 1;
+    btnNext.disabled     = !nextPageToken;
+    info.textContent     = `Página ${currentPage}`;
+
+  } catch (err) {
+    grid.innerHTML = `
+      <div class="error-box">
+        <h3>⚠️ No se pudieron cargar los prompts</h3>
+        <p>${err.message}</p>
+        <p style="margin-top:8px;font-size:12px">Verifica que tu API Key y Blog ID sean correctos y que la Blogger API esté habilitada.</p>
+      </div>`;
+    document.getElementById('pagination').style.display = 'none';
+  }
+}
+
+// Pagination
+function changePage(dir) {
+  if (dir === 1 && nextPageToken) {
+    prevTokens.push(nextPageToken);
+    currentPage++;
+    const token = prevTokens[prevTokens.length - 2] || null;
+    loadPosts(nextPageToken, currentLabel);
+  } else if (dir === -1 && currentPage > 1) {
+    currentPage--;
+    prevTokens.pop();
+    const token = prevTokens.length ? prevTokens[prevTokens.length - 1] : null;
+    loadPosts(token, currentLabel);
+  }
+  document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+}
+
+// Filter by label (category)
+function filterByLabel(label) {
+  currentLabel = label;
+  currentPage  = 1;
+  prevTokens   = [];
+  document.getElementById('posts-section-title').textContent = label;
+  document.getElementById('clear-filter').style.display = 'flex';
+  loadPosts(null, label);
+  document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+}
+
+// Filter by search text (client-side on loaded posts)
+function filterPosts(query) {
+  // Reset label filter when searching
+  currentLabel = null;
+  document.getElementById('posts-section-title').textContent = query ? `Búsqueda: "${query}"` : 'Todos los Prompts';
+  document.getElementById('clear-filter').style.display = query ? 'flex' : 'none';
+
+  if (!query.trim()) { loadPosts(); return; }
+
+  // Search via API
+  clearTimeout(window._searchTimer);
+  window._searchTimer = setTimeout(async () => {
+    const grid = document.getElementById('posts-grid');
+    grid.innerHTML = '<div class="loader"><div class="spinner"></div><div class="loader-text">Buscando...</div></div>';
+    const url = `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts/search?key=${API_KEY}&q=${encodeURIComponent(query)}&fetchBodies=true&fetchImages=true`;
+    try {
+      const res  = await fetch(url);
+      const data = await res.json();
+      if (data.error) throw new Error(data.error.message);
+      renderPosts(data.items || []);
+      document.getElementById('pagination').style.display = 'none';
+    } catch(e) {
+      grid.innerHTML = `<div class="error-box"><h3>Error al buscar</h3><p>${e.message}</p></div>`;
+    }
+  }, 500);
+}
+
+// Toast
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.opacity = '1';
+  t.style.transform = 'translateX(-50%) translateY(0)';
+  setTimeout(() => { t.style.opacity='0'; t.style.transform='translateX(-50%) translateY(70px)'; }, 2600);
+}
+
+// Init
+loadPosts();
+</script>
+</body>
+</html>
