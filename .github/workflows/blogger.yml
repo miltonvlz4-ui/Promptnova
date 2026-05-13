@@ -1,0 +1,55 @@
+name: Publicar Blogger
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install googleapis
+
+      - name: Crear script
+        run: |
+          cat > post.js << 'EOF'
+          const { google } = require('googleapis');
+
+          async function main() {
+            const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+
+            const auth = new google.auth.GoogleAuth({
+              credentials,
+              scopes: ['https://www.googleapis.com/auth/blogger']
+            });
+
+            const blogger = google.blogger({
+              version: 'v3',
+              auth
+            });
+
+            const response = await blogger.posts.insert({
+              blogId: process.env.BLOG_ID,
+              requestBody: {
+                title: 'POST DE PRUEBA',
+                content: '<h1>FUNCIONA 🚀</h1>'
+              }
+            });
+
+            console.log(response.data);
+          }
+
+          main().catch(console.error);
+          EOF
+
+      - name: Ejecutar
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          BLOG_ID: ${{ secrets.BLOG_ID }}
+        run: node post.js
