@@ -1,0 +1,30 @@
+name: Fix Posts Style
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fix all posts
+        run: node scripts/fix-posts.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "PromptNova Bot"
+          git config user.email "bot@promptnova.com"
+          git add posts/
+          git diff --cached --quiet || git commit -m "🎨 Fix estilos en todos los posts"
+          git push
