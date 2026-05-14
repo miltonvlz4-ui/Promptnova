@@ -1,10 +1,8 @@
 import fs from "fs";
 import path from "path";
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
-// ─── Temas rotativos ──────────────────────────────────────────────────────────
-// Personaliza esta lista con los temas de tu blog
 const TOPICS = [
   "Los mejores prompts para escribir emails profesionales con IA",
   "Cómo usar la IA para generar ideas de negocio en minutos",
@@ -23,7 +21,6 @@ const TOPICS = [
   "Prompts para generar imágenes perfectas con IA",
 ];
 
-// ─── Utilidades ───────────────────────────────────────────────────────────────
 function slugify(text) {
   return text
     .toLowerCase()
@@ -43,16 +40,15 @@ function randomTopic() {
   return TOPICS[Math.floor(Math.random() * TOPICS.length)];
 }
 
-// ─── Llamada a OpenAI ─────────────────────────────────────────────────────────
 async function generatePost(topic) {
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
+      Authorization: `Bearer ${GROQ_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "gpt-4o-mini", // Modelo más barato y disponible en tier gratuito
+      model: "llama-3.3-70b-versatile",
       max_tokens: 3000,
       temperature: 0.8,
       messages: [
@@ -76,9 +72,9 @@ Devuelve SOLO un objeto JSON con esta estructura exacta:
   "html": "<article>...contenido completo en HTML semántico...</article>"
 }
 
-El campo "html" debe contener:
+El campo html debe contener:
 - Etiquetas h2, h3, p, ul, li, blockquote
-- Al menos 3 ejemplos de prompts dentro de <pre><code>...</code></pre>
+- Al menos 3 ejemplos de prompts dentro de pre y code
 - Mínimo 500 palabras
 - Sin estilos inline`,
         },
@@ -88,18 +84,15 @@ El campo "html" debe contener:
 
   if (!response.ok) {
     const error = await response.text();
-    throw new Error(`OpenAI API error ${response.status}: ${error}`);
+    throw new Error(`Groq API error ${response.status}: ${error}`);
   }
 
   const data = await response.json();
   const raw = data.choices[0].message.content.trim();
-
-  // Limpiar posibles backticks que ChatGPT añade a veces
   const clean = raw.replace(/^```json\s*/i, "").replace(/```\s*$/i, "").trim();
   return JSON.parse(clean);
 }
 
-// ─── Guardar post ─────────────────────────────────────────────────────────────
 function savePost(data, topic) {
   const postsDir = path.join(process.cwd(), "posts");
   fs.mkdirSync(postsDir, { recursive: true });
@@ -140,7 +133,6 @@ function savePost(data, topic) {
   fs.writeFileSync(filepath, fullHtml, "utf8");
   console.log(`✅ Post guardado: posts/${filename}`);
 
-  // ─── Actualizar index.json ────────────────────────────────────────────────
   const indexPath = path.join(postsDir, "index.json");
   let index = [];
 
@@ -148,7 +140,6 @@ function savePost(data, topic) {
     index = JSON.parse(fs.readFileSync(indexPath, "utf8"));
   }
 
-  // Evitar duplicados si el workflow se lanza dos veces el mismo minuto
   const exists = index.some((p) => p.slug === filename);
   if (!exists) {
     index.unshift({
@@ -161,17 +152,14 @@ function savePost(data, topic) {
     });
   }
 
-  // Mantener máximo 90 posts (≈1 mes)
   if (index.length > 90) index = index.slice(0, 90);
-
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2), "utf8");
   console.log(`📋 index.json actualizado — ${index.length} posts en total`);
 }
 
-// ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
-  if (!OPENAI_API_KEY) {
-    throw new Error("Falta la variable de entorno OPENAI_API_KEY");
+  if (!GROQ_API_KEY) {
+    throw new Error("Falta la variable de entorno GROQ_API_KEY");
   }
 
   const topic = randomTopic();
