@@ -1,0 +1,9 @@
+{
+  "name": "promptnova-auto",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Generador automático de posts con ChatGPT para PromptNova",
+  "scripts": {
+    "generate": "node scripts/generate-post.js"
+  }
+}
