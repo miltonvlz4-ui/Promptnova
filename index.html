@@ -461,6 +461,15 @@
 
   /* active nav */
   .nav-links a.active { color: var(--text); background: var(--bg3); }
+  .btn-fav { transition: transform 0.2s; }
+.btn-fav.faved { background: rgba(244,114,182,0.2); border-color: rgba(244,114,182,0.4); }
+.btn-fav:hover { transform: scale(1.2); }
+.btn-fav.pop { animation: pop 0.3s ease; }
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
 </style>
 </head>
 <body>
@@ -558,6 +567,7 @@
 
     <div class="filter-bar">
       <button class="filter-btn active" onclick="filterCategory('todos', this)">Todos</button>
+      <button class="filter-btn" onclick="filterFavs(this)">❤️ Favoritos</button>
       <button class="filter-btn" onclick="filterCategory('trabajo', this)">💼 Trabajo</button>
       <button class="filter-btn" onclick="filterCategory('marketing', this)">📣 Marketing</button>
       <button class="filter-btn" onclick="filterCategory('programacion', this)">💻 Programación</button>
@@ -840,6 +850,31 @@ const PER_PAGE = 6;
 let filteredPrompts = [...PROMPTS];
 let activeModal = null;
 
+  function getFavs() {
+  return JSON.parse(localStorage.getItem('pn_favs') || '[]');
+}
+
+function isFav(id) {
+  return getFavs().includes(id);
+}
+
+function toggleFav(id, btn) {
+  let favs = getFavs();
+  const wasFav = favs.includes(id);
+  if (wasFav) {
+    favs = favs.filter(f => f !== id);
+    btn.textContent = '🤍';
+    btn.classList.remove('faved');
+  } else {
+    favs.push(id);
+    btn.textContent = '❤️';
+    btn.classList.add('faved');
+  }
+  localStorage.setItem('pn_favs', JSON.stringify(favs));
+  btn.classList.add('pop');
+  setTimeout(() => btn.classList.remove('pop'), 300);
+  showToast(wasFav ? '💔 Eliminado de favoritos' : '❤️ Guardado en favoritos');
+}
 function renderPrompts() {
   const grid = document.getElementById('prompts-grid');
   const start = (currentPage - 1) * PER_PAGE;
@@ -854,7 +889,9 @@ function renderPrompts() {
         <span class="prompt-badge badge-${p.cat}">${catLabel(p.cat)}</span>
         <div class="prompt-actions" onclick="event.stopPropagation()">
           <button class="btn-icon" onclick="copyPrompt(${p.id},this)" title="Copiar">📋</button>
-          <button class="btn-icon" title="Favorito">♡</button>
+        <button class="btn-icon btn-fav ${isFav(p.id) ? 'faved' : ''}" onclick="toggleFav(${p.id},this)" title="Favorito">
+  ${isFav(p.id) ? '❤️' : '🤍'}
+</button>
         </div>
       </div>
       <h3>${p.title}</h3>
@@ -874,7 +911,14 @@ function catLabel(cat) {
   return m[cat] || cat;
 }
 
-function filterCategory(cat, btn) {
+function filterFavs(btn) {
+  currentPage = 1;
+  filteredPrompts = PROMPTS.filter(p => getFavs().includes(p.id));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPrompts();
+}
+  function filterCategory(cat, btn) {
   currentFilter = cat;
   currentPage = 1;
   filteredPrompts = cat === 'todos' ? [...PROMPTS] : PROMPTS.filter(p => p.cat === cat);
@@ -932,8 +976,9 @@ function copyPrompt(id, btn) {
   });
 }
 
-function showToast() {
+function showToast(msg) {
   const t = document.getElementById('toast');
+  t.textContent = msg || '✅ ¡Prompt copiado!';
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2500);
 }
