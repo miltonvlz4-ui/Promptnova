@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromptNova — Tu universo de prompts IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #18181f;
+    --card: #1c1c25;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --accent: #7c6ff7;
+    --accent2: #a89cff;
+    --accent3: #5b4fe0;
+    --gold: #f4c84a;
+    --text: #f0f0fa;
+    --muted: #9090a8;
+    --muted2: #6060780;
+    --green: #4ade80;
+    --pink: #f472b6;
+    --orange: #fb923c;
+    --teal: #2dd4bf;
+    --radius: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1,h2,h3,h4 { font-family: 'Syne', sans-serif; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; gap: 2rem;
+    height: 64px;
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1.25rem;
+    background: linear-gradient(135deg, var(--accent2), var(--gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex; gap: 0.25rem; list-style: none; flex: 1;
+  }
+  .nav-links a {
+    padding: 0.4rem 0.85rem; border-radius: 8px;
+    font-size: 0.875rem; color: var(--muted);
+    transition: all 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); background: var(--bg3); }
+  .nav-cta {
+    background: var(--accent); color: #fff;
+    padding: 0.45rem 1.1rem; border-radius: 8px;
+    font-size: 0.875rem; font-weight: 500;
+    transition: background 0.2s; white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--accent3); }
+  .nav-search {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.4rem 0.85rem;
+    font-size: 0.875rem; color: var(--muted); cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .nav-search:hover { border-color: var(--border2); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 92vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 4rem 2rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,111,247,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 40% at 80% 60%, rgba(244,200,74,0.07) 0%, transparent 60%);
+  }
+  .hero-dots {
+    position: absolute; inset: 0; z-index: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 800px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(124,111,247,0.15); border: 1px solid rgba(124,111,247,0.3);
+    border-radius: 100px; padding: 0.35rem 1rem;
+    font-size: 0.8rem; color: var(--accent2); font-weight: 500;
+    margin-bottom: 1.75rem;
+  }
+  .hero-badge span { color: var(--gold); }
+  .hero h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--accent2), var(--gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p {
+    font-size: 1.15rem; color: var(--muted); max-width: 560px; margin: 0 auto 2.5rem;
+  }
+  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent); color: #fff;
+    padding: 0.8rem 1.75rem; border-radius: 10px;
+    font-weight: 600; font-size: 0.95rem;
+    transition: all 0.2s; border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--accent3); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: var(--text);
+    padding: 0.8rem 1.75rem; border-radius: 10px;
+    font-weight: 500; font-size: 0.95rem;
+    border: 1px solid var(--border2); cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { background: var(--bg3); transform: translateY(-1px); }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 3rem;
+    margin-top: 4rem; padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-family: 'Syne', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--text); }
+  .hero-stat .label { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-header { text-align: center; margin-bottom: 3rem; }
+  .section-label {
+    display: inline-block; font-size: 0.75rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--accent2); margin-bottom: 0.75rem;
+  }
+  .section-header h2 { font-size: clamp(1.8rem, 4vw, 2.75rem); font-weight: 700; margin-bottom: 0.75rem; }
+  .section-header p { color: var(--muted); max-width: 520px; margin: 0 auto; }
+
+  /* ── CATEGORIES ── */
+  #categorias { background: var(--bg2); }
+  .cats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  .cat-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.5rem 1.25rem;
+    text-align: center; cursor: pointer;
+    transition: all 0.25s; position: relative; overflow: hidden;
+  }
+  .cat-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--accent), transparent);
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .cat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .cat-card:hover::before { opacity: 0.06; }
+  .cat-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+  .cat-name { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem; }
+  .cat-count { font-size: 0.8rem; color: var(--muted); }
+
+  /* ── PROMPTS GRID ── */
+  #posts { background: var(--bg); }
+  .filter-bar {
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    margin-bottom: 2rem; align-items: center;
+  }
+  .filter-btn {
+    padding: 0.4rem 1rem; border-radius: 100px;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--muted); font-size: 0.85rem; cursor: pointer;
+    transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .search-bar {
+    margin-left: auto;
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.4rem 0.85rem;
+    display: flex; align-items: center; gap: 8px;
+    color: var(--muted);
+  }
+  .search-bar input {
+    background: none; border: none; outline: none;
+    color: var(--text); font-size: 0.875rem; width: 180px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .search-bar input::placeholder { color: var(--muted); }
+  .prompts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+  .prompt-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.5rem;
+    transition: all 0.25s; cursor: pointer; position: relative;
+  }
+  .prompt-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+  .prompt-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.75rem; }
+  .prompt-badge {
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 0.25rem 0.6rem; border-radius: 6px;
+  }
+  .badge-trabajo { background: rgba(124,111,247,0.2); color: var(--accent2); }
+  .badge-marketing { background: rgba(244,200,74,0.15); color: var(--gold); }
+  .badge-programacion { background: rgba(45,212,191,0.15); color: var(--teal); }
+  .badge-estudio { background: rgba(74,222,128,0.15); color: var(--green); }
+  .badge-personal { background: rgba(244,114,182,0.15); color: var(--pink); }
+  .badge-emprendimiento { background: rgba(251,146,60,0.15); color: var(--orange); }
+  .prompt-actions { display: flex; gap: 8px; }
+  .btn-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: var(--bg3); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.2s; font-size: 0.85rem;
+  }
+  .btn-icon:hover { background: var(--accent); border-color: var(--accent); }
+  .prompt-card h3 {
+    font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600;
+    margin-bottom: 0.5rem; line-height: 1.3;
+  }
+  .prompt-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.5; margin-bottom: 1rem; }
+  .prompt-text {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.75rem 1rem;
+    font-size: 0.82rem; color: var(--muted); line-height: 1.55;
+    font-style: italic; margin-bottom: 1rem;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .prompt-footer {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .prompt-tools { display: flex; gap: 6px; }
+  .tool-pill {
+    font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 100px;
+    border: 1px solid var(--border); color: var(--muted);
+  }
+  .copy-btn {
+    background: rgba(124,111,247,0.15); border: 1px solid rgba(124,111,247,0.3);
+    color: var(--accent2); padding: 0.35rem 0.85rem; border-radius: 8px;
+    font-size: 0.8rem; font-weight: 500; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .copy-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .copy-btn.copied { background: rgba(74,222,128,0.15); border-color: rgba(74,222,128,0.3); color: var(--green); }
+  .pagination {
+    display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 3rem;
+  }
+  .page-btn {
+    width: 38px; height: 38px; border-radius: 8px;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--muted); cursor: pointer; transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .page-btn:hover, .page-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* ── BLOG ── */
+  #blog { background: var(--bg2); }
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
+  .blog-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: all 0.25s; cursor: pointer;
+  }
+  .blog-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+  .blog-thumb {
+    height: 160px; display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem; position: relative; overflow: hidden;
+  }
+  .blog-body { padding: 1.25rem; }
+  .blog-meta { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; }
+  .blog-tag {
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 0.2rem 0.55rem; border-radius: 6px;
+    background: rgba(124,111,247,0.15); color: var(--accent2);
+  }
+  .blog-date { font-size: 0.8rem; color: var(--muted); }
+  .blog-card h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; margin-bottom: 0.5rem; line-height: 1.3; }
+  .blog-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.5; }
+  .blog-read { display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem; font-size: 0.875rem; color: var(--accent2); font-weight: 500; }
+
+  /* ── ABOUT ── */
+  #sobre-mi { background: var(--bg); }
+  .about-wrap {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .about-avatar {
+    width: 180px; height: 180px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 5rem; margin: 0 auto 2rem;
+    box-shadow: 0 0 60px rgba(124,111,247,0.3);
+  }
+  .about-text h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem; }
+  .about-text p { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+  .skills-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+  .skill-tag {
+    font-size: 0.8rem; padding: 0.3rem 0.75rem; border-radius: 100px;
+    border: 1px solid var(--border); color: var(--muted);
+  }
+  .about-visual { text-align: center; }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(124,111,247,0.15), rgba(244,200,74,0.06));
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    text-align: center; padding: 5rem 2rem;
+  }
+  .cta-section h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem; }
+  .cta-section p { color: var(--muted); max-width: 480px; margin: 0 auto 2rem; }
+  .email-form { display: flex; gap: 0.75rem; max-width: 420px; margin: 0 auto; }
+  .email-form input {
+    flex: 1; background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 0.75rem 1rem;
+    color: var(--text); font-size: 0.9rem; outline: none;
+    font-family: 'DM Sans', sans-serif; transition: border-color 0.2s;
+  }
+  .email-form input:focus { border-color: var(--accent); }
+  .email-form input::placeholder { color: var(--muted); }
+  .email-form button { white-space: nowrap; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg2); border-top: 1px solid var(--border);
+    padding: 3rem 2rem 2rem;
+  }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+  }
+  .footer-brand .logo { font-size: 1.1rem; display: block; margin-bottom: 0.75rem; }
+  .footer-brand p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.25rem; }
+  .social-links { display: flex; gap: 0.75rem; }
+  .social-link {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--bg3); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.875rem; transition: all 0.2s;
+  }
+  .social-link:hover { background: var(--accent); border-color: var(--accent); }
+  .footer-col h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.5rem; }
+  .footer-col a { font-size: 0.875rem; color: var(--muted); transition: color 0.2s; }
+  .footer-col a:hover { color: var(--text); }
+  .footer-bottom {
+    max-width: 1200px; margin: 2rem auto 0;
+    padding-top: 1.5rem; border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; gap: 0.5rem;
+  }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+    background: var(--card); border: 1px solid var(--green);
+    border-radius: 10px; padding: 0.75rem 1.25rem;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.875rem; color: var(--green);
+    transform: translateY(100px); opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 1rem;
+    opacity: 0; pointer-events: none; transition: opacity 0.25s;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius-xl); padding: 2rem; max-width: 560px; width: 100%;
+    transform: translateY(20px); transition: transform 0.25s;
+    max-height: 80vh; overflow-y: auto;
+  }
+  .modal-overlay.open .modal { transform: translateY(0); }
+  .modal-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.25rem; }
+  .modal-close {
+    background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
+    width: 32px; height: 32px; cursor: pointer; color: var(--muted);
+    display: flex; align-items: center; justify-content: center; font-size: 1rem;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .modal-close:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .modal-prompt-text {
+    background: var(--bg3); border: 1px solid var(--border); border-radius: 10px;
+    padding: 1rem; font-size: 0.9rem; color: var(--text); line-height: 1.6;
+    margin: 1rem 0; white-space: pre-wrap;
+  }
+  .modal-copy-btn {
+    width: 100%; padding: 0.85rem; border-radius: 10px;
+    background: var(--accent); border: none; color: #fff;
+    font-size: 0.95rem; font-weight: 600; cursor: pointer;
+    transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  }
+  .modal-copy-btn:hover { background: var(--accent3); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .about-wrap { grid-template-columns: 1fr; }
+    .about-visual { display: none; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .email-form { flex-direction: column; }
+    .hero-stats { gap: 1.5rem; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.6s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+
+  .star { color: var(--gold); }
+
+  /* active nav */
+  .nav-links a.active { color: var(--text); background: var(--bg3); }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">🪐 PromptNova</a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Inicio</a></li>
+      <li><a href="#posts">Prompts</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+    </ul>
+    <div class="nav-search" onclick="document.getElementById('search-input').focus()">
+      🔍 <span style="font-size:0.85rem">Buscar prompts...</span>
+    </div>
+    <a href="#posts" class="nav-cta">✨ Explorar</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-badge fade-up">🪐 <span>+100</span> prompts IA listos para usar</div>
+    <h1 class="fade-up delay-1">Desata el poder<br>de la IA con <em>Prompts<br>que funcionan.</em></h1>
+    <p class="fade-up delay-2">Encuentra, copia y usa los mejores prompts para ChatGPT, Claude, Gemini y más. Resultados profesionales en segundos.</p>
+    <div class="hero-btns fade-up delay-3">
+      <button class="btn-primary" onclick="document.getElementById('posts').scrollIntoView({behavior:'smooth'})">🚀 Explorar Prompts</button>
+      <button class="btn-outline" onclick="document.getElementById('categorias').scrollIntoView({behavior:'smooth'})">⊞ Ver categorías</button>
+    </div>
+    <div class="hero-stats fade-up delay-3">
+      <div class="hero-stat"><div class="num">+100</div><div class="label">Prompts disponibles</div></div>
+      <div class="hero-stat"><div class="num">+5K</div><div class="label">Usuarios activos</div></div>
+      <div class="hero-stat"><div class="num">4.9/5</div><div class="label">Valoración media</div></div>
+      <div class="hero-stat"><div class="num">+50K</div><div class="label">Prompts copiados</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CATEGORÍAS ── -->
+<section id="categorias">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">⭐ Explora</span>
+      <h2>Encuentra tu categoría</h2>
+      <p>Prompts organizados para cada área de tu vida profesional y personal.</p>
+    </div>
+    <div class="cats-grid">
+      <div class="cat-card" onclick="filterCategory('trabajo')">
+        <span class="cat-icon">💼</span>
+        <div class="cat-name">Trabajo</div>
+        <div class="cat-count">18 prompts</div>
+      </div>
+      <div class="cat-card" onclick="filterCategory('estudio')">
+        <span class="cat-icon">📚</span>
+        <div class="cat-name">Estudio</div>
+        <div class="cat-count">14 prompts</div>
+      </div>
+      <div class="cat-card" onclick="filterCategory('marketing')">
+        <span class="cat-icon">📣</span>
+        <div class="cat-name">Marketing</div>
+        <div class="cat-count">22 prompts</div>
+      </div>
+      <div class="cat-card" onclick="filterCategory('programacion')">
+        <span class="cat-icon">💻</span>
+        <div class="cat-name">Programación</div>
+        <div class="cat-count">16 prompts</div>
+      </div>
+      <div class="cat-card" onclick="filterCategory('personal')">
+        <span class="cat-icon">❤️</span>
+        <div class="cat-name">Desarrollo Personal</div>
+        <div class="cat-count">12 prompts</div>
+      </div>
+      <div class="cat-card" onclick="filterCategory('emprendimiento')">
+        <span class="cat-icon">🚀</span>
+        <div class="cat-name">Emprendimiento</div>
+        <div class="cat-count">20 prompts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROMPTS ── -->
+<section id="posts">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">✦ Colección</span>
+      <h2>Todos los Prompts</h2>
+      <p>Listos para copiar y usar. Haz clic en cualquier tarjeta para ver el prompt completo.</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterCategory('todos', this)">Todos</button>
+      <button class="filter-btn" onclick="filterCategory('trabajo', this)">💼 Trabajo</button>
+      <button class="filter-btn" onclick="filterCategory('marketing', this)">📣 Marketing</button>
+      <button class="filter-btn" onclick="filterCategory('programacion', this)">💻 Programación</button>
+      <button class="filter-btn" onclick="filterCategory('estudio', this)">📚 Estudio</button>
+      <button class="filter-btn" onclick="filterCategory('personal', this)">❤️ Personal</button>
+      <button class="filter-btn" onclick="filterCategory('emprendimiento', this)">🚀 Emprendimiento</button>
+      <div class="search-bar">
+        🔍 <input type="text" id="search-input" placeholder="Buscar prompt..." oninput="searchPrompts(this.value)">
+      </div>
+    </div>
+
+    <div class="prompts-grid" id="prompts-grid"></div>
+
+    <div class="pagination">
+      <button class="page-btn" id="prev-btn" onclick="changePage(-1)">←</button>
+      <button class="page-btn active" id="page-1" onclick="goPage(1)">1</button>
+      <button class="page-btn" id="page-2" onclick="goPage(2)">2</button>
+      <button class="page-btn" id="page-3" onclick="goPage(3)">3</button>
+      <button class="page-btn" onclick="changePage(1)">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── BLOG ── -->
+<section id="blog">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">📖 Blog</span>
+      <h2>Aprende a usar la IA</h2>
+      <p>Artículos, guías y tutoriales para sacarle el máximo partido a los prompts.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(124,111,247,0.3),rgba(168,156,255,0.1))">🧠</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Guía</span>
+            <span class="blog-date">12 enero 2025</span>
+          </div>
+          <h3>Cómo escribir el prompt perfecto: guía completa para principiantes</h3>
+          <p>Aprende las técnicas fundamentales de prompt engineering que usan los profesionales para obtener resultados increíbles con cualquier IA.</p>
+          <a href="#" class="blog-read">Leer artículo →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(244,200,74,0.2),rgba(251,146,60,0.1))">⚡</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Productividad</span>
+            <span class="blog-date">8 enero 2025</span>
+          </div>
+          <h3>10 prompts que transformarán tu forma de trabajar en 2025</h3>
+          <p>Descubre los prompts más potentes para automatizar tareas repetitivas, redactar emails y generar informes profesionales en minutos.</p>
+          <a href="#" class="blog-read">Leer artículo →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(45,212,191,0.2),rgba(74,222,128,0.1))">🎨</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Creatividad</span>
+            <span class="blog-date">3 enero 2025</span>
+          </div>
+          <h3>Prompts creativos para generar contenido viral en redes sociales</h3>
+          <p>Los mejores prompts para crear posts, captions, guiones de vídeo y estrategias de contenido que enganchen a tu audiencia.</p>
+          <a href="#" class="blog-read">Leer artículo →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(244,114,182,0.2),rgba(168,85,247,0.1))">📊</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Negocios</span>
+            <span class="blog-date">28 diciembre 2024</span>
+          </div>
+          <h3>ChatGPT vs Claude vs Gemini: ¿qué IA es mejor para cada tarea?</h3>
+          <p>Comparativa honesta de los tres gigantes de la IA. Descubre cuál usar según si necesitas análisis, creatividad o código.</p>
+          <a href="#" class="blog-read">Leer artículo →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(251,146,60,0.2),rgba(244,200,74,0.1))">🔧</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Técnico</span>
+            <span class="blog-date">20 diciembre 2024</span>
+          </div>
+          <h3>Prompt Engineering avanzado: técnicas de cadena de pensamiento y rol</h3>
+          <p>Lleva tus prompts al siguiente nivel con técnicas como Chain-of-Thought, Few-Shot, Tree of Thoughts y asignación de roles expertos.</p>
+          <a href="#" class="blog-read">Leer artículo →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(74,222,128,0.2),rgba(45,212,191,0.1))">🎓</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Educación</span>
+            <span class="blog-date">15 diciembre 2024</span>
+          </div>
+          <h3>Cómo usar la IA para estudiar más rápido y retener más información</h3>
+          <p>Prompts diseñados para estudiantes: crear mapas mentales, explicar conceptos difíciles, generar exámenes de práctica y mucho más.</p>
+          <a href="#" class="blog-read">Leer artículo →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOBRE MÍ ── -->
+<section id="sobre-mi">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="about-visual">
+        <div class="about-avatar">🧑‍🚀</div>
+        <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:1.5rem">
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1.25rem;text-align:center">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem">+100</div>
+            <div style="font-size:0.75rem;color:var(--muted)">Prompts</div>
+          </div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1.25rem;text-align:center">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem">+5K</div>
+            <div style="font-size:0.75rem;color:var(--muted)">Seguidores</div>
+          </div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1.25rem;text-align:center">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem">2 años</div>
+            <div style="font-size:0.75rem;color:var(--muted)">En IA</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">👋 Hola, soy</span>
+        <h2 style="margin-top:0.5rem">El creador de<br><em style="font-style:normal;background:linear-gradient(135deg,var(--accent2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">PromptNova</em></h2>
+        <p>Soy un apasionado de la inteligencia artificial y el prompt engineering. Llevo más de 2 años explorando, probando y perfeccionando prompts para ChatGPT, Claude, Gemini y otras IAs.</p>
+        <p>PromptNova nació con una misión clara: hacer la IA accesible para todos. Aquí encontrarás prompts probados y listos para usar que te ahorrarán horas de trabajo.</p>
+        <p>Cada prompt en esta colección ha sido testeado, refinado y optimizado. No teórico — <strong style="color:var(--text)">resultados reales</strong> para personas reales.</p>
+        <div class="skills-list">
+          <span class="skill-tag">ChatGPT</span>
+          <span class="skill-tag">Claude</span>
+          <span class="skill-tag">Gemini</span>
+          <span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">IA Generativa</span>
+          <span class="skill-tag">Automatización</span>
+          <span class="skill-tag">Productividad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-section">
+  <span class="section-label">📬 Newsletter</span>
+  <h2>Únete a la comunidad PromptNova</h2>
+  <p>Recibe nuevos prompts, tips y recursos exclusivos cada semana. Gratis, siempre.</p>
+  <form class="email-form" onsubmit="handleSubscribe(event)">
+    <input type="email" placeholder="tu@email.com" required>
+    <button class="btn-primary" type="submit">Suscribirme →</button>
+  </form>
+  <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted)">Sin spam. Cancela cuando quieras. ✌️</p>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">🪐 PromptNova</a>
+      <p>Tu copiloto en el universo de la inteligencia artificial. Prompts probados para ChatGPT, Claude y Gemini.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" title="Twitter">𝕏</a>
+        <a href="#" class="social-link" title="TikTok">♪</a>
+        <a href="#" class="social-link" title="Instagram">📷</a>
+        <a href="#" class="social-link" title="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Sígueme</h4>
+      <ul>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Explorar</h4>
+      <ul>
+        <li><a href="#posts">Todos los prompts</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Términos de uso</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Aviso Legal</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 PromptNova — Todos los derechos reservados. Hecho con ✨ para la comunidad IA.</span>
+    <span>Prompts que realmente funcionan 🚀</span>
+  </div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast">✅ ¡Prompt copiado!</div>
+
+<!-- ── MODAL ── -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div id="modal-badge" class="prompt-badge" style="margin-bottom:0.5rem;display:inline-block"></div>
+        <h3 id="modal-title" style="font-family:'Syne',sans-serif;font-size:1.2rem"></h3>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <p id="modal-desc" style="font-size:0.875rem;color:var(--muted);margin-bottom:0.25rem"></p>
+    <div class="modal-prompt-text" id="modal-text"></div>
+    <button class="modal-copy-btn" onclick="copyModal()">📋 Copiar prompt completo</button>
+  </div>
+</div>
+
+<script>
+const PROMPTS = [
+  { id:1, cat:'trabajo', title:'Redacta un email profesional persuasivo', desc:'Genera emails de trabajo formales, claros y con llamada a la acción.', text:'Actúa como un experto en comunicación corporativa. Redacta un email profesional para [destinatario/cargo] sobre [tema]. El tono debe ser [formal/amigable/urgente]. El objetivo es [objetivo específico]. Incluye: asunto impactante, saludo personalizado, desarrollo del tema en 2-3 párrafos cortos, llamada a la acción clara y cierre profesional. El email no debe superar las 200 palabras.', tools:['ChatGPT','Claude'], stars:5 },
+  { id:2, cat:'marketing', title:'Crea un post viral para Instagram', desc:'Genera captions con gancho, emojis y hashtags estratégicos.', text:'Eres un experto en marketing digital y contenido viral. Crea 3 variantes de caption para Instagram sobre [tema del post]. Cada caption debe incluir: gancho en la primera línea (que detenga el scroll), desarrollo del mensaje en 3-4 líneas, llamada a la acción, emojis relevantes y 15 hashtags estratégicos (mezcla de populares, nicho y marca). El tono es [alegre/inspirador/educativo/provocador].', tools:['ChatGPT','Gemini'], stars:5 },
+  { id:3, cat:'programacion', title:'Revisa y mejora mi código', desc:'Analiza código, encuentra bugs y sugiere optimizaciones.', text:'Eres un senior developer con 10 años de experiencia. Analiza el siguiente código [PEGAR CÓDIGO]: 1) Identifica bugs o errores potenciales, 2) Sugiere optimizaciones de rendimiento, 3) Propón mejoras de legibilidad y buenas prácticas, 4) Indica si hay problemas de seguridad, 5) Reescribe las partes críticas con las mejoras aplicadas. Explica cada cambio con su justificación.', tools:['Claude','ChatGPT'], stars:5 },
+  { id:4, cat:'estudio', title:'Explícame este concepto como si tuviera 10 años', desc:'Simplifica conceptos complejos usando analogías y ejemplos.', text:'Eres un profesor experto en [materia] con habilidad para enseñar a cualquier nivel. Explícame [concepto] usando: una analogía con algo de la vida cotidiana, un ejemplo práctico y visual, los 3 puntos clave que debo recordar, y una pregunta de comprensión para verificar que lo entendí. Usa lenguaje simple, sin jerga técnica innecesaria. Al final, dime cómo se aplica esto en el mundo real.', tools:['Claude','ChatGPT','Gemini'], stars:5 },
+  { id:5, cat:'emprendimiento', title:'Valida tu idea de negocio en 5 minutos', desc:'Análisis rápido de viabilidad y puntos críticos de tu idea.', text:'Actúa como un mentor de startups con experiencia en venture capital. Voy a describirte mi idea de negocio: [DESCRIBIR IDEA]. Por favor analiza: 1) Problema real que resuelve y tamaño del mercado, 2) Propuesta de valor única vs competidores, 3) Modelo de negocio y fuentes de ingresos potenciales, 4) Los 3 mayores riesgos y cómo mitigarlos, 5) Próximos 3 pasos concretos para validar la idea. Sé directo y honesto, incluso si el feedback es negativo.', tools:['ChatGPT','Claude'], stars:5 },
+  { id:6, cat:'personal', title:'Crea tu plan de desarrollo personal', desc:'Plan estructurado de crecimiento personal adaptado a tus metas.', text:'Eres un coach de vida certificado. Ayúdame a crear un plan de desarrollo personal de 90 días. Mis metas son: [METAS]. Mis recursos disponibles son: [TIEMPO/DINERO/HABILIDADES]. Crea un plan que incluya: objetivos SMART semanales, hábitos diarios a implementar (máx. 3), métricas para medir el progreso, libros/recursos recomendados y un sistema de rendición de cuentas. Presenta el plan en formato de tabla semana a semana.', tools:['Claude','ChatGPT'], stars:4 },
+  { id:7, cat:'marketing', title:'Estrategia de contenido para 30 días', desc:'Calendario editorial completo con ideas para cada plataforma.', text:'Eres un estratega de contenido digital. Crea un calendario de contenido para [marca/nicho] durante 30 días para [plataformas: Instagram/TikTok/LinkedIn/Twitter]. Incluye: tema diario alineado con [objetivo de negocio], formato de contenido (reel/carrusel/stories/post), hook o idea principal, mejor horario de publicación y KPIs a medir. Considera las tendencias actuales y los momentos clave del mes. Organiza el resultado en una tabla clara.', tools:['ChatGPT','Gemini'], stars:5 },
+  { id:8, cat:'trabajo', title:'Prepárate para una entrevista de trabajo', desc:'Simula una entrevista y recibe feedback detallado.', text:'Vas a simular ser un reclutador senior de [empresa/sector]. Voy a entrevistarme para el puesto de [PUESTO]. Mi CV resume: [BREVE RESUMEN]. Primero, hazme las 10 preguntas más difíciles que haría un reclutador exigente para este puesto. Después de que responda cada una, evalúa mi respuesta del 1-10, señala qué hice bien y qué mejorar, y dame la respuesta modelo ideal usando el método STAR. Al final, dame 3 consejos para destacar sobre otros candidatos.', tools:['Claude','ChatGPT'], stars:5 },
+  { id:9, cat:'programacion', title:'Genera una API REST completa', desc:'Crea endpoints, modelos y documentación lista para producción.', text:'Eres un arquitecto de software backend especializado en APIs REST. Crea una API REST completa para [descripción del proyecto] usando [tecnología: Node.js/Python/etc]. Incluye: estructura de carpetas del proyecto, modelos de datos con validaciones, endpoints CRUD completos con middleware de autenticación JWT, manejo de errores estandarizado, ejemplos de request/response en formato JSON y comandos para instalar dependencias y ejecutar el proyecto. El código debe seguir las mejores prácticas y ser production-ready.', tools:['Claude','ChatGPT'], stars:5 },
+  { id:10, cat:'estudio', title:'Resume cualquier documento en puntos clave', desc:'Extrae los insights más importantes de textos largos.', text:'Eres un experto en síntesis de información. Analiza el siguiente texto [PEGAR TEXTO] y crea: 1) Resumen ejecutivo de 3 líneas, 2) Los 7 puntos más importantes con explicación de 2-3 líneas cada uno, 3) Las 3 conclusiones o aprendizajes principales, 4) Términos técnicos clave con sus definiciones, 5) Preguntas que quedan sin responder en el texto. Prioriza la claridad y la accionabilidad de la información.', tools:['Claude','Gemini','ChatGPT'], stars:4 },
+  { id:11, cat:'emprendimiento', title:'Escribe un elevator pitch irresistible', desc:'Tu propuesta de valor en 60 segundos que convence a inversores.', text:'Eres un experto en storytelling para startups que ha ayudado a empresas a recaudar millones. Crea 3 versiones de elevator pitch para [empresa/producto]: Versión 30 segundos (para un ascensor), Versión 60 segundos (para un evento de networking) y Versión 2 minutos (para una reunión de inversores). Cada versión debe incluir: el problema que resuelves, tu solución única, tracción o validación que tienes y la llamada a la acción. Usa storytelling emocional y datos concretos.', tools:['ChatGPT','Claude'], stars:5 },
+  { id:12, cat:'personal', title:'Supera el bloqueo creativo ahora mismo', desc:'Técnicas y ejercicios para desbloquear tu creatividad al instante.', text:'Eres un coach creativo y experto en pensamiento lateral. Estoy bloqueado con [proyecto/problema creativo]. Ayúdame con: 5 técnicas de brainstorming específicas para este caso, 10 ideas locas sin filtro (el juicio viene después), 3 analogías de otros campos que podrían inspirarme, un ejercicio de 10 minutos para desbloquearme ahora mismo y las preguntas que me están faltando hacerme. No me des las respuestas, dame las herramientas para encontrarlas yo.', tools:['Claude','ChatGPT'], stars:4 },
+];
+
+let currentFilter = 'todos';
+let currentPage = 1;
+const PER_PAGE = 6;
+let filteredPrompts = [...PROMPTS];
+let activeModal = null;
+
+function renderPrompts() {
+  const grid = document.getElementById('prompts-grid');
+  const start = (currentPage - 1) * PER_PAGE;
+  const page = filteredPrompts.slice(start, start + PER_PAGE);
+  if (page.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted)">No se encontraron prompts. Prueba con otro filtro. 🔍</div>';
+    return;
+  }
+  grid.innerHTML = page.map(p => `
+    <div class="prompt-card" onclick="openModal(${p.id})">
+      <div class="prompt-top">
+        <span class="prompt-badge badge-${p.cat}">${catLabel(p.cat)}</span>
+        <div class="prompt-actions" onclick="event.stopPropagation()">
+          <button class="btn-icon" onclick="copyPrompt(${p.id},this)" title="Copiar">📋</button>
+          <button class="btn-icon" title="Favorito">♡</button>
+        </div>
+      </div>
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+      <div class="prompt-text">${p.text}</div>
+      <div class="prompt-footer">
+        <div class="prompt-tools">${p.tools.map(t=>`<span class="tool-pill">${t}</span>`).join('')}</div>
+        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(${p.id},this)">📋 Copiar</button>
+      </div>
+    </div>
+  `).join('');
+  updatePagination();
+}
+
+function catLabel(cat) {
+  const m = {trabajo:'💼 Trabajo',marketing:'📣 Marketing',programacion:'💻 Programación',estudio:'📚 Estudio',personal:'❤️ Personal',emprendimiento:'🚀 Emprendimiento'};
+  return m[cat] || cat;
+}
+
+function filterCategory(cat, btn) {
+  currentFilter = cat;
+  currentPage = 1;
+  filteredPrompts = cat === 'todos' ? [...PROMPTS] : PROMPTS.filter(p => p.cat === cat);
+  if (document.getElementById('search-input').value) filteredPrompts = filteredPrompts.filter(p => matchSearch(p, document.getElementById('search-input').value));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderPrompts();
+  if (cat !== 'todos') document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+}
+
+function searchPrompts(val) {
+  currentPage = 1;
+  const base = currentFilter === 'todos' ? PROMPTS : PROMPTS.filter(p => p.cat === currentFilter);
+  filteredPrompts = val ? base.filter(p => matchSearch(p, val)) : [...base];
+  renderPrompts();
+}
+
+function matchSearch(p, val) {
+  const v = val.toLowerCase();
+  return p.title.toLowerCase().includes(v) || p.desc.toLowerCase().includes(v) || p.text.toLowerCase().includes(v);
+}
+
+function updatePagination() {
+  const total = Math.ceil(filteredPrompts.length / PER_PAGE);
+  for (let i = 1; i <= 3; i++) {
+    const btn = document.getElementById('page-' + i);
+    if (!btn) continue;
+    btn.style.display = i <= total ? '' : 'none';
+    btn.classList.toggle('active', i === currentPage);
+  }
+}
+
+function changePage(dir) {
+  const total = Math.ceil(filteredPrompts.length / PER_PAGE);
+  currentPage = Math.max(1, Math.min(total, currentPage + dir));
+  renderPrompts();
+  document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+}
+
+function goPage(n) {
+  currentPage = n;
+  renderPrompts();
+}
+
+function copyPrompt(id, btn) {
+  const p = PROMPTS.find(x => x.id === id);
+  navigator.clipboard.writeText(p.text).then(() => {
+    if (btn && btn.classList.contains('copy-btn')) {
+      const orig = btn.textContent;
+      btn.textContent = '✅ Copiado';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+    }
+    showToast();
+  });
+}
+
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function openModal(id) {
+  const p = PROMPTS.find(x => x.id === id);
+  activeModal = p;
+  document.getElementById('modal-badge').textContent = catLabel(p.cat);
+  document.getElementById('modal-badge').className = 'prompt-badge badge-' + p.cat;
+  document.getElementById('modal-title').textContent = p.title;
+  document.getElementById('modal-desc').textContent = p.desc;
+  document.getElementById('modal-text').textContent = p.text;
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+}
+
+function copyModal() {
+  if (!activeModal) return;
+  navigator.clipboard.writeText(activeModal.text).then(() => {
+    const btn = document.querySelector('.modal-copy-btn');
+    btn.textContent = '✅ ¡Copiado al portapapeles!';
+    setTimeout(() => btn.textContent = '📋 Copiar prompt completo', 2000);
+    showToast();
+  });
+}
+
+function handleSubscribe(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = '✅ ¡Suscrito!';
+  btn.style.background = 'var(--green)';
+  setTimeout(() => { btn.textContent = 'Suscribirme →'; btn.style.background = ''; }, 3000);
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+renderPrompts();
+</script>
+</body>
+</html>
