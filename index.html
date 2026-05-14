@@ -802,7 +802,8 @@
   <span class="section-label">📬 Newsletter</span>
   <h2>Únete a la comunidad PromptNova</h2>
   <p>Recibe nuevos prompts, tips y recursos exclusivos cada semana. Gratis, siempre.</p>
-  <form class="email-form" onsubmit="handleSubscribe(event)">
+<form class="email-form" name="suscripcion" method="POST" data-netlify="true" onsubmit="handleSubscribe(event)">
+  <input type="hidden" name="form-name" value="suscripcion">
     <input type="email" placeholder="tu@email.com" required>
     <button class="btn-primary" type="submit">Suscribirme →</button>
   </form>
@@ -1057,10 +1058,23 @@ function copyModal() {
 
 function handleSubscribe(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = '✅ ¡Suscrito!';
-  btn.style.background = 'var(--green)';
-  setTimeout(() => { btn.textContent = 'Suscribirme →'; btn.style.background = ''; }, 3000);
+  const form = e.target;
+  const data = new FormData(form);
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(data).toString()
+  })
+  .then(() => {
+    const btn = form.querySelector('button');
+    btn.textContent = '✅ ¡Suscrito!';
+    btn.style.background = 'var(--green)';
+    form.reset();
+    setTimeout(() => { btn.textContent = 'Suscribirme →'; btn.style.background = ''; }, 3000);
+  })
+  .catch(() => {
+    alert('Error al suscribirse. Inténtalo de nuevo.');
+  });
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
