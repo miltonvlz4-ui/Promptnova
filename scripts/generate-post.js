@@ -88,9 +88,17 @@ El campo html debe contener:
   }
 
   const data = await response.json();
-  const raw = data.choices[0].message.content.trim();
-  const clean = raw.replace(/^```json\s*/i, "").replace(/```\s*$/i, "").trim();
-  return JSON.parse(clean);
+const raw = data.choices[0].message.content.trim();
+  const clean = raw
+    .replace(/^```json\s*/i, "")
+    .replace(/```\s*$/i, "")
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, "")
+    .trim();
+
+  // Extraer solo el bloque JSON si hay texto extra alrededor
+  const match = clean.match(/\{[\s\S]*\}/);
+  if (!match) throw new Error("No se encontró JSON válido en la respuesta");
+  return JSON.parse(match[0]);
 }
 
 function savePost(data, topic) {
