@@ -589,14 +589,47 @@
       <h2>Aprende a usar la IA</h2>
       <p>Artículos, guías y tutoriales para sacarle el máximo partido a los prompts.</p>
     </div>
-    <div class="blog-grid">
-      <div class="blog-card">
-        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(124,111,247,0.3),rgba(168,156,255,0.1))">🧠</div>
-        <div class="blog-body">
-          <div class="blog-meta">
-            <span class="blog-tag">Guía</span>
-            <span class="blog-date">12 enero 2025</span>
+ <div class="blog-grid" id="blog-grid">
+  <!-- Los posts se cargan automáticamente -->
+</div>
+<script>
+  const EMOJIS = ['🧠','⚡','🎨','📊','🔧','🎓','🚀','💡','✨','🤖'];
+  const GRADIENTS = [
+    'linear-gradient(135deg,rgba(124,111,247,0.3),rgba(168,156,255,0.1))',
+    'linear-gradient(135deg,rgba(244,200,74,0.2),rgba(251,146,60,0.1))',
+    'linear-gradient(135deg,rgba(45,212,191,0.2),rgba(74,222,128,0.1))',
+    'linear-gradient(135deg,rgba(244,114,182,0.2),rgba(168,85,247,0.1))',
+    'linear-gradient(135deg,rgba(251,146,60,0.2),rgba(244,200,74,0.1))',
+    'linear-gradient(135deg,rgba(74,222,128,0.2),rgba(45,212,191,0.1))',
+  ];
+
+  fetch('./posts/index.json')
+    .then(r => r.json())
+    .then(posts => {
+      const grid = document.getElementById('blog-grid');
+      grid.innerHTML = posts.slice(0, 6).map((p, i) => `
+        <div class="blog-card" onclick="window.location.href='./posts/${p.slug}'">
+          <div class="blog-thumb" style="background:${GRADIENTS[i % GRADIENTS.length]}">
+            ${EMOJIS[i % EMOJIS.length]}
           </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-tag">${p.tags?.[0] || 'IA'}</span>
+              <span class="blog-date">${p.date}</span>
+            </div>
+            <h3>${p.title}</h3>
+            <p>${p.description}</p>
+            <a href="./posts/${p.slug}" class="blog-read">Leer artículo →</a>
+          </div>
+        </div>
+      `).join('');
+    })
+    .catch(() => {
+      // Si no hay posts aún, no muestra nada
+      document.getElementById('blog-grid').innerHTML = 
+        '<p style="color:var(--muted);text-align:center;grid-column:1/-1">Pronto nuevos artículos ✨</p>';
+    });
+</script>
           <h3>Cómo escribir el prompt perfecto: guía completa para principiantes</h3>
           <p>Aprende las técnicas fundamentales de prompt engineering que usan los profesionales para obtener resultados increíbles con cualquier IA.</p>
           <a href="#" class="blog-read">Leer artículo →</a>
