@@ -1,5 +1,17 @@
 [
   {
+    "slug": "2026-05-15-escribiendo-emails-con-ia.html",
+    "title": "Escribiendo emails con IA",
+    "description": "Aprende a escribir emails profesionales con inteligencia artificial",
+    "date": "2026-05-15",
+    "tags": [
+      "IA",
+      "emails profesionales",
+      "prompt engineering"
+    ],
+    "readingTime": 10
+  },
+  {
     "slug": "2026-05-15-asistente-personal.html",
     "title": "Asistente Personal",
     "description": "Construye un asistente personal con ChatGPT y prompts",
