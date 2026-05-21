@@ -1,5 +1,257 @@
 [
   {
+    "slug": "2026-05-20-prompts-creativos.html",
+    "title": "Prompts creativos",
+    "description": "Descubre los prompts más creativos para diseñadores gráficos y mejora tus habilidades",
+    "date": "2026-05-20",
+    "tags": [
+      "diseño gráfico",
+      "inteligencia artificial",
+      "prompt engineering"
+    ],
+    "readingTime": 5
+  },
+  {
+    "slug": "2026-05-20-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo aprender cualquier cosa de manera rápida y eficiente con prompts",
+    "date": "2026-05-20",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompts"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-19-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Aprende a utilizar ChatGPT en tu trabajo diario con esta guía práctica",
+    "date": "2026-05-19",
+    "tags": [
+      "ChatGPT",
+      "Inteligencia Artificial",
+      "Productividad"
+    ],
+    "readingTime": 5
+  },
+  {
+    "slug": "2026-05-19-imagenes-perfectas-con-ia.html",
+    "title": "Imágenes perfectas con IA",
+    "description": "Aprende a generar imágenes perfectas con IA utilizando prompts",
+    "date": "2026-05-19",
+    "tags": [
+      "IA",
+      "Imágenes",
+      "Prompts"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-19-asistente-personal-con-chatgpt.html",
+    "title": "Asistente Personal con ChatGPT",
+    "description": "Aprende a construir un asistente personal con ChatGPT y prompts",
+    "date": "2026-05-19",
+    "tags": [
+      "ChatGPT",
+      "Asistente Personal",
+      "Inteligencia Artificial"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-18-aprende-10x-mas-rapido.html",
+    "title": "Aprende 10x Más Rápido",
+    "description": "Descubre cómo usar prompts para aprender cualquier cosa 10 veces más rápido",
+    "date": "2026-05-18",
+    "tags": [
+      "prompts",
+      "aprendizaje",
+      "inteligencia artificial"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-18-prompts-de-marketing.html",
+    "title": "Prompts de Marketing",
+    "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus estrategias",
+    "date": "2026-05-18",
+    "tags": [
+      "marketing",
+      "prompts",
+      "inteligencia artificial"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-18-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para desarrolladores",
+    "date": "2026-05-18",
+    "tags": [
+      "inteligencia artificial",
+      "prompt engineering",
+      "desarrollo de software"
+    ],
+    "readingTime": 5
+  },
+  {
+    "slug": "2026-05-17-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo aprender cualquier cosa 10 veces más rápido con prompts",
+    "date": "2026-05-17",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompt engineering"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-17-automatiza-tu-negocio.html",
+    "title": "Automatiza tu negocio",
+    "description": "Aprende a automatizar procesos con prompts inteligentes",
+    "date": "2026-05-17",
+    "tags": [
+      "automatización",
+      "negocios",
+      "IA"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-17-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Mejora tu productividad con ChatGPT en tu trabajo diario",
+    "date": "2026-05-17",
+    "tags": [
+      "ChatGPT",
+      "Productividad",
+      "IA"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-16-contenido-viral.html",
+    "title": "Contenido Viral",
+    "description": "Crea contenido viral en redes sociales con prompts avanzados",
+    "date": "2026-05-16",
+    "tags": [
+      "prompts",
+      "contenido viral",
+      "redes sociales"
+    ],
+    "readingTime": 5
+  },
+  {
+    "slug": "2026-05-16-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Aprende a utilizar ChatGPT en tu trabajo diario de manera efectiva",
+    "date": "2026-05-16",
+    "tags": [
+      "ChatGPT",
+      "Inteligencia Artificial",
+      "Productividad"
+    ],
+    "readingTime": 5
+  },
+  {
+    "slug": "2026-05-16-prompts-virales.html",
+    "title": "Prompts Virales",
+    "description": "Aprende a crear contenido viral con prompts avanzados",
+    "date": "2026-05-16",
+    "tags": [
+      "prompts",
+      "contenido viral",
+      "redes sociales"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-15-escribiendo-emails-con-ia.html",
+    "title": "Escribiendo emails con IA",
+    "description": "Aprende a escribir emails profesionales con inteligencia artificial",
+    "date": "2026-05-15",
+    "tags": [
+      "IA",
+      "emails profesionales",
+      "prompt engineering"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-15-asistente-personal.html",
+    "title": "Asistente Personal",
+    "description": "Construye un asistente personal con ChatGPT y prompts",
+    "date": "2026-05-15",
+    "tags": [
+      "Inteligencia Artificial",
+      "ChatGPT",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-15-prompts-infalibles.html",
+    "title": "Prompts infalibles",
+    "description": "Aprende a escribir prompts efectivos para IA con ejemplos prácticos",
+    "date": "2026-05-15",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "IA"
+    ],
+    "readingTime": 5
+  },
+  {
+    "slug": "2026-05-14-prompts-de-marketing.html",
+    "title": "Prompts de marketing",
+    "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas",
+    "date": "2026-05-14",
+    "tags": [
+      "marketing",
+      "prompts",
+      "inteligencia artificial"
+    ],
+    "readingTime": 5
+  },
+  {
+    "slug": "2026-05-14-escribiendo-emails-con-ia.html",
+    "title": "Escribiendo emails con IA",
+    "description": "Descubre los mejores prompts para escribir emails profesionales con inteligencia artificial",
+    "date": "2026-05-14",
+    "tags": [
+      "IA",
+      "emails profesionales",
+      "prompt engineering"
+    ],
+    "readingTime": 5
+  },
+  {
+    "slug": "2026-05-14-escribiendo-emails-profesionales.html",
+    "title": "Escribiendo Emails Profesionales",
+    "description": "Aprende a escribir emails profesionales con IA y mejora tu comunicación laboral",
+    "date": "2026-05-14",
+    "tags": [
+      "IA",
+      "Emails Profesionales",
+      "Comunicación Laboral"
+    ],
+    "readingTime": 10
+  },
+  {
+    "slug": "2026-05-14-crea-un-curso-online.html",
+    "title": "Crea un curso online",
+    "description": "Aprende a crear un curso online desde cero con ChatGPT",
+    "date": "2026-05-14",
+    "tags": [
+      "ChatGPT",
+      "curso online",
+      "educación en línea"
+    ],
+    "readingTime": 15
+  },
+  {
     "slug": "2026-05-14-prompt-engineering.html",
     "title": "Prompt Engineering",
     "description": "Aprende trucos de prompt engineering para desarrolladores",
