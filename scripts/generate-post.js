@@ -117,23 +117,72 @@ function savePost(data, topic) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${data.title} | PromptNova</title>
   <meta name="description" content="${data.description}">
-  <link rel="stylesheet" href="../style.css">
+  <meta property="og:title" content="${data.title} | PromptNova">
+  <meta property="og:description" content="${data.description}">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <!-- Ruta absoluta: funciona desde /posts/ sin romper estilos -->
+  <link rel="stylesheet" href="/styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <nav><a href="../index.html">← PromptNova</a></nav>
-  </header>
-  <main class="post">
-    <h1>${data.title}</h1>
-    <p class="meta">
-      <time datetime="${date}">${date}</time> · 
-      ${data.readingTime} min de lectura · 
-      ${data.tags.map((t) => `<span class="tag">${t}</span>`).join(" ")}
-    </p>
-    ${data.html}
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">🪐 PromptNova</a>
+      <ul class="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/#posts">Prompts</a></li>
+        <li><a href="/#categorias">Categorías</a></li>
+        <li><a href="/#blog" class="active">Blog</a></li>
+        <li><a href="/#sobre-mi">Sobre mí</a></li>
+        <li><a href="/privacidad.html">Privacidad</a></li>
+      </ul>
+      <a href="/#posts" class="nav-cta">✨ Explorar</a>
+    </div>
+  </nav>
+
+  <main class="post-container">
+    <div class="post-header">
+      <a href="/" class="post-back">← Volver al inicio</a>
+      <span class="post-tag">${data.tags[0] || "IA"}</span>
+      <h1>${data.title}</h1>
+      <p class="post-meta">
+        <time datetime="${date}">${date}</time> · 
+        ${data.readingTime} min de lectura · 
+        ${data.tags.map((t) => `<span class="tag">${t}</span>`).join(" ")}
+      </p>
+    </div>
+
+    <div class="post-content">
+      ${data.html}
+    </div>
   </main>
+
   <footer>
-    <p>© PromptNova ${new Date().getFullYear()}</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">🪐 PromptNova</a>
+        <p>Tu copiloto en el universo de la inteligencia artificial.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="/#posts">Todos los prompts</a></li>
+          <li><a href="/#blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacidad.html">Política de Privacidad</a></li>
+          <li><a href="/terminos.html">Términos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© PromptNova ${new Date().getFullYear()} — Todos los derechos reservados.</span>
+    </div>
   </footer>
 </body>
 </html>`;
