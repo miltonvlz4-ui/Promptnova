@@ -10,8 +10,8 @@ for (const file of files) {
   const filepath = path.join(postsDir, file);
   let html = fs.readFileSync(filepath, "utf8");
 
-  // Saltar si ya tiene el base href correcto
-  if (html.includes('<base href="/Promptnova/">')) {
+  // Saltar si ya está completamente actualizado
+  if (html.includes('<base href="/Promptnova/">') && html.includes('class="post-container"')) {
     console.log(`⏭️  Ya actualizado: ${file}`);
     continue;
   }
@@ -19,19 +19,26 @@ for (const file of files) {
   // 1. Eliminar <style> inline previos
   html = html.replace(/<style>[\s\S]*?<\/style>\s*/g, "");
 
-  // 2. Eliminar Google Fonts duplicados
+  // 2. Eliminar Google Fonts y preconnect duplicados
   html = html.replace(/<link[^>]*fonts\.googleapis\.com[^>]*>\s*/g, "");
   html = html.replace(/<link[^>]*fonts\.gstatic\.com[^>]*>\s*/g, "");
   html = html.replace(/<link[^>]*preconnect[^>]*>\s*/g, "");
 
-  // 3. Eliminar cualquier link CSS antiguo
+  // 3. Eliminar AdSense duplicado
+  html = html.replace(/<script async src="https:\/\/pagead2[^>]*><\/script>\s*/g, "");
+
+  // 4. Eliminar cualquier link CSS antiguo
   html = html
     .replace(/<link rel="stylesheet" href="\.\.\/style\.css">/g, "")
     .replace(/<link rel="stylesheet" href="\.\.\/styles\.css">/g, "")
     .replace(/<link rel="stylesheet" href="\.\/styles\.css">/g, "")
-    .replace(/<link rel="stylesheet" href="\/styles\.css">/g, "");
+    .replace(/<link rel="stylesheet" href="\/styles\.css">/g, "")
+    .replace(/<link rel="stylesheet" href="styles\.css">/g, "");
 
-  // 4. Insertar base href + fuentes + CSS correcto justo después de <meta charset>
+  // 5. Eliminar base href previo si existe
+  html = html.replace(/<base href="[^"]*">\s*/g, "");
+
+  // 6. Insertar base href + fuentes + CSS + AdSense justo después de <meta charset>
   const newLinks = `  <base href="/Promptnova/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -43,7 +50,7 @@ for (const file of files) {
     `<meta charset="UTF-8">\n${newLinks}`
   );
 
-  // 5. Reemplazar nav/header antiguo
+  // 7. Reemplazar nav/header antiguo
   const oldHeader = /<header>[\s\S]*?<\/header>/;
   const newNav = `<nav>
     <div class="nav-inner">
@@ -64,13 +71,42 @@ for (const file of files) {
     html = html.replace(oldHeader, newNav);
   }
 
-  // Si el nav ya existe pero con rutas / en vez de relativas, actualizarlo
+  // 8. Corregir enlaces con rutas absolutas en el nav existente
   html = html.replace(/href="\/#/g, 'href="index.html#');
   html = html.replace(/href="\/"/g, 'href="index.html"');
   html = html.replace(/href="\/privacidad\.html"/g, 'href="privacidad.html"');
   html = html.replace(/href="\/terminos\.html"/g, 'href="terminos.html"');
 
-  // 6. Actualizar footer
+  // 9. *** CLAVE *** Reemplazar <main class="post"> por la estructura correcta
+  // Extraer el contenido del main antiguo
+  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/);
+  if (mainMatch) {
+    const mainContent = mainMatch[1];
+
+    // Extraer h1, meta y article por separado
+    const h1Match = mainContent.match(/<h1>([\s\S]*?)<\/h1>/);
+    const metaMatch = mainContent.match(/<p class="meta">([\s\S]*?)<\/p>/);
+    const articleMatch = mainContent.match(/<article>([\s\S]*?)<\/article>/);
+
+    const h1 = h1Match ? h1Match[1] : "";
+    const meta = metaMatch ? metaMatch[1] : "";
+    const articleContent = articleMatch ? articleMatch[1] : mainContent;
+
+    const newMain = `<main class="post-container">
+    <div class="post-header">
+      <a href="index.html" class="post-back">← Volver al inicio</a>
+      <h1>${h1}</h1>
+      <p class="post-meta">${meta}</p>
+    </div>
+    <div class="post-content">
+      ${articleContent}
+    </div>
+  </main>`;
+
+    html = html.replace(/<main[\s\S]*?<\/main>/, newMain);
+  }
+
+  // 10. Actualizar footer
   const oldFooter = /<footer>[\s\S]*?<\/footer>/;
   const newFooter = `<footer>
     <div class="footer-inner">
