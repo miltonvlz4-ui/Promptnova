@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <base href="/Promptnova/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ✅ SEO: title y meta description son obligatorios para AdSense -->
@@ -28,7 +29,7 @@
     Sin esto, cualquier página en subcarpeta busca ./styles.css
     relativo a SU carpeta y no lo encuentra → formato roto.
   -->
-  <link rel="stylesheet" href="/styles.css">
+ <link rel="stylesheet" href="styles.css">
 
   <!-- ✅ AdSense: el script va en <head>, una sola vez, sin duplicar -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
@@ -326,7 +327,7 @@
   </div>
 
   <!-- ✅ app.js con ruta absoluta para que funcione desde cualquier subcarpeta -->
-  <script src="/app.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
