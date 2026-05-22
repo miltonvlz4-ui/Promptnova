@@ -3,10 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PromptNova — Tu universo de prompts IA</title>
+
+  <!-- ✅ SEO: title y meta description son obligatorios para AdSense -->
+  <title>PromptNova — Los mejores prompts para ChatGPT, Claude y Gemini</title>
+  <meta name="description" content="Descubre más de 100 prompts listos para usar en ChatGPT, Claude y Gemini. Ahorra tiempo y obtén resultados profesionales con IA en segundos.">
+
+  <!-- ✅ Open Graph básico (buena señal para AdSense) -->
+  <meta property="og:title" content="PromptNova — Tu universo de prompts IA">
+  <meta property="og:description" content="Más de 100 prompts probados para ChatGPT, Claude y Gemini. Resultados profesionales en segundos.">
+  <meta property="og:type" content="website">
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+
+  <!--
+    ✅ RUTA DEL CSS:
+    Usa una ruta ABSOLUTA desde la raíz del dominio (/styles.css)
+    en lugar de relativa (./styles.css).
+    Esto garantiza que el CSS cargue correctamente tanto en:
+      - /index.html  (raíz)
+      - /blog/post.html  (subcarpeta)
+      - /blog/otro-post.html  (subcarpeta)
+    Sin esto, cualquier página en subcarpeta busca ./styles.css
+    relativo a SU carpeta y no lo encuentra → formato roto.
+  -->
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- ✅ AdSense: el script va en <head>, una sola vez, sin duplicar -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -14,13 +38,15 @@
   <!-- ── NAV ── -->
   <nav>
     <div class="nav-inner">
-      <a href="./" class="logo">🪐 PromptNova</a>
+      <a href="/" class="logo">🪐 PromptNova</a>
       <ul class="nav-links">
-        <li><a href="./" class="active">Inicio</a></li>
+        <li><a href="/" class="active">Inicio</a></li>
         <li><a href="#posts">Prompts</a></li>
         <li><a href="#categorias">Categorías</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
+        <!-- ✅ AdSense requiere enlaces visibles a Política de Privacidad -->
+        <li><a href="/privacidad.html">Privacidad</a></li>
       </ul>
       <div class="nav-search" onclick="document.getElementById('search-input').focus()">
         🔍 <span style="font-size:0.85rem">Buscar prompts...</span>
@@ -29,12 +55,17 @@
     </div>
   </nav>
 
-  <!-- ── AD TOP ── -->
+  <!--
+    ✅ ANUNCIO SUPERIOR — AdSense
+    IMPORTANTE: sustituye data-ad-slot="XXXXXXXXXX" por el ID numérico
+    real de tu bloque de anuncios en Google AdSense.
+    "auto" NO es un valor válido y hace que el anuncio no se muestre.
+  -->
   <div class="ad-banner">
     <ins class="adsbygoogle"
       style="display:block"
       data-ad-client="ca-pub-7965643620841539"
-      data-ad-slot="auto"
+      data-ad-slot="XXXXXXXXXX"
       data-ad-format="auto"
       data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -139,12 +170,12 @@
     </div>
   </section>
 
-  <!-- ── AD MIDDLE ── -->
+  <!-- ✅ ANUNCIO INTERMEDIO -->
   <div class="ad-banner">
     <ins class="adsbygoogle"
       style="display:block"
       data-ad-client="ca-pub-7965643620841539"
-      data-ad-slot="auto"
+      data-ad-slot="XXXXXXXXXX"
       data-ad-format="auto"
       data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -158,18 +189,16 @@
         <h2>Aprende a usar la IA</h2>
         <p>Artículos, guías y tutoriales para sacarle el máximo partido a los prompts.</p>
       </div>
-      <div class="blog-grid" id="blog-grid">
-        <!-- Los posts se cargan automáticamente -->
-      </div>
+      <div class="blog-grid" id="blog-grid"></div>
     </div>
   </section>
 
-  <!-- ── AD BOTTOM ── -->
+  <!-- ✅ ANUNCIO INFERIOR -->
   <div class="ad-banner">
     <ins class="adsbygoogle"
       style="display:block"
       data-ad-client="ca-pub-7965643620841539"
-      data-ad-slot="auto"
+      data-ad-slot="XXXXXXXXXX"
       data-ad-format="auto"
       data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -233,7 +262,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="./" class="logo">🪐 PromptNova</a>
+        <a href="/" class="logo">🪐 PromptNova</a>
         <p>Tu copiloto en el universo de la inteligencia artificial. Prompts probados para ChatGPT, Claude y Gemini.</p>
         <div class="social-links">
           <a href="#" class="social-link" title="Twitter">𝕏</a>
@@ -263,10 +292,11 @@
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="#">Términos de uso</a></li>
-          <li><a href="#">Privacidad</a></li>
-          <li><a href="#">Aviso Legal</a></li>
-          <li><a href="#">Contacto</a></li>
+          <!-- ✅ AdSense exige páginas de privacidad y términos accesibles -->
+          <li><a href="/privacidad.html">Política de Privacidad</a></li>
+          <li><a href="/terminos.html">Términos de Uso</a></li>
+          <li><a href="/aviso-legal.html">Aviso Legal</a></li>
+          <li><a href="mailto:contacto@promptnova.com">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -295,8 +325,8 @@
     </div>
   </div>
 
-  <!-- ── SCRIPTS ── -->
-  <script src="./app.js"></script>
+  <!-- ✅ app.js con ruta absoluta para que funcione desde cualquier subcarpeta -->
+  <script src="/app.js"></script>
 
 </body>
 </html>
