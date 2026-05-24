@@ -21,6 +21,51 @@ const TOPICS = [
   "Prompts para generar imágenes perfectas con IA",
 ];
 
+// ── CLASIFICACIÓN AUTOMÁTICA ──
+// Mapeo de palabras clave → categoría
+const CATEGORY_RULES = [
+  {
+    cat: "programacion",
+    keywords: ["developer", "código", "codigo", "api", "software", "programar", "programación", "programacion", "developer", "script", "web", "app", "github", "función", "base de datos", "backend", "frontend"],
+  },
+  {
+    cat: "marketing",
+    keywords: ["marketing", "viral", "redes sociales", "instagram", "seo", "contenido", "publicidad", "anuncio", "campaña", "audiencia", "engagement", "copy", "copywriting", "tiktok", "youtube"],
+  },
+  {
+    cat: "emprendimiento",
+    keywords: ["negocio", "startup", "emprender", "empresa", "inversión", "inversion", "producto", "vender", "ventas", "cliente", "automatiza", "automatizar", "ingresos", "monetizar"],
+  },
+  {
+    cat: "estudio",
+    keywords: ["aprender", "aprendizaje", "estudiar", "estudio", "curso", "educación", "educacion", "enseñar", "profesor", "examen", "conocimiento", "habilidad", "idioma"],
+  },
+  {
+    cat: "trabajo",
+    keywords: ["trabajo", "email", "profesional", "oficina", "reunión", "reunion", "productividad", "carrera", "cv", "entrevista", "jefe", "empresa", "laboral", "informe", "presentación"],
+  },
+  {
+    cat: "personal",
+    keywords: ["personal", "hábito", "habito", "motivación", "motivacion", "creatividad", "bienestar", "salud", "mente", "meditación", "meditacion", "psicología", "psicologia", "felicidad", "coach", "vida"],
+  },
+];
+
+function classifyPost(title, tags = []) {
+  const text = `${title} ${tags.join(" ")}`.toLowerCase();
+
+  // Contar coincidencias por categoría
+  const scores = CATEGORY_RULES.map((rule) => ({
+    cat: rule.cat,
+    score: rule.keywords.filter((kw) => text.includes(kw)).length,
+  }));
+
+  // Ordenar por puntuación y coger la mayor
+  scores.sort((a, b) => b.score - a.score);
+
+  // Si no hay ninguna coincidencia clara, devolver 'general'
+  return scores[0].score > 0 ? scores[0].cat : "general";
+}
+
 function slugify(text) {
   return text
     .toLowerCase()
@@ -88,14 +133,13 @@ El campo html debe contener:
   }
 
   const data = await response.json();
-const raw = data.choices[0].message.content.trim();
+  const raw = data.choices[0].message.content.trim();
   const clean = raw
     .replace(/^```json\s*/i, "")
     .replace(/```\s*$/i, "")
     .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, "")
     .trim();
 
-  // Extraer solo el bloque JSON si hay texto extra alrededor
   const match = clean.match(/\{[\s\S]*\}/);
   if (!match) throw new Error("No se encontró JSON válido en la respuesta");
   return JSON.parse(match[0]);
@@ -110,6 +154,10 @@ function savePost(data, topic) {
   const filename = `${date}-${slug}.html`;
   const filepath = path.join(postsDir, filename);
 
+  // Clasificar automáticamente la categoría
+  const category = classifyPost(data.title, data.tags);
+  console.log(`🏷️  Categoría detectada: ${category}`);
+
   const fullHtml = `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -123,7 +171,6 @@ function savePost(data, topic) {
   <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <!-- Ruta absoluta: funciona desde /posts/ sin romper estilos -->
   <link rel="stylesheet" href="/styles.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
 </head>
@@ -207,6 +254,7 @@ function savePost(data, topic) {
       date,
       tags: data.tags,
       readingTime: data.readingTime,
+      category,                          // ← campo nuevo añadido
     });
   }
 
