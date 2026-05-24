@@ -182,22 +182,32 @@ function renderBlog() {
   fetch('./posts/index.json')
     .then(r => r.json())
     .then(posts => {
-      grid.innerHTML = posts.slice(0, 6).map((p, i) => `
-        <div class="blog-card" onclick="window.location.href='./posts/${p.slug}'">
-          <div class="blog-thumb" style="background:${GRADIENTS[i % GRADIENTS.length]}">
-            ${EMOJIS[i % EMOJIS.length]}
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta">
-              <span class="blog-tag">${p.tags?.[0] || 'IA'}</span>
-              <span class="blog-date">${p.date}</span>
+      if (!posts || posts.length === 0) {
+        grid.innerHTML = '<p style="color:var(--muted);text-align:center;grid-column:1/-1">Pronto nuevos artículos ✨</p>';
+        return;
+      }
+
+      grid.innerHTML = posts.slice(0, 6).map((p, i) => {
+        const slug = p.slug || p.title?.toLowerCase().replace(/\s+/g, '-');
+        const htmlFile = `./posts/${slug}.html`;
+        
+        return `
+          <div class="blog-card" onclick="window.location.href='${htmlFile}'">
+            <div class="blog-thumb" style="background:${GRADIENTS[i % GRADIENTS.length]}">
+              ${EMOJIS[i % EMOJIS.length]}
             </div>
-            <h3>${p.title}</h3>
-            <p>${p.description}</p>
-            <a href="./posts/${p.slug}" class="blog-read">Leer artículo →</a>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">${p.tags?.[0] || 'IA'}</span>
+                <span class="blog-date">${p.date || new Date().toLocaleDateString('es-ES')}</span>
+              </div>
+              <h3>${p.title}</h3>
+              <p>${p.description}</p>
+              <a href="${htmlFile}" class="blog-read">Leer artículo →</a>
+            </div>
           </div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
     })
     .catch(() => {
       grid.innerHTML = '<p style="color:var(--muted);text-align:center;grid-column:1/-1">Pronto nuevos artículos ✨</p>';
