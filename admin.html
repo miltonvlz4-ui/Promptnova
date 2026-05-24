@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <base href="/Promptnova/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — PromptNova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .admin-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(124,111,247,0.05), rgba(168,156,255,0.05));
+      border-radius: 16px;
+      border: 1px solid rgba(124,111,247,0.2);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid rgba(124,111,247,0.3);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 0 0 3px rgba(124,111,247,0.1);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .classifier-preview {
+      background: rgba(45,212,191,0.1);
+      border: 1px solid rgba(45,212,191,0.3);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .classifier-preview.active {
+      display: block;
+    }
+
+    .classifier-preview-header {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .category-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #2dd4bf, #4ade80);
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn-submit,
+    .btn-reset {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #7c6ff7, #a89cff);
+      color: white;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(124,111,247,0.4);
+    }
+
+    .btn-reset {
+      background: rgba(124,111,247,0.1);
+      color: var(--text);
+      border: 1px solid rgba(124,111,247,0.3);
+    }
+
+    .btn-reset:hover {
+      background: rgba(124,111,247,0.2);
+    }
+
+    .success-message {
+      display: none;
+      background: rgba(45,212,191,0.15);
+      border: 1px solid rgba(45,212,191,0.5);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      color: #2dd4bf;
+      animation: slideDown 0.3s ease;
+    }
+
+    .success-message.show {
+      display: block;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .tools-select {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .tool-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(124,111,247,0.1);
+      border: 1px solid rgba(124,111,247,0.3);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tool-checkbox input {
+      width: auto;
+      margin: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .tool-checkbox:has(input:checked) {
+      background: rgba(124,111,247,0.3);
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">🪐 PromptNova</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#posts">Prompts</a></li>
+        <li><a href="index.html#categorias">Categorías</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="privacidad.html">Privacidad</a></li>
+      </ul>
+      <a href="index.html#posts" class="nav-cta">✨ Explorar</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="admin-container">
+      <h1 style="margin-bottom: 0.5rem">📝 Añadir nuevo prompt</h1>
+      <p style="color: var(--muted); margin-bottom: 2rem">La categoría se asignará automáticamente basada en el contenido</p>
+
+      <div class="success-message" id="successMessage">
+        ✅ ¡Prompt añadido exitosamente! Recargando...
+      </div>
+
+      <form id="promptForm">
+        <div class="form-group">
+          <label for="title">Título del prompt *</label>
+          <input 
+            type="text" 
+            id="title" 
+            placeholder="ej: Redacta un email profesional" 
+            required
+            oninput="updateClassification()"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="description">Descripción *</label>
+          <input 
+            type="text" 
+            id="description" 
+            placeholder="ej: Genera emails formales con llamada a la acción" 
+            required
+            oninput="updateClassification()"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="text">Texto del prompt *</label>
+          <textarea 
+            id="text" 
+            placeholder="Ej: Actúa como un experto en comunicación corporativa..." 
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Herramientas compatibles</label>
+          <div class="tools-select">
+            <label class="tool-checkbox">
+              <input type="checkbox" name="tools" value="ChatGPT" checked>
+              ChatGPT
+            </label>
+            <label class="tool-checkbox">
+              <input type="checkbox" name="tools" value="Claude" checked>
+              Claude
+            </label>
+            <label class="tool-checkbox">
+              <input type="checkbox" name="tools" value="Gemini">
+              Gemini
+            </label>
+          </div>
+        </div>
+
+        <div class="classifier-preview" id="classifierPreview">
+          <div class="classifier-preview-header">🎯 Categoría detectada:</div>
+          <span class="category-badge" id="categoryBadge">Analizando...</span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">➕ Añadir Prompt</button>
+          <button type="reset" class="btn-reset">Limpiar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">🪐 PromptNova</a>
+        <p>Tu copiloto en el universo de la inteligencia artificial.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/classifier.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function updateClassification() {
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+
+      if (title.trim() || description.trim()) {
+        const category = classifyPrompt(title, description);
+        const categoryNames = {
+          trabajo: '💼 Trabajo',
+          marketing: '📣 Marketing',
+          programacion: '💻 Programación',
+          estudio: '📚 Estudio',
+          personal: '❤️ Personal',
+          emprendimiento: '🚀 Emprendimiento'
+        };
+
+        document.getElementById('classifierPreview').classList.add('active');
+        document.getElementById('categoryBadge').textContent = categoryNames[category];
+        document.getElementById('categoryBadge').className = `category-badge badge-${category}`;
+      } else {
+        document.getElementById('classifierPreview').classList.remove('active');
+      }
+    }
+
+    document.getElementById('promptForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const text = document.getElementById('text').value;
+      const tools = Array.from(document.querySelectorAll('input[name="tools"]:checked'))
+        .map(el => el.value);
+
+      // Obtener nuevo ID
+      const newId = Math.max(...PROMPTS.map(p => p.id)) + 1;
+
+      // Crear prompt con clasificación automática
+      const newPrompt = addAutoClassifiedPrompt({
+        id: newId,
+        title,
+        description,
+        text,
+        tools: tools.length > 0 ? tools : ['ChatGPT', 'Claude']
+      });
+
+      // Añadir a la lista global
+      PROMPTS.push(newPrompt);
+
+      // Guardar en localStorage
+      localStorage.setItem('pn_custom_prompts', JSON.stringify(PROMPTS));
+
+      // Mostrar mensaje de éxito
+      document.getElementById('successMessage').classList.add('show');
+
+      // Limpiar formulario
+      document.getElementById('promptForm').reset();
+      document.getElementById('classifierPreview').classList.remove('active');
+
+      // Redirigir después de 2 segundos
+      setTimeout(() => {
+        window.location.href = 'index.html#categorias';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
