@@ -1,319 +1,532 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <base href="/Promptnova/">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ✅ SEO: title y meta description son obligatorios para AdSense -->
-  <title>PromptNova — Los mejores prompts para ChatGPT, Claude y Gemini</title>
-  <meta name="description" content="Descubre más de 100 prompts listos para usar en ChatGPT, Claude y Gemini. Ahorra tiempo y obtén resultados profesionales con IA en segundos.">
-
-  <!-- ✅ Open Graph básico (buena señal para AdSense) -->
-  <meta property="og:title" content="PromptNova — Tu universo de prompts IA">
-  <meta property="og:description" content="Más de 100 prompts probados para ChatGPT, Claude y Gemini. Resultados profesionales en segundos.">
-  <meta property="og:type" content="website">
-
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-
-  <!--
-    ✅ RUTA DEL CSS:
-    Usa una ruta ABSOLUTA desde la raíz del dominio (/styles.css)
-    en lugar de relativa (./styles.css).
-    Esto garantiza que el CSS cargue correctamente tanto en:
-      - /index.html  (raíz)
-      - /blog/post.html  (subcarpeta)
-      - /blog/otro-post.html  (subcarpeta)
-    Sin esto, cualquier página en subcarpeta busca ./styles.css
-    relativo a SU carpeta y no lo encuentra → formato roto.
-  -->
- <link rel="stylesheet" href="styles.css">
-
-  <!-- ✅ AdSense: el script va en <head>, una sola vez, sin duplicar -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromptNova — Los mejores prompts para ChatGPT, Claude y Gemini</title>
+<meta name="description" content="Descubre más de 100 prompts listos para usar en ChatGPT, Claude y Gemini. Ahorra tiempo y obtén resultados profesionales con IA en segundos.">
+<meta property="og:title" content="PromptNova — Tu universo de prompts IA">
+<meta property="og:description" content="Más de 100 prompts probados para ChatGPT, Claude y Gemini. Resultados profesionales en segundos.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
-  <nav>
-    <div class="nav-inner">
-<a href="index.html" class="logo">🪐 PromptNova</a>
-      <ul class="nav-links">
- <li><a href="index.html" class="active">Inicio</a></li>
-         <li><a href="#posts">Prompts</a></li>
-         <li><a href="#categorias">Categorías</a></li>
-         <li><a href="#blog">Blog</a></li>
-         <li><a href="#sobre-mi">Sobre mí</a></li>
-         <!-- ✅ AdSense requiere enlaces visibles a Política de Privacidad -->
-        <li><a href="privacidad.html">Privacidad</a></li>
-       </ul>
-       <div class="nav-search" onclick="document.getElementById('search-input').focus()">
-         🔍 <span style="font-size:0.85rem">Buscar prompts...</span>
-       </div>
-       <a href="#posts" class="nav-cta">✨ Explorar</a>
-     </div>
-   </nav>
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">🪐 PromptNova</a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Inicio</a></li>
+      <li><a href="#posts">Prompts</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="privacidad.html">Privacidad</a></li>
+    </ul>
+    <div class="nav-search" onclick="document.getElementById('search-input').focus()">
+      🔍 <span style="font-size:0.85rem">Buscar prompts...</span>
+    </div>
+    <a href="#posts" class="nav-cta">✨ Explorar</a>
+  </div>
+</nav>
 
-   <!--
-     ✅ ANUNCIO SUPERIOR — AdSense
-     IMPORTANTE: sustituye data-ad-slot="XXXXXXXXXX" por el ID numérico
-     real de tu bloque de anuncios en Google AdSense.
-     "auto" NO es un valor válido y hace que el anuncio no se muestre.
-   -->
-<!-- ── AD TOP (después del hero) ── -->
-<div class="ad-banner">
+<!-- AD TOP -->
+<div class="ad-banner" style="max-width:1200px;margin:1.5rem auto;padding:0 2rem;text-align:center">
   <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-7965643620841539"
-    data-ad-slot="TU_SLOT_ID_1"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
+       style="display:block"
+       data-ad-client="ca-pub-7965643620841539"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-dots"></div>
-    <div class="hero-content">
-      <div class="hero-badge fade-up">🪐 <span>+100</span> prompts IA listos para usar</div>
-      <h1 class="fade-up delay-1">Desata el poder<br>de la IA con <em>Prompts<br>que funcionan.</em></h1>
-      <p class="fade-up delay-2">Encuentra, copia y usa los mejores prompts para ChatGPT, Claude, Gemini y más. Resultados profesionales en segundos.</p>
-      <div class="hero-btns fade-up delay-3">
-         <button class="btn-primary" onclick="document.getElementById('posts').scrollIntoView({behavior:'smooth'})">🚀 Explorar Prompts</button>
-         <button class="btn-outline" onclick="document.getElementById('categorias').scrollIntoView({behavior:'smooth'})">⊞ Ver categorías</button>
-       </div>
-       <div class="hero-stats fade-up delay-3">
-         <div class="hero-stat"><div class="num">+100</div><div class="label">Prompts disponibles</div></div>
-         <div class="hero-stat"><div class="num">+5K</div><div class="label">Usuarios activos</div></div>
-         <div class="hero-stat"><div class="num">4.9/5</div><div class="label">Valoración media</div></div>
-         <div class="hero-stat"><div class="num">+50K</div><div class="label">Prompts copiados</div></div>
-       </div>
-     </div>
-   </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-badge fade-up">🪐 <span>+100</span> prompts IA listos para usar</div>
+    <h1 class="fade-up delay-1">Desata el poder<br>de la IA con <em>Prompts<br>que funcionan.</em></h1>
+    <p class="fade-up delay-2">Encuentra, copia y usa los mejores prompts para ChatGPT, Claude, Gemini y más. Resultados profesionales en segundos.</p>
+    <div class="hero-btns fade-up delay-3">
+      <button class="btn-primary" onclick="document.getElementById('posts').scrollIntoView({behavior:'smooth'})">🚀 Explorar Prompts</button>
+      <button class="btn-outline" onclick="document.getElementById('categorias').scrollIntoView({behavior:'smooth'})">⊞ Ver categorías</button>
+    </div>
+    <div class="hero-stats fade-up delay-3" id="hero-stats">
+      <!-- Rellenado por JS con datos reales -->
+    </div>
+  </div>
+</section>
 
-   <!-- ── CATEGORÍAS ── -->
-   <section id="categorias">
-     <div class="container">
-       <div class="section-header">
-         <span class="section-label">⭐ Explora</span>
-         <h2>Encuentra tu categoría</h2>
-         <p>Prompts organizados para cada área de tu vida profesional y personal.</p>
-       </div>
-       <div class="cats-grid">
-         <div class="cat-card" onclick="filterCategory('trabajo')">
-           <span class="cat-icon">💼</span>
-           <div class="cat-name">Trabajo</div>
-           <div class="cat-count">18 prompts</div>
-         </div>
-         <div class="cat-card" onclick="filterCategory('estudio')">
-           <span class="cat-icon">📚</span>
-           <div class="cat-name">Estudio</div>
-           <div class="cat-count">14 prompts</div>
-         </div>
-         <div class="cat-card" onclick="filterCategory('marketing')">
-           <span class="cat-icon">📣</span>
-           <div class="cat-name">Marketing</div>
-           <div class="cat-count">22 prompts</div>
-         </div>
-         <div class="cat-card" onclick="filterCategory('programacion')">
-           <span class="cat-icon">💻</span>
-           <div class="cat-name">Programación</div>
-           <div class="cat-count">16 prompts</div>
-         </div>
-         <div class="cat-card" onclick="filterCategory('personal')">
-           <span class="cat-icon">❤️</span>
-           <div class="cat-name">Desarrollo Personal</div>
-           <div class="cat-count">12 prompts</div>
-         </div>
-         <div class="cat-card" onclick="filterCategory('emprendimiento')">
-           <span class="cat-icon">🚀</span>
-           <div class="cat-name">Emprendimiento</div>
-           <div class="cat-count">20 prompts</div>
-         </div>
-       </div>
-     </div>
-   </section>
+<!-- CATEGORÍAS -->
+<section id="categorias">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">⭐ Explora</span>
+      <h2>Encuentra tu categoría</h2>
+      <p>Prompts organizados para cada área de tu vida profesional y personal.</p>
+    </div>
+    <div class="cats-grid" id="cats-grid">
+      <!-- Rellenado por JS con conteos reales -->
+    </div>
+  </div>
+</section>
 
-   <!-- ── PROMPTS ── -->
-   <section id="posts">
-     <div class="container">
-       <div class="section-header">
-         <span class="section-label">✦ Colección</span>
-         <h2>Todos los Prompts</h2>
-         <p>Listos para copiar y usar. Haz clic en cualquier tarjeta para ver el prompt completo.</p>
-       </div>
+<!-- PROMPTS -->
+<section id="posts">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">✦ Colección</span>
+      <h2>Todos los Prompts</h2>
+      <p>Listos para copiar y usar. Haz clic en cualquier tarjeta para ver el prompt completo.</p>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterCategory('todos', this)">Todos</button>
+      <button class="filter-btn" onclick="filterFavs(this)">❤️ Favoritos</button>
+      <button class="filter-btn" onclick="filterCategory('trabajo', this)">💼 Trabajo</button>
+      <button class="filter-btn" onclick="filterCategory('marketing', this)">📣 Marketing</button>
+      <button class="filter-btn" onclick="filterCategory('programacion', this)">💻 Programación</button>
+      <button class="filter-btn" onclick="filterCategory('estudio', this)">📚 Estudio</button>
+      <button class="filter-btn" onclick="filterCategory('personal', this)">❤️ Personal</button>
+      <button class="filter-btn" onclick="filterCategory('emprendimiento', this)">🚀 Emprendimiento</button>
+      <div class="search-bar">
+        🔍 <input type="text" id="search-input" placeholder="Buscar prompt..." oninput="searchPrompts(this.value)">
+      </div>
+    </div>
+    <div class="prompts-grid" id="prompts-grid"></div>
+    <div class="pagination">
+      <button class="page-btn" onclick="changePage(-1)">←</button>
+      <button class="page-btn active" id="page-1" onclick="goPage(1)">1</button>
+      <button class="page-btn" id="page-2" onclick="goPage(2)">2</button>
+      <button class="page-btn" id="page-3" onclick="goPage(3)">3</button>
+      <button class="page-btn" onclick="changePage(1)">→</button>
+    </div>
+  </div>
+</section>
 
-       <div class="filter-bar">
-         <button class="filter-btn active" onclick="filterCategory('todos', this)">Todos</button>
-         <button class="filter-btn" onclick="filterFavs(this)">❤️ Favoritos</button>
-         <button class="filter-btn" onclick="filterCategory('trabajo', this)">💼 Trabajo</button>
-         <button class="filter-btn" onclick="filterCategory('marketing', this)">📣 Marketing</button>
-         <button class="filter-btn" onclick="filterCategory('programacion', this)">💻 Programación</button>
-         <button class="filter-btn" onclick="filterCategory('estudio', this)">📚 Estudio</button>
-         <button class="filter-btn" onclick="filterCategory('personal', this)">❤️ Personal</button>
-         <button class="filter-btn" onclick="filterCategory('emprendimiento', this)">🚀 Emprendimiento</button>
-         <div class="search-bar">
-           🔍 <input type="text" id="search-input" placeholder="Buscar prompt..." oninput="searchPrompts(this.value)">
-         </div>
-       </div>
-
-       <div class="prompts-grid" id="prompts-grid"></div>
-
-       <div class="pagination">
-         <button class="page-btn" id="prev-btn" onclick="changePage(-1)">←</button>
-         <button class="page-btn active" id="page-1" onclick="goPage(1)">1</button>
-         <button class="page-btn" id="page-2" onclick="goPage(2)">2</button>
-         <button class="page-btn" id="page-3" onclick="goPage(3)">3</button>
-         <button class="page-btn" onclick="changePage(1)">→</button>
-       </div>
-     </div>
-   </section>
-
-   <!-- ✅ ANUNCIO INTERMEDIO -->
-   <div class="ad-banner">
-     <ins class="adsbygoogle"
+<!-- AD MIDDLE -->
+<div class="ad-banner" style="max-width:1200px;margin:0 auto;padding:0 2rem;text-align:center">
+  <ins class="adsbygoogle"
        style="display:block"
        data-ad-client="ca-pub-7965643620841539"
-       data-ad-slot="XXXXXXXXXX"
        data-ad-format="auto"
        data-full-width-responsive="true"></ins>
-     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-   </div>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
-   <!-- ── BLOG ── -->
-   <section id="blog">
-     <div class="container">
-       <div class="section-header">
-         <span class="section-label">📖 Blog</span>
-         <h2>Aprende a usar la IA</h2>
-         <p>Artículos, guías y tutoriales para sacarle el máximo partido a los prompts.</p>
-       </div>
-       <div class="blog-grid" id="blog-grid"></div>
-     </div>
-   </section>
+<!-- BLOG -->
+<section id="blog">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">📖 Blog</span>
+      <h2>Aprende a usar la IA</h2>
+      <p>Artículos, guías y tutoriales para sacarle el máximo partido a los prompts.</p>
+    </div>
+    <div class="blog-grid" id="blog-grid"></div>
+  </div>
+</section>
 
-   <!-- ✅ ANUNCIO INFERIOR -->
-   <div class="ad-banner">
-     <ins class="adsbygoogle"
+<!-- AD BOTTOM -->
+<div class="ad-banner" style="max-width:1200px;margin:0 auto;padding:0 2rem;text-align:center">
+  <ins class="adsbygoogle"
        style="display:block"
        data-ad-client="ca-pub-7965643620841539"
-       data-ad-slot="XXXXXXXXXX"
        data-ad-format="auto"
        data-full-width-responsive="true"></ins>
-     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-   </div>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
-   <!-- ── SOBRE MÍ ── -->
-   <section id="sobre-mi">
-     <div class="container">
-       <div class="about-wrap">
-         <div class="about-visual">
-           <div class="about-avatar">🧑‍🚀</div>
-           <div class="about-stats">
-             <div class="stat-box">
-               <div class="stat-num">+100</div>
-               <div class="stat-label">Prompts</div>
-             </div>
-             <div class="stat-box">
-               <div class="stat-num">+5K</div>
-               <div class="stat-label">Seguidores</div>
-             </div>
-             <div class="stat-box">
-               <div class="stat-num">2 años</div>
-               <div class="stat-label">En IA</div>
-             </div>
-           </div>
-         </div>
-         <div class="about-text">
-           <span class="section-label">👋 Hola, soy</span>
-           <h2 style="margin-top:0.5rem">El creador de<br><em style="font-style:normal;background:linear-gradient(135deg,var(--accent2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent">PromptNova</em></h2>
-           <p>Soy un apasionado de la inteligencia artificial y el prompt engineering. Llevo más de 2 años explorando, probando y perfeccionando prompts para ChatGPT, Claude, Gemini y otras IAs.</p>
-           <p>PromptNova nació con una misión clara: hacer la IA accesible para todos. Aquí encontrarás prompts probados y listos para usar que te ahorrarán horas de trabajo.</p>
-           <p>Cada prompt en esta colección ha sido testeado, refinado y optimizado. No teórico — <strong style="color:var(--text)">resultados reales</strong> para personas reales.</p>
-           <div class="skills-list">
-             <span class="skill-tag">ChatGPT</span>
-             <span class="skill-tag">Claude</span>
-             <span class="skill-tag">Gemini</span>
-             <span class="skill-tag">Prompt Engineering</span>
-             <span class="skill-tag">IA Generativa</span>
-             <span class="skill-tag">Automatización</span>
-             <span class="skill-tag">Productividad</span>
-           </div>
-         </div>
-       </div>
-     </div>
-   </section>
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="about-visual">
+        <div class="about-avatar">🧑‍🚀</div>
+        <div class="about-stats">
+          <div class="stat-box"><div class="stat-num" id="stat-total">0</div><div class="stat-label">Prompts</div></div>
+          <div class="stat-box"><div class="stat-num">+5K</div><div class="stat-label">Seguidores</div></div>
+          <div class="stat-box"><div class="stat-num">2 años</div><div class="stat-label">En IA</div></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">👋 Hola, soy</span>
+        <h2 style="margin-top:0.5rem">El creador de<br><em style="font-style:normal;background:linear-gradient(135deg,var(--accent2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">PromptNova</em></h2>
+        <p>Soy un apasionado de la inteligencia artificial y el prompt engineering. Llevo más de 2 años explorando, probando y perfeccionando prompts para ChatGPT, Claude, Gemini y otras IAs.</p>
+        <p>PromptNova nació con una misión clara: hacer la IA accesible para todos. Aquí encontrarás prompts probados y listos para usar que te ahorrarán horas de trabajo.</p>
+        <p>Cada prompt en esta colección ha sido testeado, refinado y optimizado. No teórico — <strong>resultados reales</strong> para personas reales.</p>
+        <div class="skills-list">
+          <span class="skill-tag">ChatGPT</span>
+          <span class="skill-tag">Claude</span>
+          <span class="skill-tag">Gemini</span>
+          <span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">IA Generativa</span>
+          <span class="skill-tag">Automatización</span>
+          <span class="skill-tag">Productividad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-   <!-- ── CTA ── -->
-   <div class="cta-section">
-     <span class="section-label">📬 Newsletter</span>
-     <h2>Únete a la comunidad PromptNova</h2>
-     <p>Recibe nuevos prompts, tips y recursos exclusivos cada semana. Gratis, siempre.</p>
-     <form class="email-form" name="suscripcion" method="POST" data-netlify="true" onsubmit="handleSubscribe(event)">
-       <input type="hidden" name="form-name" value="suscripcion">
-       <input type="email" name="email" placeholder="tu@email.com" required>
-       <button class="btn-primary" type="submit">Suscribirme →</button>
-     </form>
-     <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted)">Sin spam. Cancela cuando quieras. ✌️</p>
-   </div>
+<!-- NEWSLETTER -->
+<div class="cta-section">
+  <span class="section-label">📬 Newsletter</span>
+  <h2>Únete a la comunidad PromptNova</h2>
+  <p>Recibe nuevos prompts, tips y recursos exclusivos cada semana. Gratis, siempre.</p>
+  <div class="email-form">
+    <input type="email" id="newsletter-email" placeholder="tu@email.com" required>
+    <button class="btn-primary" onclick="handleSubscribe()">Suscribirme →</button>
+  </div>
+  <div id="newsletter-success" style="display:none;margin-top:1rem;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);border-radius:10px;padding:0.75rem 1.5rem;color:var(--green);font-size:0.9rem">
+    ✅ ¡Gracias! Pronto recibirás novedades en tu email.
+  </div>
+  <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted)">Sin spam. Cancela cuando quieras. ✌️</p>
+</div>
 
-   <!-- ── FOOTER ── -->
-   <footer>
-     <div class="footer-inner">
-       <div class="footer-brand">
-<a href="index.html" class="logo">🪐 PromptNova</a>
-         <p>Tu copiloto en el universo de la inteligencia artificial. Prompts probados para ChatGPT, Claude y Gemini.</p>
-       </div>
-       <div class="footer-col">
-         <h4>Explorar</h4>
-         <ul>
-           <li><a href="#posts">Todos los prompts</a></li>
-           <li><a href="#blog">Blog</a></li>
-           <li><a href="#categorias">Categorías</a></li>
-           <li><a href="#sobre-mi">Sobre mí</a></li>
-         </ul>
-       </div>
-       <div class="footer-col">
-         <h4>Legal</h4>
-         <ul>
-           <!-- ✅ AdSense exige páginas de privacidad y términos accesibles -->
-  <li><a href="privacidad.html">Política de Privacidad</a></li>
-<li><a href="terminos.html">Términos de Uso</a></li>
-<li><a href="aviso-legal.html">Aviso Legal</a></li>
-           <li><a href="mailto:contacto@promptnova.com">Contacto</a></li>
-         </ul>
-       </div>
-     </div>
-     <div class="footer-bottom">
-       <span>© 2025 PromptNova — Todos los derechos reservados. Hecho con ✨ para la comunidad IA.</span>
-       <span>Prompts que realmente funcionan 🚀</span>
-     </div>
-   </footer>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">🪐 PromptNova</a>
+      <p>Tu copiloto en el universo de la inteligencia artificial. Prompts probados para ChatGPT, Claude y Gemini.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" title="Twitter/X">𝕏</a>
+        <a href="#" class="social-link" title="TikTok">♪</a>
+        <a href="#" class="social-link" title="Instagram">📷</a>
+        <a href="#" class="social-link" title="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Sígueme</h4>
+      <ul>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Explorar</h4>
+      <ul>
+        <li><a href="#posts">Todos los prompts</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacidad.html">Política de Privacidad</a></li>
+        <li><a href="terminos.html">Términos de Uso</a></li>
+        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        <li><a href="mailto:contacto@promptnova.com">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PromptNova — Todos los derechos reservados. Hecho con ✨ para la comunidad IA.</span>
+    <span>Prompts que realmente funcionan 🚀</span>
+  </div>
+</footer>
 
-   <!-- ── TOAST ── -->
-   <div class="toast" id="toast">✅ ¡Prompt copiado!</div>
+<!-- TOAST -->
+<div class="toast" id="toast">✅ ¡Prompt copiado!</div>
 
-   <!-- ── MODAL ── -->
-   <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
-     <div class="modal">
-       <div class="modal-header">
-         <div>
-           <div id="modal-badge" class="prompt-badge" style="margin-bottom:0.5rem;display:inline-block"></div>
-           <h3 id="modal-title" style="font-family:'Syne',sans-serif;font-size:1.2rem"></h3>
-         </div>
-         <button class="modal-close" onclick="closeModal()">✕</button>
-       </div>
-       <p id="modal-desc" style="font-size:0.875rem;color:var(--muted);margin-bottom:0.25rem"></p>
-       <div class="modal-prompt-text" id="modal-text"></div>
-       <button class="modal-copy-btn" onclick="copyModal()">📋 Copiar prompt completo</button>
-     </div>
-   </div>
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div id="modal-badge" class="prompt-badge" style="margin-bottom:0.5rem;display:inline-block"></div>
+        <h3 id="modal-title"></h3>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <p id="modal-desc" style="font-size:0.875rem;color:var(--muted);margin-bottom:0.25rem"></p>
+    <div class="modal-prompt-text" id="modal-text"></div>
+    <button class="modal-copy-btn" onclick="copyModal()">📋 Copiar prompt completo</button>
+  </div>
+</div>
 
-   <!-- ✅ app.js con ruta absoluta para que funcione desde cualquier subcarpeta -->
-<script src="app.js"></script>
+<script>
+// ── DATOS DE PROMPTS ──
+const PROMPTS = [
+  { id:1,  cat:'trabajo',        title:'Redacta un email profesional persuasivo',          desc:'Genera emails de trabajo formales, claros y con llamada a la acción.',                         text:'Actúa como un experto en comunicación corporativa. Redacta un email profesional para [destinatario/cargo] sobre [tema]. El tono debe ser [formal/amigable/urgente]. El objetivo es [objetivo específico]. Incluye: asunto impactante, saludo personalizado, desarrollo del tema en 2-3 párrafos cortos, llamada a la acción clara y cierre profesional. El email no debe superar las 200 palabras.', tools:['ChatGPT','Claude'] },
+  { id:2,  cat:'marketing',      title:'Crea un post viral para Instagram',                desc:'Genera captions con gancho, emojis y hashtags estratégicos.',                                  text:'Eres un experto en marketing digital y contenido viral. Crea 3 variantes de caption para Instagram sobre [tema del post]. Cada caption debe incluir: gancho en la primera línea (que detenga el scroll), desarrollo del mensaje en 3-4 líneas, llamada a la acción, emojis relevantes y 15 hashtags estratégicos (mezcla de populares, nicho y marca). El tono es [alegre/inspirador/educativo/provocador].', tools:['ChatGPT','Gemini'] },
+  { id:3,  cat:'programacion',   title:'Revisa y mejora mi código',                        desc:'Analiza código, encuentra bugs y sugiere optimizaciones.',                                      text:'Eres un senior developer con 10 años de experiencia. Analiza el siguiente código [PEGAR CÓDIGO]: 1) Identifica bugs o errores potenciales, 2) Sugiere optimizaciones de rendimiento, 3) Propón mejoras de legibilidad y buenas prácticas, 4) Indica si hay problemas de seguridad, 5) Reescribe las partes críticas con las mejoras aplicadas. Explica cada cambio con su justificación.', tools:['Claude','ChatGPT'] },
+  { id:4,  cat:'estudio',        title:'Explícame este concepto como si tuviera 10 años',  desc:'Simplifica conceptos complejos usando analogías y ejemplos.',                                  text:'Eres un profesor experto en [materia] con habilidad para enseñar a cualquier nivel. Explícame [concepto] usando: una analogía con algo de la vida cotidiana, un ejemplo práctico y visual, los 3 puntos clave que debo recordar, y una pregunta de comprensión para verificar que lo entendí. Usa lenguaje simple, sin jerga técnica innecesaria. Al final, dime cómo se aplica esto en el mundo real.', tools:['Claude','ChatGPT','Gemini'] },
+  { id:5,  cat:'emprendimiento', title:'Valida tu idea de negocio en 5 minutos',           desc:'Análisis rápido de viabilidad y puntos críticos de tu idea.',                                  text:'Actúa como un mentor de startups con experiencia en venture capital. Voy a describirte mi idea de negocio: [DESCRIBIR IDEA]. Por favor analiza: 1) Problema real que resuelve y tamaño del mercado, 2) Propuesta de valor única vs competidores, 3) Modelo de negocio y fuentes de ingresos potenciales, 4) Los 3 mayores riesgos y cómo mitigarlos, 5) Próximos 3 pasos concretos para validar la idea. Sé directo y honesto, incluso si el feedback es negativo.', tools:['ChatGPT','Claude'] },
+  { id:6,  cat:'personal',       title:'Crea tu plan de desarrollo personal',               desc:'Plan estructurado de crecimiento personal adaptado a tus metas.',                              text:'Eres un coach de vida certificado. Ayúdame a crear un plan de desarrollo personal de 90 días. Mis metas son: [METAS]. Mis recursos disponibles son: [TIEMPO/DINERO/HABILIDADES]. Crea un plan que incluya: objetivos SMART semanales, hábitos diarios a implementar (máx. 3), métricas para medir el progreso, libros/recursos recomendados y un sistema de rendición de cuentas. Presenta el plan en formato de tabla semana a semana.', tools:['Claude','ChatGPT'] },
+  { id:7,  cat:'marketing',      title:'Estrategia de contenido para 30 días',              desc:'Calendario editorial completo con ideas para cada plataforma.',                                text:'Eres un estratega de contenido digital. Crea un calendario de contenido para [marca/nicho] durante 30 días para [plataformas: Instagram/TikTok/LinkedIn/Twitter]. Incluye: tema diario alineado con [objetivo de negocio], formato de contenido (reel/carrusel/stories/post), hook o idea principal, mejor horario de publicación y KPIs a medir. Considera las tendencias actuales y los momentos clave del mes. Organiza el resultado en una tabla clara.', tools:['ChatGPT','Gemini'] },
+  { id:8,  cat:'trabajo',        title:'Prepárate para una entrevista de trabajo',          desc:'Simula una entrevista y recibe feedback detallado.',                                            text:'Vas a simular ser un reclutador senior de [empresa/sector]. Voy a entrevistarme para el puesto de [PUESTO]. Mi CV resume: [BREVE RESUMEN]. Primero, hazme las 10 preguntas más difíciles que haría un reclutador exigente para este puesto. Después de que responda cada una, evalúa mi respuesta del 1-10, señala qué hice bien y qué mejorar, y dame la respuesta modelo ideal usando el método STAR. Al final, dame 3 consejos para destacar sobre otros candidatos.', tools:['Claude','ChatGPT'] },
+  { id:9,  cat:'programacion',   title:'Genera una API REST completa',                      desc:'Crea endpoints, modelos y documentación lista para producción.',                               text:'Eres un arquitecto de software backend especializado en APIs REST. Crea una API REST completa para [descripción del proyecto] usando [tecnología: Node.js/Python/etc]. Incluye: estructura de carpetas del proyecto, modelos de datos con validaciones, endpoints CRUD completos con middleware de autenticación JWT, manejo de errores estandarizado, ejemplos de request/response en formato JSON y comandos para instalar dependencias y ejecutar el proyecto. El código debe seguir las mejores prácticas y ser production-ready.', tools:['Claude','ChatGPT'] },
+  { id:10, cat:'estudio',        title:'Resume cualquier documento en puntos clave',        desc:'Extrae los insights más importantes de textos largos.',                                        text:'Eres un experto en síntesis de información. Analiza el siguiente texto [PEGAR TEXTO] y crea: 1) Resumen ejecutivo de 3 líneas, 2) Los 7 puntos más importantes con explicación de 2-3 líneas cada uno, 3) Las 3 conclusiones o aprendizajes principales, 4) Términos técnicos clave con sus definiciones, 5) Preguntas que quedan sin responder en el texto. Prioriza la claridad y la accionabilidad de la información.', tools:['Claude','Gemini','ChatGPT'] },
+  { id:11, cat:'emprendimiento', title:'Escribe un elevator pitch irresistible',            desc:'Tu propuesta de valor en 60 segundos que convence a inversores.',                              text:'Eres un experto en storytelling para startups que ha ayudado a empresas a recaudar millones. Crea 3 versiones de elevator pitch para [empresa/producto]: Versión 30 segundos (para un ascensor), Versión 60 segundos (para un evento de networking) y Versión 2 minutos (para una reunión de inversores). Cada versión debe incluir: el problema que resuelves, tu solución única, tracción o validación que tienes y la llamada a la acción. Usa storytelling emocional y datos concretos.', tools:['ChatGPT','Claude'] },
+  { id:12, cat:'personal',       title:'Supera el bloqueo creativo ahora mismo',            desc:'Técnicas y ejercicios para desbloquear tu creatividad al instante.',                          text:'Eres un coach creativo y experto en pensamiento lateral. Estoy bloqueado con [proyecto/problema creativo]. Ayúdame con: 5 técnicas de brainstorming específicas para este caso, 10 ideas locas sin filtro (el juicio viene después), 3 analogías de otros campos que podrían inspirarme, un ejercicio de 10 minutos para desbloquearme ahora mismo y las preguntas que me están faltando hacerme. No me des las respuestas, dame las herramientas para encontrarlas yo.', tools:['Claude','ChatGPT'] },
+  { id:13, cat:'trabajo',        title:'Escribe un informe ejecutivo en minutos',           desc:'Convierte datos en un reporte profesional listo para presentar.',                              text:'Eres un consultor de negocios senior. Redacta un informe ejecutivo sobre [tema] para [audiencia: directivos/inversores/clientes]. Incluye: resumen ejecutivo de 5 líneas, contexto y antecedentes, hallazgos principales con datos, análisis de implicaciones, recomendaciones priorizadas y próximos pasos con fechas. El tono debe ser directo y orientado a la acción. Usa viñetas donde sea posible para facilitar la lectura.', tools:['Claude','ChatGPT'] },
+  { id:14, cat:'marketing',      title:'Crea un guión de vídeo para YouTube',               desc:'Estructura narrativa completa con gancho, desarrollo y CTA.',                                  text:'Eres un guionista de YouTube con experiencia en videos virales. Crea un guión completo para un vídeo de [duración] minutos sobre [tema]. El guión debe incluir: gancho en los primeros 30 segundos (que evite que el espectador haga clic fuera), introducción que prometa valor, desarrollo en 3-5 secciones con transiciones, momentos de engagement (preguntas al espectador, polls), llamada a la acción para suscribirse y outro. Incluye indicaciones de edición y B-roll sugerido.', tools:['ChatGPT','Claude'] },
+  { id:15, cat:'programacion',   title:'Crea una landing page con HTML y CSS',              desc:'Diseño completo y responsivo listo para publicar.',                                            text:'Eres un desarrollador frontend experto en conversión. Crea el código completo (HTML + CSS + JS) de una landing page para [producto/servicio]. La página debe incluir: hero con propuesta de valor clara, sección de beneficios (3-5 puntos), testimonios o prueba social, FAQ con 5 preguntas frecuentes, formulario de contacto o botón CTA, y footer básico. El diseño debe ser moderno, responsivo y optimizado para conversión. Usa colores [colores preferidos] y fuente [tipografía].', tools:['Claude','ChatGPT'] },
+  { id:16, cat:'estudio',        title:'Crea un examen de práctica personalizado',          desc:'Genera preguntas tipo test con respuestas explicadas.',                                        text:'Eres un profesor universitario especializado en [materia]. Crea un examen de práctica de 20 preguntas sobre [tema específico]. Para cada pregunta: incluye 4 opciones de respuesta (A, B, C, D), indica la respuesta correcta al final, y proporciona una explicación detallada de por qué esa respuesta es correcta y por qué las otras son incorrectas. Varía la dificultad: 30% fáciles, 50% medias, 20% difíciles. Al final, da consejos para estudiar este tema.', tools:['Claude','ChatGPT','Gemini'] },
+  { id:17, cat:'emprendimiento', title:'Diseña tu modelo de negocio Canvas',               desc:'Business Model Canvas completo con los 9 bloques clave.',                                     text:'Actúa como un experto en estrategia empresarial. Desarrolla un Business Model Canvas completo para [idea de negocio]. Para cada uno de los 9 bloques, proporciona contenido específico y accionable: 1) Segmentos de clientes, 2) Propuesta de valor, 3) Canales, 4) Relación con clientes, 5) Fuentes de ingresos, 6) Recursos clave, 7) Actividades clave, 8) Socios clave, 9) Estructura de costos. Sé específico y evita generalidades. Al final, identifica las 3 hipótesis más importantes a validar.', tools:['ChatGPT','Claude'] },
+  { id:18, cat:'personal',       title:'Escribe una carta de presentación irresistible',   desc:'Cover letter personalizada que destaca tus fortalezas únicas.',                               text:'Eres un experto en recursos humanos y redacción profesional. Escribe una carta de presentación para el puesto de [PUESTO] en [EMPRESA]. Mis puntos fuertes son: [HABILIDADES]. Mi experiencia relevante: [EXPERIENCIA]. La carta debe: captar atención en el primer párrafo, conectar mis habilidades con las necesidades de la empresa, incluir un logro cuantificable, mostrar conocimiento de la empresa/sector, y terminar con una llamada a la acción clara. Máximo 300 palabras.', tools:['Claude','ChatGPT'] },
+];
 
+// ── BLOG POSTS (estático, sin fetch) ──
+const BLOG_POSTS = [
+  { emoji:'🧠', gradient:'linear-gradient(135deg,rgba(124,111,247,0.3),rgba(168,156,255,0.1))', tag:'Guía',         date:'15 enero 2025',    title:'Cómo escribir el prompt perfecto: guía completa para principiantes',     desc:'Aprende las técnicas fundamentales de prompt engineering que usan los profesionales para obtener resultados increíbles con cualquier IA.',              slug:'#' },
+  { emoji:'⚡', gradient:'linear-gradient(135deg,rgba(244,200,74,0.2),rgba(251,146,60,0.1))',   tag:'Productividad', date:'8 enero 2025',     title:'10 prompts que transformarán tu forma de trabajar en 2025',              desc:'Descubre los prompts más potentes para automatizar tareas repetitivas, redactar emails y generar informes profesionales en minutos.',                   slug:'#' },
+  { emoji:'🎨', gradient:'linear-gradient(135deg,rgba(45,212,191,0.2),rgba(74,222,128,0.1))',   tag:'Creatividad',   date:'3 enero 2025',     title:'Prompts creativos para generar contenido viral en redes sociales',        desc:'Los mejores prompts para crear posts, captions, guiones de vídeo y estrategias de contenido que enganchen a tu audiencia.',                             slug:'#' },
+  { emoji:'📊', gradient:'linear-gradient(135deg,rgba(244,114,182,0.2),rgba(168,85,247,0.1))',  tag:'Negocios',      date:'28 diciembre 2024', title:'ChatGPT vs Claude vs Gemini: ¿qué IA es mejor para cada tarea?',         desc:'Comparativa honesta de los tres gigantes de la IA. Descubre cuál usar según si necesitas análisis, creatividad o código.',                              slug:'#' },
+  { emoji:'🔧', gradient:'linear-gradient(135deg,rgba(251,146,60,0.2),rgba(244,200,74,0.1))',   tag:'Técnico',       date:'20 diciembre 2024', title:'Prompt Engineering avanzado: técnicas de cadena de pensamiento y rol',   desc:'Lleva tus prompts al siguiente nivel con técnicas como Chain-of-Thought, Few-Shot, Tree of Thoughts y asignación de roles expertos.',                   slug:'#' },
+  { emoji:'🎓', gradient:'linear-gradient(135deg,rgba(74,222,128,0.2),rgba(45,212,191,0.1))',   tag:'Educación',     date:'15 diciembre 2024', title:'Cómo usar la IA para estudiar más rápido y retener más información',     desc:'Prompts diseñados para estudiantes: crear mapas mentales, explicar conceptos difíciles, generar exámenes de práctica y mucho más.',                    slug:'#' },
+];
+
+// ── CONFIG DE CATEGORÍAS ──
+const CATS_CONFIG = [
+  { key:'trabajo',        icon:'💼', name:'Trabajo' },
+  { key:'estudio',        icon:'📚', name:'Estudio' },
+  { key:'marketing',      icon:'📣', name:'Marketing' },
+  { key:'programacion',   icon:'💻', name:'Programación' },
+  { key:'personal',       icon:'❤️', name:'Desarrollo Personal' },
+  { key:'emprendimiento', icon:'🚀', name:'Emprendimiento' },
+];
+
+// ── CONTEOS REALES desde el array ──
+function countByCategory(cat) {
+  return PROMPTS.filter(p => p.cat === cat).length;
+}
+
+// ── RENDER CATEGORÍAS con conteos reales ──
+function renderCats() {
+  const grid = document.getElementById('cats-grid');
+  grid.innerHTML = CATS_CONFIG.map(c => {
+    const count = countByCategory(c.key);
+    return `<div class="cat-card" onclick="filterCategory('${c.key}',null)">
+      <span class="cat-icon">${c.icon}</span>
+      <div class="cat-name">${c.name}</div>
+      <div class="cat-count">${count} prompt${count !== 1 ? 's' : ''}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── RENDER HERO STATS con datos reales ──
+function renderHeroStats() {
+  const total = PROMPTS.length;
+  const cats  = CATS_CONFIG.length;
+  document.getElementById('hero-stats').innerHTML = `
+    <div class="hero-stat"><div class="num">+${total}</div><div class="label">Prompts disponibles</div></div>
+    <div class="hero-stat"><div class="num">${cats}</div><div class="label">Categorías</div></div>
+    <div class="hero-stat"><div class="num">4.9/5</div><div class="label">Valoración media</div></div>
+    <div class="hero-stat"><div class="num">+50K</div><div class="label">Prompts copiados</div></div>
+  `;
+  // stat del about
+  const el = document.getElementById('stat-total');
+  if (el) el.textContent = '+' + total;
+}
+
+// ── RENDER BLOG (clases exactas del styles.css) ──
+function renderBlog() {
+  const grid = document.getElementById('blog-grid');
+  grid.innerHTML = BLOG_POSTS.map(p => `
+    <div class="blog-card" onclick="window.location.href='${p.slug}'">
+      <div class="blog-thumb" style="background:${p.gradient}">${p.emoji}</div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-tag">${p.tag}</span>
+          <span class="blog-date">${p.date}</span>
+        </div>
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+        <span class="blog-read">Leer artículo →</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── PROMPTS LOGIC ──
+let currentFilter = 'todos';
+let currentPage   = 1;
+const PER_PAGE    = 6;
+let filteredPrompts = [...PROMPTS];
+
+function getFavs() {
+  try { return JSON.parse(localStorage.getItem('pn_favs') || '[]'); } catch(e) { return []; }
+}
+function isFav(id) { return getFavs().includes(id); }
+
+function toggleFav(id, btn) {
+  let favs = getFavs();
+  const wasFav = favs.includes(id);
+  favs = wasFav ? favs.filter(f => f !== id) : [...favs, id];
+  btn.textContent = wasFav ? '🤍' : '❤️';
+  btn.classList.toggle('faved', !wasFav);
+  try { localStorage.setItem('pn_favs', JSON.stringify(favs)); } catch(e) {}
+  btn.classList.add('pop');
+  setTimeout(() => btn.classList.remove('pop'), 300);
+  showToast(wasFav ? '💔 Eliminado de favoritos' : '❤️ Guardado en favoritos');
+}
+
+function catLabel(cat) {
+  const m = {trabajo:'💼 Trabajo',marketing:'📣 Marketing',programacion:'💻 Programación',estudio:'📚 Estudio',personal:'❤️ Personal',emprendimiento:'🚀 Emprendimiento'};
+  return m[cat] || cat;
+}
+
+function renderPrompts() {
+  const grid  = document.getElementById('prompts-grid');
+  const start = (currentPage - 1) * PER_PAGE;
+  const page  = filteredPrompts.slice(start, start + PER_PAGE);
+  if (!page.length) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted)">No se encontraron prompts. Prueba con otro filtro. 🔍</div>';
+    return;
+  }
+  grid.innerHTML = page.map(p => `
+    <div class="prompt-card" onclick="openModal(${p.id})">
+      <div class="prompt-top">
+        <span class="prompt-badge badge-${p.cat}">${catLabel(p.cat)}</span>
+        <div class="prompt-actions" onclick="event.stopPropagation()">
+          <button class="btn-icon" onclick="copyPrompt(${p.id},this)" title="Copiar">📋</button>
+          <button class="btn-icon btn-fav ${isFav(p.id)?'faved':''}" onclick="toggleFav(${p.id},this)" title="Favorito">${isFav(p.id)?'❤️':'🤍'}</button>
+        </div>
+      </div>
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+      <div class="prompt-text">${p.text}</div>
+      <div class="prompt-footer">
+        <div class="prompt-tools">${p.tools.map(t=>`<span class="tool-pill">${t}</span>`).join('')}</div>
+        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(${p.id},this)">📋 Copiar</button>
+      </div>
+    </div>
+  `).join('');
+  updatePagination();
+}
+
+function updatePagination() {
+  const total = Math.ceil(filteredPrompts.length / PER_PAGE);
+  for (let i = 1; i <= 3; i++) {
+    const btn = document.getElementById('page-' + i);
+    if (!btn) continue;
+    btn.style.display = i <= total ? '' : 'none';
+    btn.classList.toggle('active', i === currentPage);
+  }
+}
+
+function filterFavs(btn) {
+  currentPage = 1;
+  filteredPrompts = PROMPTS.filter(p => getFavs().includes(p.id));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPrompts();
+}
+
+function filterCategory(cat, btn) {
+  currentFilter = cat;
+  currentPage   = 1;
+  filteredPrompts = cat === 'todos' ? [...PROMPTS] : PROMPTS.filter(p => p.cat === cat);
+  const val = document.getElementById('search-input').value;
+  if (val) filteredPrompts = filteredPrompts.filter(p => matchSearch(p, val));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderPrompts();
+  if (cat !== 'todos') document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+}
+
+function searchPrompts(val) {
+  currentPage = 1;
+  const base  = currentFilter === 'todos' ? PROMPTS : PROMPTS.filter(p => p.cat === currentFilter);
+  filteredPrompts = val ? base.filter(p => matchSearch(p, val)) : [...base];
+  renderPrompts();
+}
+
+function matchSearch(p, val) {
+  const v = val.toLowerCase();
+  return p.title.toLowerCase().includes(v) || p.desc.toLowerCase().includes(v) || p.text.toLowerCase().includes(v);
+}
+
+function changePage(dir) {
+  const total   = Math.ceil(filteredPrompts.length / PER_PAGE);
+  const newPage = currentPage + dir;
+  if (newPage >= 1 && newPage <= total) {
+    currentPage = newPage;
+    renderPrompts();
+    document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+  }
+}
+
+function goPage(n) {
+  currentPage = n;
+  renderPrompts();
+  document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+}
+
+// ── COPY ──
+function copyPrompt(id, btn) {
+  const p = PROMPTS.find(x => x.id === id);
+  if (!p) return;
+  navigator.clipboard.writeText(p.text).then(() => {
+    if (btn && btn.classList.contains('copy-btn')) {
+      btn.textContent = '✅ Copiado'; btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = '📋 Copiar'; btn.classList.remove('copied'); }, 2000);
+    }
+    showToast('✅ ¡Prompt copiado!');
+  });
+}
+
+function copyModal() {
+  const text = document.getElementById('modal-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.modal-copy-btn');
+    btn.textContent = '✅ ¡Copiado!';
+    setTimeout(() => { btn.textContent = '📋 Copiar prompt completo'; }, 2000);
+    showToast('✅ ¡Prompt copiado!');
+  });
+}
+
+// ── MODAL ──
+function openModal(id) {
+  const p = PROMPTS.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('modal-badge').textContent = catLabel(p.cat);
+  document.getElementById('modal-badge').className   = 'prompt-badge badge-' + p.cat;
+  document.getElementById('modal-title').textContent = p.title;
+  document.getElementById('modal-desc').textContent  = p.desc;
+  document.getElementById('modal-text').textContent  = p.text;
+  document.querySelector('.modal-copy-btn').textContent = '📋 Copiar prompt completo';
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── TOAST ──
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ── NEWSLETTER ──
+function handleSubscribe() {
+  const email = document.getElementById('newsletter-email').value.trim();
+  if (!email || !email.includes('@')) { showToast('⚠️ Introduce un email válido'); return; }
+  document.getElementById('newsletter-success').style.display = 'block';
+  document.getElementById('newsletter-email').value = '';
+  showToast('✅ ¡Suscripción registrada!');
+}
+
+// ── INIT ──
+renderHeroStats();
+renderCats();
+renderPrompts();
+renderBlog();
+</script>
 </body>
 </html>
