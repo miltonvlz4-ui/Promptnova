@@ -3,528 +3,1225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PromptNova — Los mejores prompts para ChatGPT, Claude y Gemini</title>
 <meta name="description" content="Descubre más de 100 prompts listos para usar en ChatGPT, Claude y Gemini. Ahorra tiempo y obtén resultados profesionales con IA en segundos.">
-<meta property="og:title" content="PromptNova — Tu universo de prompts IA">
-<meta property="og:description" content="Más de 100 prompts probados para ChatGPT, Claude y Gemini. Resultados profesionales en segundos.">
-<meta property="og:type" content="website">
+<title>PromptNova — Los mejores prompts para ChatGPT, Claude y Gemini</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
+<style>
+:root {
+  --bg: #0a0a0f;
+  --bg2: #111118;
+  --bg3: #1a1a26;
+  --card: #16161f;
+  --card-hover: #1e1e2e;
+  --border: rgba(139,92,246,0.15);
+  --border2: rgba(139,92,246,0.3);
+  --accent: #7c3aed;
+  --accent2: #a855f7;
+  --accent3: #c084fc;
+  --gold: #f59e0b;
+  --text: #f1f0ff;
+  --text2: #a89fc0;
+  --text3: #6b6380;
+  --success: #10b981;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.2rem; color:var(--text); text-decoration:none; }
+.nav-logo span { color:var(--accent2); }
+.nav-links { display:flex; gap:0.25rem; align-items:center; }
+.nav-links a {
+  color:var(--text2); text-decoration:none; font-size:0.9rem; font-weight:500;
+  padding:0.4rem 0.75rem; border-radius:8px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color:var(--text); background:rgba(124,58,237,0.12); }
+.nav-links a.active { color:var(--accent2); }
+.nav-links .nav-cta {
+  background: var(--accent); color:#fff; border-radius:8px;
+  padding:0.4rem 1rem; margin-left:0.5rem;
+}
+.nav-links .nav-cta:hover { background:var(--accent2); color:#fff; }
+.nav-search {
+  display:flex; align-items:center; gap:0.5rem;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:10px; padding:0.4rem 0.75rem;
+  transition: border-color 0.2s;
+}
+.nav-search:focus-within { border-color:var(--accent2); }
+.nav-search input {
+  background:none; border:none; outline:none;
+  color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.85rem;
+  width:160px;
+}
+.nav-search input::placeholder { color:var(--text3); }
+.nav-search svg { width:16px; height:16px; color:var(--text3); flex-shrink:0; }
+
+/* HAMBURGER */
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; }
+.hamburger span { display:block; width:22px; height:2px; background:var(--text2); border-radius:2px; transition:0.3s; }
+.mobile-menu {
+  display:none; position:fixed; top:64px; left:0; right:0; z-index:99;
+  background:rgba(10,10,15,0.97); border-bottom:1px solid var(--border);
+  padding:1rem 2rem 1.5rem; flex-direction:column; gap:0.25rem;
+}
+.mobile-menu.open { display:flex; }
+.mobile-menu a { color:var(--text2); text-decoration:none; padding:0.6rem 0; font-size:0.95rem; border-bottom:1px solid var(--border); }
+.mobile-menu a:last-child { border-bottom:none; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center;
+  padding: 6rem 2rem 4rem;
+  position:relative; overflow:hidden;
+}
+.hero-bg {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(124,58,237,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(168,85,247,0.08) 0%, transparent 60%);
+}
+.hero-badge {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  background:rgba(124,58,237,0.15); border:1px solid var(--border2);
+  border-radius:50px; padding:0.35rem 1rem; font-size:0.8rem;
+  color:var(--accent3); margin-bottom:1.5rem; font-weight:500;
+}
+.hero h1 {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height:1.05; margin-bottom:1.25rem;
+  letter-spacing:-0.02em;
+}
+.hero h1 em { font-style:normal; color:var(--accent2); }
+.hero p {
+  font-size:1.1rem; color:var(--text2); max-width:560px; margin:0 auto 2.5rem;
+  line-height:1.7;
+}
+.hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:4rem; }
+.btn-primary {
+  background: linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff; border:none; border-radius:12px; padding:0.85rem 2rem;
+  font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:500;
+  cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(124,58,237,0.35); }
+.btn-secondary {
+  background:transparent; color:var(--text);
+  border:1px solid var(--border2); border-radius:12px; padding:0.85rem 2rem;
+  font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:500;
+  cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+.btn-secondary:hover { background:rgba(124,58,237,0.1); border-color:var(--accent2); }
+
+/* STATS */
+.stats {
+  display:flex; gap:2rem; justify-content:center; flex-wrap:wrap;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  width:100%; max-width:700px; margin:0 auto;
+}
+.stat { text-align:center; }
+.stat-num { font-family:'Syne',sans-serif; font-size:1.8rem; font-weight:800; color:var(--text); }
+.stat-label { font-size:0.8rem; color:var(--text3); margin-top:0.2rem; }
+
+/* SECTION */
+section { padding:5rem 2rem; max-width:1200px; margin:0 auto; }
+.section-label {
+  display:inline-flex; align-items:center; gap:0.4rem;
+  font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--accent3); margin-bottom:0.75rem;
+}
+h2 { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(1.8rem,3vw,2.8rem); line-height:1.15; margin-bottom:0.75rem; }
+h2 em { font-style:normal; color:var(--accent2); }
+.section-sub { color:var(--text2); font-size:1rem; max-width:500px; line-height:1.7; margin-bottom:2.5rem; }
+
+/* CATEGORIES GRID */
+.cat-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem;
+}
+.cat-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:1.5rem;
+  cursor:pointer; text-decoration:none; display:flex; flex-direction:column; gap:0.5rem;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.cat-card:hover { border-color:var(--accent2); background:var(--card-hover); transform:translateY(-3px); }
+.cat-card .cat-icon { font-size:2rem; }
+.cat-card .cat-name { font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; }
+.cat-card .cat-count { font-size:0.8rem; color:var(--text3); }
+
+/* FILTER TABS */
+.filter-wrap { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem; }
+.filter-btn {
+  background:var(--card); border:1px solid var(--border);
+  color:var(--text2); border-radius:50px; padding:0.4rem 1rem;
+  font-family:'DM Sans',sans-serif; font-size:0.85rem; cursor:pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background:var(--accent); border-color:var(--accent);
+  color:#fff;
+}
+
+/* PROMPTS GRID */
+.prompts-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem;
+}
+.prompt-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:1.5rem;
+  cursor:pointer; transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  position:relative;
+}
+.prompt-card:hover { border-color:var(--accent2); background:var(--card-hover); transform:translateY(-2px); }
+.prompt-card .p-cat {
+  font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;
+  color:var(--accent3); margin-bottom:0.5rem;
+}
+.prompt-card .p-title { font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; margin-bottom:0.5rem; }
+.prompt-card .p-preview { font-size:0.85rem; color:var(--text2); line-height:1.6; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.prompt-card .p-footer { display:flex; align-items:center; justify-content:space-between; margin-top:1rem; }
+.prompt-card .p-ai { font-size:0.75rem; color:var(--text3); }
+.prompt-card .p-copy-btn {
+  background:rgba(124,58,237,0.15); border:1px solid var(--border2);
+  color:var(--accent3); border-radius:8px; padding:0.3rem 0.7rem;
+  font-size:0.75rem; font-weight:500; cursor:pointer; transition:0.2s;
+}
+.prompt-card .p-copy-btn:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
+.p-stars { display:flex; gap:2px; margin-top:0.5rem; }
+.p-stars span { font-size:0.75rem; }
+.p-fav { position:absolute; top:1rem; right:1rem; background:none; border:none; cursor:pointer; font-size:1rem; opacity:0.4; transition:opacity 0.2s; }
+.p-fav:hover, .p-fav.active { opacity:1; }
+
+/* PAGINATION */
+.pagination { display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-top:2rem; }
+.page-btn {
+  width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center;
+  background:var(--card); border:1px solid var(--border); color:var(--text2);
+  cursor:pointer; font-size:0.85rem; transition:0.2s;
+}
+.page-btn:hover, .page-btn.active { background:var(--accent); border-color:var(--accent); color:#fff; }
+
+/* BLOG */
+.blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem; }
+.blog-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--radius-lg); overflow:hidden;
+  cursor:pointer; transition: border-color 0.2s, transform 0.2s;
+  display:flex; flex-direction:column;
+}
+.blog-card:hover { border-color:var(--accent2); transform:translateY(-3px); }
+.blog-thumb {
+  height:160px; background:linear-gradient(135deg,var(--bg3),rgba(124,58,237,0.2));
+  display:flex; align-items:center; justify-content:center; font-size:3rem;
+  flex-shrink:0;
+}
+.blog-body { padding:1.25rem; flex:1; display:flex; flex-direction:column; }
+.blog-meta { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem; flex-wrap:wrap; }
+.blog-cat-badge {
+  background:rgba(124,58,237,0.15); border:1px solid var(--border2);
+  color:var(--accent3); border-radius:50px; padding:0.2rem 0.6rem; font-size:0.7rem; font-weight:600;
+}
+.blog-date { font-size:0.75rem; color:var(--text3); }
+.blog-card h3 { font-family:'Syne',sans-serif; font-weight:700; font-size:1.05rem; margin-bottom:0.5rem; line-height:1.3; }
+.blog-card p { font-size:0.85rem; color:var(--text2); line-height:1.6; flex:1; }
+.blog-card .blog-footer { margin-top:1rem; display:flex; align-items:center; justify-content:space-between; }
+.blog-card .read-more { font-size:0.8rem; color:var(--accent3); font-weight:500; }
+.blog-rating { display:flex; align-items:center; gap:4px; }
+.blog-rating .stars { display:flex; gap:1px; }
+.blog-rating .stars span { font-size:0.75rem; }
+.blog-rating .rating-val { font-size:0.75rem; color:var(--text3); }
+
+/* BLOG FILTER */
+.blog-filter-wrap { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem; }
+
+/* BLOG SUBMIT FORM */
+.blog-form-wrap {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--radius-xl); padding:2rem; margin-bottom:3rem;
+}
+.blog-form-wrap h3 { font-family:'Syne',sans-serif; font-weight:700; font-size:1.2rem; margin-bottom:1.25rem; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
+.form-group { display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1rem; }
+.form-group label { font-size:0.8rem; color:var(--text2); font-weight:500; }
+.form-group input, .form-group textarea, .form-group select {
+  background:var(--bg3); border:1px solid var(--border);
+  border-radius:10px; padding:0.7rem 0.9rem;
+  color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.9rem;
+  outline:none; transition:border-color 0.2s;
+  resize:vertical;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  border-color:var(--accent2);
+}
+.form-group select option { background:var(--bg2); }
+.rating-input { display:flex; gap:0.5rem; align-items:center; }
+.rating-input .star-btn {
+  font-size:1.5rem; cursor:pointer; opacity:0.3; transition:opacity 0.15s, transform 0.15s;
+  background:none; border:none;
+}
+.rating-input .star-btn:hover, .rating-input .star-btn.selected { opacity:1; transform:scale(1.2); }
+
+/* MODAL */
+.modal-overlay {
+  display:none; position:fixed; inset:0; z-index:200;
+  background:rgba(0,0,0,0.7); backdrop-filter:blur(8px);
+  align-items:center; justify-content:center; padding:1rem;
+}
+.modal-overlay.open { display:flex; }
+.modal {
+  background:var(--bg2); border:1px solid var(--border2);
+  border-radius:var(--radius-xl); padding:2rem; max-width:600px; width:100%;
+  max-height:90vh; overflow-y:auto; position:relative;
+}
+.modal-close {
+  position:absolute; top:1rem; right:1rem;
+  background:none; border:none; cursor:pointer; color:var(--text2); font-size:1.5rem; line-height:1;
+}
+.modal-close:hover { color:var(--text); }
+.modal .m-cat { font-size:0.75rem; color:var(--accent3); font-weight:600; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem; }
+.modal h3 { font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; margin-bottom:1rem; }
+.modal .m-prompt {
+  background:var(--bg3); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.25rem;
+  font-size:0.9rem; line-height:1.7; color:var(--text2);
+  margin-bottom:1.25rem; white-space:pre-wrap;
+}
+.modal .m-meta { display:flex; gap:1rem; font-size:0.8rem; color:var(--text3); margin-bottom:1.5rem; flex-wrap:wrap; }
+.modal .m-rate-section { margin-bottom:1rem; }
+.modal .m-rate-label { font-size:0.85rem; color:var(--text2); margin-bottom:0.5rem; }
+
+/* BLOG MODAL */
+.blog-modal-body { font-size:0.95rem; color:var(--text2); line-height:1.8; }
+.blog-modal-body p { margin-bottom:1rem; }
+.blog-modal-body h4 { font-family:'Syne',sans-serif; font-weight:700; color:var(--text); margin:1.25rem 0 0.5rem; }
+
+/* ABOUT */
+.about-wrap { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+.about-avatar {
+  width:200px; height:200px; border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex; align-items:center; justify-content:center; font-size:5rem;
+  margin:0 auto 1.5rem; position:relative;
+}
+.about-avatar::after {
+  content:''; position:absolute; inset:-4px;
+  border-radius:50%; border:2px dashed var(--accent2); opacity:0.4;
+  animation:spin 20s linear infinite;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+.skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; }
+.skill-tag {
+  background:rgba(124,58,237,0.12); border:1px solid var(--border2);
+  color:var(--accent3); border-radius:50px; padding:0.3rem 0.75rem; font-size:0.8rem; font-weight:500;
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--radius-xl); padding:3rem 2rem; text-align:center;
+  max-width:600px; margin:0 auto;
+}
+.newsletter-section h2 { margin-bottom:0.5rem; }
+.newsletter-section p { color:var(--text2); margin-bottom:1.5rem; }
+.nl-form { display:flex; gap:0.75rem; max-width:400px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+.nl-form input {
+  flex:1; min-width:200px;
+  background:var(--bg3); border:1px solid var(--border); border-radius:12px;
+  padding:0.75rem 1rem; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.9rem;
+  outline:none; transition:border-color 0.2s;
+}
+.nl-form input:focus { border-color:var(--accent2); }
+.nl-note { font-size:0.8rem; color:var(--text3); margin-top:0.75rem; }
+
+/* FOOTER */
+footer {
+  background:var(--bg2); border-top:1px solid var(--border);
+  padding:3rem 2rem 2rem;
+}
+.footer-inner { max-width:1200px; margin:0 auto; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:3rem; margin-bottom:2.5rem; }
+.footer-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.3rem; margin-bottom:0.75rem; }
+.footer-logo span { color:var(--accent2); }
+.footer-desc { font-size:0.85rem; color:var(--text3); line-height:1.7; max-width:280px; }
+.footer-col h4 { font-family:'Syne',sans-serif; font-weight:700; font-size:0.9rem; margin-bottom:1rem; color:var(--text); }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.5rem; }
+.footer-col ul a { color:var(--text3); text-decoration:none; font-size:0.85rem; transition:color 0.2s; }
+.footer-col ul a:hover { color:var(--accent3); }
+.footer-bottom { border-top:1px solid var(--border); padding-top:1.5rem; text-align:center; font-size:0.8rem; color:var(--text3); }
+
+/* TOAST */
+.toast {
+  position:fixed; bottom:2rem; right:2rem; z-index:999;
+  background:var(--success); color:#fff; border-radius:12px;
+  padding:0.75rem 1.25rem; font-size:0.9rem; font-weight:500;
+  transform:translateY(100px); opacity:0; transition:all 0.3s;
+  display:flex; align-items:center; gap:0.5rem;
+}
+.toast.show { transform:translateY(0); opacity:1; }
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  .nav-links, .nav-search { display:none; }
+  .hamburger { display:flex; }
+  .about-wrap { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr; gap:2rem; }
+  .form-row { grid-template-columns:1fr; }
+  nav { padding:0 1rem; }
+  section { padding:3rem 1rem; }
+  .hero { padding:5rem 1rem 3rem; }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.hero > * { animation: fadeUp 0.6s ease backwards; }
+.hero-badge { animation-delay:0.1s; }
+.hero h1 { animation-delay:0.2s; }
+.hero p { animation-delay:0.3s; }
+.hero-btns { animation-delay:0.4s; }
+.stats { animation-delay:0.5s; }
+
+.divider { border:none; border-top:1px solid var(--border); max-width:1200px; margin:0 auto; }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <a href="#" class="logo">🪐 PromptNova</a>
-    <ul class="nav-links">
-      <li><a href="#" class="active">Inicio</a></li>
-      <li><a href="#posts">Prompts</a></li>
-      <li><a href="#categorias">Categorías</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="privacidad.html">Privacidad</a></li>
-    </ul>
-    <div class="nav-search" onclick="document.getElementById('search-input').focus()">
-      🔍 <span style="font-size:0.85rem">Buscar prompts...</span>
-    </div>
-    <a href="#posts" class="nav-cta">✨ Explorar</a>
+  <a href="#" class="nav-logo">🪐 Prompt<span>Nova</span></a>
+  <div class="nav-search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="searchInput" placeholder="Buscar prompts..." oninput="filterPrompts()">
+  </div>
+  <div class="nav-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#posts">Prompts</a>
+    <a href="#categorias">Categorías</a>
+    <a href="#blog">Blog</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="https://miltonvlz4-ui.github.io/privacidad.html" target="_blank">Privacidad</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
   </div>
 </nav>
-
-<!-- AD TOP -->
-<div class="ad-banner" style="max-width:1200px;margin:1.5rem auto;padding:0 2rem;text-align:center">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7965643620841539"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio" onclick="closeMenu()">Inicio</a>
+  <a href="#posts" onclick="closeMenu()">Prompts</a>
+  <a href="#categorias" onclick="closeMenu()">Categorías</a>
+  <a href="#blog" onclick="closeMenu()">Blog</a>
+  <a href="#sobre-mi" onclick="closeMenu()">Sobre mí</a>
+  <a href="https://miltonvlz4-ui.github.io/privacidad.html" target="_blank" onclick="closeMenu()">Privacidad</a>
+  <a href="https://miltonvlz4-ui.github.io/terminos.html" target="_blank" onclick="closeMenu()">Términos de Uso</a>
+  <a href="https://miltonvlz4-ui.github.io/aviso-legal.html" target="_blank" onclick="closeMenu()">Aviso Legal</a>
+  <a href="mailto:contacto@promptnova.com" onclick="closeMenu()">Contacto</a>
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<div id="inicio" class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-dots"></div>
-  <div class="hero-content">
-    <div class="hero-badge fade-up">🪐 <span>+100</span> prompts IA listos para usar</div>
-    <h1 class="fade-up delay-1">Desata el poder<br>de la IA con <em>Prompts<br>que funcionan.</em></h1>
-    <p class="fade-up delay-2">Encuentra, copia y usa los mejores prompts para ChatGPT, Claude, Gemini y más. Resultados profesionales en segundos.</p>
-    <div class="hero-btns fade-up delay-3">
-      <button class="btn-primary" onclick="document.getElementById('posts').scrollIntoView({behavior:'smooth'})">🚀 Explorar Prompts</button>
-      <button class="btn-outline" onclick="document.getElementById('categorias').scrollIntoView({behavior:'smooth'})">⊞ Ver categorías</button>
+  <div style="position:relative; z-index:1; width:100%;">
+    <div class="hero-badge">🪐 +100 prompts IA listos para usar</div>
+    <h1>Desata el poder de la IA<br>con <em>Prompts que funcionan.</em></h1>
+    <p>Encuentra, copia y usa los mejores prompts para ChatGPT, Claude, Gemini y más. Resultados profesionales en segundos.</p>
+    <div class="hero-btns">
+      <a href="#posts" class="btn-primary">🚀 Explorar Prompts</a>
+      <a href="#categorias" class="btn-secondary">⊞ Ver categorías</a>
     </div>
-    <div class="hero-stats fade-up delay-3" id="hero-stats">
-      <!-- Rellenado por JS con datos reales -->
+    <div class="stats">
+      <div class="stat"><div class="stat-num">+100</div><div class="stat-label">Prompts disponibles</div></div>
+      <div class="stat"><div class="stat-num">+5K</div><div class="stat-label">Usuarios activos</div></div>
+      <div class="stat"><div class="stat-num">4.9/5</div><div class="stat-label">Valoración media</div></div>
+      <div class="stat"><div class="stat-num">+50K</div><div class="stat-label">Prompts copiados</div></div>
     </div>
   </div>
-</section>
+</div>
+
+<hr class="divider">
 
 <!-- CATEGORÍAS -->
 <section id="categorias">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">⭐ Explora</span>
-      <h2>Encuentra tu categoría</h2>
-      <p>Prompts organizados para cada área de tu vida profesional y personal.</p>
-    </div>
-    <div class="cats-grid" id="cats-grid">
-      <!-- Rellenado por JS con conteos reales -->
-    </div>
+  <div class="section-label">⭐ Explora</div>
+  <h2>Encuentra tu <em>categoría</em></h2>
+  <p class="section-sub">Prompts organizados para cada área de tu vida profesional y personal.</p>
+  <div class="cat-grid">
+    <a href="#posts" class="cat-card" onclick="filterByCategory('trabajo')">
+      <div class="cat-icon">💼</div>
+      <div class="cat-name">Trabajo</div>
+      <div class="cat-count">18 prompts</div>
+    </a>
+    <a href="#posts" class="cat-card" onclick="filterByCategory('estudio')">
+      <div class="cat-icon">📚</div>
+      <div class="cat-name">Estudio</div>
+      <div class="cat-count">14 prompts</div>
+    </a>
+    <a href="#posts" class="cat-card" onclick="filterByCategory('marketing')">
+      <div class="cat-icon">📣</div>
+      <div class="cat-name">Marketing</div>
+      <div class="cat-count">22 prompts</div>
+    </a>
+    <a href="#posts" class="cat-card" onclick="filterByCategory('programacion')">
+      <div class="cat-icon">💻</div>
+      <div class="cat-name">Programación</div>
+      <div class="cat-count">16 prompts</div>
+    </a>
+    <a href="#posts" class="cat-card" onclick="filterByCategory('personal')">
+      <div class="cat-icon">❤️</div>
+      <div class="cat-name">Desarrollo Personal</div>
+      <div class="cat-count">12 prompts</div>
+    </a>
+    <a href="#posts" class="cat-card" onclick="filterByCategory('emprendimiento')">
+      <div class="cat-icon">🚀</div>
+      <div class="cat-name">Emprendimiento</div>
+      <div class="cat-count">20 prompts</div>
+    </a>
   </div>
 </section>
+
+<hr class="divider">
 
 <!-- PROMPTS -->
 <section id="posts">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">✦ Colección</span>
-      <h2>Todos los Prompts</h2>
-      <p>Listos para copiar y usar. Haz clic en cualquier tarjeta para ver el prompt completo.</p>
-    </div>
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterCategory('todos', this)">Todos</button>
-      <button class="filter-btn" onclick="filterFavs(this)">❤️ Favoritos</button>
-      <button class="filter-btn" onclick="filterCategory('trabajo', this)">💼 Trabajo</button>
-      <button class="filter-btn" onclick="filterCategory('marketing', this)">📣 Marketing</button>
-      <button class="filter-btn" onclick="filterCategory('programacion', this)">💻 Programación</button>
-      <button class="filter-btn" onclick="filterCategory('estudio', this)">📚 Estudio</button>
-      <button class="filter-btn" onclick="filterCategory('personal', this)">❤️ Personal</button>
-      <button class="filter-btn" onclick="filterCategory('emprendimiento', this)">🚀 Emprendimiento</button>
-      <div class="search-bar">
-        🔍 <input type="text" id="search-input" placeholder="Buscar prompt..." oninput="searchPrompts(this.value)">
-      </div>
-    </div>
-    <div class="prompts-grid" id="prompts-grid"></div>
-    <div class="pagination">
-      <button class="page-btn" onclick="changePage(-1)">←</button>
-      <button class="page-btn active" id="page-1" onclick="goPage(1)">1</button>
-      <button class="page-btn" id="page-2" onclick="goPage(2)">2</button>
-      <button class="page-btn" id="page-3" onclick="goPage(3)">3</button>
-      <button class="page-btn" onclick="changePage(1)">→</button>
-    </div>
+  <div class="section-label">✦ Colección</div>
+  <h2>Todos los <em>Prompts</em></h2>
+  <p class="section-sub">Listos para copiar y usar. Haz clic en cualquier tarjeta para ver el prompt completo.</p>
+  <div class="filter-wrap" id="filterWrap">
+    <button class="filter-btn active" onclick="setFilter('todos',this)">Todos</button>
+    <button class="filter-btn" onclick="setFilter('favoritos',this)">❤️ Favoritos</button>
+    <button class="filter-btn" onclick="setFilter('trabajo',this)">💼 Trabajo</button>
+    <button class="filter-btn" onclick="setFilter('marketing',this)">📣 Marketing</button>
+    <button class="filter-btn" onclick="setFilter('programacion',this)">💻 Programación</button>
+    <button class="filter-btn" onclick="setFilter('estudio',this)">📚 Estudio</button>
+    <button class="filter-btn" onclick="setFilter('personal',this)">❤️ Personal</button>
+    <button class="filter-btn" onclick="setFilter('emprendimiento',this)">🚀 Emprendimiento</button>
   </div>
+  <div class="prompts-grid" id="promptsGrid"></div>
+  <div class="pagination" id="pagination"></div>
 </section>
 
-<!-- AD MIDDLE -->
-<div class="ad-banner" style="max-width:1200px;margin:0 auto;padding:0 2rem;text-align:center">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7965643620841539"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+<hr class="divider">
 
 <!-- BLOG -->
 <section id="blog">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">📖 Blog</span>
-      <h2>Aprende a usar la IA</h2>
-      <p>Artículos, guías y tutoriales para sacarle el máximo partido a los prompts.</p>
+  <div class="section-label">📖 Blog</div>
+  <h2>Aprende a usar <em>la IA</em></h2>
+  <p class="section-sub">Artículos, guías y tutoriales para sacarle el máximo partido a los prompts.</p>
+
+  <!-- Blog submit form -->
+  <div class="blog-form-wrap">
+    <h3>✍️ Comparte tu artículo</h3>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Título del artículo *</label>
+        <input type="text" id="blogTitle" placeholder="Ej: Cómo usar ChatGPT para...">
+      </div>
+      <div class="form-group">
+        <label>Categoría *</label>
+        <select id="blogCategory">
+          <option value="">Seleccionar categoría</option>
+          <option value="guias">📖 Guías</option>
+          <option value="tutoriales">🎓 Tutoriales</option>
+          <option value="trucos">💡 Trucos y Tips</option>
+          <option value="herramientas">🛠️ Herramientas</option>
+          <option value="casos">✅ Casos de Uso</option>
+          <option value="noticias">📰 Noticias IA</option>
+        </select>
+      </div>
     </div>
-    <div class="blog-grid" id="blog-grid"></div>
+    <div class="form-group">
+      <label>Resumen / Descripción *</label>
+      <textarea id="blogSummary" rows="3" placeholder="Describe brevemente de qué trata el artículo..."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Contenido del artículo *</label>
+      <textarea id="blogContent" rows="6" placeholder="Escribe aquí el contenido completo..."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Emoji/icono del artículo</label>
+      <input type="text" id="blogEmoji" placeholder="Ej: 🤖" maxlength="4" style="max-width:80px;">
+    </div>
+    <div class="form-group">
+      <label>Tu valoración del tema ⭐</label>
+      <div class="rating-input" id="blogRatingInput">
+        <button class="star-btn" data-val="1" onclick="setFormRating(1)">⭐</button>
+        <button class="star-btn" data-val="2" onclick="setFormRating(2)">⭐</button>
+        <button class="star-btn" data-val="3" onclick="setFormRating(3)">⭐</button>
+        <button class="star-btn" data-val="4" onclick="setFormRating(4)">⭐</button>
+        <button class="star-btn" data-val="5" onclick="setFormRating(5)">⭐</button>
+        <span style="font-size:0.8rem;color:var(--text3);margin-left:0.5rem;" id="formRatingLabel">Sin valorar</span>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="submitBlog()" style="margin-top:0.5rem;">Publicar artículo</button>
   </div>
+
+  <!-- Blog filters -->
+  <div class="blog-filter-wrap" id="blogFilterWrap">
+    <button class="filter-btn active" onclick="setBlogFilter('todos',this)">Todos</button>
+    <button class="filter-btn" onclick="setBlogFilter('guias',this)">📖 Guías</button>
+    <button class="filter-btn" onclick="setBlogFilter('tutoriales',this)">🎓 Tutoriales</button>
+    <button class="filter-btn" onclick="setBlogFilter('trucos',this)">💡 Trucos</button>
+    <button class="filter-btn" onclick="setBlogFilter('herramientas',this)">🛠️ Herramientas</button>
+    <button class="filter-btn" onclick="setBlogFilter('casos',this)">✅ Casos de Uso</button>
+    <button class="filter-btn" onclick="setBlogFilter('noticias',this)">📰 Noticias IA</button>
+  </div>
+
+  <div class="blog-grid" id="blogGrid"></div>
 </section>
 
-<!-- AD BOTTOM -->
-<div class="ad-banner" style="max-width:1200px;margin:0 auto;padding:0 2rem;text-align:center">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7965643620841539"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+<hr class="divider">
 
-<!-- SOBRE MÍ -->
+<!-- ABOUT -->
 <section id="sobre-mi">
-  <div class="container">
-    <div class="about-wrap">
-      <div class="about-visual">
-        <div class="about-avatar">🧑‍🚀</div>
-        <div class="about-stats">
-          <div class="stat-box"><div class="stat-num" id="stat-total">0</div><div class="stat-label">Prompts</div></div>
-          <div class="stat-box"><div class="stat-num">+5K</div><div class="stat-label">Seguidores</div></div>
-          <div class="stat-box"><div class="stat-num">2 años</div><div class="stat-label">En IA</div></div>
-        </div>
+  <div class="about-wrap">
+    <div style="text-align:center;">
+      <div class="about-avatar">🧑‍🚀</div>
+      <div style="display:flex;justify-content:center;gap:2rem;margin-top:1rem;">
+        <div class="stat"><div class="stat-num">+100</div><div class="stat-label">Prompts</div></div>
+        <div class="stat"><div class="stat-num">+5K</div><div class="stat-label">Seguidores</div></div>
+        <div class="stat"><div class="stat-num">2 años</div><div class="stat-label">En IA</div></div>
       </div>
-      <div class="about-text">
-        <span class="section-label">👋 Hola, soy</span>
-        <h2 style="margin-top:0.5rem">El creador de<br><em style="font-style:normal;background:linear-gradient(135deg,var(--accent2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">PromptNova</em></h2>
-        <p>Soy un apasionado de la inteligencia artificial y el prompt engineering. Llevo más de 2 años explorando, probando y perfeccionando prompts para ChatGPT, Claude, Gemini y otras IAs.</p>
-        <p>PromptNova nació con una misión clara: hacer la IA accesible para todos. Aquí encontrarás prompts probados y listos para usar que te ahorrarán horas de trabajo.</p>
-        <p>Cada prompt en esta colección ha sido testeado, refinado y optimizado. No teórico — <strong>resultados reales</strong> para personas reales.</p>
-        <div class="skills-list">
-          <span class="skill-tag">ChatGPT</span>
-          <span class="skill-tag">Claude</span>
-          <span class="skill-tag">Gemini</span>
-          <span class="skill-tag">Prompt Engineering</span>
-          <span class="skill-tag">IA Generativa</span>
-          <span class="skill-tag">Automatización</span>
-          <span class="skill-tag">Productividad</span>
-        </div>
+    </div>
+    <div>
+      <div class="section-label">👋 Hola, soy</div>
+      <h2>El creador de <em>PromptNova</em></h2>
+      <p style="color:var(--text2);line-height:1.8;margin-bottom:1rem;">Soy un apasionado de la inteligencia artificial y el prompt engineering. Llevo más de 2 años explorando, probando y perfeccionando prompts para ChatGPT, Claude, Gemini y otras IAs.</p>
+      <p style="color:var(--text2);line-height:1.8;margin-bottom:1rem;">PromptNova nació con una misión clara: hacer la IA accesible para todos. Aquí encontrarás prompts probados y listos para usar que te ahorrarán horas de trabajo.</p>
+      <p style="color:var(--text2);line-height:1.8;">Cada prompt en esta colección ha sido testeado, refinado y optimizado. No teórico — <strong>resultados reales</strong> para personas reales.</p>
+      <div class="skill-tags">
+        <span class="skill-tag">ChatGPT</span>
+        <span class="skill-tag">Claude</span>
+        <span class="skill-tag">Gemini</span>
+        <span class="skill-tag">Prompt Engineering</span>
+        <span class="skill-tag">IA Generativa</span>
+        <span class="skill-tag">Automatización</span>
+        <span class="skill-tag">Productividad</span>
       </div>
     </div>
   </div>
 </section>
+
+<hr class="divider">
 
 <!-- NEWSLETTER -->
-<div class="cta-section">
-  <span class="section-label">📬 Newsletter</span>
-  <h2>Únete a la comunidad PromptNova</h2>
-  <p>Recibe nuevos prompts, tips y recursos exclusivos cada semana. Gratis, siempre.</p>
-  <div class="email-form">
-    <input type="email" id="newsletter-email" placeholder="tu@email.com" required>
-    <button class="btn-primary" onclick="handleSubscribe()">Suscribirme →</button>
+<section style="padding:4rem 2rem;">
+  <div class="newsletter-section">
+    <div class="section-label">📬 Newsletter</div>
+    <h2>Únete a la comunidad <em>PromptNova</em></h2>
+    <p>Recibe nuevos prompts, tips y recursos exclusivos cada semana. Gratis, siempre.</p>
+    <div class="nl-form">
+      <input type="email" id="nlEmail" placeholder="tu@email.com">
+      <button class="btn-primary" onclick="subscribeNewsletter()">Suscribirme →</button>
+    </div>
+    <p class="nl-note">Sin spam. Cancela cuando quieras. ✌️</p>
   </div>
-  <div id="newsletter-success" style="display:none;margin-top:1rem;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);border-radius:10px;padding:0.75rem 1.5rem;color:var(--green);font-size:0.9rem">
-    ✅ ¡Gracias! Pronto recibirás novedades en tu email.
-  </div>
-  <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted)">Sin spam. Cancela cuando quieras. ✌️</p>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="#" class="logo">🪐 PromptNova</a>
-      <p>Tu copiloto en el universo de la inteligencia artificial. Prompts probados para ChatGPT, Claude y Gemini.</p>
-      <div class="social-links">
-        <a href="#" class="social-link" title="Twitter/X">𝕏</a>
-        <a href="#" class="social-link" title="TikTok">♪</a>
-        <a href="#" class="social-link" title="Instagram">📷</a>
-        <a href="#" class="social-link" title="YouTube">▶</a>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">🪐 Prompt<span>Nova</span></div>
+        <p class="footer-desc">Tu copiloto en el universo de la inteligencia artificial. Prompts probados para ChatGPT, Claude y Gemini.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="#posts">Todos los prompts</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="https://miltonvlz4-ui.github.io/privacidad.html" target="_blank">Política de Privacidad</a></li>
+          <li><a href="https://miltonvlz4-ui.github.io/terminos.html" target="_blank">Términos de Uso</a></li>
+          <li><a href="https://miltonvlz4-ui.github.io/aviso-legal.html" target="_blank">Aviso Legal</a></li>
+          <li><a href="mailto:contacto@promptnova.com">Contacto</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Sígueme</h4>
-      <ul>
-        <li><a href="#">Twitter / X</a></li>
-        <li><a href="#">TikTok</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">YouTube</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Explorar</h4>
-      <ul>
-        <li><a href="#posts">Todos los prompts</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#categorias">Categorías</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="privacidad.html">Política de Privacidad</a></li>
-        <li><a href="terminos.html">Términos de Uso</a></li>
-        <li><a href="aviso-legal.html">Aviso Legal</a></li>
-        <li><a href="mailto:contacto@promptnova.com">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 PromptNova — Todos los derechos reservados. Hecho con ✨ para la comunidad IA.</span>
-    <span>Prompts que realmente funcionan 🚀</span>
+    <div class="footer-bottom">© 2025 PromptNova — Todos los derechos reservados. Hecho con ✨ para la comunidad IA.</div>
   </div>
 </footer>
 
 <!-- TOAST -->
-<div class="toast" id="toast">✅ ¡Prompt copiado!</div>
+<div class="toast" id="toast"></div>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+<!-- PROMPT MODAL -->
+<div class="modal-overlay" id="promptModal">
   <div class="modal">
-    <div class="modal-header">
-      <div>
-        <div id="modal-badge" class="prompt-badge" style="margin-bottom:0.5rem;display:inline-block"></div>
-        <h3 id="modal-title"></h3>
+    <button class="modal-close" onclick="closeModal('promptModal')">✕</button>
+    <div class="m-cat" id="mCat"></div>
+    <h3 id="mTitle"></h3>
+    <div class="m-meta" id="mMeta"></div>
+    <div class="m-prompt" id="mPrompt"></div>
+    <div class="m-rate-section">
+      <div class="m-rate-label">¿Te fue útil este prompt? Valóralo:</div>
+      <div class="rating-input" id="modalRatingInput">
+        <button class="star-btn" data-val="1" onclick="ratePrompt(1)">⭐</button>
+        <button class="star-btn" data-val="2" onclick="ratePrompt(2)">⭐</button>
+        <button class="star-btn" data-val="3" onclick="ratePrompt(3)">⭐</button>
+        <button class="star-btn" data-val="4" onclick="ratePrompt(4)">⭐</button>
+        <button class="star-btn" data-val="5" onclick="ratePrompt(5)">⭐</button>
+        <span style="font-size:0.8rem;color:var(--text3);margin-left:0.5rem;" id="modalRatingLabel"></span>
       </div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
-    <p id="modal-desc" style="font-size:0.875rem;color:var(--muted);margin-bottom:0.25rem"></p>
-    <div class="modal-prompt-text" id="modal-text"></div>
-    <button class="modal-copy-btn" onclick="copyModal()">📋 Copiar prompt completo</button>
+    <button class="btn-primary" onclick="copyModalPrompt()" style="width:100%;justify-content:center;">📋 Copiar prompt completo</button>
+  </div>
+</div>
+
+<!-- BLOG MODAL -->
+<div class="modal-overlay" id="blogModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('blogModal')">✕</button>
+    <div class="m-cat" id="bmCat"></div>
+    <h3 id="bmTitle"></h3>
+    <div class="m-meta" id="bmMeta"></div>
+    <div class="blog-modal-body" id="bmBody"></div>
+    <div style="margin-top:1.5rem;">
+      <div class="m-rate-label" style="font-size:0.85rem;color:var(--text2);margin-bottom:0.5rem;">¿Te resultó útil este artículo?</div>
+      <div class="rating-input" id="blogModalRating">
+        <button class="star-btn" data-val="1" onclick="rateBlog(1)">⭐</button>
+        <button class="star-btn" data-val="2" onclick="rateBlog(2)">⭐</button>
+        <button class="star-btn" data-val="3" onclick="rateBlog(3)">⭐</button>
+        <button class="star-btn" data-val="4" onclick="rateBlog(4)">⭐</button>
+        <button class="star-btn" data-val="5" onclick="rateBlog(5)">⭐</button>
+        <span style="font-size:0.8rem;color:var(--text3);margin-left:0.5rem;" id="blogModalRatingLabel"></span>
+      </div>
+    </div>
   </div>
 </div>
 
 <script>
-// ── DATOS DE PROMPTS ──
+// ===== DATA =====
 const PROMPTS = [
-  { id:1,  cat:'trabajo',        title:'Redacta un email profesional persuasivo',          desc:'Genera emails de trabajo formales, claros y con llamada a la acción.',                         text:'Actúa como un experto en comunicación corporativa. Redacta un email profesional para [destinatario/cargo] sobre [tema]. El tono debe ser [formal/amigable/urgente]. El objetivo es [objetivo específico]. Incluye: asunto impactante, saludo personalizado, desarrollo del tema en 2-3 párrafos cortos, llamada a la acción clara y cierre profesional. El email no debe superar las 200 palabras.', tools:['ChatGPT','Claude'] },
-  { id:2,  cat:'marketing',      title:'Crea un post viral para Instagram',                desc:'Genera captions con gancho, emojis y hashtags estratégicos.',                                  text:'Eres un experto en marketing digital y contenido viral. Crea 3 variantes de caption para Instagram sobre [tema del post]. Cada caption debe incluir: gancho en la primera línea (que detenga el scroll), desarrollo del mensaje en 3-4 líneas, llamada a la acción, emojis relevantes y 15 hashtags estratégicos (mezcla de populares, nicho y marca). El tono es [alegre/inspirador/educativo/provocador].', tools:['ChatGPT','Gemini'] },
-  { id:3,  cat:'programacion',   title:'Revisa y mejora mi código',                        desc:'Analiza código, encuentra bugs y sugiere optimizaciones.',                                      text:'Eres un senior developer con 10 años de experiencia. Analiza el siguiente código [PEGAR CÓDIGO]: 1) Identifica bugs o errores potenciales, 2) Sugiere optimizaciones de rendimiento, 3) Propón mejoras de legibilidad y buenas prácticas, 4) Indica si hay problemas de seguridad, 5) Reescribe las partes críticas con las mejoras aplicadas. Explica cada cambio con su justificación.', tools:['Claude','ChatGPT'] },
-  { id:4,  cat:'estudio',        title:'Explícame este concepto como si tuviera 10 años',  desc:'Simplifica conceptos complejos usando analogías y ejemplos.',                                  text:'Eres un profesor experto en [materia] con habilidad para enseñar a cualquier nivel. Explícame [concepto] usando: una analogía con algo de la vida cotidiana, un ejemplo práctico y visual, los 3 puntos clave que debo recordar, y una pregunta de comprensión para verificar que lo entendí. Usa lenguaje simple, sin jerga técnica innecesaria. Al final, dime cómo se aplica esto en el mundo real.', tools:['Claude','ChatGPT','Gemini'] },
-  { id:5,  cat:'emprendimiento', title:'Valida tu idea de negocio en 5 minutos',           desc:'Análisis rápido de viabilidad y puntos críticos de tu idea.',                                  text:'Actúa como un mentor de startups con experiencia en venture capital. Voy a describirte mi idea de negocio: [DESCRIBIR IDEA]. Por favor analiza: 1) Problema real que resuelve y tamaño del mercado, 2) Propuesta de valor única vs competidores, 3) Modelo de negocio y fuentes de ingresos potenciales, 4) Los 3 mayores riesgos y cómo mitigarlos, 5) Próximos 3 pasos concretos para validar la idea. Sé directo y honesto, incluso si el feedback es negativo.', tools:['ChatGPT','Claude'] },
-  { id:6,  cat:'personal',       title:'Crea tu plan de desarrollo personal',               desc:'Plan estructurado de crecimiento personal adaptado a tus metas.',                              text:'Eres un coach de vida certificado. Ayúdame a crear un plan de desarrollo personal de 90 días. Mis metas son: [METAS]. Mis recursos disponibles son: [TIEMPO/DINERO/HABILIDADES]. Crea un plan que incluya: objetivos SMART semanales, hábitos diarios a implementar (máx. 3), métricas para medir el progreso, libros/recursos recomendados y un sistema de rendición de cuentas. Presenta el plan en formato de tabla semana a semana.', tools:['Claude','ChatGPT'] },
-  { id:7,  cat:'marketing',      title:'Estrategia de contenido para 30 días',              desc:'Calendario editorial completo con ideas para cada plataforma.',                                text:'Eres un estratega de contenido digital. Crea un calendario de contenido para [marca/nicho] durante 30 días para [plataformas: Instagram/TikTok/LinkedIn/Twitter]. Incluye: tema diario alineado con [objetivo de negocio], formato de contenido (reel/carrusel/stories/post), hook o idea principal, mejor horario de publicación y KPIs a medir. Considera las tendencias actuales y los momentos clave del mes. Organiza el resultado en una tabla clara.', tools:['ChatGPT','Gemini'] },
-  { id:8,  cat:'trabajo',        title:'Prepárate para una entrevista de trabajo',          desc:'Simula una entrevista y recibe feedback detallado.',                                            text:'Vas a simular ser un reclutador senior de [empresa/sector]. Voy a entrevistarme para el puesto de [PUESTO]. Mi CV resume: [BREVE RESUMEN]. Primero, hazme las 10 preguntas más difíciles que haría un reclutador exigente para este puesto. Después de que responda cada una, evalúa mi respuesta del 1-10, señala qué hice bien y qué mejorar, y dame la respuesta modelo ideal usando el método STAR. Al final, dame 3 consejos para destacar sobre otros candidatos.', tools:['Claude','ChatGPT'] },
-  { id:9,  cat:'programacion',   title:'Genera una API REST completa',                      desc:'Crea endpoints, modelos y documentación lista para producción.',                               text:'Eres un arquitecto de software backend especializado en APIs REST. Crea una API REST completa para [descripción del proyecto] usando [tecnología: Node.js/Python/etc]. Incluye: estructura de carpetas del proyecto, modelos de datos con validaciones, endpoints CRUD completos con middleware de autenticación JWT, manejo de errores estandarizado, ejemplos de request/response en formato JSON y comandos para instalar dependencias y ejecutar el proyecto. El código debe seguir las mejores prácticas y ser production-ready.', tools:['Claude','ChatGPT'] },
-  { id:10, cat:'estudio',        title:'Resume cualquier documento en puntos clave',        desc:'Extrae los insights más importantes de textos largos.',                                        text:'Eres un experto en síntesis de información. Analiza el siguiente texto [PEGAR TEXTO] y crea: 1) Resumen ejecutivo de 3 líneas, 2) Los 7 puntos más importantes con explicación de 2-3 líneas cada uno, 3) Las 3 conclusiones o aprendizajes principales, 4) Términos técnicos clave con sus definiciones, 5) Preguntas que quedan sin responder en el texto. Prioriza la claridad y la accionabilidad de la información.', tools:['Claude','Gemini','ChatGPT'] },
-  { id:11, cat:'emprendimiento', title:'Escribe un elevator pitch irresistible',            desc:'Tu propuesta de valor en 60 segundos que convence a inversores.',                              text:'Eres un experto en storytelling para startups que ha ayudado a empresas a recaudar millones. Crea 3 versiones de elevator pitch para [empresa/producto]: Versión 30 segundos (para un ascensor), Versión 60 segundos (para un evento de networking) y Versión 2 minutos (para una reunión de inversores). Cada versión debe incluir: el problema que resuelves, tu solución única, tracción o validación que tienes y la llamada a la acción. Usa storytelling emocional y datos concretos.', tools:['ChatGPT','Claude'] },
-  { id:12, cat:'personal',       title:'Supera el bloqueo creativo ahora mismo',            desc:'Técnicas y ejercicios para desbloquear tu creatividad al instante.',                          text:'Eres un coach creativo y experto en pensamiento lateral. Estoy bloqueado con [proyecto/problema creativo]. Ayúdame con: 5 técnicas de brainstorming específicas para este caso, 10 ideas locas sin filtro (el juicio viene después), 3 analogías de otros campos que podrían inspirarme, un ejercicio de 10 minutos para desbloquearme ahora mismo y las preguntas que me están faltando hacerme. No me des las respuestas, dame las herramientas para encontrarlas yo.', tools:['Claude','ChatGPT'] },
-  { id:13, cat:'trabajo',        title:'Escribe un informe ejecutivo en minutos',           desc:'Convierte datos en un reporte profesional listo para presentar.',                              text:'Eres un consultor de negocios senior. Redacta un informe ejecutivo sobre [tema] para [audiencia: directivos/inversores/clientes]. Incluye: resumen ejecutivo de 5 líneas, contexto y antecedentes, hallazgos principales con datos, análisis de implicaciones, recomendaciones priorizadas y próximos pasos con fechas. El tono debe ser directo y orientado a la acción. Usa viñetas donde sea posible para facilitar la lectura.', tools:['Claude','ChatGPT'] },
-  { id:14, cat:'marketing',      title:'Crea un guión de vídeo para YouTube',               desc:'Estructura narrativa completa con gancho, desarrollo y CTA.',                                  text:'Eres un guionista de YouTube con experiencia en videos virales. Crea un guión completo para un vídeo de [duración] minutos sobre [tema]. El guión debe incluir: gancho en los primeros 30 segundos (que evite que el espectador haga clic fuera), introducción que prometa valor, desarrollo en 3-5 secciones con transiciones, momentos de engagement (preguntas al espectador, polls), llamada a la acción para suscribirse y outro. Incluye indicaciones de edición y B-roll sugerido.', tools:['ChatGPT','Claude'] },
-  { id:15, cat:'programacion',   title:'Crea una landing page con HTML y CSS',              desc:'Diseño completo y responsivo listo para publicar.',                                            text:'Eres un desarrollador frontend experto en conversión. Crea el código completo (HTML + CSS + JS) de una landing page para [producto/servicio]. La página debe incluir: hero con propuesta de valor clara, sección de beneficios (3-5 puntos), testimonios o prueba social, FAQ con 5 preguntas frecuentes, formulario de contacto o botón CTA, y footer básico. El diseño debe ser moderno, responsivo y optimizado para conversión. Usa colores [colores preferidos] y fuente [tipografía].', tools:['Claude','ChatGPT'] },
-  { id:16, cat:'estudio',        title:'Crea un examen de práctica personalizado',          desc:'Genera preguntas tipo test con respuestas explicadas.',                                        text:'Eres un profesor universitario especializado en [materia]. Crea un examen de práctica de 20 preguntas sobre [tema específico]. Para cada pregunta: incluye 4 opciones de respuesta (A, B, C, D), indica la respuesta correcta al final, y proporciona una explicación detallada de por qué esa respuesta es correcta y por qué las otras son incorrectas. Varía la dificultad: 30% fáciles, 50% medias, 20% difíciles. Al final, da consejos para estudiar este tema.', tools:['Claude','ChatGPT','Gemini'] },
-  { id:17, cat:'emprendimiento', title:'Diseña tu modelo de negocio Canvas',               desc:'Business Model Canvas completo con los 9 bloques clave.',                                     text:'Actúa como un experto en estrategia empresarial. Desarrolla un Business Model Canvas completo para [idea de negocio]. Para cada uno de los 9 bloques, proporciona contenido específico y accionable: 1) Segmentos de clientes, 2) Propuesta de valor, 3) Canales, 4) Relación con clientes, 5) Fuentes de ingresos, 6) Recursos clave, 7) Actividades clave, 8) Socios clave, 9) Estructura de costos. Sé específico y evita generalidades. Al final, identifica las 3 hipótesis más importantes a validar.', tools:['ChatGPT','Claude'] },
-  { id:18, cat:'personal',       title:'Escribe una carta de presentación irresistible',   desc:'Cover letter personalizada que destaca tus fortalezas únicas.',                               text:'Eres un experto en recursos humanos y redacción profesional. Escribe una carta de presentación para el puesto de [PUESTO] en [EMPRESA]. Mis puntos fuertes son: [HABILIDADES]. Mi experiencia relevante: [EXPERIENCIA]. La carta debe: captar atención en el primer párrafo, conectar mis habilidades con las necesidades de la empresa, incluir un logro cuantificable, mostrar conocimiento de la empresa/sector, y terminar con una llamada a la acción clara. Máximo 300 palabras.', tools:['Claude','ChatGPT'] },
+  { id:1, cat:'trabajo', title:'Email profesional persuasivo', ai:'ChatGPT · Claude', emoji:'💼', rating:4.8, ratingCount:124,
+    prompt:`Actúa como un experto en comunicación empresarial. Redacta un email profesional y persuasivo para [objetivo: presentar propuesta/solicitar reunión/hacer seguimiento].
+
+Contexto: [describe tu situación]
+Destinatario: [cargo y empresa]
+Tono: [formal/semiformal/cercano]
+
+El email debe:
+- Captar atención en el asunto
+- Ser conciso (máx. 200 palabras)
+- Incluir un CTA claro
+- Transmitir valor desde el primer párrafo` },
+  { id:2, cat:'marketing', title:'Copy para anuncio de Facebook Ads', ai:'ChatGPT · Claude', emoji:'📣', rating:4.9, ratingCount:89,
+    prompt:`Eres un experto en copywriting y publicidad digital. Crea 3 variantes de copy para un anuncio de Facebook Ads.
+
+Producto/Servicio: [describe]
+Público objetivo: [edad, intereses, pain points]
+Objetivo del anuncio: [tráfico/leads/ventas]
+Presupuesto de personaje: [€X/día]
+
+Para cada variante incluye:
+- Texto principal (máx. 125 caracteres)
+- Titular llamativo (máx. 40 caracteres)
+- Descripción (máx. 30 caracteres)
+- Emoji estratégico
+- Tipo de CTA recomendado` },
+  { id:3, cat:'programacion', title:'Revisar y optimizar código', ai:'Claude · ChatGPT', emoji:'💻', rating:4.7, ratingCount:203,
+    prompt:`Actúa como un senior developer especialista en [lenguaje/framework].
+
+Revisa el siguiente código y proporciona:
+1. Análisis de bugs potenciales
+2. Sugerencias de optimización de rendimiento
+3. Mejoras en legibilidad y mantenibilidad
+4. Patrones de diseño aplicables
+5. Tests unitarios recomendados
+
+Código a revisar:
+[PEGA TU CÓDIGO AQUÍ]
+
+Explica cada sugerencia con su justificación técnica.` },
+  { id:4, cat:'estudio', title:'Plan de estudio personalizado', ai:'ChatGPT · Gemini', emoji:'📚', rating:4.6, ratingCount:67,
+    prompt:`Eres un pedagogo experto en aprendizaje acelerado. Crea un plan de estudio personalizado para dominar [tema/materia].
+
+Mi nivel actual: [principiante/intermedio/avanzado]
+Tiempo disponible: [X horas/semana]
+Fecha objetivo: [fecha o evento]
+Estilo de aprendizaje: [visual/auditivo/kinestésico]
+
+El plan debe incluir:
+- Hoja de ruta semanal detallada
+- Recursos recomendados (libros, videos, cursos)
+- Ejercicios prácticos por etapa
+- Métricas para medir progreso
+- Técnicas de repaso (Feynman, Anki, etc.)` },
+  { id:5, cat:'personal', title:'Reflexión para tomar decisiones difíciles', ai:'Claude', emoji:'❤️', rating:4.9, ratingCount:145,
+    prompt:`Actúa como un coach de vida con enfoque en psicología positiva. Ayúdame a analizar esta decisión importante con claridad.
+
+La decisión que enfrento: [describe la situación]
+Las opciones que tengo: [lista las alternativas]
+Mis valores más importantes: [lista 3-5 valores]
+Lo que más me preocupa: [expresa tus miedos]
+
+Guíame a través de:
+1. Clarificación de mis valores reales
+2. Análisis pros/contras profundo
+3. Ejercicio de visualización de escenarios futuros
+4. Identificación de sesgos cognitivos presentes
+5. Acción mínima viable para avanzar` },
+  { id:6, cat:'emprendimiento', title:'Validación de idea de negocio', ai:'ChatGPT · Claude', emoji:'🚀', rating:4.8, ratingCount:98,
+    prompt:`Eres un mentor startup con experiencia en validación de mercado. Analiza críticamente mi idea de negocio.
+
+Mi idea: [describe tu propuesta de valor]
+Mercado objetivo: [define tu cliente ideal]
+Modelo de negocio: [cómo ganarías dinero]
+Recursos disponibles: [tiempo, dinero, habilidades]
+
+Proporciona:
+1. Análisis de viabilidad (1-10) con justificación
+2. Los 5 supuestos más críticos a validar
+3. Experimentos lean para validar en 30 días
+4. Riesgos principales y cómo mitigarlos
+5. Competidores directos e indirectos
+6. Primer MVP mínimo posible` },
+  { id:7, cat:'trabajo', title:'Preparación para entrevista laboral', ai:'Claude · ChatGPT', emoji:'💼', rating:4.7, ratingCount:156,
+    prompt:`Actúa como un headhunter senior y coach de entrevistas. Ayúdame a prepararme para esta entrevista.
+
+Puesto al que aplico: [título del cargo]
+Empresa: [nombre y sector]
+Mis puntos fuertes: [lista 3 fortalezas]
+Mi mayor debilidad para este rol: [sé honesto]
+Experiencia previa relevante: [resumida]
+
+Necesito:
+1. Las 10 preguntas más probables para este rol
+2. Respuestas modelo con método STAR
+3. Cómo hablar de debilidades positivamente
+4. Preguntas inteligentes que debo hacer yo
+5. Errores comunes a evitar
+6. Negociación de salario: estrategia y frases clave` },
+  { id:8, cat:'marketing', title:'Estrategia de contenido para redes', ai:'ChatGPT · Gemini', emoji:'📣', rating:4.6, ratingCount:78,
+    prompt:`Eres un estratega de contenidos digital. Diseña un plan de contenido mensual para mis redes.
+
+Mi marca/negocio: [describe]
+Plataformas: [Instagram/LinkedIn/TikTok/etc.]
+Objetivo principal: [awareness/leads/ventas/comunidad]
+Frecuencia deseada: [X publicaciones/semana]
+Recursos disponibles: [tiempo, herramientas, equipo]
+
+Entrega:
+1. Calendario editorial con 30 ideas de posts
+2. Mix de contenido (educativo/entretenimiento/ventas)
+3. Formatos recomendados por plataforma
+4. Hooks para los primeros 3 segundos
+5. Hashtag strategy
+6. KPIs para medir éxito` },
+  { id:9, cat:'programacion', title:'Diseño de arquitectura de software', ai:'Claude', emoji:'💻', rating:4.8, ratingCount:44,
+    prompt:`Eres un arquitecto de software con experiencia en sistemas escalables. Diseña la arquitectura para este proyecto.
+
+Proyecto: [describe qué construyes]
+Escala esperada: [usuarios, requests/día]
+Stack preferido: [tecnologías que manejas]
+Presupuesto infraestructura: [€X/mes aprox]
+Requisitos críticos: [performance/seguridad/etc.]
+
+Diseña:
+1. Diagrama de arquitectura (en texto/ASCII)
+2. Elección de base de datos con justificación
+3. Estrategia de caché
+4. Autenticación y autorización
+5. Plan de escalabilidad
+6. Monitoreo y alertas recomendadas` },
+  { id:10, cat:'estudio', title:'Explicación de conceptos complejos', ai:'Claude · ChatGPT', emoji:'📚', rating:4.9, ratingCount:201,
+    prompt:`Actúa como el mejor profesor del mundo para explicar conceptos difíciles.
+
+Concepto a explicar: [tema complejo]
+Mi background: [qué ya sé del tema]
+Para qué lo necesito: [aplicación práctica]
+Nivel deseado: [básico/intermedio/experto]
+
+Explícamelo usando:
+1. Analogía con algo cotidiano
+2. Explicación simple sin jerga (primero)
+3. Conceptos clave definidos uno a uno
+4. Ejemplo práctico del mundo real
+5. Los errores más comunes de comprensión
+6. Recursos para profundizar
+7. Quiz de 5 preguntas para verificar comprensión` },
+  { id:11, cat:'personal', title:'Plan de hábitos y rutina diaria', ai:'ChatGPT · Claude', emoji:'❤️', rating:4.7, ratingCount:113,
+    prompt:`Eres un experto en productividad y neurociencia del comportamiento. Diseña mi rutina diaria óptima.
+
+Mis objetivos principales: [lista 3 metas]
+Horario laboral: [de X a Y horas]
+Energía: [mañana/tarde/noche más productivo]
+H�bitos actuales: [los que ya tienes]
+H�bitos a incorporar: [los que quieres]
+
+Crea:
+1. Rutina mañana (duración X min)
+2. Bloques de trabajo con técnica Pomodoro
+3. Rutina nocturna para mejor descanso
+4. Los 3 hábitos ancla más importantes
+5. Plan de implementación gradual (semanas 1-4)
+6. Cómo manejar días malos sin romper la cadena` },
+  { id:12, cat:'emprendimiento', title:'Pitch deck para inversores', ai:'Claude · ChatGPT', emoji:'🚀', rating:4.9, ratingCount:87,
+    prompt:`Actúa como un venture capitalist que ha evaluado +500 startups. Ayúdame a crear mi pitch deck.
+
+Mi startup: [nombre y one-liner]
+Problema que resuelvo: [describe el pain point]
+Mi solución: [cómo la resuelves]
+Tracción actual: [métricas, usuarios, revenue]
+Inversión que busco: [cantidad y uso de fondos]
+
+Estructura el pitch con:
+1. Problem slide (datos que impacten)
+2. Solution slide (propuesta de valor clara)
+3. Market size (TAM/SAM/SOM)
+4. Business model
+5. Traction & métricas clave
+6. Team (por qué vosotros)
+7. Ask & uso de fondos
+8. Preguntas difíciles de inversores y respuestas` },
 ];
 
-// ── BLOG POSTS (estático, sin fetch) ──
-const BLOG_POSTS = [
-  { emoji:'🧠', gradient:'linear-gradient(135deg,rgba(124,111,247,0.3),rgba(168,156,255,0.1))', tag:'Guía',         date:'15 enero 2025',    title:'Cómo escribir el prompt perfecto: guía completa para principiantes',     desc:'Aprende las técnicas fundamentales de prompt engineering que usan los profesionales para obtener resultados increíbles con cualquier IA.',              slug:'#' },
-  { emoji:'⚡', gradient:'linear-gradient(135deg,rgba(244,200,74,0.2),rgba(251,146,60,0.1))',   tag:'Productividad', date:'8 enero 2025',     title:'10 prompts que transformarán tu forma de trabajar en 2025',              desc:'Descubre los prompts más potentes para automatizar tareas repetitivas, redactar emails y generar informes profesionales en minutos.',                   slug:'#' },
-  { emoji:'🎨', gradient:'linear-gradient(135deg,rgba(45,212,191,0.2),rgba(74,222,128,0.1))',   tag:'Creatividad',   date:'3 enero 2025',     title:'Prompts creativos para generar contenido viral en redes sociales',        desc:'Los mejores prompts para crear posts, captions, guiones de vídeo y estrategias de contenido que enganchen a tu audiencia.',                             slug:'#' },
-  { emoji:'📊', gradient:'linear-gradient(135deg,rgba(244,114,182,0.2),rgba(168,85,247,0.1))',  tag:'Negocios',      date:'28 diciembre 2024', title:'ChatGPT vs Claude vs Gemini: ¿qué IA es mejor para cada tarea?',         desc:'Comparativa honesta de los tres gigantes de la IA. Descubre cuál usar según si necesitas análisis, creatividad o código.',                              slug:'#' },
-  { emoji:'🔧', gradient:'linear-gradient(135deg,rgba(251,146,60,0.2),rgba(244,200,74,0.1))',   tag:'Técnico',       date:'20 diciembre 2024', title:'Prompt Engineering avanzado: técnicas de cadena de pensamiento y rol',   desc:'Lleva tus prompts al siguiente nivel con técnicas como Chain-of-Thought, Few-Shot, Tree of Thoughts y asignación de roles expertos.',                   slug:'#' },
-  { emoji:'🎓', gradient:'linear-gradient(135deg,rgba(74,222,128,0.2),rgba(45,212,191,0.1))',   tag:'Educación',     date:'15 diciembre 2024', title:'Cómo usar la IA para estudiar más rápido y retener más información',     desc:'Prompts diseñados para estudiantes: crear mapas mentales, explicar conceptos difíciles, generar exámenes de práctica y mucho más.',                    slug:'#' },
+const BLOG_POSTS_DEFAULT = [
+  { id:1, cat:'guias', title:'Guía definitiva de prompt engineering para principiantes', summary:'Aprende las técnicas fundamentales para comunicarte mejor con la IA y obtener resultados profesionales desde el primer día.', content:`El prompt engineering es el arte de comunicarse eficazmente con los modelos de IA. En esta guía aprenderás todo lo que necesitas saber para empezar.\n\n## ¿Qué es un prompt?\n\nUn prompt es la instrucción que le das a la IA. La calidad de tu prompt determina directamente la calidad de la respuesta que recibes.\n\n## Las 5 claves de un buen prompt\n\n1. **Claridad**: Sé específico sobre lo que quieres\n2. **Contexto**: Proporciona el contexto necesario\n3. **Rol**: Dile a la IA qué papel debe jugar\n4. **Formato**: Especifica cómo quieres la respuesta\n5. **Ejemplos**: Incluye ejemplos cuando sea posible\n\n## Técnicas avanzadas\n\nLa técnica "Chain of Thought" consiste en pedir a la IA que piense paso a paso. Esto mejora dramáticamente la calidad de las respuestas en tareas complejas.`, emoji:'📖', date:'15 May 2025', rating:4.8, ratingCount:89 },
+  { id:2, cat:'tutoriales', title:'ChatGPT para productividad: 10 casos de uso reales', summary:'Descubre cómo profesionales de todo el mundo están usando ChatGPT para multiplicar su productividad en el trabajo.', content:`ChatGPT ha cambiado la forma en que trabajamos. Aquí tienes los 10 casos de uso más efectivos que están usando los profesionales más productivos.\n\n## 1. Redacción y edición\n\nUsa ChatGPT para redactar emails, informes y documentos. La clave está en proporcionar contexto suficiente y revisar siempre la salida.\n\n## 2. Análisis de datos\n\nPide a ChatGPT que interprete tus datos, sugiera visualizaciones o identifique patrones. Funciona mejor cuando describes el contexto empresarial.\n\n## 3. Brainstorming\n\nCuando estés bloqueado, usa ChatGPT como compañero de brainstorming. Pídele 20 ideas y luego filtra las mejores.`, emoji:'⚡', date:'8 May 2025', rating:4.6, ratingCount:124 },
+  { id:3, cat:'trucos', title:'5 trucos de prompt que los expertos no cuentan', summary:'Técnicas avanzadas de prompting que marcan la diferencia entre respuestas mediocres y resultados extraordinarios.', content:`Estos trucos te situarán en el top 1% de usuarios de IA.\n\n## Truco 1: El método "Actúa como"\n\nEspecificar un rol experto mejora dramáticamente las respuestas. "Actúa como un especialista en marketing con 15 años de experiencia" es mucho más efectivo que simplemente pedir consejos de marketing.\n\n## Truco 2: Límites y restricciones\n\nParadójicamente, dar restricciones a la IA mejora la creatividad. "Dame 5 ideas, cada una en máximo 2 líneas" produce mejores resultados que pedir simplemente ideas.\n\n## Truco 3: Pedir revisión\n\nDespués de recibir una respuesta, pide: "Ahora critica tu propia respuesta y mejórala". El resultado suele ser notablemente superior.`, emoji:'💡', date:'1 May 2025', rating:4.9, ratingCount:67 },
+  { id:4, cat:'herramientas', title:'Las mejores herramientas de IA para diseñadores en 2025', summary:'Una comparativa completa de las herramientas de IA más potentes para diseño gráfico, UI/UX y creatividad visual.', content:`El ecosistema de herramientas de IA para diseño ha evolucionado enormemente. Aquí tienes las más relevantes en 2025.\n\n## Generación de imágenes\n\nMidjourney sigue siendo el rey para imágenes artísticas. DALL-E 3 destaca por seguir instrucciones precisas. Ideogram es ideal para texto en imágenes.\n\n## UI/UX con IA\n\nHerramientas como Figma AI, Galileo y Uizard están transformando cómo diseñamos interfaces. Permiten pasar de descripción a wireframe en segundos.\n\n## Recomendación\n\nEmpieza con las herramientas integradas en tu flujo actual antes de añadir nuevas. La curva de aprendizaje es real.`, emoji:'🛠️', date:'25 Abr 2025', rating:4.5, ratingCount:45 },
+  { id:5, cat:'casos', title:'Cómo una PYME triplicó sus ventas con prompts de IA', summary:'Caso de estudio real: una pequeña empresa de e-commerce que transformó su estrategia de marketing usando prompts inteligentes.', content:`Este caso de estudio muestra cómo Tienda Artesanal SL, una PYME española, multiplicó por 3 sus ventas en 6 meses usando IA estratégicamente.\n\n## El problema inicial\n\nLa empresa gastaba 20 horas semanales en crear contenido para sus redes sociales y emails, con resultados mediocres.\n\n## La solución aplicada\n\nImplementaron un sistema de prompts para: generar descripciones de productos, crear emails de seguimiento personalizados y producir contenido para redes sociales.\n\n## Los resultados\n\nRedujeron el tiempo de creación de contenido en un 75%. La tasa de conversión de emails aumentó un 40%. Las ventas totales crecieron un 200% en 6 meses.`, emoji:'✅', date:'18 Abr 2025', rating:4.7, ratingCount:92 },
+  { id:6, cat:'noticias', title:'GPT-5 y Claude 4: lo que sabemos hasta ahora', summary:'Análisis de las últimas noticias sobre los próximos modelos de IA y qué significan para los usuarios de prompts.', content:`La carrera de los modelos de lenguaje continúa acelerándose. Aquí te contamos lo más relevante sobre los próximos lanzamientos.\n\n## GPT-5: lo confirmado\n\nOpenAI ha confirmado mejoras significativas en razonamiento multi-paso y comprensión de contextos muy largos. Los benchmarks internos muestran mejoras del 30-40% sobre GPT-4.\n\n## Claude 4: capacidades mejoradas\n\nAnthropic está enfocando Claude 4 en mayor precisión, reducción de alucinaciones y mejor manejo de tareas complejas de análisis.\n\n## ¿Qué significa para ti?\n\nLos prompts bien estructurados seguirán siendo la clave para extraer el máximo valor, independientemente del modelo.`, emoji:'📰', date:'10 Abr 2025', rating:4.4, ratingCount:134 },
 ];
 
-// ── CONFIG DE CATEGORÍAS ──
-const CATS_CONFIG = [
-  { key:'trabajo',        icon:'💼', name:'Trabajo' },
-  { key:'estudio',        icon:'📚', name:'Estudio' },
-  { key:'marketing',      icon:'📣', name:'Marketing' },
-  { key:'programacion',   icon:'💻', name:'Programación' },
-  { key:'personal',       icon:'❤️', name:'Desarrollo Personal' },
-  { key:'emprendimiento', icon:'🚀', name:'Emprendimiento' },
-];
-
-// ── CONTEOS REALES desde el array ──
-function countByCategory(cat) {
-  return PROMPTS.filter(p => p.cat === cat).length;
-}
-
-// ── RENDER CATEGORÍAS con conteos reales ──
-function renderCats() {
-  const grid = document.getElementById('cats-grid');
-  grid.innerHTML = CATS_CONFIG.map(c => {
-    const count = countByCategory(c.key);
-    return `<div class="cat-card" onclick="filterCategory('${c.key}',null)">
-      <span class="cat-icon">${c.icon}</span>
-      <div class="cat-name">${c.name}</div>
-      <div class="cat-count">${count} prompt${count !== 1 ? 's' : ''}</div>
-    </div>`;
-  }).join('');
-}
-
-// ── RENDER HERO STATS con datos reales ──
-function renderHeroStats() {
-  const total = PROMPTS.length;
-  const cats  = CATS_CONFIG.length;
-  document.getElementById('hero-stats').innerHTML = `
-    <div class="hero-stat"><div class="num">+${total}</div><div class="label">Prompts disponibles</div></div>
-    <div class="hero-stat"><div class="num">${cats}</div><div class="label">Categorías</div></div>
-    <div class="hero-stat"><div class="num">4.9/5</div><div class="label">Valoración media</div></div>
-    <div class="hero-stat"><div class="num">+50K</div><div class="label">Prompts copiados</div></div>
-  `;
-  // stat del about
-  const el = document.getElementById('stat-total');
-  if (el) el.textContent = '+' + total;
-}
-
-// ── RENDER BLOG (clases exactas del styles.css) ──
-function renderBlog() {
-  const grid = document.getElementById('blog-grid');
-  grid.innerHTML = BLOG_POSTS.map(p => `
-    <div class="blog-card" onclick="window.location.href='${p.slug}'">
-      <div class="blog-thumb" style="background:${p.gradient}">${p.emoji}</div>
-      <div class="blog-body">
-        <div class="blog-meta">
-          <span class="blog-tag">${p.tag}</span>
-          <span class="blog-date">${p.date}</span>
-        </div>
-        <h3>${p.title}</h3>
-        <p>${p.desc}</p>
-        <span class="blog-read">Leer artículo →</span>
-      </div>
-    </div>
-  `).join('');
-}
-
-// ── PROMPTS LOGIC ──
+// ===== STATE =====
 let currentFilter = 'todos';
-let currentPage   = 1;
-const PER_PAGE    = 6;
-let filteredPrompts = [...PROMPTS];
+let currentPage = 1;
+const PROMPTS_PER_PAGE = 6;
+let currentModalPrompt = null;
+let currentModalBlog = null;
+let favorites = JSON.parse(localStorage.getItem('pn_favorites') || '[]');
+let promptRatings = JSON.parse(localStorage.getItem('pn_prompt_ratings') || '{}');
+let blogRatings = JSON.parse(localStorage.getItem('pn_blog_ratings') || '{}');
+let currentFormRating = 0;
+let currentBlogFilter = 'todos';
+let blogPosts = JSON.parse(localStorage.getItem('pn_blog_posts') || 'null') || BLOG_POSTS_DEFAULT;
 
-function getFavs() {
-  try { return JSON.parse(localStorage.getItem('pn_favs') || '[]'); } catch(e) { return []; }
-}
-function isFav(id) { return getFavs().includes(id); }
-
-function toggleFav(id, btn) {
-  let favs = getFavs();
-  const wasFav = favs.includes(id);
-  favs = wasFav ? favs.filter(f => f !== id) : [...favs, id];
-  btn.textContent = wasFav ? '🤍' : '❤️';
-  btn.classList.toggle('faved', !wasFav);
-  try { localStorage.setItem('pn_favs', JSON.stringify(favs)); } catch(e) {}
-  btn.classList.add('pop');
-  setTimeout(() => btn.classList.remove('pop'), 300);
-  showToast(wasFav ? '💔 Eliminado de favoritos' : '❤️ Guardado en favoritos');
-}
-
-function catLabel(cat) {
-  const m = {trabajo:'💼 Trabajo',marketing:'📣 Marketing',programacion:'💻 Programación',estudio:'📚 Estudio',personal:'❤️ Personal',emprendimiento:'🚀 Emprendimiento'};
-  return m[cat] || cat;
+// ===== PROMPTS =====
+function getFilteredPrompts() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  return PROMPTS.filter(p => {
+    if(currentFilter === 'favoritos') return favorites.includes(p.id);
+    if(currentFilter !== 'todos' && p.cat !== currentFilter) return false;
+    if(search && !p.title.toLowerCase().includes(search) && !p.prompt.toLowerCase().includes(search)) return false;
+    return true;
+  });
 }
 
 function renderPrompts() {
-  const grid  = document.getElementById('prompts-grid');
-  const start = (currentPage - 1) * PER_PAGE;
-  const page  = filteredPrompts.slice(start, start + PER_PAGE);
-  if (!page.length) {
-    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted)">No se encontraron prompts. Prueba con otro filtro. 🔍</div>';
-    return;
-  }
-  grid.innerHTML = page.map(p => `
-    <div class="prompt-card" onclick="openModal(${p.id})">
-      <div class="prompt-top">
-        <span class="prompt-badge badge-${p.cat}">${catLabel(p.cat)}</span>
-        <div class="prompt-actions" onclick="event.stopPropagation()">
-          <button class="btn-icon" onclick="copyPrompt(${p.id},this)" title="Copiar">📋</button>
-          <button class="btn-icon btn-fav ${isFav(p.id)?'faved':''}" onclick="toggleFav(${p.id},this)" title="Favorito">${isFav(p.id)?'❤️':'🤍'}</button>
-        </div>
+  const filtered = getFilteredPrompts();
+  const total = filtered.length;
+  const totalPages = Math.ceil(total / PROMPTS_PER_PAGE);
+  if(currentPage > totalPages) currentPage = 1;
+  const start = (currentPage-1)*PROMPTS_PER_PAGE;
+  const paginated = filtered.slice(start, start+PROMPTS_PER_PAGE);
+  const grid = document.getElementById('promptsGrid');
+  grid.innerHTML = paginated.map(p => {
+    const isFav = favorites.includes(p.id);
+    const userRating = promptRatings[p.id];
+    const displayRating = userRating || p.rating;
+    const stars = renderStars(displayRating);
+    return `<div class="prompt-card" onclick="openPromptModal(${p.id})">
+      <button class="p-fav ${isFav?'active':''}" onclick="toggleFav(event,${p.id})" title="${isFav?'Quitar de favoritos':'Añadir a favoritos'}">${isFav?'❤️':'🤍'}</button>
+      <div class="p-cat">${p.emoji} ${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</div>
+      <div class="p-title">${p.title}</div>
+      <div class="p-preview">${p.prompt.substring(0,120)}...</div>
+      <div class="p-stars">${stars} <span style="font-size:0.75rem;color:var(--text3);margin-left:4px;">${displayRating.toFixed(1)} (${p.ratingCount})</span></div>
+      <div class="p-footer">
+        <div class="p-ai">${p.ai}</div>
+        <button class="p-copy-btn" onclick="copyPromptDirect(event,${p.id})">📋 Copiar</button>
       </div>
-      <h3>${p.title}</h3>
-      <p>${p.desc}</p>
-      <div class="prompt-text">${p.text}</div>
-      <div class="prompt-footer">
-        <div class="prompt-tools">${p.tools.map(t=>`<span class="tool-pill">${t}</span>`).join('')}</div>
-        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(${p.id},this)">📋 Copiar</button>
-      </div>
-    </div>
-  `).join('');
-  updatePagination();
+    </div>`;
+  }).join('');
+  renderPagination(totalPages);
 }
 
-function updatePagination() {
-  const total = Math.ceil(filteredPrompts.length / PER_PAGE);
-  for (let i = 1; i <= 3; i++) {
-    const btn = document.getElementById('page-' + i);
-    if (!btn) continue;
-    btn.style.display = i <= total ? '' : 'none';
-    btn.classList.toggle('active', i === currentPage);
+function renderStars(rating) {
+  let html = '';
+  for(let i=1;i<=5;i++) {
+    if(rating >= i) html += '<span>⭐</span>';
+    else if(rating >= i-0.5) html += '<span>✨</span>';
+    else html += '<span style="opacity:0.2">⭐</span>';
   }
+  return html;
 }
 
-function filterFavs(btn) {
-  currentPage = 1;
-  filteredPrompts = PROMPTS.filter(p => getFavs().includes(p.id));
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderPrompts();
-}
-
-function filterCategory(cat, btn) {
-  currentFilter = cat;
-  currentPage   = 1;
-  filteredPrompts = cat === 'todos' ? [...PROMPTS] : PROMPTS.filter(p => p.cat === cat);
-  const val = document.getElementById('search-input').value;
-  if (val) filteredPrompts = filteredPrompts.filter(p => matchSearch(p, val));
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  renderPrompts();
-  if (cat !== 'todos') document.getElementById('posts').scrollIntoView({behavior:'smooth'});
-}
-
-function searchPrompts(val) {
-  currentPage = 1;
-  const base  = currentFilter === 'todos' ? PROMPTS : PROMPTS.filter(p => p.cat === currentFilter);
-  filteredPrompts = val ? base.filter(p => matchSearch(p, val)) : [...base];
-  renderPrompts();
-}
-
-function matchSearch(p, val) {
-  const v = val.toLowerCase();
-  return p.title.toLowerCase().includes(v) || p.desc.toLowerCase().includes(v) || p.text.toLowerCase().includes(v);
-}
-
-function changePage(dir) {
-  const total   = Math.ceil(filteredPrompts.length / PER_PAGE);
-  const newPage = currentPage + dir;
-  if (newPage >= 1 && newPage <= total) {
-    currentPage = newPage;
-    renderPrompts();
-    document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+function renderPagination(totalPages) {
+  const pg = document.getElementById('pagination');
+  if(totalPages <= 1) { pg.innerHTML=''; return; }
+  let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled style="opacity:0.3"':''}>←</button>`;
+  for(let i=1;i<=totalPages;i++) {
+    html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
   }
+  html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===totalPages?'disabled style="opacity:0.3"':''}>→</button>`;
+  pg.innerHTML = html;
 }
 
-function goPage(n) {
-  currentPage = n;
+function goPage(p) {
+  const filtered = getFilteredPrompts();
+  const totalPages = Math.ceil(filtered.length / PROMPTS_PER_PAGE);
+  if(p < 1 || p > totalPages) return;
+  currentPage = p;
   renderPrompts();
   document.getElementById('posts').scrollIntoView({behavior:'smooth'});
 }
 
-// ── COPY ──
-function copyPrompt(id, btn) {
-  const p = PROMPTS.find(x => x.id === id);
-  if (!p) return;
-  navigator.clipboard.writeText(p.text).then(() => {
-    if (btn && btn.classList.contains('copy-btn')) {
-      btn.textContent = '✅ Copiado'; btn.classList.add('copied');
-      setTimeout(() => { btn.textContent = '📋 Copiar'; btn.classList.remove('copied'); }, 2000);
-    }
-    showToast('✅ ¡Prompt copiado!');
+function setFilter(cat, btn) {
+  currentFilter = cat;
+  currentPage = 1;
+  document.querySelectorAll('#filterWrap .filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPrompts();
+}
+
+function filterByCategory(cat) {
+  currentFilter = cat;
+  currentPage = 1;
+  document.querySelectorAll('#filterWrap .filter-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.toLowerCase().includes(cat));
+  });
+  renderPrompts();
+}
+
+function filterPrompts() { currentPage=1; renderPrompts(); }
+
+function toggleFav(e, id) {
+  e.stopPropagation();
+  if(favorites.includes(id)) favorites = favorites.filter(f=>f!==id);
+  else favorites.push(id);
+  localStorage.setItem('pn_favorites', JSON.stringify(favorites));
+  renderPrompts();
+}
+
+function copyPromptDirect(e, id) {
+  e.stopPropagation();
+  const p = PROMPTS.find(x=>x.id===id);
+  if(!p) return;
+  navigator.clipboard.writeText(p.prompt).then(()=>showToast('✅ ¡Prompt copiado!'));
+}
+
+// ===== PROMPT MODAL =====
+function openPromptModal(id) {
+  const p = PROMPTS.find(x=>x.id===id);
+  if(!p) return;
+  currentModalPrompt = p;
+  document.getElementById('mCat').textContent = p.emoji + ' ' + p.cat.charAt(0).toUpperCase()+p.cat.slice(1);
+  document.getElementById('mTitle').textContent = p.title;
+  const userRating = promptRatings[p.id];
+  const displayRating = userRating || p.rating;
+  document.getElementById('mMeta').innerHTML = `<span>🤖 ${p.ai}</span><span>${renderStars(displayRating)} ${displayRating.toFixed(1)}/5 (${p.ratingCount} valoraciones)</span>`;
+  document.getElementById('mPrompt').textContent = p.prompt;
+  const label = document.getElementById('modalRatingLabel');
+  if(userRating) { label.textContent = `Tu valoración: ${userRating}⭐`; updateStarDisplay('modalRatingInput', userRating); }
+  else { label.textContent = 'Sin valorar aún'; updateStarDisplay('modalRatingInput', 0); }
+  document.getElementById('promptModal').classList.add('open');
+}
+
+function ratePrompt(val) {
+  if(!currentModalPrompt) return;
+  promptRatings[currentModalPrompt.id] = val;
+  localStorage.setItem('pn_prompt_ratings', JSON.stringify(promptRatings));
+  document.getElementById('modalRatingLabel').textContent = `Tu valoración: ${val}⭐ ¡Gracias!`;
+  updateStarDisplay('modalRatingInput', val);
+  renderPrompts();
+  showToast('⭐ ¡Valoración guardada!');
+}
+
+function copyModalPrompt() {
+  if(!currentModalPrompt) return;
+  navigator.clipboard.writeText(currentModalPrompt.prompt).then(()=>showToast('✅ ¡Prompt copiado!'));
+}
+
+// ===== BLOG =====
+const BLOG_CAT_LABELS = {guias:'📖 Guías',tutoriales:'🎓 Tutoriales',trucos:'💡 Trucos',herramientas:'🛠️ Herramientas',casos:'✅ Casos de Uso',noticias:'📰 Noticias IA'};
+
+function renderBlog() {
+  const filtered = currentBlogFilter === 'todos' ? blogPosts : blogPosts.filter(p=>p.cat===currentBlogFilter);
+  const grid = document.getElementById('blogGrid');
+  if(!filtered.length) { grid.innerHTML='<p style="color:var(--text3)">No hay artículos en esta categoría todavía.</p>'; return; }
+  grid.innerHTML = filtered.map(p => {
+    const userRating = blogRatings[p.id];
+    const displayRating = userRating || p.rating;
+    const catLabel = BLOG_CAT_LABELS[p.cat] || p.cat;
+    return `<div class="blog-card" onclick="openBlogModal(${p.id})">
+      <div class="blog-thumb">${p.emoji || '📝'}</div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-cat-badge">${catLabel}</span>
+          <span class="blog-date">${p.date}</span>
+        </div>
+        <h3>${p.title}</h3>
+        <p>${p.summary}</p>
+        <div class="blog-footer">
+          <span class="read-more">Leer más →</span>
+          <div class="blog-rating">
+            <div class="stars">${renderStars(displayRating)}</div>
+            <span class="rating-val">${displayRating.toFixed(1)}</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function setBlogFilter(cat, btn) {
+  currentBlogFilter = cat;
+  document.querySelectorAll('#blogFilterWrap .filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderBlog();
+}
+
+function openBlogModal(id) {
+  const p = blogPosts.find(x=>x.id===id);
+  if(!p) return;
+  currentModalBlog = p;
+  const catLabel = BLOG_CAT_LABELS[p.cat] || p.cat;
+  document.getElementById('bmCat').textContent = catLabel;
+  document.getElementById('bmTitle').textContent = p.title;
+  const userRating = blogRatings[p.id];
+  const displayRating = userRating || p.rating;
+  document.getElementById('bmMeta').innerHTML = `<span>${p.date}</span><span>${renderStars(displayRating)} ${displayRating.toFixed(1)}/5</span>`;
+  const bodyEl = document.getElementById('bmBody');
+  bodyEl.innerHTML = p.content.replace(/\n\n/g,'</p><p>').replace(/^/,'<p>').replace(/$/,'</p>')
+    .replace(/<p>## (.+?)<\/p>/g,'<h4>$1</h4>')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+  const label = document.getElementById('blogModalRatingLabel');
+  if(userRating) { label.textContent = `Tu valoración: ${userRating}⭐`; updateStarDisplay('blogModalRating', userRating); }
+  else { label.textContent = 'Sin valorar aún'; updateStarDisplay('blogModalRating', 0); }
+  document.getElementById('blogModal').classList.add('open');
+}
+
+function rateBlog(val) {
+  if(!currentModalBlog) return;
+  blogRatings[currentModalBlog.id] = val;
+  localStorage.setItem('pn_blog_ratings', JSON.stringify(blogRatings));
+  document.getElementById('blogModalRatingLabel').textContent = `Tu valoración: ${val}⭐ ¡Gracias!`;
+  updateStarDisplay('blogModalRating', val);
+  renderBlog();
+  showToast('⭐ ¡Gracias por tu valoración!');
+}
+
+// ===== BLOG FORM =====
+function setFormRating(val) {
+  currentFormRating = val;
+  document.getElementById('formRatingLabel').textContent = val + ' estrella' + (val===1?'':'s');
+  updateStarDisplay('blogRatingInput', val);
+}
+
+function submitBlog() {
+  const title = document.getElementById('blogTitle').value.trim();
+  const cat = document.getElementById('blogCategory').value;
+  const summary = document.getElementById('blogSummary').value.trim();
+  const content = document.getElementById('blogContent').value.trim();
+  const emoji = document.getElementById('blogEmoji').value.trim() || '📝';
+  if(!title||!cat||!summary||!content) { showToast('⚠️ Completa todos los campos obligatorios'); return; }
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('es-ES',{day:'numeric',month:'short',year:'numeric'});
+  const newPost = {
+    id: Date.now(), cat, title, summary, content, emoji, date:dateStr,
+    rating: currentFormRating || 5, ratingCount:1
+  };
+  blogPosts.unshift(newPost);
+  localStorage.setItem('pn_blog_posts', JSON.stringify(blogPosts));
+  document.getElementById('blogTitle').value='';
+  document.getElementById('blogCategory').value='';
+  document.getElementById('blogSummary').value='';
+  document.getElementById('blogContent').value='';
+  document.getElementById('blogEmoji').value='';
+  currentFormRating=0;
+  document.getElementById('formRatingLabel').textContent='Sin valorar';
+  updateStarDisplay('blogRatingInput',0);
+  currentBlogFilter='todos';
+  document.querySelectorAll('#blogFilterWrap .filter-btn').forEach((b,i)=>b.classList.toggle('active',i===0));
+  renderBlog();
+  showToast('✅ ¡Artículo publicado correctamente!');
+  document.getElementById('blog').scrollIntoView({behavior:'smooth'});
+}
+
+// ===== HELPERS =====
+function updateStarDisplay(containerId, val) {
+  const container = document.getElementById(containerId);
+  if(!container) return;
+  container.querySelectorAll('.star-btn').forEach(btn => {
+    const bval = parseInt(btn.dataset.val);
+    btn.classList.toggle('selected', bval <= val);
   });
 }
 
-function copyModal() {
-  const text = document.getElementById('modal-text').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.querySelector('.modal-copy-btn');
-    btn.textContent = '✅ ¡Copiado!';
-    setTimeout(() => { btn.textContent = '📋 Copiar prompt completo'; }, 2000);
-    showToast('✅ ¡Prompt copiado!');
-  });
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
 }
 
-// ── MODAL ──
-function openModal(id) {
-  const p = PROMPTS.find(x => x.id === id);
-  if (!p) return;
-  document.getElementById('modal-badge').textContent = catLabel(p.cat);
-  document.getElementById('modal-badge').className   = 'prompt-badge badge-' + p.cat;
-  document.getElementById('modal-title').textContent = p.title;
-  document.getElementById('modal-desc').textContent  = p.desc;
-  document.getElementById('modal-text').textContent  = p.text;
-  document.querySelector('.modal-copy-btn').textContent = '📋 Copiar prompt completo';
-  document.getElementById('modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-  document.getElementById('modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-// ── TOAST ──
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
+  setTimeout(()=>t.classList.remove('show'), 2500);
 }
 
-// ── NEWSLETTER ──
-function handleSubscribe() {
-  const email = document.getElementById('newsletter-email').value.trim();
-  if (!email || !email.includes('@')) { showToast('⚠️ Introduce un email válido'); return; }
-  document.getElementById('newsletter-success').style.display = 'block';
-  document.getElementById('newsletter-email').value = '';
-  showToast('✅ ¡Suscripción registrada!');
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
 }
 
-// ── INIT ──
-renderHeroStats();
-renderCats();
+function subscribeNewsletter() {
+  const email = document.getElementById('nlEmail').value.trim();
+  if(!email || !email.includes('@')) { showToast('⚠️ Introduce un email válido'); return; }
+  showToast('✅ ¡Suscripción confirmada! Gracias 🎉');
+  document.getElementById('nlEmail').value='';
+}
+
+// Close modals on overlay click
+document.addEventListener('click', e => {
+  if(e.target.classList.contains('modal-overlay')) {
+    e.target.classList.remove('open');
+  }
+});
+
+// Close mobile menu on nav link click
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('mobileMenu').classList.remove('open');
+}));
+
+// Init
 renderPrompts();
 renderBlog();
 </script>
