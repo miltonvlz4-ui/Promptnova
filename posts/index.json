@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-05-29-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para desarrolladores",
+    "date": "2026-05-29",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo de software"
+    ],
+    "readingTime": 10,
+    "category": "programacion"
+  },
+  {
     "slug": "2026-05-29-aprende-10x-mas-rapido.html",
     "title": "Aprende 10x Más Rápido",
     "description": "Descubre cómo aprender cualquier cosa 10 veces más rápido con prompts efectivos",
