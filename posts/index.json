@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-01-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para developers",
+    "date": "2026-06-01",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo de software"
+    ],
+    "readingTime": 5,
+    "category": "programacion"
+  },
+  {
     "slug": "2026-06-01-10-prompts-de-marketing.html",
     "title": "10 Prompts de Marketing",
     "description": "Descubre los prompts más usados por expertos en marketing para impulsar tus campañas",
