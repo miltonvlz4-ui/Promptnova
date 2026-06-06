@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-06-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para developers",
+    "date": "2026-06-06",
+    "tags": [
+      "Inteligencia Artificial",
+      "Desarrollo de Software",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10,
+    "category": "programacion"
+  },
+  {
     "slug": "2026-06-05-prompts-creativos.html",
     "title": "Prompts Creativos",
     "description": "Descubre los prompts más creativos para diseñadores gráficos",
