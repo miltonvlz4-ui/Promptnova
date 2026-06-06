@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-06-imagenes-perfectas-con-ia.html",
+    "title": "Imágenes perfectas con IA",
+    "description": "Genera imágenes impresionantes con prompts personalizados",
+    "date": "2026-06-06",
+    "tags": [
+      "IA",
+      "Inteligencia Artificial",
+      "Imágenes"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-06-06-prompt-engineering.html",
     "title": "Prompt Engineering",
     "description": "Aprende trucos de prompt engineering para developers",
