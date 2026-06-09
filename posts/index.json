@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-09-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para desarrolladores",
+    "date": "2026-06-09",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-06-09-domina-chatgpt.html",
     "title": "Domina ChatGPT",
     "description": "Aprende a utilizar ChatGPT en tu trabajo diario de manera efectiva",
