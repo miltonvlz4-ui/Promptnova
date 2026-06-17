@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-17-crea-un-curso-online-con-chatgpt.html",
+    "title": "Crea un curso online con ChatGPT",
+    "description": "Aprende a crear un curso online desde cero con ChatGPT",
+    "date": "2026-06-17",
+    "tags": [
+      "ChatGPT",
+      "curso online",
+      "creación de contenido"
+    ],
+    "readingTime": 5,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-06-17-asistente-personal.html",
     "title": "Asistente Personal",
     "description": "Construye un asistente personal con ChatGPT y prompts",
@@ -1123,17 +1136,5 @@
       "Prompt Engineering"
     ],
     "readingTime": 10
-  },
-  {
-    "slug": "2026-05-14-domina-chatgpt.html",
-    "title": "Domina ChatGPT",
-    "description": "Aprende a utilizar ChatGPT en tu trabajo diario de manera efectiva",
-    "date": "2026-05-14",
-    "tags": [
-      "ChatGPT",
-      "Inteligencia Artificial",
-      "Productividad"
-    ],
-    "readingTime": 5
   }
 ]
