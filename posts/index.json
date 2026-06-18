@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-18-crea-un-curso-online.html",
+    "title": "Crea un curso online",
+    "description": "Aprende a crear un curso online desde cero con ChatGPT",
+    "date": "2026-06-18",
+    "tags": [
+      "ChatGPT",
+      "curso online",
+      "educación en línea"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
     "slug": "2026-06-18-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo los prompts pueden acelerar tu aprendizaje",
@@ -1125,18 +1138,6 @@
       "marketing",
       "prompts",
       "inteligencia artificial"
-    ],
-    "readingTime": 5
-  },
-  {
-    "slug": "2026-05-14-escribiendo-emails-con-ia.html",
-    "title": "Escribiendo emails con IA",
-    "description": "Descubre los mejores prompts para escribir emails profesionales con inteligencia artificial",
-    "date": "2026-05-14",
-    "tags": [
-      "IA",
-      "emails profesionales",
-      "prompt engineering"
     ],
     "readingTime": 5
   }
