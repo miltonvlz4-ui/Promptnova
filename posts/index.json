@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-18-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo los prompts pueden acelerar tu aprendizaje",
+    "date": "2026-06-18",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompts"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
     "slug": "2026-06-18-errores-comunes-en-prompts.html",
     "title": "Errores comunes en prompts",
     "description": "Evita errores comunes al escribir prompts para IA. Aprende a mejorar tus resultados con ejemplos prácticos.",
@@ -1126,17 +1139,5 @@
       "prompt engineering"
     ],
     "readingTime": 5
-  },
-  {
-    "slug": "2026-05-14-escribiendo-emails-profesionales.html",
-    "title": "Escribiendo Emails Profesionales",
-    "description": "Aprende a escribir emails profesionales con IA y mejora tu comunicación laboral",
-    "date": "2026-05-14",
-    "tags": [
-      "IA",
-      "Emails Profesionales",
-      "Comunicación Laboral"
-    ],
-    "readingTime": 10
   }
 ]
