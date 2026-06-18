@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-18-errores-comunes-en-prompts.html",
+    "title": "Errores comunes en prompts",
+    "description": "Evita errores comunes al escribir prompts para IA. Aprende a mejorar tus resultados con ejemplos prácticos.",
+    "date": "2026-06-18",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "errores comunes"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-06-17-escribe-prompts-infalibles.html",
     "title": "Escribe Prompts Infalibles",
     "description": "Aprende a escribir prompts efectivos para inteligencia artificial",
@@ -1125,17 +1138,5 @@
       "Comunicación Laboral"
     ],
     "readingTime": 10
-  },
-  {
-    "slug": "2026-05-14-crea-un-curso-online.html",
-    "title": "Crea un curso online",
-    "description": "Aprende a crear un curso online desde cero con ChatGPT",
-    "date": "2026-05-14",
-    "tags": [
-      "ChatGPT",
-      "curso online",
-      "educación en línea"
-    ],
-    "readingTime": 15
   }
 ]
