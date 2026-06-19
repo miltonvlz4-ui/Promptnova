@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-19-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Guía para dominar ChatGPT en tu trabajo diario y mejorar la productividad",
+    "date": "2026-06-19",
+    "tags": [
+      "ChatGPT",
+      "Productividad",
+      "Inteligencia Artificial"
+    ],
+    "readingTime": 10,
+    "category": "trabajo"
+  },
+  {
     "slug": "2026-06-19-prompts-creativos.html",
     "title": "Prompts Creativos",
     "description": "Descubre los prompts más creativos para diseñadores gráficos y mejora tu habilidad para generar ideas innovadoras",
@@ -1129,17 +1142,5 @@
       "Prompt Engineering"
     ],
     "readingTime": 10
-  },
-  {
-    "slug": "2026-05-15-prompts-infalibles.html",
-    "title": "Prompts infalibles",
-    "description": "Aprende a escribir prompts efectivos para IA con ejemplos prácticos",
-    "date": "2026-05-15",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "IA"
-    ],
-    "readingTime": 5
   }
 ]
