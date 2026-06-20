@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-20-prompts-creativos.html",
+    "title": "Prompts Creativos",
+    "description": "Descubre los mejores prompts para diseñadores gráficos",
+    "date": "2026-06-20",
+    "tags": [
+      "diseño gráfico",
+      "prompt engineering",
+      "inteligencia artificial"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-06-19-domina-chatgpt.html",
     "title": "Domina ChatGPT",
     "description": "Guía para dominar ChatGPT en tu trabajo diario y mejorar la productividad",
@@ -1128,18 +1141,6 @@
       "IA",
       "emails profesionales",
       "prompt engineering"
-    ],
-    "readingTime": 10
-  },
-  {
-    "slug": "2026-05-15-asistente-personal.html",
-    "title": "Asistente Personal",
-    "description": "Construye un asistente personal con ChatGPT y prompts",
-    "date": "2026-05-15",
-    "tags": [
-      "Inteligencia Artificial",
-      "ChatGPT",
-      "Prompt Engineering"
     ],
     "readingTime": 10
   }
