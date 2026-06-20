@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-20-automatiza-tu-negocio.html",
+    "title": "Automatiza tu negocio",
+    "description": "Aprende a automatizar tu negocio con prompts inteligentes y IA",
+    "date": "2026-06-20",
+    "tags": [
+      "Inteligencia Artificial",
+      "Automatización",
+      "Negocios"
+    ],
+    "readingTime": 10,
+    "category": "emprendimiento"
+  },
+  {
     "slug": "2026-06-20-prompts-creativos.html",
     "title": "Prompts Creativos",
     "description": "Descubre los mejores prompts para diseñadores gráficos",
@@ -1129,18 +1142,6 @@
       "prompts",
       "contenido viral",
       "redes sociales"
-    ],
-    "readingTime": 10
-  },
-  {
-    "slug": "2026-05-15-escribiendo-emails-con-ia.html",
-    "title": "Escribiendo emails con IA",
-    "description": "Aprende a escribir emails profesionales con inteligencia artificial",
-    "date": "2026-05-15",
-    "tags": [
-      "IA",
-      "emails profesionales",
-      "prompt engineering"
     ],
     "readingTime": 10
   }
