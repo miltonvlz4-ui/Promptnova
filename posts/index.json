@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-21-errores-comunes-al-escribir-prompts.html",
+    "title": "Errores comunes al escribir prompts",
+    "description": "Aprende a evitar errores comunes al escribir prompts para IA",
+    "date": "2026-06-21",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "errores comunes"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
     "slug": "2026-06-20-automatiza-tu-negocio.html",
     "title": "Automatiza tu negocio",
     "description": "Aprende a automatizar tu negocio con prompts inteligentes y IA",
@@ -1132,17 +1145,5 @@
       "Productividad"
     ],
     "readingTime": 5
-  },
-  {
-    "slug": "2026-05-16-prompts-virales.html",
-    "title": "Prompts Virales",
-    "description": "Aprende a crear contenido viral con prompts avanzados",
-    "date": "2026-05-16",
-    "tags": [
-      "prompts",
-      "contenido viral",
-      "redes sociales"
-    ],
-    "readingTime": 10
   }
 ]
