@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-21-asistente-personal.html",
+    "title": "Asistente Personal",
+    "description": "Construye un asistente personal con ChatGPT y prompts",
+    "date": "2026-06-21",
+    "tags": [
+      "ChatGPT",
+      "prompts",
+      "asistente personal"
+    ],
+    "readingTime": 10,
+    "category": "personal"
+  },
+  {
     "slug": "2026-06-21-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo aprender cualquier cosa de manera rápida y efectiva con prompts personalizados",
@@ -1134,17 +1147,5 @@
       "IA"
     ],
     "readingTime": 10
-  },
-  {
-    "slug": "2026-05-16-contenido-viral.html",
-    "title": "Contenido Viral",
-    "description": "Crea contenido viral en redes sociales con prompts avanzados",
-    "date": "2026-05-16",
-    "tags": [
-      "prompts",
-      "contenido viral",
-      "redes sociales"
-    ],
-    "readingTime": 5
   }
 ]
