@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-21-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo aprender cualquier cosa de manera rápida y efectiva con prompts personalizados",
+    "date": "2026-06-21",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompts"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
     "slug": "2026-06-21-errores-comunes-al-escribir-prompts.html",
     "title": "Errores comunes al escribir prompts",
     "description": "Aprende a evitar errores comunes al escribir prompts para IA",
@@ -1131,18 +1144,6 @@
       "prompts",
       "contenido viral",
       "redes sociales"
-    ],
-    "readingTime": 5
-  },
-  {
-    "slug": "2026-05-16-domina-chatgpt.html",
-    "title": "Domina ChatGPT",
-    "description": "Aprende a utilizar ChatGPT en tu trabajo diario de manera efectiva",
-    "date": "2026-05-16",
-    "tags": [
-      "ChatGPT",
-      "Inteligencia Artificial",
-      "Productividad"
     ],
     "readingTime": 5
   }
