@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-23-automatiza-tu-negocio.html",
+    "title": "Automatiza tu negocio",
+    "description": "Aprende a automatizar tu negocio con prompts inteligentes y IA",
+    "date": "2026-06-23",
+    "tags": [
+      "Inteligencia Artificial",
+      "Automatización",
+      "Negocios"
+    ],
+    "readingTime": 5,
+    "category": "emprendimiento"
+  },
+  {
     "slug": "2026-06-23-prompts-para-expertos.html",
     "title": "Prompts para Expertos",
     "description": "Descubre los 10 prompts más usados por expertos en marketing para impulsar tus campañas",
@@ -1138,18 +1151,6 @@
       "ChatGPT",
       "Asistente Personal",
       "Inteligencia Artificial"
-    ],
-    "readingTime": 10
-  },
-  {
-    "slug": "2026-05-18-aprende-10x-mas-rapido.html",
-    "title": "Aprende 10x Más Rápido",
-    "description": "Descubre cómo usar prompts para aprender cualquier cosa 10 veces más rápido",
-    "date": "2026-05-18",
-    "tags": [
-      "prompts",
-      "aprendizaje",
-      "inteligencia artificial"
     ],
     "readingTime": 10
   }
