@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-24-crea-un-curso-online.html",
+    "title": "Crea un curso online",
+    "description": "Aprende a crear un curso online con ChatGPT desde cero",
+    "date": "2026-06-24",
+    "tags": [
+      "ChatGPT",
+      "curso online",
+      "creación de contenido"
+    ],
+    "readingTime": 10,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-06-24-errores-comunes-en-prompts.html",
     "title": "Errores comunes en prompts",
     "description": "Aprende a evitar errores al escribir prompts para IA",
@@ -1142,17 +1155,5 @@
       "Productividad"
     ],
     "readingTime": 5
-  },
-  {
-    "slug": "2026-05-19-imagenes-perfectas-con-ia.html",
-    "title": "Imágenes perfectas con IA",
-    "description": "Aprende a generar imágenes perfectas con IA utilizando prompts",
-    "date": "2026-05-19",
-    "tags": [
-      "IA",
-      "Imágenes",
-      "Prompts"
-    ],
-    "readingTime": 10
   }
 ]
