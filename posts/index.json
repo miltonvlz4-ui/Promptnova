@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-24-errores-comunes-en-prompts.html",
+    "title": "Errores comunes en prompts",
+    "description": "Aprende a evitar errores al escribir prompts para IA",
+    "date": "2026-06-24",
+    "tags": [
+      "Inteligencia Artificial",
+      "Prompt Engineering",
+      "Escribir Prompts"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
     "slug": "2026-06-23-automatiza-tu-negocio.html",
     "title": "Automatiza tu negocio",
     "description": "Aprende a automatizar tu negocio con prompts inteligentes y IA",
@@ -1139,18 +1152,6 @@
       "IA",
       "Imágenes",
       "Prompts"
-    ],
-    "readingTime": 10
-  },
-  {
-    "slug": "2026-05-19-asistente-personal-con-chatgpt.html",
-    "title": "Asistente Personal con ChatGPT",
-    "description": "Aprende a construir un asistente personal con ChatGPT y prompts",
-    "date": "2026-05-19",
-    "tags": [
-      "ChatGPT",
-      "Asistente Personal",
-      "Inteligencia Artificial"
     ],
     "readingTime": 10
   }
