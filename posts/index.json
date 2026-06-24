@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-24-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para desarrolladores",
+    "date": "2026-06-24",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-06-24-crea-un-curso-online.html",
     "title": "Crea un curso online",
     "description": "Aprende a crear un curso online con ChatGPT desde cero",
@@ -1143,17 +1156,5 @@
       "prompts"
     ],
     "readingTime": 10
-  },
-  {
-    "slug": "2026-05-19-domina-chatgpt.html",
-    "title": "Domina ChatGPT",
-    "description": "Aprende a utilizar ChatGPT en tu trabajo diario con esta guía práctica",
-    "date": "2026-05-19",
-    "tags": [
-      "ChatGPT",
-      "Inteligencia Artificial",
-      "Productividad"
-    ],
-    "readingTime": 5
   }
 ]
