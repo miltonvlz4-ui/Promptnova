@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-25-prompts-para-emails.html",
+    "title": "Prompts para Emails",
+    "description": "Descubre los mejores prompts para escribir emails profesionales con IA",
+    "date": "2026-06-25",
+    "tags": [
+      "IA",
+      "Emails Profesionales",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10,
+    "category": "trabajo"
+  },
+  {
     "slug": "2026-06-24-prompt-engineering.html",
     "title": "Prompt Engineering",
     "description": "Aprende trucos de prompt engineering para desarrolladores",
@@ -1144,17 +1157,5 @@
       "prompt engineering"
     ],
     "readingTime": 5
-  },
-  {
-    "slug": "2026-05-20-aprende-10-veces-mas-rapido.html",
-    "title": "Aprende 10 veces más rápido",
-    "description": "Descubre cómo aprender cualquier cosa de manera rápida y eficiente con prompts",
-    "date": "2026-05-20",
-    "tags": [
-      "aprendizaje",
-      "inteligencia artificial",
-      "prompts"
-    ],
-    "readingTime": 10
   }
 ]
