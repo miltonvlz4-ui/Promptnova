@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-26-asistente-personal.html",
+    "title": "Asistente Personal",
+    "description": "Construye un asistente personal con ChatGPT y prompts",
+    "date": "2026-06-26",
+    "tags": [
+      "ChatGPT",
+      "Inteligencia Artificial",
+      "Asistente Personal"
+    ],
+    "readingTime": 10,
+    "category": "personal"
+  },
+  {
     "slug": "2026-06-26-crea-un-curso-online.html",
     "title": "Crea un curso online",
     "description": "Aprende a crear un curso online desde cero con ChatGPT",
@@ -1146,18 +1159,6 @@
       "aprendizaje",
       "inteligencia artificial",
       "prompt engineering"
-    ],
-    "readingTime": 10
-  },
-  {
-    "slug": "2026-05-21-automatiza-tu-negocio.html",
-    "title": "Automatiza tu negocio",
-    "description": "Aprende a automatizar tus procesos con prompts inteligentes",
-    "date": "2026-05-21",
-    "tags": [
-      "Inteligencia Artificial",
-      "Automatización",
-      "Prompt Engineering"
     ],
     "readingTime": 10
   }
