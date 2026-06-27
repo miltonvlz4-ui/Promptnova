@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-27-ia-para-seo.html",
+    "title": "IA para SEO",
+    "description": "Mejora tu posicionamiento con prompts de IA",
+    "date": "2026-06-27",
+    "tags": [
+      "IA",
+      "SEO",
+      "posicionamiento"
+    ],
+    "readingTime": 10,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-06-26-asistente-personal.html",
     "title": "Asistente Personal",
     "description": "Construye un asistente personal con ChatGPT y prompts",
@@ -1149,17 +1162,5 @@
       "Productividad"
     ],
     "readingTime": 5
-  },
-  {
-    "slug": "2026-05-22-aprende-10-veces-mas-rapido.html",
-    "title": "Aprende 10 veces más rápido",
-    "description": "Descubre cómo aprender cualquier cosa 10 veces más rápido con prompts efectivos",
-    "date": "2026-05-22",
-    "tags": [
-      "aprendizaje",
-      "inteligencia artificial",
-      "prompt engineering"
-    ],
-    "readingTime": 10
   }
 ]
