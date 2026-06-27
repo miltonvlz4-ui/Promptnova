@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-27-imagenes-perfectas-con-ia.html",
+    "title": "Imágenes Perfectas con IA",
+    "description": "Descubre cómo crear imágenes perfectas con IA utilizando prompts",
+    "date": "2026-06-27",
+    "tags": [
+      "IA",
+      "Inteligencia Artificial",
+      "Imágenes"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-06-27-ia-para-seo.html",
     "title": "IA para SEO",
     "description": "Mejora tu posicionamiento con prompts de IA",
@@ -1150,17 +1163,5 @@
       "prompts"
     ],
     "readingTime": 10
-  },
-  {
-    "slug": "2026-05-22-domina-chatgpt.html",
-    "title": "Domina ChatGPT",
-    "description": "Aprende a utilizar ChatGPT en tu trabajo diario con esta guía práctica",
-    "date": "2026-05-22",
-    "tags": [
-      "ChatGPT",
-      "Inteligencia Artificial",
-      "Productividad"
-    ],
-    "readingTime": 5
   }
 ]
