@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-28-prompts-avanzados.html",
+    "title": "Prompts Avanzados",
+    "description": "Crea contenido viral con prompts avanzados en redes sociales",
+    "date": "2026-06-28",
+    "tags": [
+      "prompts",
+      "contenido viral",
+      "redes sociales"
+    ],
+    "readingTime": 10,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-06-28-ideas-de-negocio-con-ia.html",
     "title": "Ideas de Negocio con IA",
     "description": "Aprende a generar ideas de negocio con inteligencia artificial en minutos",
@@ -1150,18 +1163,6 @@
       "prompts",
       "contenido viral",
       "redes sociales"
-    ],
-    "readingTime": 10
-  },
-  {
-    "slug": "2026-05-23-ia-para-seo.html",
-    "title": "IA para SEO",
-    "description": "Descubre cómo la IA puede mejorar tu posicionamiento en buscadores con prompts efectivos",
-    "date": "2026-05-23",
-    "tags": [
-      "IA",
-      "SEO",
-      "Posicionamiento"
     ],
     "readingTime": 10
   }
