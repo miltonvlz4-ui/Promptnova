@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-29-ia-para-seo.html",
+    "title": "IA para SEO",
+    "description": "Aprende a utilizar la inteligencia artificial para mejorar el posicionamiento de tu contenido en los motores de búsqueda",
+    "date": "2026-06-29",
+    "tags": [
+      "IA",
+      "SEO",
+      "Inteligencia Artificial"
+    ],
+    "readingTime": 10,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-06-29-ia-para-negocios.html",
     "title": "IA para negocios",
     "description": "Aprende a generar ideas de negocio con inteligencia artificial",
@@ -1152,18 +1165,6 @@
       "Inteligencia Artificial",
       "Imágenes Generadas",
       "Prompt Engineering"
-    ],
-    "readingTime": 10
-  },
-  {
-    "slug": "2026-05-23-aprende-10-veces-mas-rapido.html",
-    "title": "Aprende 10 veces más rápido",
-    "description": "Descubre los secretos para aprender cualquier cosa 10 veces más rápido con prompts efectivos",
-    "date": "2026-05-23",
-    "tags": [
-      "aprendizaje",
-      "inteligencia artificial",
-      "prompt engineering"
     ],
     "readingTime": 10
   }
