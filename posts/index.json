@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-29-contenido-viral.html",
+    "title": "Contenido Viral",
+    "description": "Aprende a crear contenido viral con prompts avanzados",
+    "date": "2026-06-29",
+    "tags": [
+      "contenido viral",
+      "prompts avanzados",
+      "redes sociales"
+    ],
+    "readingTime": 10,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-06-29-ia-para-seo.html",
     "title": "IA para SEO",
     "description": "Aprende a utilizar la inteligencia artificial para mejorar el posicionamiento de tu contenido en los motores de búsqueda",
@@ -1155,17 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "estudio"
-  },
-  {
-    "slug": "2026-05-24-imagenes-perfectas-con-ia.html",
-    "title": "Imágenes Perfectas con IA",
-    "description": "Aprende a crear imágenes perfectas con inteligencia artificial",
-    "date": "2026-05-24",
-    "tags": [
-      "Inteligencia Artificial",
-      "Imágenes Generadas",
-      "Prompt Engineering"
-    ],
-    "readingTime": 10
   }
 ]
