@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-30-contenido-viral.html",
+    "title": "Contenido Viral",
+    "description": "Crea contenido viral en redes sociales con prompts avanzados",
+    "date": "2026-06-30",
+    "tags": [
+      "prompts",
+      "contenido viral",
+      "redes sociales"
+    ],
+    "readingTime": 5,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-06-30-asistente-personal-con-chatgpt.html",
     "title": "Asistente Personal con ChatGPT",
     "description": "Construye un asistente personal con ChatGPT y prompts para aumentar tu productividad",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "marketing"
-  },
-  {
-    "slug": "2026-05-25-aprende-rapido.html",
-    "title": "Aprende rápido",
-    "description": "Aprende cualquier cosa 10 veces más rápido con estos prompts",
-    "date": "2026-05-25",
-    "tags": [
-      "aprendizaje",
-      "inteligencia artificial",
-      "prompt engineering"
-    ],
-    "readingTime": 5,
-    "category": "estudio"
   }
 ]
