@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-06-30-ideas-de-negocio-con-ia.html",
+    "title": "Ideas de Negocio con IA",
+    "description": "Aprende a generar ideas de negocio en minutos con inteligencia artificial",
+    "date": "2026-06-30",
+    "tags": [
+      "IA",
+      "Negocios",
+      "Innovación"
+    ],
+    "readingTime": 5,
+    "category": "emprendimiento"
+  },
+  {
     "slug": "2026-06-29-contenido-viral.html",
     "title": "Contenido Viral",
     "description": "Aprende a crear contenido viral con prompts avanzados",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "trabajo"
-  },
-  {
-    "slug": "2026-05-24-crea-un-curso-online.html",
-    "title": "Crea un curso online",
-    "description": "Aprende a crear un curso online desde cero con ChatGPT",
-    "date": "2026-05-24",
-    "tags": [
-      "ChatGPT",
-      "curso online",
-      "educación en línea"
-    ],
-    "readingTime": 10,
-    "category": "estudio"
   }
 ]
