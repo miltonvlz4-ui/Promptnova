@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-01-automatiza-tu-negocio.html",
+    "title": "Automatiza tu negocio",
+    "description": "Aprende a automatizar tu negocio con prompts inteligentes y IA",
+    "date": "2026-07-01",
+    "tags": [
+      "automatización",
+      "inteligencia artificial",
+      "prompt engineering"
+    ],
+    "readingTime": 10,
+    "category": "emprendimiento"
+  },
+  {
     "slug": "2026-07-01-ideas-denegocio-con-ia.html",
     "title": "Ideas deNegocio con IA",
     "description": "Aprende a generar ideas de negocio con inteligencia artificial en minutos",
@@ -1148,19 +1161,6 @@
     "title": "Escribiendo emails con IA",
     "description": "Aprende a escribir emails profesionales con la ayuda de la inteligencia artificial",
     "date": "2026-05-27",
-    "tags": [
-      "IA",
-      "emails profesionales",
-      "prompt engineering"
-    ],
-    "readingTime": 5,
-    "category": "trabajo"
-  },
-  {
-    "slug": "2026-05-26-escribiendo-emails-con-ia.html",
-    "title": "Escribiendo emails con IA",
-    "description": "Aprende a escribir emails profesionales con inteligencia artificial",
-    "date": "2026-05-26",
     "tags": [
       "IA",
       "emails profesionales",
