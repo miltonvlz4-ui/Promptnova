@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-01-ia-para-seo.html",
+    "title": "IA para SEO",
+    "description": "Aprende a utilizar la inteligencia artificial para mejorar tu posición en buscadores",
+    "date": "2026-07-01",
+    "tags": [
+      "IA",
+      "SEO",
+      "Inteligencia Artificial"
+    ],
+    "readingTime": 10,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-06-30-contenido-viral.html",
     "title": "Contenido Viral",
     "description": "Crea contenido viral en redes sociales con prompts avanzados",
@@ -1152,19 +1165,6 @@
       "marketing",
       "prompts",
       "inteligencia artificial"
-    ],
-    "readingTime": 10,
-    "category": "marketing"
-  },
-  {
-    "slug": "2026-05-26-ia-para-seo.html",
-    "title": "IA para SEO",
-    "description": "Aprende a utilizar la inteligencia artificial para mejorar el posicionamiento de tu contenido en buscadores",
-    "date": "2026-05-26",
-    "tags": [
-      "IA",
-      "SEO",
-      "Content Marketing"
     ],
     "readingTime": 10,
     "category": "marketing"
