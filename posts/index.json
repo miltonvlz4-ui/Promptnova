@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-02-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Descubre trucos de prompt engineering para developers",
+    "date": "2026-07-02",
+    "tags": [
+      "Inteligencia Artificial",
+      "Prompt Engineering",
+      "Desarrollo de Software"
+    ],
+    "readingTime": 5,
+    "category": "programacion"
+  },
+  {
     "slug": "2026-07-02-asistente-personal.html",
     "title": "Asistente Personal",
     "description": "Construye un asistente personal con ChatGPT y prompts",
@@ -1154,19 +1167,6 @@
       "prompt engineering"
     ],
     "readingTime": 10,
-    "category": "emprendimiento"
-  },
-  {
-    "slug": "2026-05-27-ideas-de-negocio-con-ia.html",
-    "title": "Ideas de negocio con IA",
-    "description": "Aprende a generar ideas de negocio en minutos con inteligencia artificial",
-    "date": "2026-05-27",
-    "tags": [
-      "inteligencia artificial",
-      "ideas de negocio",
-      "emprendimiento"
-    ],
-    "readingTime": 5,
     "category": "emprendimiento"
   }
 ]
