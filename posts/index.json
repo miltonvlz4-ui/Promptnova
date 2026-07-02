@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-02-asistente-personal.html",
+    "title": "Asistente Personal",
+    "description": "Construye un asistente personal con ChatGPT y prompts",
+    "date": "2026-07-02",
+    "tags": [
+      "ChatGPT",
+      "Asistente Personal",
+      "Inteligencia Artificial"
+    ],
+    "readingTime": 10,
+    "category": "personal"
+  },
+  {
     "slug": "2026-07-01-automatiza-tu-negocio.html",
     "title": "Automatiza tu negocio",
     "description": "Aprende a automatizar tu negocio con prompts inteligentes y IA",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "emprendimiento"
-  },
-  {
-    "slug": "2026-05-27-escribiendo-emails-con-ia.html",
-    "title": "Escribiendo emails con IA",
-    "description": "Aprende a escribir emails profesionales con la ayuda de la inteligencia artificial",
-    "date": "2026-05-27",
-    "tags": [
-      "IA",
-      "emails profesionales",
-      "prompt engineering"
-    ],
-    "readingTime": 5,
-    "category": "trabajo"
   }
 ]
