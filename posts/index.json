@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-03-automatiza-tu-negocio.html",
+    "title": "Automatiza tu negocio",
+    "description": "Aprende a automatizar procesos con prompts inteligentes",
+    "date": "2026-07-03",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "automatización"
+    ],
+    "readingTime": 10,
+    "category": "emprendimiento"
+  },
+  {
     "slug": "2026-07-03-prompts-de-marketing.html",
     "title": "Prompts de marketing",
     "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "estudio"
-  },
-  {
-    "slug": "2026-05-28-automatiza-tu-negocio.html",
-    "title": "Automatiza tu negocio",
-    "description": "Descubre cómo los prompts inteligentes pueden mejorar tu negocio",
-    "date": "2026-05-28",
-    "tags": [
-      "automatización",
-      "inteligencia artificial",
-      "prompt engineering"
-    ],
-    "readingTime": 5,
-    "category": "emprendimiento"
   }
 ]
