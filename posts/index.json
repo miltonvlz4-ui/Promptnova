@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-04-prompts-creativos.html",
+    "title": "Prompts Creativos",
+    "description": "Descubre los prompts más creativos para diseñadores gráficos",
+    "date": "2026-07-04",
+    "tags": [
+      "diseño gráfico",
+      "inteligencia artificial",
+      "prompts"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-04-ideas-de-negocio-con-ia.html",
     "title": "Ideas de negocio con IA",
     "description": "Aprende a generar ideas de negocio en minutos con inteligencia artificial",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "general"
-  },
-  {
-    "slug": "2026-05-29-escribiendo-emails-profesionales.html",
-    "title": "Escribiendo Emails Profesionales",
-    "description": "Aprende a escribir emails profesionales con IA y mejora tu comunicación laboral",
-    "date": "2026-05-29",
-    "tags": [
-      "IA",
-      "Emails Profesionales",
-      "Comunicación Laboral"
-    ],
-    "readingTime": 10,
-    "category": "trabajo"
   }
 ]
