@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-04-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo aprender cualquier cosa de manera rápida y eficiente con prompts",
+    "date": "2026-07-04",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompt engineering"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
     "slug": "2026-07-03-automatiza-tu-negocio.html",
     "title": "Automatiza tu negocio",
     "description": "Aprende a automatizar procesos con prompts inteligentes",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "programacion"
-  },
-  {
-    "slug": "2026-05-29-aprende-10x-mas-rapido.html",
-    "title": "Aprende 10x Más Rápido",
-    "description": "Descubre cómo aprender cualquier cosa 10 veces más rápido con prompts efectivos",
-    "date": "2026-05-29",
-    "tags": [
-      "aprendizaje",
-      "inteligencia artificial",
-      "prompt engineering"
-    ],
-    "readingTime": 10,
-    "category": "estudio"
   }
 ]
