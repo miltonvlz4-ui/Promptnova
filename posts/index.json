@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-04-ideas-de-negocio-con-ia.html",
+    "title": "Ideas de negocio con IA",
+    "description": "Aprende a generar ideas de negocio en minutos con inteligencia artificial",
+    "date": "2026-07-04",
+    "tags": [
+      "inteligencia artificial",
+      "ideas de negocio",
+      "emprendimiento"
+    ],
+    "readingTime": 5,
+    "category": "emprendimiento"
+  },
+  {
     "slug": "2026-07-04-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo aprender cualquier cosa de manera rápida y eficiente con prompts",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "trabajo"
-  },
-  {
-    "slug": "2026-05-29-prompt-engineering.html",
-    "title": "Prompt Engineering",
-    "description": "Aprende trucos de prompt engineering para desarrolladores",
-    "date": "2026-05-29",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "desarrollo de software"
-    ],
-    "readingTime": 10,
-    "category": "programacion"
   }
 ]
