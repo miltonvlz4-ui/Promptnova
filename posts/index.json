@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-05-errores-comunes-en-prompts.html",
+    "title": "Errores comunes en prompts",
+    "description": "Aprende a evitar errores comunes al escribir prompts para IA",
+    "date": "2026-07-05",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "errores comunes"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-05-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo aprender cualquier cosa de manera rápida y efectiva con prompts",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "general"
-  },
-  {
-    "slug": "2026-05-30-aprende-10-veces-mas-rapido.html",
-    "title": "Aprende 10 veces más rápido",
-    "description": "Descubre cómo aprender cualquier cosa de manera efectiva con prompts",
-    "date": "2026-05-30",
-    "tags": [
-      "aprendizaje",
-      "inteligencia artificial",
-      "prompts"
-    ],
-    "readingTime": 10,
-    "category": "estudio"
   }
 ]
