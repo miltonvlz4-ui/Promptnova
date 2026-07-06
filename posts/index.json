@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-06-prompts-perfectos.html",
+    "title": "Prompts Perfectos",
+    "description": "Aprende a escribir prompts efectivos para IA",
+    "date": "2026-07-06",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "IA"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-06-escribe-emails-profesionales-con-ia.html",
     "title": "Escribe emails profesionales con IA",
     "description": "Aprende a escribir emails profesionales con inteligencia artificial y los mejores prompts para hacerlo",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "estudio"
-  },
-  {
-    "slug": "2026-05-31-errores-comunes-en-prompts.html",
-    "title": "Errores comunes en prompts",
-    "description": "Aprende a evitar errores al escribir prompts para IA",
-    "date": "2026-05-31",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "errores comunes"
-    ],
-    "readingTime": 5,
-    "category": "general"
   }
 ]
