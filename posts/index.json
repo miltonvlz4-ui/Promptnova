@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-06-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para developers",
+    "date": "2026-07-06",
+    "tags": [
+      "Inteligencia Artificial",
+      "Prompt Engineering",
+      "Desarrollo de Software"
+    ],
+    "readingTime": 10,
+    "category": "programacion"
+  },
+  {
     "slug": "2026-07-06-prompts-perfectos.html",
     "title": "Prompts Perfectos",
     "description": "Aprende a escribir prompts efectivos para IA",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "marketing"
-  },
-  {
-    "slug": "2026-06-01-aprende-10-veces-mas-rapido.html",
-    "title": "Aprende 10 veces más rápido",
-    "description": "Descubre cómo aprender cualquier cosa 10 veces más rápido con prompts efectivos",
-    "date": "2026-06-01",
-    "tags": [
-      "aprendizaje",
-      "inteligencia artificial",
-      "prompts"
-    ],
-    "readingTime": 10,
-    "category": "estudio"
   }
 ]
