@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-06-escribe-emails-profesionales-con-ia.html",
+    "title": "Escribe emails profesionales con IA",
+    "description": "Aprende a escribir emails profesionales con inteligencia artificial y los mejores prompts para hacerlo",
+    "date": "2026-07-06",
+    "tags": [
+      "IA",
+      "Emails Profesionales",
+      "Prompt Engineering"
+    ],
+    "readingTime": 5,
+    "category": "trabajo"
+  },
+  {
     "slug": "2026-07-05-ideas-de-negocio-con-ia.html",
     "title": "Ideas de Negocio con IA",
     "description": "Aprende a generar ideas de negocio en minutos con Inteligencia Artificial",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "general"
-  },
-  {
-    "slug": "2026-05-31-contenido-viral.html",
-    "title": "Contenido Viral",
-    "description": "Crea contenido viral en redes sociales con prompts avanzados",
-    "date": "2026-05-31",
-    "tags": [
-      "prompts",
-      "contenido viral",
-      "redes sociales"
-    ],
-    "readingTime": 10,
-    "category": "marketing"
   }
 ]
