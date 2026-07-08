@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-08-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo los prompts pueden acelerar tu aprendizaje en cualquier tema",
+    "date": "2026-07-08",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompts"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
     "slug": "2026-07-07-prompt-engineering.html",
     "title": "Prompt Engineering",
     "description": "Descubre trucos para desarrolladores en prompt engineering",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-01-prompt-engineering.html",
-    "title": "Prompt Engineering",
-    "description": "Aprende trucos de prompt engineering para developers",
-    "date": "2026-06-01",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "desarrollo de software"
-    ],
-    "readingTime": 5,
-    "category": "programacion"
   }
 ]
