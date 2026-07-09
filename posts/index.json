@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-09-imagenes-con-ia.html",
+    "title": "Imágenes con IA",
+    "description": "Descubre cómo generar imágenes perfectas con IA usando prompts",
+    "date": "2026-07-09",
+    "tags": [
+      "IA",
+      "Imágenes",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-09-escribiendo-emails-profesionales.html",
     "title": "Escribiendo Emails Profesionales",
     "description": "Aprende a escribir emails profesionales con IA utilizando los mejores prompts",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "marketing"
-  },
-  {
-    "slug": "2026-06-02-ideas-de-negocio-con-ia.html",
-    "title": "Ideas de negocio con IA",
-    "description": "Aprende a generar ideas de negocio en minutos con inteligencia artificial",
-    "date": "2026-06-02",
-    "tags": [
-      "Inteligencia Artificial",
-      "Ideas de negocio",
-      "Innovación"
-    ],
-    "readingTime": 5,
-    "category": "emprendimiento"
   }
 ]
