@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-09-escribiendo-emails-profesionales.html",
+    "title": "Escribiendo Emails Profesionales",
+    "description": "Aprende a escribir emails profesionales con IA utilizando los mejores prompts",
+    "date": "2026-07-09",
+    "tags": [
+      "IA",
+      "Emails Profesionales",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10,
+    "category": "trabajo"
+  },
+  {
     "slug": "2026-07-08-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo los prompts pueden acelerar tu aprendizaje en cualquier tema",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "emprendimiento"
-  },
-  {
-    "slug": "2026-06-02-prompts-creativos.html",
-    "title": "Prompts Creativos",
-    "description": "Descubre los prompts más creativos para diseñadores gráficos y mejora tu trabajo",
-    "date": "2026-06-02",
-    "tags": [
-      "diseño gráfico",
-      "prompts",
-      "inteligencia artificial"
-    ],
-    "readingTime": 10,
-    "category": "general"
   }
 ]
