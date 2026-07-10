@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-10-prompts-infalibles.html",
+    "title": "Prompts infalibles",
+    "description": "Aprende a escribir prompts efectivos para IA con ejemplos prácticos",
+    "date": "2026-07-10",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "IA"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-09-imagenes-con-ia.html",
     "title": "Imágenes con IA",
     "description": "Descubre cómo generar imágenes perfectas con IA usando prompts",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-02-prompts-de-marketing.html",
-    "title": "Prompts de Marketing",
-    "description": "Descubre los 10 prompts más usados por expertos en marketing para aumentar tus ventas",
-    "date": "2026-06-02",
-    "tags": [
-      "marketing",
-      "prompts",
-      "inteligencia artificial"
-    ],
-    "readingTime": 10,
-    "category": "marketing"
   }
 ]
