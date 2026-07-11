@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-11-prompts-para-emails.html",
+    "title": "Prompts para Emails",
+    "description": "Aprende a escribir emails profesionales con IA y promts efectivos",
+    "date": "2026-07-11",
+    "tags": [
+      "IA",
+      "prompts",
+      "emails profesionales"
+    ],
+    "readingTime": 10,
+    "category": "trabajo"
+  },
+  {
     "slug": "2026-07-10-prompts-infalibles.html",
     "title": "Prompts infalibles",
     "description": "Aprende a escribir prompts efectivos para IA con ejemplos prácticos",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "emprendimiento"
-  },
-  {
-    "slug": "2026-06-03-prompts-perfectos.html",
-    "title": "Prompts Perfectos",
-    "description": "Aprende a escribir prompts efectivos para IA",
-    "date": "2026-06-03",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "IA"
-    ],
-    "readingTime": 10,
-    "category": "general"
   }
 ]
