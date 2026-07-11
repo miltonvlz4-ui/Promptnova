@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-11-prompts-infalibles.html",
+    "title": "Prompts infalibles",
+    "description": "Aprende a escribir prompts efectivos para inteligencia artificial",
+    "date": "2026-07-11",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "IA"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-11-automatiza-tu-negocio.html",
     "title": "Automatiza tu negocio",
     "description": "Aprende a automatizar tu negocio con prompts inteligentes y IA",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-03-ia-para-seo.html",
-    "title": "IA para SEO",
-    "description": "Descubre cómo la IA puede mejorar tu SEO con prompts efectivos",
-    "date": "2026-06-03",
-    "tags": [
-      "IA",
-      "SEO",
-      "prompts"
-    ],
-    "readingTime": 5,
-    "category": "marketing"
   }
 ]
