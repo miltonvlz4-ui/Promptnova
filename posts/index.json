@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-12-errores-comunes-en-prompts.html",
+    "title": "Errores comunes en prompts",
+    "description": "Aprende a evitar errores comunes al escribir prompts para IA",
+    "date": "2026-07-12",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "errores comunes"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-12-10-prompts-de-marketing.html",
     "title": "10 Prompts de Marketing",
     "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-04-ideas-de-negocio-con-ia.html",
-    "title": "Ideas de negocio con IA",
-    "description": "Aprende a generar ideas de negocio en minutos con la inteligencia artificial",
-    "date": "2026-06-04",
-    "tags": [
-      "inteligencia artificial",
-      "ideas de negocio",
-      "emprendimiento"
-    ],
-    "readingTime": 5,
-    "category": "emprendimiento"
   }
 ]
