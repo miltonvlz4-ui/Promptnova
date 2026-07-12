@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-12-asistente-personal.html",
+    "title": "Asistente Personal",
+    "description": "Construye tu asistente personal con ChatGPT y prompts",
+    "date": "2026-07-12",
+    "tags": [
+      "ChatGPT",
+      "Asistente Personal",
+      "Inteligencia Artificial"
+    ],
+    "readingTime": 5,
+    "category": "personal"
+  },
+  {
     "slug": "2026-07-12-errores-comunes-en-prompts.html",
     "title": "Errores comunes en prompts",
     "description": "Aprende a evitar errores comunes al escribir prompts para IA",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "programacion"
-  },
-  {
-    "slug": "2026-06-05-prompts-creativos.html",
-    "title": "Prompts Creativos",
-    "description": "Descubre los prompts más creativos para diseñadores gráficos",
-    "date": "2026-06-05",
-    "tags": [
-      "diseño gráfico",
-      "inteligencia artificial",
-      "prompts"
-    ],
-    "readingTime": 10,
-    "category": "general"
   }
 ]
