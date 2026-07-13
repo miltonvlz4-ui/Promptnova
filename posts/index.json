@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-13-prompts-creativos.html",
+    "title": "Prompts creativos",
+    "description": "Descubre los prompts más creativos para diseñadores gráficos",
+    "date": "2026-07-13",
+    "tags": [
+      "diseño gráfico",
+      "prompts",
+      "inteligencia artificial"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-13-errores-comunes-al-escribir-prompts.html",
     "title": "Errores comunes al escribir prompts",
     "description": "Aprende a evitar errores comunes al escribir prompts para IA",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "marketing"
-  },
-  {
-    "slug": "2026-06-06-imagenes-perfectas-con-ia.html",
-    "title": "Imágenes perfectas con IA",
-    "description": "Genera imágenes impresionantes con prompts personalizados",
-    "date": "2026-06-06",
-    "tags": [
-      "IA",
-      "Inteligencia Artificial",
-      "Imágenes"
-    ],
-    "readingTime": 10,
-    "category": "general"
   }
 ]
