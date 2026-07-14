@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-14-ia-para-seo.html",
+    "title": "IA para SEO",
+    "description": "Descubre cómo la inteligencia artificial puede mejorar tu posicionamiento en buscadores",
+    "date": "2026-07-14",
+    "tags": [
+      "SEO",
+      "Inteligencia Artificial",
+      "IA"
+    ],
+    "readingTime": 10,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-07-13-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo aprender cualquier cosa de manera eficiente con prompts",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "personal"
-  },
-  {
-    "slug": "2026-06-07-imagenes-con-ia.html",
-    "title": "Imágenes con IA",
-    "description": "Descubre cómo crear imágenes perfectas con prompts de IA",
-    "date": "2026-06-07",
-    "tags": [
-      "IA",
-      "Inteligencia Artificial",
-      "Imágenes"
-    ],
-    "readingTime": 10,
-    "category": "general"
   }
 ]
