@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-14-errores-comunes-en-prompts.html",
+    "title": "Errores comunes en prompts",
+    "description": "Evita errores comunes al escribir prompts para IA y mejora tus resultados",
+    "date": "2026-07-14",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "errores comunes"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-14-ia-para-seo.html",
     "title": "IA para SEO",
     "description": "Descubre cómo la inteligencia artificial puede mejorar tu posicionamiento en buscadores",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-08-asistente-personal.html",
-    "title": "Asistente Personal",
-    "description": "Construye un asistente personal con ChatGPT y prompts",
-    "date": "2026-06-08",
-    "tags": [
-      "ChatGPT",
-      "Asistente Personal",
-      "Inteligencia Artificial"
-    ],
-    "readingTime": 10,
-    "category": "personal"
   }
 ]
