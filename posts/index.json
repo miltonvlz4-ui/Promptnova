@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-15-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Aprende a utilizar ChatGPT en tu trabajo diario con nuestra guía práctica",
+    "date": "2026-07-15",
+    "tags": [
+      "ChatGPT",
+      "Inteligencia Artificial",
+      "Productividad"
+    ],
+    "readingTime": 10,
+    "category": "trabajo"
+  },
+  {
     "slug": "2026-07-15-imagenes-con-ia.html",
     "title": "Imágenes con IA",
     "description": "Descubre cómo crear imágenes perfectas con IA utilizando prompts efectivos",
@@ -1154,19 +1167,6 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "marketing"
-  },
-  {
-    "slug": "2026-06-08-prompts-avanzados.html",
-    "title": "Prompts avanzados",
-    "description": "Crea contenido viral en redes sociales con prompts avanzados",
-    "date": "2026-06-08",
-    "tags": [
-      "prompts",
-      "contenido viral",
-      "redes sociales"
-    ],
-    "readingTime": 5,
     "category": "marketing"
   }
 ]
