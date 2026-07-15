@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-15-imagenes-con-ia.html",
+    "title": "Imágenes con IA",
+    "description": "Descubre cómo crear imágenes perfectas con IA utilizando prompts efectivos",
+    "date": "2026-07-15",
+    "tags": [
+      "IA",
+      "Inteligencia Artificial",
+      "Imágenes Generadas"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-14-errores-comunes-en-prompts.html",
     "title": "Errores comunes en prompts",
     "description": "Evita errores comunes al escribir prompts para IA y mejora tus resultados",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "marketing"
-  },
-  {
-    "slug": "2026-06-08-prompts-infalibles.html",
-    "title": "Prompts infalibles",
-    "description": "Aprende a escribir prompts efectivos para IA con ejemplos prácticos",
-    "date": "2026-06-08",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "IA"
-    ],
-    "readingTime": 5,
-    "category": "general"
   }
 ]
