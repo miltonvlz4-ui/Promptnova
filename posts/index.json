@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-16-crea-un-curso-online.html",
+    "title": "Crea un curso online",
+    "description": "Aprende a crear un curso online desde cero con ChatGPT",
+    "date": "2026-07-16",
+    "tags": [
+      "ChatGPT",
+      "curso online",
+      "educación en línea"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
     "slug": "2026-07-16-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo los prompts pueden acelerar tu aprendizaje",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-09-domina-chatgpt.html",
-    "title": "Domina ChatGPT",
-    "description": "Aprende a utilizar ChatGPT en tu trabajo diario de manera efectiva",
-    "date": "2026-06-09",
-    "tags": [
-      "ChatGPT",
-      "Inteligencia Artificial",
-      "Productividad"
-    ],
-    "readingTime": 10,
-    "category": "trabajo"
   }
 ]
