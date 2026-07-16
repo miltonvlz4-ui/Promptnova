@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-16-prompts-infalibles.html",
+    "title": "Prompts infalibles",
+    "description": "Aprende a escribir prompts efectivos para inteligencia artificial",
+    "date": "2026-07-16",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "IA"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-16-crea-un-curso-online.html",
     "title": "Crea un curso online",
     "description": "Aprende a crear un curso online desde cero con ChatGPT",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "marketing"
-  },
-  {
-    "slug": "2026-06-09-prompt-engineering.html",
-    "title": "Prompt Engineering",
-    "description": "Aprende trucos de prompt engineering para desarrolladores",
-    "date": "2026-06-09",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "desarrollo"
-    ],
-    "readingTime": 10,
-    "category": "general"
   }
 ]
