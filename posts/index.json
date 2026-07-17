@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-17-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre técnicas para aprender cualquier cosa de manera eficiente con prompts",
+    "date": "2026-07-17",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompt engineering"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
     "slug": "2026-07-16-prompts-infalibles.html",
     "title": "Prompts infalibles",
     "description": "Aprende a escribir prompts efectivos para inteligencia artificial",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "estudio"
-  },
-  {
-    "slug": "2026-06-10-10-prompts-de-marketing.html",
-    "title": "10 Prompts de Marketing",
-    "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas",
-    "date": "2026-06-10",
-    "tags": [
-      "marketing",
-      "prompts",
-      "inteligencia artificial"
-    ],
-    "readingTime": 10,
-    "category": "marketing"
   }
 ]
