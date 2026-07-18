@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-18-ia-para-seo.html",
+    "title": "IA para SEO",
+    "description": "Aprende a utilizar la inteligencia artificial para mejorar tu posicionamiento en buscadores",
+    "date": "2026-07-18",
+    "tags": [
+      "IA",
+      "SEO",
+      "posicionamiento"
+    ],
+    "readingTime": 5,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-07-17-aprende-rapido.html",
     "title": "Aprende Rápido",
     "description": "Aprende cualquier cosa 10 veces más rápido con prompts",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "emprendimiento"
-  },
-  {
-    "slug": "2026-06-11-prompts-de-marketing.html",
-    "title": "Prompts de Marketing",
-    "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas",
-    "date": "2026-06-11",
-    "tags": [
-      "marketing",
-      "prompts",
-      "inteligencia artificial"
-    ],
-    "readingTime": 10,
-    "category": "marketing"
   }
 ]
