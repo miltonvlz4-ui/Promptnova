@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-18-imagenes-con-ia.html",
+    "title": "Imágenes con IA",
+    "description": "Genera imágenes perfectas con IA utilizando prompts efectivos",
+    "date": "2026-07-18",
+    "tags": [
+      "IA",
+      "Imágenes",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-18-asistente-personal.html",
     "title": "Asistente Personal",
     "description": "Construye un asistente personal con ChatGPT y prompts",
@@ -1152,19 +1165,6 @@
       "prompt engineering",
       "inteligencia artificial",
       "errores comunes"
-    ],
-    "readingTime": 5,
-    "category": "general"
-  },
-  {
-    "slug": "2026-06-12-prompts-creativos.html",
-    "title": "Prompts creativos",
-    "description": "Descubre los prompts más creativos para diseñadores gráficos",
-    "date": "2026-06-12",
-    "tags": [
-      "diseño gráfico",
-      "inteligencia artificial",
-      "prompts"
     ],
     "readingTime": 5,
     "category": "general"
