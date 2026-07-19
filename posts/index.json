@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-19-prompts-de-marketing.html",
+    "title": "Prompts de Marketing",
+    "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas",
+    "date": "2026-07-19",
+    "tags": [
+      "marketing",
+      "prompts",
+      "inteligencia artificial"
+    ],
+    "readingTime": 10,
+    "category": "marketing"
+  },
+  {
     "slug": "2026-07-19-crea-un-curso-online.html",
     "title": "Crea un curso online",
     "description": "Aprende a crear un curso online desde cero con ChatGPT",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "marketing"
-  },
-  {
-    "slug": "2026-06-13-domina-chatgpt.html",
-    "title": "Domina ChatGPT",
-    "description": "Aprende a utilizar ChatGPT en tu trabajo diario de manera efectiva",
-    "date": "2026-06-13",
-    "tags": [
-      "ChatGPT",
-      "Inteligencia Artificial",
-      "Productividad"
-    ],
-    "readingTime": 10,
-    "category": "trabajo"
   }
 ]
