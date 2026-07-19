@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-19-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para developers",
+    "date": "2026-07-19",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-19-prompts-de-marketing.html",
     "title": "Prompts de Marketing",
     "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "trabajo"
-  },
-  {
-    "slug": "2026-06-13-crear-contenido-viral.html",
-    "title": "Crear Contenido Viral",
-    "description": "Aprende a crear contenido viral en redes sociales con prompts avanzados",
-    "date": "2026-06-13",
-    "tags": [
-      "contenidoviral",
-      "redessociales",
-      "promptengineering"
-    ],
-    "readingTime": 5,
-    "category": "marketing"
   }
 ]
