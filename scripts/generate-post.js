@@ -171,28 +171,28 @@ function savePost(data, topic) {
   <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav>
     <div class="nav-inner">
-      <a href="/" class="logo">🪐 PromptNova</a>
+      <a href="./" class="logo">🪐 PromptNova</a>
       <ul class="nav-links">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/#posts">Prompts</a></li>
-        <li><a href="/#categorias">Categorías</a></li>
-        <li><a href="/#blog" class="active">Blog</a></li>
-        <li><a href="/#sobre-mi">Sobre mí</a></li>
-        <li><a href="/privacidad.html">Privacidad</a></li>
+        <li><a href="./">Inicio</a></li>
+        <li><a href="./#posts">Prompts</a></li>
+        <li><a href="./#categorias">Categorías</a></li>
+        <li><a href="./#blog" class="active">Blog</a></li>
+        <li><a href="./#sobre-mi">Sobre mí</a></li>
+        <li><a href="privacidad.html">Privacidad</a></li>
       </ul>
-      <a href="/#posts" class="nav-cta">✨ Explorar</a>
+      <a href="./#posts" class="nav-cta">✨ Explorar</a>
     </div>
   </nav>
 
   <main class="post-container">
     <div class="post-header">
-      <a href="/" class="post-back">← Volver al inicio</a>
+      <a href="./" class="post-back">← Volver al inicio</a>
       <span class="post-tag">${data.tags[0] || "IA"}</span>
       <h1>${data.title}</h1>
       <p class="post-meta">
@@ -210,21 +210,21 @@ function savePost(data, topic) {
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="/" class="logo">🪐 PromptNova</a>
+        <a href="./" class="logo">🪐 PromptNova</a>
         <p>Tu copiloto en el universo de la inteligencia artificial.</p>
       </div>
       <div class="footer-col">
         <h4>Explorar</h4>
         <ul>
-          <li><a href="/#posts">Todos los prompts</a></li>
-          <li><a href="/#blog">Blog</a></li>
+          <li><a href="./#posts">Todos los prompts</a></li>
+          <li><a href="./#blog">Blog</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="/privacidad.html">Política de Privacidad</a></li>
-          <li><a href="/terminos.html">Términos de Uso</a></li>
+          <li><a href="privacidad.html">Política de Privacidad</a></li>
+          <li><a href="terminos.html">Términos de Uso</a></li>
         </ul>
       </div>
     </div>
