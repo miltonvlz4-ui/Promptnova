@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossorigin="anonymous" integrity="sha384-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossorigin="anonymous"></script>
   
   <style>
     :root {
@@ -113,6 +113,7 @@
       text-align:center;
       padding: 6rem 2rem 4rem;
       position:relative; overflow:hidden;
+      margin-top: 64px;
     }
     .hero-bg {
       position:absolute; inset:0; pointer-events:none;
@@ -425,7 +426,7 @@
 <body>
 
 <!-- NAV -->
-<nav role="navigation" aria-label="Main navigation">
+<nav role="navigation" aria-label="Navegación principal">
   <a href="#inicio" class="nav-logo">🪐 Prompt<span>Nova</span></a>
   <div class="nav-search">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -437,21 +438,21 @@
     <a href="#categorias">Categorías</a>
     <a href="#blog">Blog</a>
     <a href="#sobre-mi">Sobre mí</a>
-    <a href="https://miltonvlz4-ui.github.io/privacidad.html" target="_blank" rel="noopener noreferrer">Privacidad</a>
+    <a href="./privacidad.html" target="_blank" rel="noopener noreferrer">Privacidad</a>
   </div>
   <div class="hamburger" onclick="toggleMenu()" aria-label="Menú de navegación" role="button" tabindex="0">
     <span></span><span></span><span></span>
   </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Navegación móvil">
   <a href="#inicio" onclick="closeMenu()">Inicio</a>
   <a href="#posts" onclick="closeMenu()">Prompts</a>
   <a href="#categorias" onclick="closeMenu()">Categorías</a>
   <a href="#blog" onclick="closeMenu()">Blog</a>
   <a href="#sobre-mi" onclick="closeMenu()">Sobre mí</a>
-  <a href="https://miltonvlz4-ui.github.io/privacidad.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Privacidad</a>
-  <a href="https://miltonvlz4-ui.github.io/terminos.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Términos de Uso</a>
-  <a href="https://miltonvlz4-ui.github.io/aviso-legal.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Aviso Legal</a>
+  <a href="./privacidad.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Privacidad</a>
+  <a href="./terminos.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Términos de Uso</a>
+  <a href="./aviso-legal.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Aviso Legal</a>
   <a href="mailto:contacto@promptnova.com" onclick="closeMenu()">Contacto</a>
 </div>
 
@@ -534,7 +535,7 @@
     <button class="filter-btn" onclick="setFilter('emprendimiento',this)">🚀 Emprendimiento</button>
   </div>
   <div class="prompts-grid" id="promptsGrid" role="grid"></div>
-  <div class="pagination" id="pagination" role="navigation" aria-label="Pagination"></div>
+  <div class="pagination" id="pagination" role="navigation" aria-label="Paginación"></div>
 </section>
 
 <hr class="divider">
@@ -593,7 +594,7 @@
   </div>
 
   <!-- Blog filters -->
-  <div class="blog-filter-wrap" id="blogFilterWrap" role="group" aria-label="Filtrar articulos">
+  <div class="blog-filter-wrap" id="blogFilterWrap" role="group" aria-label="Filtrar artículos">
     <button class="filter-btn active" onclick="setBlogFilter('todos',this)">Todos</button>
     <button class="filter-btn" onclick="setBlogFilter('guias',this)">📖 Guías</button>
     <button class="filter-btn" onclick="setBlogFilter('tutoriales',this)">🎓 Tutoriales</button>
@@ -624,7 +625,7 @@
       <h2 id="about-heading">El creador de <em>PromptNova</em></h2>
       <p style="color:var(--text2);line-height:1.8;margin-bottom:1rem;">Soy un apasionado de la inteligencia artificial y el prompt engineering. Llevo más de 2 años explorando, probando y perfeccionando técnicas para extraer el máximo potencial de modelos como ChatGPT, Claude y Gemini.</p>
       <p style="color:var(--text2);line-height:1.8;margin-bottom:1rem;">PromptNova nació con una misión clara: hacer la IA accesible para todos. Aquí encontrarás prompts probados y listos para usar que te ahorrarán horas de trabajo y dispararán tu productividad.</p>
-      <p style="color:var(--text2);line-height:1.8;">Cada prompt en esta colección ha sido testeado, refinado y optimizado. No teórico — <strong>resultados reales</strong> para personas reales.</p>
+      <p style="color:var(--text2);line-height:1.8;">Cada prompt en esta colección ha sido testeado, refinado y optimizado. No teórico — <strong>resultados reales</strong> para personas reales que buscan productividad real.</p>
       <div class="skill-tags">
         <span class="skill-tag">ChatGPT</span>
         <span class="skill-tag">Claude</span>
@@ -674,9 +675,9 @@
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="https://miltonvlz4-ui.github.io/privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-          <li><a href="https://miltonvlz4-ui.github.io/terminos.html" target="_blank" rel="noopener noreferrer">Términos de Uso</a></li>
-          <li><a href="https://miltonvlz4-ui.github.io/aviso-legal.html" target="_blank" rel="noopener noreferrer">Aviso Legal</a></li>
+          <li><a href="./privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+          <li><a href="./terminos.html" target="_blank" rel="noopener noreferrer">Términos de Uso</a></li>
+          <li><a href="./aviso-legal.html" target="_blank" rel="noopener noreferrer">Aviso Legal</a></li>
           <li><a href="mailto:contacto@promptnova.com">Contacto</a></li>
         </ul>
       </div>
@@ -693,7 +694,7 @@
   <div class="modal">
     <button class="modal-close" onclick="closeModal('promptModal')" aria-label="Cerrar modal">✕</button>
     <div class="m-cat" id="mCat"></div>
-    <h3 id="promptModalTitle" id="mTitle"></h3>
+    <h3 id="promptModalTitle"></h3>
     <div class="m-meta" id="mMeta"></div>
     <div class="m-prompt" id="mPrompt"></div>
     <div class="m-rate-section">
@@ -716,7 +717,7 @@
   <div class="modal">
     <button class="modal-close" onclick="closeModal('blogModal')" aria-label="Cerrar modal">✕</button>
     <div class="m-cat" id="bmCat"></div>
-    <h3 id="blogModalTitle" id="bmTitle"></h3>
+    <h3 id="blogModalTitle"></h3>
     <div class="m-meta" id="bmMeta"></div>
     <div class="blog-modal-body" id="bmBody"></div>
     <div style="margin-top:1.5rem;">
@@ -736,42 +737,29 @@
 <script>
 // ===== DATA =====
 const PROMPTS = [
-  { id:1, cat:'trabajo', title:'Email profesional persuasivo', ai:'ChatGPT · Claude', emoji:'💼', rating:4.8, ratingCount:124,
-    prompt:`Actúa como un experto en comunicación empresarial. Redacta un email profesional y persuasivo para [objetivo: presentar propuesta/solicitar reunión/hacer seguimiento].\n\nContexto: [describe tu situación]\nDestinatario: [cargo y empresa]\nTono: [formal/semiformal/cercano]\n\nEl email debe:\n- Captar atención en el asunto\n- Ser conciso (máx. 200 palabras)\n- Incluir un CTA claro\n- Transmitir valor desde el primer párrafo` },
-  { id:2, cat:'marketing', title:'Copy para anuncio de Facebook Ads', ai:'ChatGPT · Claude', emoji:'📣', rating:4.9, ratingCount:89,
-    prompt:`Eres un experto en copywriting y publicidad digital. Crea 3 variantes de copy para un anuncio de Facebook Ads.\n\nProducto/Servicio: [describe]\nPúblico objetivo: [edad, intereses, pain points]\nObjetivo del anuncio: [tráfico/leads/ventas]\nPresupuesto de personaje: [€X/día]\n\nPara cada variante incluye:\n- Texto principal (máx. 125 caracteres)\n- Titular llamativo (máx. 40 caracteres)\n- Descripción (máx. 30 caracteres)\n- Emoji estratégico\n- Tipo de CTA recomendado` },
-  { id:3, cat:'programacion', title:'Revisar y optimizar código', ai:'Claude · ChatGPT', emoji:'💻', rating:4.7, ratingCount:203,
-    prompt:`Actúa como un senior developer especialista en [lenguaje/framework].\n\nRevisa el siguiente código y proporciona:\n1. Análisis de bugs potenciales\n2. Sugerencias de optimización de rendimiento\n3. Mejoras en legibilidad y mantenibilidad\n4. Patrones de diseño aplicables\n5. Tests unitarios recomendados\n\nCódigo a revisar:\n[PEGA TU CÓDIGO AQUÍ]\n\nExplica cada sugerencia con su justificación técnica.` },
-  { id:4, cat:'estudio', title:'Plan de estudio personalizado', ai:'ChatGPT · Gemini', emoji:'📚', rating:4.6, ratingCount:67,
-    prompt:`Eres un pedagogo experto en aprendizaje acelerado. Crea un plan de estudio personalizado para dominar [tema/materia].\n\nMi nivel actual: [principiante/intermedio/avanzado]\nTiempo disponible: [X horas/semana]\nFecha objetivo: [fecha o evento]\nEstilo de aprendizaje: [visual/auditivo/kinestésico]\n\nEl plan debe incluir:\n- Hoja de ruta semanal detallada\n- Recursos recomendados (libros, videos, cursos)\n- Ejercicios prácticos por etapa\n- Métricas para medir progreso\n- Técnicas de repaso (Feynman, Anki, etc.)` },
-  { id:5, cat:'personal', title:'Reflexión para tomar decisiones difíciles', ai:'Claude', emoji:'❤️', rating:4.9, ratingCount:145,
-    prompt:`Actúa como un coach de vida con enfoque en psicología positiva. Ayúdame a analizar esta decisión importante con claridad.\n\nLa decisión que enfrento: [describe la situación]\nLas opciones que tengo: [lista las alternativas]\nMis valores más importantes: [lista 3-5 valores]\nLo que más me preocupa: [expresa tus miedos]\n\nGuíame a través de:\n1. Clarificación de mis valores reales\n2. Análisis pros/contras profundo\n3. Ejercicio de visualización de escenarios futuros\n4. Identificación de sesgos cognitivos presentes\n5. Acción mínima viable para avanzar` },
-  { id:6, cat:'emprendimiento', title:'Validación de idea de negocio', ai:'ChatGPT · Claude', emoji:'🚀', rating:4.8, ratingCount:98,
-    prompt:`Eres un mentor startup con experiencia en validación de mercado. Analiza críticamente mi idea de negocio.\n\nMi idea: [describe tu propuesta de valor]\nMercado objetivo: [define tu cliente ideal]\nModelo de negocio: [cómo ganarías dinero]\nRecursos disponibles: [tiempo, dinero, habilidades]\n\nProporciona:\n1. Análisis de viabilidad (1-10) con justificación\n2. Los 5 supuestos más críticos a validar\n3. Experimentos lean para validar en 30 días\n4. Riesgos principales y cómo mitigarlos\n5. Competidores directos e indirectos\n6. Primer MVP mínimo posible` },
-  { id:7, cat:'trabajo', title:'Preparación para entrevista laboral', ai:'Claude · ChatGPT', emoji:'💼', rating:4.7, ratingCount:156,
-    prompt:`Actúa como un headhunter senior y coach de entrevistas. Ayúdame a prepararme para esta entrevista.\n\nPuesto al que aplico: [título del cargo]\nEmpresa: [nombre y sector]\nMis puntos fuertes: [lista 3 fortalezas]\nMi mayor debilidad para este rol: [sé honesto]\nExperiencia previa relevante: [resumida]\n\nNecesito:\n1. Las 10 preguntas más probables para este rol\n2. Respuestas modelo con método STAR\n3. Cómo hablar de debilidades positivamente\n4. Preguntas inteligentes que debo hacer yo\n5. Errores comunes a evitar\n6. Negociación de salario: estrategia y frases clave` },
-  { id:8, cat:'marketing', title:'Estrategia de contenido para redes', ai:'ChatGPT · Gemini', emoji:'📣', rating:4.6, ratingCount:78,
-    prompt:`Eres un estratega de contenidos digital. Diseña un plan de contenido mensual para mis redes.\n\nMi marca/negocio: [describe]\nPlataformas: [Instagram/LinkedIn/TikTok/etc.]\nObjetivo principal: [awareness/leads/ventas/comunidad]\nFrecuencia deseada: [X publicaciones/semana]\nRecursos disponibles: [tiempo, herramientas, equipo]\n\nEntrega:\n1. Calendario editorial con 30 ideas de posts\n2. Mix de contenido (educativo/entretenimiento/ventas)\n3. Formatos recomendados por plataforma\n4. Hooks para los primeros 3 segundos\n5. Hashtag strategy\n6. KPIs para medir éxito` },
-  { id:9, cat:'programacion', title:'Diseño de arquitectura de software', ai:'Claude', emoji:'💻', rating:4.8, ratingCount:44,
-    prompt:`Eres un arquitecto de software con experiencia en sistemas escalables. Diseña la arquitectura para este proyecto.\n\nProyecto: [describe qué construyes]\nEscala esperada: [usuarios, requests/día]\nStack preferido: [tecnologías que manejas]\nPresupuesto infraestructura: [€X/mes aprox]\nRequisitos críticos: [performance/seguridad/etc.]\n\nDiseña:\n1. Diagrama de arquitectura (en texto/ASCII)\n2. Elección de base de datos con justificación\n3. Estrategia de caché\n4. Autenticación y autorización\n5. Plan de escalabilidad\n6. Monitoreo y alertas recomendadas` },
-  { id:10, cat:'estudio', title:'Explicación de conceptos complejos', ai:'Claude · ChatGPT', emoji:'📚', rating:4.9, ratingCount:201,
-    prompt:`Actúa como el mejor profesor del mundo para explicar conceptos difíciles.\n\nConcepto a explicar: [tema complejo]\nMi background: [qué ya sé del tema]\nPara qué lo necesito: [aplicación práctica]\nNivel deseado: [básico/intermedio/experto]\n\nExplícamelo usando:\n1. Analogía con algo cotidiano\n2. Explicación simple sin jerga (primero)\n3. Conceptos clave definidos uno a uno\n4. Ejemplo práctico del mundo real\n5. Los errores más comunes de comprensión\n6. Recursos para profundizar\n7. Quiz de 5 preguntas para verificar comprensión` },
-  { id:11, cat:'personal', title:'Plan de hábitos y rutina diaria', ai:'ChatGPT · Claude', emoji:'❤️', rating:4.7, ratingCount:113,
-    prompt:`Eres un experto en productividad y neurociencia del comportamiento. Diseña mi rutina diaria óptima.\n\nMis objetivos principales: [lista 3 metas]\nHorario laboral: [de X a Y horas]\nEnergía: [mañana/tarde/noche más productivo]\nHábitos actuales: [los que ya tienes]\nHábitos a incorporar: [los que quieres]\n\nCrea:\n1. Rutina mañana (duración X min)\n2. Bloques de trabajo con técnica Pomodoro\n3. Rutina nocturna para mejor descanso\n4. Los 3 hábitos ancla más importantes\n5. Plan de implementación gradual (semanas 1-4)\n6. Cómo manejar días malos sin romper la cadena` },
-  { id:12, cat:'emprendimiento', title:'Pitch deck para inversores', ai:'Claude · ChatGPT', emoji:'🚀', rating:4.9, ratingCount:87,
-    prompt:`Actúa como un venture capitalist que ha evaluado +500 startups. Ayúdame a crear mi pitch deck.\n\nMi startup: [nombre y one-liner]\nProblema que resuelvo: [describe el pain point]\nMi solución: [cómo la resuelves]\nTracción actual: [métricas, usuarios, revenue]\nInversión que busco: [cantidad y uso de fondos]\n\nEstructura el pitch con:\n1. Problem slide (datos que impacten)\n2. Solution slide (propuesta de valor clara)\n3. Market size (TAM/SAM/SOM)\n4. Business model\n5. Traction & métricas clave\n6. Team (por qué vosotros)\n7. Ask & uso de fondos\n8. Preguntas difíciles de inversores y respuestas` },
+  { id:1, cat:'trabajo', title:'Email profesional persuasivo', ai:'ChatGPT · Claude', emoji:'💼', rating:4.8, ratingCount:124, prompt:'Actúa como un experto en comunicación empresarial. Redacta un email profesional y persuasivo para [objetivo: presentar propuesta/solicitar reunión/hacer seguimiento].\n\nContexto: [describe tu situación]\nDestinatario: [cargo y empresa]\nTono: [formal/semiformal/cercano]\n\nEl email debe:\n- Captar atención en el asunto\n- Ser conciso (máx. 200 palabras)\n- Incluir un CTA claro\n- Transmitir valor desde el primer párrafo' },
+  { id:2, cat:'marketing', title:'Copy para anuncio de Facebook Ads', ai:'ChatGPT · Claude', emoji:'📣', rating:4.9, ratingCount:89, prompt:'Eres un experto en copywriting y publicidad digital. Crea 3 variantes de copy para un anuncio de Facebook Ads.\n\nProducto/Servicio: [describe]\nPúblico objetivo: [edad, intereses, pain points]\nObjetivo del anuncio: [tráfico/leads/ventas]\n\nPara cada variante: Texto principal, Titular, Descripción, Emoji estratégico, CTA' },
+  { id:3, cat:'programacion', title:'Revisar y optimizar código', ai:'Claude · ChatGPT', emoji:'💻', rating:4.7, ratingCount:203, prompt:'Actúa como un senior developer especialista en [lenguaje/framework].\n\nRevisa el siguiente código y proporciona:\n1. Análisis de bugs potenciales\n2. Sugerencias de optimización\n3. Mejoras en legibilidad\n4. Patrones de diseño\n5. Tests unitarios recomendados' },
+  { id:4, cat:'estudio', title:'Plan de estudio personalizado', ai:'ChatGPT · Gemini', emoji:'📚', rating:4.6, ratingCount:67, prompt:'Eres pedagogo experto en aprendizaje acelerado. Crea plan de estudio para dominar [tema].\n\nNivel: [principiante/intermedio/avanzado]\nTiempo: [X horas/semana]\nFecha objetivo: [fecha]\n\nIncluir: Hoja de ruta, Recursos, Ejercicios, Métricas de progreso' },
+  { id:5, cat:'personal', title:'Reflexión para decisiones difíciles', ai:'Claude', emoji:'❤️', rating:4.9, ratingCount:145, prompt:'Coach de vida con enfoque psicología positiva. Ayuda a analizar decisión importante.\n\nDecisión: [describe]\nOpciones: [lista alternativas]\nValores: [lista 3-5]\n\nGuía: Clarificación de valores, Análisis profundo, Visualización de escenarios' },
+  { id:6, cat:'emprendimiento', title:'Validación de idea de negocio', ai:'ChatGPT · Claude', emoji:'🚀', rating:4.8, ratingCount:98, prompt:'Mentor startup. Analiza críticamente idea de negocio.\n\nIdea: [describe propuesta]\nMercado: [cliente ideal]\nModelo: [cómo ganarías dinero]\n\nAnalisis: Viabilidad, Supuestos críticos, Experimentos lean, Riesgos' },
+  { id:7, cat:'trabajo', title:'Preparación para entrevista laboral', ai:'Claude · ChatGPT', emoji:'💼', rating:4.7, ratingCount:156, prompt:'Headhunter senior. Ayuda a prepararse para entrevista.\n\nPuesto: [título cargo]\nEmpresa: [nombre]\nFortalezas: [lista 3]\n\nNecesito: 10 preguntas probables, Respuestas modelo STAR, Negociación salarial' },
+  { id:8, cat:'marketing', title:'Estrategia de contenido para redes', ai:'ChatGPT · Gemini', emoji:'📣', rating:4.6, ratingCount:78, prompt:'Estratega de contenidos digital. Diseña plan de contenido mensual.\n\nMarca: [describe]\nPlataformas: [Instagram/LinkedIn/TikTok]\nObjetivo: [awareness/leads/ventas]\n\nEntrega: Calendario editorial, Mix contenido, Formatos, Hooks, Hashtags, KPIs' },
+  { id:9, cat:'programacion', title:'Diseño arquitectura de software', ai:'Claude', emoji:'💻', rating:4.8, ratingCount:44, prompt:'Arquitecto de software sistemas escalables. Diseña arquitectura.\n\nProyecto: [describe]\nEscala: [usuarios, requests/día]\nStack: [tecnologías]\n\nDiseña: Arquitectura, BD, Caché, Autenticación, Escalabilidad' },
+  { id:10, cat:'estudio', title:'Explicación de conceptos complejos', ai:'Claude · ChatGPT', emoji:'📚', rating:4.9, ratingCount:201, prompt:'Mejor profesor para explicar conceptos difíciles.\n\nConcepto: [tema complejo]\nBackground: [qué ya sabes]\nNivel: [básico/intermedio/experto]\n\nExplica: Analogía, Explicación simple, Conceptos clave, Ejemplo real, Quiz' },
+  { id:11, cat:'personal', title:'Plan de hábitos y rutina diaria', ai:'ChatGPT · Claude', emoji:'❤️', rating:4.7, ratingCount:113, prompt:'Experto productividad. Diseña rutina diaria óptima.\n\nObjetivos: [lista 3 metas]\nHorario laboral: [de X a Y]\nEnergía: [mañana/tarde/noche]\n\nCrea: Rutina mañana, Bloques Pomodoro, Rutina nocturna, Hábitos ancla' },
+  { id:12, cat:'emprendimiento', title:'Pitch deck para inversores', ai:'Claude · ChatGPT', emoji:'🚀', rating:4.9, ratingCount:87, prompt:'Venture capitalist evaluó +500 startups. Ayuda crear pitch deck.\n\nStartup: [nombre y one-liner]\nProblema: [pain point]\nSolución: [cómo resuelves]\n\nEstructura: Problem, Solution, Market size, Business model, Traction, Team, Ask' }
 ];
 
 const BLOG_POSTS_DEFAULT = [
-  { id:1, cat:'guias', title:'Guía definitiva de prompt engineering para principiantes', summary:'Aprende las técnicas fundamentales para comunicarte mejor con la IA y obtener resultados profesionales.', emoji:'📖', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit...' },
-  { id:2, cat:'tutoriales', title:'ChatGPT para productividad: 10 casos de uso reales', summary:'Descubre cómo profesionales de todo el mundo están usando ChatGPT para multiplicar su productividad.', emoji:'🎓', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit...' },
-  { id:3, cat:'trucos', title:'5 trucos de prompt que los expertos no cuentan', summary:'Técnicas avanzadas de prompting que marcan la diferencia entre respuestas mediocres y resultados extraordinarios.', emoji:'💡', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit...' },
-  { id:4, cat:'herramientas', title:'Las mejores herramientas de IA para diseñadores en 2025', summary:'Una comparativa completa de las herramientas de IA más potentes para diseño gráfico, UI/UX.', emoji:'🛠️', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit...' },
-  { id:5, cat:'casos', title:'Cómo una PYME triplicó sus ventas con prompts de IA', summary:'Caso de estudio real: una pequeña empresa de e-commerce que transformó su estrategia de marketing.', emoji:'✅', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit...' },
-  { id:6, cat:'noticias', title:'GPT-5 y Claude 4: lo que sabemos hasta ahora', summary:'Análisis de las últimas noticias sobre los próximos modelos de IA y qué significan para los usuarios.', emoji:'📰', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit...' },
+  { id:1, cat:'guias', title:'Guía definitiva de prompt engineering', summary:'Aprende técnicas fundamentales para comunicarte mejor con IA.', emoji:'📖', content:'Contenido del artículo sobre prompt engineering para principiantes.' },
+  { id:2, cat:'tutoriales', title:'ChatGPT para productividad: 10 casos reales', summary:'Profesionales usando ChatGPT para multiplicar productividad.', emoji:'🎓', content:'10 casos de uso reales de ChatGPT en diferentes industrias.' },
+  { id:3, cat:'trucos', title:'5 trucos de prompt que expertos no cuentan', summary:'Técnicas avanzadas para respuestas extraordinarias.', emoji:'💡', content:'Técnicas avanzadas de prompting que marcan diferencia real.' },
+  { id:4, cat:'herramientas', title:'Mejores herramientas IA para diseñadores 2025', summary:'Herramientas IA potentes para diseño gráfico y UI/UX.', emoji:'🛠️', content:'Comparativa completa de herramientas IA para profesionales del diseño.' },
+  { id:5, cat:'casos', title:'PYME triplicó ventas con prompts IA', summary:'Empresa de e-commerce transformó estrategia marketing.', emoji:'✅', content:'Caso de estudio real de transformación digital con IA.' },
+  { id:6, cat:'noticias', title:'GPT-5 y Claude 4: lo que sabemos', summary:'Últimas noticias sobre próximos modelos de IA.', emoji:'📰', content:'Análisis de noticias sobre los próximos modelos de IA.' }
 ];
 
-// ===== STATE =====
 let currentFilter = 'todos';
 let currentPage = 1;
 const PROMPTS_PER_PAGE = 6;
@@ -850,7 +838,7 @@ function goPage(p) {
   if(p < 1 || p > totalPages) return;
   currentPage = p;
   renderPrompts();
-  window.scrollTo({top: document.getElementById('posts').offsetTop - 100, behavior: 'smooth'});
+  document.getElementById('posts').scrollIntoView({ behavior: 'smooth' });
 }
 
 function setFilter(f, btn) {
@@ -884,7 +872,6 @@ function toggleFav(e, id) {
   else favorites.push(id);
   localStorage.setItem('pn_favorites', JSON.stringify(favorites));
   renderPrompts();
-  renderBlog();
 }
 
 function copyPromptDirect(e, id) {
@@ -892,7 +879,7 @@ function copyPromptDirect(e, id) {
   const p = PROMPTS.find(x => x.id === id);
   if(p) {
     navigator.clipboard.writeText(p.prompt);
-    showToast('Prompt copiado al portapapeles');
+    showToast('✓ Prompt copiado al portapapeles');
   }
 }
 
@@ -901,7 +888,7 @@ function openPromptModal(id) {
   if(!p) return;
   currentModalPrompt = id;
   document.getElementById('mCat').textContent = `${p.emoji} ${p.cat.toUpperCase()}`;
-  document.getElementById('mTitle').textContent = p.title;
+  document.getElementById('promptModalTitle').textContent = p.title;
   document.getElementById('mMeta').innerHTML = `<span>IA: ${p.ai}</span><span>Usuarios: ${p.ratingCount}</span>`;
   document.getElementById('mPrompt').textContent = p.prompt;
   const userRating = promptRatings[id];
@@ -928,7 +915,7 @@ function copyModalPrompt() {
   const p = PROMPTS.find(x => x.id === currentModalPrompt);
   if(p) {
     navigator.clipboard.writeText(p.prompt);
-    showToast('Prompt copiado completamente');
+    showToast('✓ Prompt copiado completamente');
   }
 }
 
@@ -937,8 +924,6 @@ function renderBlog() {
   const filtered = blogPosts.filter(b => currentBlogFilter === 'todos' || b.cat === currentBlogFilter);
   const grid = document.getElementById('blogGrid');
   grid.innerHTML = filtered.map(b => {
-    const userRating = blogRatings[b.id];
-    const displayRating = userRating || 4.5;
     return `<div class="blog-card" onclick="openBlogModal(${b.id})" role="article">
       <div class="blog-thumb">${b.emoji || '📖'}</div>
       <div class="blog-body">
@@ -972,26 +957,18 @@ function setFormRating(val) {
 }
 
 function submitBlog() {
-  const title = document.getElementById('blogTitle').value;
+  const title = document.getElementById('blogTitle').value.trim();
   const cat = document.getElementById('blogCategory').value;
-  const summary = document.getElementById('blogSummary').value;
-  const content = document.getElementById('blogContent').value;
-  const emoji = document.getElementById('blogEmoji').value;
+  const summary = document.getElementById('blogSummary').value.trim();
+  const content = document.getElementById('blogContent').value.trim();
+  const emoji = document.getElementById('blogEmoji').value || '📝';
 
   if(!title || !cat || !summary || !content) {
-    showToast('Completa todos los campos requeridos');
+    showToast('⚠️ Completa todos los campos requeridos');
     return;
   }
 
-  const newBlog = {
-    id: blogPosts.length + 1,
-    cat,
-    title,
-    summary,
-    content,
-    emoji: emoji || '📝'
-  };
-
+  const newBlog = { id: blogPosts.length + 1, cat, title, summary, content, emoji };
   blogPosts.push(newBlog);
   localStorage.setItem('pn_blog_posts', JSON.stringify(blogPosts));
   
@@ -1004,7 +981,7 @@ function submitBlog() {
   currentFormRating = 0;
   
   renderBlog();
-  showToast('Artículo publicado exitosamente');
+  showToast('✓ Artículo publicado exitosamente');
 }
 
 function openBlogModal(id) {
@@ -1012,7 +989,7 @@ function openBlogModal(id) {
   if(!b) return;
   currentModalBlog = id;
   document.getElementById('bmCat').textContent = b.cat.toUpperCase();
-  document.getElementById('bmTitle').textContent = b.title;
+  document.getElementById('blogModalTitle').textContent = b.title;
   document.getElementById('bmMeta').innerHTML = `<span>${b.emoji}</span>`;
   document.getElementById('bmBody').innerHTML = `<p>${b.content}</p>`;
   const userRating = blogRatings[id];
@@ -1037,10 +1014,8 @@ function closeModal(modalId) {
   document.getElementById(modalId).classList.remove('open');
 }
 
-// ===== UI =====
 function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
 }
 
 function closeMenu() {
@@ -1055,35 +1030,25 @@ function showToast(msg) {
 }
 
 function subscribeNewsletter() {
-  const email = document.getElementById('nlEmail').value;
-  if(!email) {
-    showToast('Ingresa un email válido');
+  const email = document.getElementById('nlEmail').value.trim();
+  if(!email || !email.includes('@')) {
+    showToast('⚠️ Email inválido');
     return;
   }
   document.getElementById('nlEmail').value = '';
-  showToast('¡Suscrito! Revisa tu email para confirmar');
+  showToast('✓ ¡Suscrito! Revisa tu email para confirmar');
 }
 
-// ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
   renderPrompts();
   renderBlog();
   
-  // Close mobile menu on link click
-  document.querySelectorAll('.mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => closeMenu());
-  });
-
-  // Close modals on overlay click
   document.querySelectorAll('.modal-overlay').forEach(overlay => {
     overlay.addEventListener('click', (e) => {
-      if(e.target === overlay) {
-        overlay.classList.remove('open');
-      }
+      if(e.target === overlay) overlay.classList.remove('open');
     });
   });
 
-  // Keyboard shortcuts
   document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape') {
       document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
