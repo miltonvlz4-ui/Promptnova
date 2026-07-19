@@ -178,73 +178,6 @@
     h2 em { font-style:normal; color:var(--accent2); }
     .section-sub { color:var(--text2); font-size:1rem; max-width:500px; line-height:1.7; margin-bottom:2.5rem; }
 
-    /* CATEGORIES GRID */
-    .cat-grid {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem;
-    }
-    .cat-card {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:var(--radius-lg); padding:1.5rem;
-      cursor:pointer; text-decoration:none; display:flex; flex-direction:column; gap:0.5rem;
-      transition: border-color 0.2s, background 0.2s, transform 0.2s;
-    }
-    .cat-card:hover { border-color:var(--accent2); background:var(--card-hover); transform:translateY(-3px); }
-    .cat-card .cat-icon { font-size:2rem; }
-    .cat-card .cat-name { font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; }
-    .cat-card .cat-count { font-size:0.8rem; color:var(--text3); }
-
-    /* FILTER TABS */
-    .filter-wrap { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem; }
-    .filter-btn {
-      background:var(--card); border:1px solid var(--border);
-      color:var(--text2); border-radius:50px; padding:0.4rem 1rem;
-      font-family:'DM Sans',sans-serif; font-size:0.85rem; cursor:pointer;
-      transition: all 0.2s;
-    }
-    .filter-btn:hover, .filter-btn.active {
-      background:var(--accent); border-color:var(--accent);
-      color:#fff;
-    }
-
-    /* PROMPTS GRID */
-    .prompts-grid {
-      display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem;
-    }
-    .prompt-card {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:var(--radius-lg); padding:1.5rem;
-      cursor:pointer; transition: border-color 0.2s, background 0.2s, transform 0.2s;
-      position:relative;
-    }
-    .prompt-card:hover { border-color:var(--accent2); background:var(--card-hover); transform:translateY(-2px); }
-    .prompt-card .p-cat {
-      font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;
-      color:var(--accent3); margin-bottom:0.5rem;
-    }
-    .prompt-card .p-title { font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; margin-bottom:0.5rem; }
-    .prompt-card .p-preview { font-size:0.85rem; color:var(--text2); line-height:1.6; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
-    .prompt-card .p-footer { display:flex; align-items:center; justify-content:space-between; margin-top:1rem; }
-    .prompt-card .p-ai { font-size:0.75rem; color:var(--text3); }
-    .prompt-card .p-copy-btn {
-      background:rgba(124,58,237,0.15); border:1px solid var(--border2);
-      color:var(--accent3); border-radius:8px; padding:0.3rem 0.7rem;
-      font-size:0.75rem; font-weight:500; cursor:pointer; transition:0.2s;
-    }
-    .prompt-card .p-copy-btn:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
-    .p-stars { display:flex; gap:2px; margin-top:0.5rem; }
-    .p-stars span { font-size:0.75rem; }
-    .p-fav { position:absolute; top:1rem; right:1rem; background:none; border:none; cursor:pointer; font-size:1rem; opacity:0.4; transition:opacity 0.2s; }
-    .p-fav:hover, .p-fav.active { opacity:1; }
-
-    /* PAGINATION */
-    .pagination { display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-top:2rem; }
-    .page-btn {
-      width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center;
-      background:var(--card); border:1px solid var(--border); color:var(--text2);
-      cursor:pointer; font-size:0.85rem; transition:0.2s;
-    }
-    .page-btn:hover, .page-btn.active { background:var(--accent); border-color:var(--accent); color:#fff; }
-
     /* BLOG */
     .blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem; }
     .blog-card {
@@ -268,107 +201,21 @@
     .blog-date { font-size:0.75rem; color:var(--text3); }
     .blog-card h3 { font-family:'Syne',sans-serif; font-weight:700; font-size:1.05rem; margin-bottom:0.5rem; line-height:1.3; }
     .blog-card p { font-size:0.85rem; color:var(--text2); line-height:1.6; flex:1; }
-    .blog-card .blog-footer { margin-top:1rem; display:flex; align-items:center; justify-content:space-between; }
-    .blog-card .read-more { font-size:0.8rem; color:var(--accent3); font-weight:500; }
+    .blog-read { font-size:0.8rem; color:var(--accent3); font-weight:500; text-decoration:none; margin-top:1rem; display:inline-block; }
 
-    /* BLOG SUBMIT FORM */
-    .blog-form-wrap {
+    /* FILTER TABS */
+    .filter-wrap { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem; }
+    .blog-filter-wrap { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem; }
+    .filter-btn {
       background:var(--card); border:1px solid var(--border);
-      border-radius:var(--radius-xl); padding:2rem; margin-bottom:3rem;
+      color:var(--text2); border-radius:50px; padding:0.4rem 1rem;
+      font-family:'DM Sans',sans-serif; font-size:0.85rem; cursor:pointer;
+      transition: all 0.2s;
     }
-    .blog-form-wrap h3 { font-family:'Syne',sans-serif; font-weight:700; font-size:1.2rem; margin-bottom:1.25rem; }
-    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
-    .form-group { display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1rem; }
-    .form-group label { font-size:0.8rem; color:var(--text2); font-weight:500; }
-    .form-group input, .form-group textarea, .form-group select {
-      background:var(--bg3); border:1px solid var(--border);
-      border-radius:10px; padding:0.7rem 0.9rem;
-      color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.9rem;
-      outline:none; transition:border-color 0.2s;
-      resize:vertical;
+    .filter-btn:hover, .filter-btn.active {
+      background:var(--accent); border-color:var(--accent);
+      color:#fff;
     }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-      border-color:var(--accent2);
-    }
-    .form-group select option { background:var(--bg2); }
-    .rating-input { display:flex; gap:0.5rem; align-items:center; }
-    .rating-input .star-btn {
-      font-size:1.5rem; cursor:pointer; opacity:0.3; transition:opacity 0.15s, transform 0.15s;
-      background:none; border:none;
-    }
-    .rating-input .star-btn:hover, .rating-input .star-btn.selected { opacity:1; transform:scale(1.2); }
-
-    /* MODAL */
-    .modal-overlay {
-      display:none; position:fixed; inset:0; z-index:200;
-      background:rgba(0,0,0,0.7); backdrop-filter:blur(8px);
-      align-items:center; justify-content:center; padding:1rem;
-    }
-    .modal-overlay.open { display:flex; }
-    .modal {
-      background:var(--bg2); border:1px solid var(--border2);
-      border-radius:var(--radius-xl); padding:2rem; max-width:600px; width:100%;
-      max-height:90vh; overflow-y:auto; position:relative;
-    }
-    .modal-close {
-      position:absolute; top:1rem; right:1rem;
-      background:none; border:none; cursor:pointer; color:var(--text2); font-size:1.5rem; line-height:1;
-    }
-    .modal-close:hover { color:var(--text); }
-    .modal .m-cat { font-size:0.75rem; color:var(--accent3); font-weight:600; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem; }
-    .modal h3 { font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; margin-bottom:1rem; }
-    .modal .m-prompt {
-      background:var(--bg3); border:1px solid var(--border);
-      border-radius:var(--radius); padding:1.25rem;
-      font-size:0.9rem; line-height:1.7; color:var(--text2);
-      margin-bottom:1.25rem; white-space:pre-wrap; word-break: break-word;
-    }
-    .modal .m-meta { display:flex; gap:1rem; font-size:0.8rem; color:var(--text3); margin-bottom:1.5rem; flex-wrap:wrap; }
-    .modal .m-rate-section { margin-bottom:1rem; }
-    .modal .m-rate-label { font-size:0.85rem; color:var(--text2); margin-bottom:0.5rem; }
-
-    /* BLOG MODAL */
-    .blog-modal-body { font-size:0.95rem; color:var(--text2); line-height:1.8; }
-    .blog-modal-body p { margin-bottom:1rem; }
-    .blog-modal-body h4 { font-family:'Syne',sans-serif; font-weight:700; color:var(--text); margin:1.25rem 0 0.5rem; }
-
-    /* ABOUT */
-    .about-wrap { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
-    .about-avatar {
-      width:200px; height:200px; border-radius:50%;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      display:flex; align-items:center; justify-content:center; font-size:5rem;
-      margin:0 auto 1.5rem; position:relative;
-    }
-    .about-avatar::after {
-      content:''; position:absolute; inset:-4px;
-      border-radius:50%; border:2px dashed var(--accent2); opacity:0.4;
-      animation:spin 20s linear infinite;
-    }
-    @keyframes spin { to { transform:rotate(360deg); } }
-    .skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; }
-    .skill-tag {
-      background:rgba(124,58,237,0.12); border:1px solid var(--border2);
-      color:var(--accent3); border-radius:50px; padding:0.3rem 0.75rem; font-size:0.8rem; font-weight:500;
-    }
-
-    /* NEWSLETTER */
-    .newsletter-section {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:var(--radius-xl); padding:3rem 2rem; text-align:center;
-      max-width:600px; margin:0 auto;
-    }
-    .newsletter-section h2 { margin-bottom:0.5rem; }
-    .newsletter-section p { color:var(--text2); margin-bottom:1.5rem; }
-    .nl-form { display:flex; gap:0.75rem; max-width:400px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
-    .nl-form input {
-      flex:1; min-width:200px;
-      background:var(--bg3); border:1px solid var(--border); border-radius:12px;
-      padding:0.75rem 1rem; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.9rem;
-      outline:none; transition:border-color 0.2s;
-    }
-    .nl-form input:focus { border-color:var(--accent2); }
-    .nl-note { font-size:0.8rem; color:var(--text3); margin-top:0.75rem; }
 
     /* FOOTER */
     footer {
@@ -400,25 +247,11 @@
     @media (max-width:768px) {
       .nav-links, .nav-search { display:none; }
       .hamburger { display:flex; }
-      .about-wrap { grid-template-columns:1fr; }
       .footer-grid { grid-template-columns:1fr; gap:2rem; }
-      .form-row { grid-template-columns:1fr; }
       nav { padding:0 1rem; }
       section { padding:3rem 1rem; }
       .hero { padding:5rem 1rem 3rem; }
     }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity:0; transform:translateY(20px); }
-      to { opacity:1; transform:translateY(0); }
-    }
-    .hero > * { animation: fadeUp 0.6s ease backwards; }
-    .hero-badge { animation-delay:0.1s; }
-    .hero h1 { animation-delay:0.2s; }
-    .hero p { animation-delay:0.3s; }
-    .hero-btns { animation-delay:0.4s; }
-    .stats { animation-delay:0.5s; }
 
     .divider { border:none; border-top:1px solid var(--border); max-width:1200px; margin:0 auto; }
   </style>
@@ -430,12 +263,10 @@
   <a href="#inicio" class="nav-logo">🪐 Prompt<span>Nova</span></a>
   <div class="nav-search">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input type="text" id="searchInput" placeholder="Buscar prompts..." oninput="filterPrompts()" aria-label="Buscar prompts">
+    <input type="text" id="searchInput" placeholder="Buscar prompts..." aria-label="Buscar prompts">
   </div>
   <div class="nav-links">
     <a href="#inicio">Inicio</a>
-    <a href="#posts">Prompts</a>
-    <a href="#categorias">Categorías</a>
     <a href="#blog">Blog</a>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="./privacidad.html" target="_blank" rel="noopener noreferrer">Privacidad</a>
@@ -444,216 +275,33 @@
     <span></span><span></span><span></span>
   </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Navegación móvil">
-  <a href="#inicio" onclick="closeMenu()">Inicio</a>
-  <a href="#posts" onclick="closeMenu()">Prompts</a>
-  <a href="#categorias" onclick="closeMenu()">Categorías</a>
-  <a href="#blog" onclick="closeMenu()">Blog</a>
-  <a href="#sobre-mi" onclick="closeMenu()">Sobre mí</a>
-  <a href="./privacidad.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Privacidad</a>
-  <a href="./terminos.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Términos de Uso</a>
-  <a href="./aviso-legal.html" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Aviso Legal</a>
-  <a href="mailto:contacto@promptnova.com" onclick="closeMenu()">Contacto</a>
-</div>
 
 <!-- HERO -->
 <div id="inicio" class="hero" role="main">
   <div class="hero-bg" aria-hidden="true"></div>
   <div style="position:relative; z-index:1; width:100%;">
-    <div class="hero-badge">🪐 +100 prompts IA listos para usar</div>
-    <h1>Desata el poder de la IA<br>con <em>Prompts que funcionan.</em></h1>
-    <p>Encuentra, copia y usa los mejores prompts para ChatGPT, Claude, Gemini y más. Resultados profesionales en segundos.</p>
-    <div class="hero-btns">
-      <a href="#posts" class="btn-primary">🚀 Explorar Prompts</a>
-      <a href="#categorias" class="btn-secondary">⊞ Ver categorías</a>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="stat-num">+100</div><div class="stat-label">Prompts disponibles</div></div>
-      <div class="stat"><div class="stat-num">+5K</div><div class="stat-label">Usuarios activos</div></div>
-      <div class="stat"><div class="stat-num">4.9/5</div><div class="stat-label">Valoración media</div></div>
-      <div class="stat"><div class="stat-num">+50K</div><div class="stat-label">Prompts copiados</div></div>
-    </div>
+    <div class="hero-badge">🪐 Blog de Inteligencia Artificial</div>
+    <h1>Aprende sobre <em>Prompts e IA</em></h1>
+    <p>Descubre artículos, guías y tutoriales sobre prompt engineering e inteligencia artificial.</p>
   </div>
 </div>
-
-<hr class="divider">
-
-<!-- CATEGORÍAS -->
-<section id="categorias" aria-labelledby="categories-heading">
-  <div class="section-label">⭐ Explora</div>
-  <h2 id="categories-heading">Encuentra tu <em>categoría</em></h2>
-  <p class="section-sub">Prompts organizados para cada área de tu vida profesional y personal.</p>
-  <div class="cat-grid">
-    <a href="#posts" class="cat-card" onclick="filterByCategory('trabajo'); return false;" role="button">
-      <div class="cat-icon" aria-hidden="true">💼</div>
-      <div class="cat-name">Trabajo</div>
-      <div class="cat-count">18 prompts</div>
-    </a>
-    <a href="#posts" class="cat-card" onclick="filterByCategory('estudio'); return false;" role="button">
-      <div class="cat-icon" aria-hidden="true">📚</div>
-      <div class="cat-name">Estudio</div>
-      <div class="cat-count">14 prompts</div>
-    </a>
-    <a href="#posts" class="cat-card" onclick="filterByCategory('marketing'); return false;" role="button">
-      <div class="cat-icon" aria-hidden="true">📣</div>
-      <div class="cat-name">Marketing</div>
-      <div class="cat-count">22 prompts</div>
-    </a>
-    <a href="#posts" class="cat-card" onclick="filterByCategory('programacion'); return false;" role="button">
-      <div class="cat-icon" aria-hidden="true">💻</div>
-      <div class="cat-name">Programación</div>
-      <div class="cat-count">16 prompts</div>
-    </a>
-    <a href="#posts" class="cat-card" onclick="filterByCategory('personal'); return false;" role="button">
-      <div class="cat-icon" aria-hidden="true">❤️</div>
-      <div class="cat-name">Desarrollo Personal</div>
-      <div class="cat-count">12 prompts</div>
-    </a>
-    <a href="#posts" class="cat-card" onclick="filterByCategory('emprendimiento'); return false;" role="button">
-      <div class="cat-icon" aria-hidden="true">🚀</div>
-      <div class="cat-name">Emprendimiento</div>
-      <div class="cat-count">20 prompts</div>
-    </a>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- PROMPTS -->
-<section id="posts" aria-labelledby="prompts-heading">
-  <div class="section-label">✦ Colección</div>
-  <h2 id="prompts-heading">Todos los <em>Prompts</em></h2>
-  <p class="section-sub">Listos para copiar y usar. Haz clic en cualquier tarjeta para ver el prompt completo.</p>
-  <div class="filter-wrap" id="filterWrap" role="group" aria-label="Filtrar prompts">
-    <button class="filter-btn active" onclick="setFilter('todos',this)">Todos</button>
-    <button class="filter-btn" onclick="setFilter('favoritos',this)">❤️ Favoritos</button>
-    <button class="filter-btn" onclick="setFilter('trabajo',this)">💼 Trabajo</button>
-    <button class="filter-btn" onclick="setFilter('marketing',this)">📣 Marketing</button>
-    <button class="filter-btn" onclick="setFilter('programacion',this)">💻 Programación</button>
-    <button class="filter-btn" onclick="setFilter('estudio',this)">📚 Estudio</button>
-    <button class="filter-btn" onclick="setFilter('personal',this)">❤️ Personal</button>
-    <button class="filter-btn" onclick="setFilter('emprendimiento',this)">🚀 Emprendimiento</button>
-  </div>
-  <div class="prompts-grid" id="promptsGrid" role="grid"></div>
-  <div class="pagination" id="pagination" role="navigation" aria-label="Paginación"></div>
-</section>
 
 <hr class="divider">
 
 <!-- BLOG -->
 <section id="blog" aria-labelledby="blog-heading">
   <div class="section-label">📖 Blog</div>
-  <h2 id="blog-heading">Aprende a usar <em>la IA</em></h2>
-  <p class="section-sub">Artículos, guías y tutoriales para sacarle el máximo partido a los prompts.</p>
-
-  <!-- Blog submit form -->
-  <div class="blog-form-wrap" role="form">
-    <h3>✍️ Comparte tu artículo</h3>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="blogTitle">Título del artículo *</label>
-        <input type="text" id="blogTitle" placeholder="Ej: Cómo usar ChatGPT para...">
-      </div>
-      <div class="form-group">
-        <label for="blogCategory">Categoría *</label>
-        <select id="blogCategory">
-          <option value="">Seleccionar categoría</option>
-          <option value="guias">📖 Guías</option>
-          <option value="tutoriales">🎓 Tutoriales</option>
-          <option value="trucos">💡 Trucos y Tips</option>
-          <option value="herramientas">🛠️ Herramientas</option>
-          <option value="casos">✅ Casos de Uso</option>
-          <option value="noticias">📰 Noticias IA</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="blogSummary">Resumen / Descripción *</label>
-      <textarea id="blogSummary" rows="3" placeholder="Describe brevemente de qué trata el artículo..."></textarea>
-    </div>
-    <div class="form-group">
-      <label for="blogContent">Contenido del artículo *</label>
-      <textarea id="blogContent" rows="6" placeholder="Escribe aquí el contenido completo..."></textarea>
-    </div>
-    <div class="form-group">
-      <label for="blogEmoji">Emoji/icono del artículo</label>
-      <input type="text" id="blogEmoji" placeholder="Ej: 🤖" maxlength="4" style="max-width:80px;">
-    </div>
-    <div class="form-group">
-      <label>Tu valoración del tema ⭐</label>
-      <div class="rating-input" id="blogRatingInput">
-        <button class="star-btn" data-val="1" onclick="setFormRating(1)" aria-label="1 estrella">⭐</button>
-        <button class="star-btn" data-val="2" onclick="setFormRating(2)" aria-label="2 estrellas">⭐</button>
-        <button class="star-btn" data-val="3" onclick="setFormRating(3)" aria-label="3 estrellas">⭐</button>
-        <button class="star-btn" data-val="4" onclick="setFormRating(4)" aria-label="4 estrellas">⭐</button>
-        <button class="star-btn" data-val="5" onclick="setFormRating(5)" aria-label="5 estrellas">⭐</button>
-        <span style="font-size:0.8rem;color:var(--text3);margin-left:0.5rem;" id="formRatingLabel">Sin valorar</span>
-      </div>
-    </div>
-    <button class="btn-primary" onclick="submitBlog()" style="margin-top:0.5rem;">Publicar artículo</button>
-  </div>
+  <h2 id="blog-heading">Aprende sobre <em>IA</em></h2>
+  <p class="section-sub">Artículos, guías y tutoriales para dominar los prompts.</p>
 
   <!-- Blog filters -->
-  <div class="blog-filter-wrap" id="blogFilterWrap" role="group" aria-label="Filtrar artículos">
-    <button class="filter-btn active" onclick="setBlogFilter('todos',this)">Todos</button>
-    <button class="filter-btn" onclick="setBlogFilter('guias',this)">📖 Guías</button>
-    <button class="filter-btn" onclick="setBlogFilter('tutoriales',this)">🎓 Tutoriales</button>
-    <button class="filter-btn" onclick="setBlogFilter('trucos',this)">💡 Trucos</button>
-    <button class="filter-btn" onclick="setBlogFilter('herramientas',this)">🛠️ Herramientas</button>
-    <button class="filter-btn" onclick="setBlogFilter('casos',this)">✅ Casos de Uso</button>
-    <button class="filter-btn" onclick="setBlogFilter('noticias',this)">📰 Noticias IA</button>
+  <div class="blog-filter-wrap" id="blog-filter-wrap" role="group" aria-label="Filtrar artículos">
   </div>
 
-  <div class="blog-grid" id="blogGrid" role="grid"></div>
+  <div class="blog-grid" id="blog-grid" role="grid"></div>
 </section>
 
 <hr class="divider">
-
-<!-- ABOUT -->
-<section id="sobre-mi" aria-labelledby="about-heading">
-  <div class="about-wrap">
-    <div style="text-align:center;">
-      <div class="about-avatar" aria-hidden="true">🧑‍🚀</div>
-      <div style="display:flex;justify-content:center;gap:2rem;margin-top:1rem;">
-        <div class="stat"><div class="stat-num">+100</div><div class="stat-label">Prompts</div></div>
-        <div class="stat"><div class="stat-num">+5K</div><div class="stat-label">Seguidores</div></div>
-        <div class="stat"><div class="stat-num">2 años</div><div class="stat-label">En IA</div></div>
-      </div>
-    </div>
-    <div>
-      <div class="section-label">👋 Hola, soy</div>
-      <h2 id="about-heading">El creador de <em>PromptNova</em></h2>
-      <p style="color:var(--text2);line-height:1.8;margin-bottom:1rem;">Soy un apasionado de la inteligencia artificial y el prompt engineering. Llevo más de 2 años explorando, probando y perfeccionando técnicas para extraer el máximo potencial de modelos como ChatGPT, Claude y Gemini.</p>
-      <p style="color:var(--text2);line-height:1.8;margin-bottom:1rem;">PromptNova nació con una misión clara: hacer la IA accesible para todos. Aquí encontrarás prompts probados y listos para usar que te ahorrarán horas de trabajo y dispararán tu productividad.</p>
-      <p style="color:var(--text2);line-height:1.8;">Cada prompt en esta colección ha sido testeado, refinado y optimizado. No teórico — <strong>resultados reales</strong> para personas reales que buscan productividad real.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">ChatGPT</span>
-        <span class="skill-tag">Claude</span>
-        <span class="skill-tag">Gemini</span>
-        <span class="skill-tag">Prompt Engineering</span>
-        <span class="skill-tag">IA Generativa</span>
-        <span class="skill-tag">Automatización</span>
-        <span class="skill-tag">Productividad</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- NEWSLETTER -->
-<section style="padding:4rem 2rem;">
-  <div class="newsletter-section">
-    <div class="section-label">📬 Newsletter</div>
-    <h2>Únete a la comunidad <em>PromptNova</em></h2>
-    <p>Recibe nuevos prompts, tips y recursos exclusivos cada semana. Gratis, siempre.</p>
-    <div class="nl-form">
-      <input type="email" id="nlEmail" placeholder="tu@email.com" required>
-      <button class="btn-primary" onclick="subscribeNewsletter()">Suscribirme →</button>
-    </div>
-    <p class="nl-note">Sin spam. Cancela cuando quieras. ✌️</p>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer role="contentinfo">
@@ -661,23 +309,18 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo">🪐 Prompt<span>Nova</span></div>
-        <p class="footer-desc">Tu copiloto en el universo de la inteligencia artificial. Prompts probados para ChatGPT, Claude y Gemini.</p>
+        <p class="footer-desc">Tu copiloto en el universo de la inteligencia artificial.</p>
       </div>
       <div class="footer-col">
         <h4>Explorar</h4>
         <ul>
-          <li><a href="#posts">Todos los prompts</a></li>
           <li><a href="#blog">Blog</a></li>
-          <li><a href="#categorias">Categorías</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
           <li><a href="./privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-          <li><a href="./terminos.html" target="_blank" rel="noopener noreferrer">Términos de Uso</a></li>
-          <li><a href="./aviso-legal.html" target="_blank" rel="noopener noreferrer">Aviso Legal</a></li>
           <li><a href="mailto:contacto@promptnova.com">Contacto</a></li>
         </ul>
       </div>
@@ -689,372 +332,127 @@
 <!-- TOAST -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<!-- PROMPT MODAL -->
-<div class="modal-overlay" id="promptModal" role="dialog" aria-modal="true" aria-labelledby="promptModalTitle">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('promptModal')" aria-label="Cerrar modal">✕</button>
-    <div class="m-cat" id="mCat"></div>
-    <h3 id="promptModalTitle"></h3>
-    <div class="m-meta" id="mMeta"></div>
-    <div class="m-prompt" id="mPrompt"></div>
-    <div class="m-rate-section">
-      <div class="m-rate-label">¿Te fue útil este prompt? Valóralo:</div>
-      <div class="rating-input" id="modalRatingInput">
-        <button class="star-btn" data-val="1" onclick="ratePrompt(1)" aria-label="Calificar 1 estrella">⭐</button>
-        <button class="star-btn" data-val="2" onclick="ratePrompt(2)" aria-label="Calificar 2 estrellas">⭐</button>
-        <button class="star-btn" data-val="3" onclick="ratePrompt(3)" aria-label="Calificar 3 estrellas">⭐</button>
-        <button class="star-btn" data-val="4" onclick="ratePrompt(4)" aria-label="Calificar 4 estrellas">⭐</button>
-        <button class="star-btn" data-val="5" onclick="ratePrompt(5)" aria-label="Calificar 5 estrellas">⭐</button>
-        <span style="font-size:0.8rem;color:var(--text3);margin-left:0.5rem;" id="modalRatingLabel"></span>
-      </div>
-    </div>
-    <button class="btn-primary" onclick="copyModalPrompt()" style="width:100%;justify-content:center;">📋 Copiar prompt completo</button>
-  </div>
-</div>
-
-<!-- BLOG MODAL -->
-<div class="modal-overlay" id="blogModal" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('blogModal')" aria-label="Cerrar modal">✕</button>
-    <div class="m-cat" id="bmCat"></div>
-    <h3 id="blogModalTitle"></h3>
-    <div class="m-meta" id="bmMeta"></div>
-    <div class="blog-modal-body" id="bmBody"></div>
-    <div style="margin-top:1.5rem;">
-      <div class="m-rate-label" style="font-size:0.85rem;color:var(--text2);margin-bottom:0.5rem;">¿Te resultó útil este artículo?</div>
-      <div class="rating-input" id="blogModalRating">
-        <button class="star-btn" data-val="1" onclick="rateBlog(1)" aria-label="Calificar 1 estrella">⭐</button>
-        <button class="star-btn" data-val="2" onclick="rateBlog(2)" aria-label="Calificar 2 estrellas">⭐</button>
-        <button class="star-btn" data-val="3" onclick="rateBlog(3)" aria-label="Calificar 3 estrellas">⭐</button>
-        <button class="star-btn" data-val="4" onclick="rateBlog(4)" aria-label="Calificar 4 estrellas">⭐</button>
-        <button class="star-btn" data-val="5" onclick="rateBlog(5)" aria-label="Calificar 5 estrellas">⭐</button>
-        <span style="font-size:0.8rem;color:var(--text3);margin-left:0.5rem;" id="blogModalRatingLabel"></span>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
-// ===== DATA =====
-const PROMPTS = [
-  { id:1, cat:'trabajo', title:'Email profesional persuasivo', ai:'ChatGPT · Claude', emoji:'💼', rating:4.8, ratingCount:124, prompt:'Actúa como un experto en comunicación empresarial. Redacta un email profesional y persuasivo para [objetivo: presentar propuesta/solicitar reunión/hacer seguimiento].\n\nContexto: [describe tu situación]\nDestinatario: [cargo y empresa]\nTono: [formal/semiformal/cercano]\n\nEl email debe:\n- Captar atención en el asunto\n- Ser conciso (máx. 200 palabras)\n- Incluir un CTA claro\n- Transmitir valor desde el primer párrafo' },
-  { id:2, cat:'marketing', title:'Copy para anuncio de Facebook Ads', ai:'ChatGPT · Claude', emoji:'📣', rating:4.9, ratingCount:89, prompt:'Eres un experto en copywriting y publicidad digital. Crea 3 variantes de copy para un anuncio de Facebook Ads.\n\nProducto/Servicio: [describe]\nPúblico objetivo: [edad, intereses, pain points]\nObjetivo del anuncio: [tráfico/leads/ventas]\n\nPara cada variante: Texto principal, Titular, Descripción, Emoji estratégico, CTA' },
-  { id:3, cat:'programacion', title:'Revisar y optimizar código', ai:'Claude · ChatGPT', emoji:'💻', rating:4.7, ratingCount:203, prompt:'Actúa como un senior developer especialista en [lenguaje/framework].\n\nRevisa el siguiente código y proporciona:\n1. Análisis de bugs potenciales\n2. Sugerencias de optimización\n3. Mejoras en legibilidad\n4. Patrones de diseño\n5. Tests unitarios recomendados' },
-  { id:4, cat:'estudio', title:'Plan de estudio personalizado', ai:'ChatGPT · Gemini', emoji:'📚', rating:4.6, ratingCount:67, prompt:'Eres pedagogo experto en aprendizaje acelerado. Crea plan de estudio para dominar [tema].\n\nNivel: [principiante/intermedio/avanzado]\nTiempo: [X horas/semana]\nFecha objetivo: [fecha]\n\nIncluir: Hoja de ruta, Recursos, Ejercicios, Métricas de progreso' },
-  { id:5, cat:'personal', title:'Reflexión para decisiones difíciles', ai:'Claude', emoji:'❤️', rating:4.9, ratingCount:145, prompt:'Coach de vida con enfoque psicología positiva. Ayuda a analizar decisión importante.\n\nDecisión: [describe]\nOpciones: [lista alternativas]\nValores: [lista 3-5]\n\nGuía: Clarificación de valores, Análisis profundo, Visualización de escenarios' },
-  { id:6, cat:'emprendimiento', title:'Validación de idea de negocio', ai:'ChatGPT · Claude', emoji:'🚀', rating:4.8, ratingCount:98, prompt:'Mentor startup. Analiza críticamente idea de negocio.\n\nIdea: [describe propuesta]\nMercado: [cliente ideal]\nModelo: [cómo ganarías dinero]\n\nAnalisis: Viabilidad, Supuestos críticos, Experimentos lean, Riesgos' },
-  { id:7, cat:'trabajo', title:'Preparación para entrevista laboral', ai:'Claude · ChatGPT', emoji:'💼', rating:4.7, ratingCount:156, prompt:'Headhunter senior. Ayuda a prepararse para entrevista.\n\nPuesto: [título cargo]\nEmpresa: [nombre]\nFortalezas: [lista 3]\n\nNecesito: 10 preguntas probables, Respuestas modelo STAR, Negociación salarial' },
-  { id:8, cat:'marketing', title:'Estrategia de contenido para redes', ai:'ChatGPT · Gemini', emoji:'📣', rating:4.6, ratingCount:78, prompt:'Estratega de contenidos digital. Diseña plan de contenido mensual.\n\nMarca: [describe]\nPlataformas: [Instagram/LinkedIn/TikTok]\nObjetivo: [awareness/leads/ventas]\n\nEntrega: Calendario editorial, Mix contenido, Formatos, Hooks, Hashtags, KPIs' },
-  { id:9, cat:'programacion', title:'Diseño arquitectura de software', ai:'Claude', emoji:'💻', rating:4.8, ratingCount:44, prompt:'Arquitecto de software sistemas escalables. Diseña arquitectura.\n\nProyecto: [describe]\nEscala: [usuarios, requests/día]\nStack: [tecnologías]\n\nDiseña: Arquitectura, BD, Caché, Autenticación, Escalabilidad' },
-  { id:10, cat:'estudio', title:'Explicación de conceptos complejos', ai:'Claude · ChatGPT', emoji:'📚', rating:4.9, ratingCount:201, prompt:'Mejor profesor para explicar conceptos difíciles.\n\nConcepto: [tema complejo]\nBackground: [qué ya sabes]\nNivel: [básico/intermedio/experto]\n\nExplica: Analogía, Explicación simple, Conceptos clave, Ejemplo real, Quiz' },
-  { id:11, cat:'personal', title:'Plan de hábitos y rutina diaria', ai:'ChatGPT · Claude', emoji:'❤️', rating:4.7, ratingCount:113, prompt:'Experto productividad. Diseña rutina diaria óptima.\n\nObjetivos: [lista 3 metas]\nHorario laboral: [de X a Y]\nEnergía: [mañana/tarde/noche]\n\nCrea: Rutina mañana, Bloques Pomodoro, Rutina nocturna, Hábitos ancla' },
-  { id:12, cat:'emprendimiento', title:'Pitch deck para inversores', ai:'Claude · ChatGPT', emoji:'🚀', rating:4.9, ratingCount:87, prompt:'Venture capitalist evaluó +500 startups. Ayuda crear pitch deck.\n\nStartup: [nombre y one-liner]\nProblema: [pain point]\nSolución: [cómo resuelves]\n\nEstructura: Problem, Solution, Market size, Business model, Traction, Team, Ask' }
+// Constants
+const EMOJIS = ['🧠', '⚡', '🎨', '📊', '🔧', '🎓', '🚀', '💡', '✨', '🤖'];
+const GRADIENTS = [
+  'linear-gradient(135deg,rgba(124,111,247,0.3),rgba(168,156,255,0.1))',
+  'linear-gradient(135deg,rgba(244,200,74,0.2),rgba(251,146,60,0.1))',
+  'linear-gradient(135deg,rgba(45,212,191,0.2),rgba(74,222,128,0.1))',
+  'linear-gradient(135deg,rgba(244,114,182,0.2),rgba(168,85,247,0.1))',
+  'linear-gradient(135deg,rgba(251,146,60,0.2),rgba(244,200,74,0.1))',
+  'linear-gradient(135deg,rgba(74,222,128,0.2),rgba(45,212,191,0.1))',
 ];
 
-const BLOG_POSTS_DEFAULT = [
-  { id:1, cat:'guias', title:'Guía definitiva de prompt engineering', summary:'Aprende técnicas fundamentales para comunicarte mejor con IA.', emoji:'📖', content:'Contenido del artículo sobre prompt engineering para principiantes.' },
-  { id:2, cat:'tutoriales', title:'ChatGPT para productividad: 10 casos reales', summary:'Profesionales usando ChatGPT para multiplicar productividad.', emoji:'🎓', content:'10 casos de uso reales de ChatGPT en diferentes industrias.' },
-  { id:3, cat:'trucos', title:'5 trucos de prompt que expertos no cuentan', summary:'Técnicas avanzadas para respuestas extraordinarias.', emoji:'💡', content:'Técnicas avanzadas de prompting que marcan diferencia real.' },
-  { id:4, cat:'herramientas', title:'Mejores herramientas IA para diseñadores 2025', summary:'Herramientas IA potentes para diseño gráfico y UI/UX.', emoji:'🛠️', content:'Comparativa completa de herramientas IA para profesionales del diseño.' },
-  { id:5, cat:'casos', title:'PYME triplicó ventas con prompts IA', summary:'Empresa de e-commerce transformó estrategia marketing.', emoji:'✅', content:'Caso de estudio real de transformación digital con IA.' },
-  { id:6, cat:'noticias', title:'GPT-5 y Claude 4: lo que sabemos', summary:'Últimas noticias sobre próximos modelos de IA.', emoji:'📰', content:'Análisis de noticias sobre los próximos modelos de IA.' }
-];
+const CAT_LABELS = {
+  trabajo:       '💼 Trabajo',
+  marketing:     '📣 Marketing',
+  programacion:  '💻 Programación',
+  estudio:       '📚 Estudio',
+  personal:      '❤️ Personal',
+  emprendimiento:'🚀 Emprendimiento',
+  general:       '🌐 General',
+};
 
-let currentFilter = 'todos';
-let currentPage = 1;
-const PROMPTS_PER_PAGE = 6;
-let currentModalPrompt = null;
-let currentModalBlog = null;
-let favorites = JSON.parse(localStorage.getItem('pn_favorites') || '[]');
-let promptRatings = JSON.parse(localStorage.getItem('pn_prompt_ratings') || '{}');
-let blogRatings = JSON.parse(localStorage.getItem('pn_blog_ratings') || '{}');
-let currentFormRating = 0;
+// Blog state
+let allBlogPosts = [];
 let currentBlogFilter = 'todos';
-let blogPosts = JSON.parse(localStorage.getItem('pn_blog_posts') || 'null') || BLOG_POSTS_DEFAULT;
 
-// ===== PROMPTS =====
-function getFilteredPrompts() {
-  const search = document.getElementById('searchInput').value.toLowerCase();
-  return PROMPTS.filter(p => {
-    if(currentFilter === 'favoritos') return favorites.includes(p.id);
-    if(currentFilter !== 'todos' && p.cat !== currentFilter) return false;
-    if(search && !p.title.toLowerCase().includes(search) && !p.prompt.toLowerCase().includes(search)) return false;
-    return true;
-  });
-}
-
-function renderPrompts() {
-  const filtered = getFilteredPrompts();
-  const total = filtered.length;
-  const totalPages = Math.ceil(total / PROMPTS_PER_PAGE);
-  if(currentPage > totalPages) currentPage = 1;
-  const start = (currentPage-1)*PROMPTS_PER_PAGE;
-  const paginated = filtered.slice(start, start+PROMPTS_PER_PAGE);
-  const grid = document.getElementById('promptsGrid');
-  grid.innerHTML = paginated.map(p => {
-    const isFav = favorites.includes(p.id);
-    const userRating = promptRatings[p.id];
-    const displayRating = userRating || p.rating;
-    const stars = renderStars(displayRating);
-    return `<div class="prompt-card" onclick="openPromptModal(${p.id})">
-      <button class="p-fav ${isFav?'active':''}" onclick="toggleFav(event,${p.id})" title="${isFav?'Quitar de favoritos':'Añadir a favoritos'}" aria-label="${isFav?'Quitar de favoritos':'Añadir a favoritos'}">${isFav?'❤️':'🤍'}</button>
-      <div class="p-cat">${p.emoji} ${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</div>
-      <div class="p-title">${p.title}</div>
-      <div class="p-preview">${p.prompt.substring(0,120)}...</div>
-      <div class="p-stars">${stars} <span style="font-size:0.75rem;color:var(--text3);margin-left:4px;">${displayRating.toFixed(1)} (${p.ratingCount})</span></div>
-      <div class="p-footer">
-        <div class="p-ai">${p.ai}</div>
-        <button class="p-copy-btn" onclick="copyPromptDirect(event,${p.id})" aria-label="Copiar prompt">📋 Copiar</button>
-      </div>
-    </div>`;
-  }).join('');
-  renderPagination(totalPages);
-}
-
-function renderStars(rating) {
-  let html = '';
-  for(let i=1;i<=5;i++) {
-    if(rating >= i) html += '<span aria-hidden="true">⭐</span>';
-    else if(rating >= i-0.5) html += '<span aria-hidden="true">✨</span>';
-    else html += '<span style="opacity:0.2" aria-hidden="true">⭐</span>';
-  }
-  return html;
-}
-
-function renderPagination(totalPages) {
-  const pg = document.getElementById('pagination');
-  if(totalPages <= 1) { pg.innerHTML=''; return; }
-  let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled style="opacity:0.3"':''} aria-label="Página anterior">←</button>`;
-  for(let i=1;i<=totalPages;i++) {
-    html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})" aria-label="Página ${i}" ${i===currentPage?'aria-current="page"':''}>${i}</button>`;
-  }
-  html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===totalPages?'disabled style="opacity:0.3"':''} aria-label="Página siguiente">→</button>`;
-  pg.innerHTML = html;
-}
-
-function goPage(p) {
-  const filtered = getFilteredPrompts();
-  const totalPages = Math.ceil(filtered.length / PROMPTS_PER_PAGE);
-  if(p < 1 || p > totalPages) return;
-  currentPage = p;
-  renderPrompts();
-  document.getElementById('posts').scrollIntoView({ behavior: 'smooth' });
-}
-
-function setFilter(f, btn) {
-  currentFilter = f;
-  currentPage = 1;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderPrompts();
-}
-
-function filterPrompts() {
-  currentPage = 1;
-  renderPrompts();
-}
-
-function filterByCategory(cat) {
-  currentFilter = cat;
-  currentPage = 1;
-  const btns = document.querySelectorAll('.filter-btn');
-  btns.forEach((b, i) => {
-    if(i === 0) b.classList.remove('active');
-    else if(b.textContent.toLowerCase().includes(cat)) { b.classList.add('active'); btns[0].classList.remove('active'); }
-  });
-  renderPrompts();
-}
-
-function toggleFav(e, id) {
-  e.stopPropagation();
-  const idx = favorites.indexOf(id);
-  if(idx > -1) favorites.splice(idx, 1);
-  else favorites.push(id);
-  localStorage.setItem('pn_favorites', JSON.stringify(favorites));
-  renderPrompts();
-}
-
-function copyPromptDirect(e, id) {
-  e.stopPropagation();
-  const p = PROMPTS.find(x => x.id === id);
-  if(p) {
-    navigator.clipboard.writeText(p.prompt);
-    showToast('✓ Prompt copiado al portapapeles');
-  }
-}
-
-function openPromptModal(id) {
-  const p = PROMPTS.find(x => x.id === id);
-  if(!p) return;
-  currentModalPrompt = id;
-  document.getElementById('mCat').textContent = `${p.emoji} ${p.cat.toUpperCase()}`;
-  document.getElementById('promptModalTitle').textContent = p.title;
-  document.getElementById('mMeta').innerHTML = `<span>IA: ${p.ai}</span><span>Usuarios: ${p.ratingCount}</span>`;
-  document.getElementById('mPrompt').textContent = p.prompt;
-  const userRating = promptRatings[id];
-  document.getElementById('modalRatingLabel').textContent = userRating ? `${userRating}/5` : 'Sin valorar';
-  document.querySelectorAll('#modalRatingInput .star-btn').forEach((btn, i) => {
-    btn.classList.toggle('selected', userRating && i+1 <= userRating);
-  });
-  document.getElementById('promptModal').classList.add('open');
-}
-
-function ratePrompt(val) {
-  if(!currentModalPrompt) return;
-  promptRatings[currentModalPrompt] = val;
-  localStorage.setItem('pn_prompt_ratings', JSON.stringify(promptRatings));
-  document.getElementById('modalRatingLabel').textContent = `${val}/5`;
-  document.querySelectorAll('#modalRatingInput .star-btn').forEach((btn, i) => {
-    btn.classList.toggle('selected', i+1 <= val);
-  });
-  renderPrompts();
-}
-
-function copyModalPrompt() {
-  if(!currentModalPrompt) return;
-  const p = PROMPTS.find(x => x.id === currentModalPrompt);
-  if(p) {
-    navigator.clipboard.writeText(p.prompt);
-    showToast('✓ Prompt copiado completamente');
-  }
-}
-
-// ===== BLOG =====
-function renderBlog() {
-  const filtered = blogPosts.filter(b => currentBlogFilter === 'todos' || b.cat === currentBlogFilter);
-  const grid = document.getElementById('blogGrid');
-  grid.innerHTML = filtered.map(b => {
-    return `<div class="blog-card" onclick="openBlogModal(${b.id})" role="article">
-      <div class="blog-thumb">${b.emoji || '📖'}</div>
-      <div class="blog-body">
-        <div class="blog-meta">
-          <span class="blog-cat-badge">${b.cat}</span>
-          <span class="blog-date">Hoy</span>
-        </div>
-        <h3>${b.title}</h3>
-        <p>${b.summary}</p>
-        <div class="blog-footer">
-          <span class="read-more">Leer más →</span>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-function setBlogFilter(f, btn) {
-  currentBlogFilter = f;
-  document.querySelectorAll('.blog-filter-wrap .filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderBlog();
-}
-
-function setFormRating(val) {
-  currentFormRating = val;
-  document.getElementById('formRatingLabel').textContent = `${val}/5`;
-  document.querySelectorAll('#blogRatingInput .star-btn').forEach((btn, i) => {
-    btn.classList.toggle('selected', i+1 <= val);
-  });
-}
-
-function submitBlog() {
-  const title = document.getElementById('blogTitle').value.trim();
-  const cat = document.getElementById('blogCategory').value;
-  const summary = document.getElementById('blogSummary').value.trim();
-  const content = document.getElementById('blogContent').value.trim();
-  const emoji = document.getElementById('blogEmoji').value || '📝';
-
-  if(!title || !cat || !summary || !content) {
-    showToast('⚠️ Completa todos los campos requeridos');
-    return;
-  }
-
-  const newBlog = { id: blogPosts.length + 1, cat, title, summary, content, emoji };
-  blogPosts.push(newBlog);
-  localStorage.setItem('pn_blog_posts', JSON.stringify(blogPosts));
-  
-  document.getElementById('blogTitle').value = '';
-  document.getElementById('blogCategory').value = '';
-  document.getElementById('blogSummary').value = '';
-  document.getElementById('blogContent').value = '';
-  document.getElementById('blogEmoji').value = '';
-  document.getElementById('formRatingLabel').textContent = 'Sin valorar';
-  currentFormRating = 0;
-  
-  renderBlog();
-  showToast('✓ Artículo publicado exitosamente');
-}
-
-function openBlogModal(id) {
-  const b = blogPosts.find(x => x.id === id);
-  if(!b) return;
-  currentModalBlog = id;
-  document.getElementById('bmCat').textContent = b.cat.toUpperCase();
-  document.getElementById('blogModalTitle').textContent = b.title;
-  document.getElementById('bmMeta').innerHTML = `<span>${b.emoji}</span>`;
-  document.getElementById('bmBody').innerHTML = `<p>${b.content}</p>`;
-  const userRating = blogRatings[id];
-  document.getElementById('blogModalRatingLabel').textContent = userRating ? `${userRating}/5` : 'Sin valorar';
-  document.querySelectorAll('#blogModalRating .star-btn').forEach((btn, i) => {
-    btn.classList.toggle('selected', userRating && i+1 <= userRating);
-  });
-  document.getElementById('blogModal').classList.add('open');
-}
-
-function rateBlog(val) {
-  if(!currentModalBlog) return;
-  blogRatings[currentModalBlog] = val;
-  localStorage.setItem('pn_blog_ratings', JSON.stringify(blogRatings));
-  document.getElementById('blogModalRatingLabel').textContent = `${val}/5`;
-  document.querySelectorAll('#blogModalRating .star-btn').forEach((btn, i) => {
-    btn.classList.toggle('selected', i+1 <= val);
-  });
-}
-
-function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove('open');
-}
-
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-
-function closeMenu() {
-  document.getElementById('mobileMenu').classList.remove('open');
-}
-
+// Show toast message
 function showToast(msg) {
   const toast = document.getElementById('toast');
   toast.textContent = msg;
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3000);
+  setTimeout(() => toast.classList.remove('show'), 2000);
 }
 
-function subscribeNewsletter() {
-  const email = document.getElementById('nlEmail').value.trim();
-  if(!email || !email.includes('@')) {
-    showToast('⚠️ Email inválido');
+// Build filter buttons dynamically
+function buildBlogFilters(posts) {
+  const cats = [...new Set(posts.map(p => p.category).filter(Boolean))];
+  const wrap = document.getElementById('blog-filter-wrap');
+  if (!wrap) return;
+
+  wrap.innerHTML = `<button class="filter-btn active" onclick="filterBlog('todos', this)">Todos</button>` +
+    cats.map(cat => `<button class="filter-btn" onclick="filterBlog('${cat}', this)">${CAT_LABELS[cat] || cat}</button>`).join('');
+}
+
+// Filter blog posts by category
+function filterBlog(cat, btn) {
+  currentBlogFilter = cat;
+  document.querySelectorAll('#blog-filter-wrap .filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderBlogGrid();
+}
+
+// Render blog grid
+function renderBlogGrid() {
+  const grid = document.getElementById('blog-grid');
+  const posts = currentBlogFilter === 'todos'
+    ? allBlogPosts
+    : allBlogPosts.filter(p => p.category === currentBlogFilter);
+
+  if (!posts || posts.length === 0) {
+    grid.innerHTML = '<p style="color:var(--text3);text-align:center;grid-column:1/-1">No hay artículos en esta categoría aún ✨</p>';
     return;
   }
-  document.getElementById('nlEmail').value = '';
-  showToast('✓ ¡Suscrito! Revisa tu email para confirmar');
+
+  grid.innerHTML = posts.map((p, i) => {
+    const htmlFile = `./posts/${p.slug}`;
+    const catBadge = p.category ? (CAT_LABELS[p.category] || p.category) : (p.tags?.[0] || 'IA');
+
+    return `
+      <a href="${htmlFile}" class="blog-card" style="text-decoration:none;">
+        <div class="blog-thumb" style="background:${GRADIENTS[i % GRADIENTS.length]}">
+          ${EMOJIS[i % EMOJIS.length]}
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat-badge">${catBadge}</span>
+            <span class="blog-date">${p.date || new Date().toLocaleDateString('es-ES')}</span>
+          </div>
+          <h3>${p.title}</h3>
+          <p>${p.description}</p>
+          <span class="blog-read">Leer artículo →</span>
+        </div>
+      </a>
+    `;
+  }).join('');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderPrompts();
-  renderBlog();
-  
-  document.querySelectorAll('.modal-overlay').forEach(overlay => {
-    overlay.addEventListener('click', (e) => {
-      if(e.target === overlay) overlay.classList.remove('open');
-    });
-  });
+// Fetch and render blog
+function renderBlog() {
+  const grid = document.getElementById('blog-grid');
 
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape') {
-      document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
-    }
-  });
+  fetch('./posts/index.json')
+    .then(r => {
+      if (!r.ok) throw new Error('No se pudo cargar index.json');
+      return r.json();
+    })
+    .then(posts => {
+      if (!posts || posts.length === 0) {
+        grid.innerHTML = '<p style="color:var(--text3);text-align:center;grid-column:1/-1">Pronto nuevos artículos ✨</p>';
+        return;
+      }
+      allBlogPosts = posts;
+      buildBlogFilters(posts);
+      renderBlogGrid();
+    })
+    .catch(err => {
+      console.error('Error loading blog:', err);
+      grid.innerHTML = '<p style="color:var(--text3);text-align:center;grid-column:1/-1">Error al cargar artículos. Recargue la página.</p>';
+    });
+}
+
+// Menu toggle
+function toggleMenu() {
+  // Aquí puedes agregar lógica del menú móvil si es necesario
+}
+
+// Init
+document.addEventListener('DOMContentLoaded', () => {
+  renderBlog();
 });
 </script>
+
 </body>
 </html>
