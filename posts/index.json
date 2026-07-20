@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-20-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Aprende a utilizar ChatGPT en tu trabajo diario con nuestra guía práctica",
+    "date": "2026-07-20",
+    "tags": [
+      "ChatGPT",
+      "Inteligencia Artificial",
+      "Productividad"
+    ],
+    "readingTime": 10,
+    "category": "trabajo"
+  },
+  {
     "slug": "2026-07-19-prompt-engineering.html",
     "title": "Prompt Engineering",
     "description": "Aprende trucos de prompt engineering para developers",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-14-domina-chatgpt.html",
-    "title": "Domina ChatGPT",
-    "description": "Aprende a usar ChatGPT en tu trabajo diario",
-    "date": "2026-06-14",
-    "tags": [
-      "ChatGPT",
-      "Inteligencia Artificial",
-      "Productividad"
-    ],
-    "readingTime": 10,
-    "category": "trabajo"
   }
 ]
