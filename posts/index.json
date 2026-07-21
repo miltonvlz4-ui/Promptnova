@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-21-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo acelerar tu aprendizaje con prompts efectivos",
+    "date": "2026-07-21",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompt engineering"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
     "slug": "2026-07-21-prompts-creativos.html",
     "title": "Prompts Creativos",
     "description": "Descubre los mejores prompts para diseñadores gráficos",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-15-ideas-de-negocio-con-ia.html",
-    "title": "Ideas de negocio con IA",
-    "description": "Aprende a generar ideas de negocio en minutos con inteligencia artificial",
-    "date": "2026-06-15",
-    "tags": [
-      "Inteligencia Artificial",
-      "Ideas de Negocio",
-      "Emprendimiento"
-    ],
-    "readingTime": 5,
-    "category": "emprendimiento"
   }
 ]
