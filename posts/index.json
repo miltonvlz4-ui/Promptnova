@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-21-prompts-creativos.html",
+    "title": "Prompts Creativos",
+    "description": "Descubre los mejores prompts para diseñadores gráficos",
+    "date": "2026-07-21",
+    "tags": [
+      "Diseño Gráfico",
+      "Inteligencia Artificial",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-21-prompt-engineering.html",
     "title": "Prompt Engineering",
     "description": "Aprende trucos de prompt engineering para desarrolladores",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 5,
     "category": "emprendimiento"
-  },
-  {
-    "slug": "2026-06-14-prompt-engineering.html",
-    "title": "Prompt Engineering",
-    "description": "Descubre trucos de prompt engineering para developers",
-    "date": "2026-06-14",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "desarrollo de software"
-    ],
-    "readingTime": 10,
-    "category": "programacion"
   }
 ]
