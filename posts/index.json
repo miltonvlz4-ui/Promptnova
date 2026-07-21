@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-21-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para desarrolladores",
+    "date": "2026-07-21",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-20-domina-chatgpt.html",
     "title": "Domina ChatGPT",
     "description": "Aprende a utilizar ChatGPT en tu trabajo diario con nuestra guía práctica",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "programacion"
-  },
-  {
-    "slug": "2026-06-14-errores-comunes-en-prompts.html",
-    "title": "Errores comunes en prompts",
-    "description": "Evita errores comunes al escribir prompts para IA",
-    "date": "2026-06-14",
-    "tags": [
-      "IA",
-      "prompt engineering",
-      "errores comunes"
-    ],
-    "readingTime": 5,
-    "category": "general"
   }
 ]
