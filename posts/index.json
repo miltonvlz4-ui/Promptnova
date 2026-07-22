@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-22-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Guía para dominar ChatGPT en tu trabajo diario y aumentar la productividad",
+    "date": "2026-07-22",
+    "tags": [
+      "ChatGPT",
+      "Inteligencia Artificial",
+      "Productividad"
+    ],
+    "readingTime": 5,
+    "category": "trabajo"
+  },
+  {
     "slug": "2026-07-22-prompts-creativos.html",
     "title": "Prompts creativos",
     "description": "Descubre los prompts más creativos para diseñadores gráficos y potencia tu imaginación",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-15-ia-para-seo.html",
-    "title": "IA para SEO",
-    "description": "Aprende a mejorar tu posicionamiento en buscadores con IA y prompts",
-    "date": "2026-06-15",
-    "tags": [
-      "IA",
-      "SEO",
-      "Prompt Engineering"
-    ],
-    "readingTime": 10,
-    "category": "marketing"
   }
 ]
