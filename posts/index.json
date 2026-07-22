@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-07-22-prompts-creativos.html",
+    "title": "Prompts creativos",
+    "description": "Descubre los prompts más creativos para diseñadores gráficos y potencia tu imaginación",
+    "date": "2026-07-22",
+    "tags": [
+      "diseño gráfico",
+      "prompt engineering",
+      "inteligencia artificial"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-21-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo acelerar tu aprendizaje con prompts efectivos",
@@ -1155,18 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "marketing"
-  },
-  {
-    "slug": "2026-06-15-errores-comunes-en-prompts.html",
-    "title": "Errores comunes en prompts",
-    "description": "Evita errores comunes al escribir prompts para IA",
-    "date": "2026-06-15",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "errores comunes"
-    ],
-    "readingTime": 5,
-    "category": "general"
   }
 ]
