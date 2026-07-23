@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-07-23-10-prompts-de-marketing.html",
+    "title": "10 Prompts de Marketing",
+    "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus estrategias",
+    "date": "2026-07-23",
+    "tags": [
+      "marketing",
+      "prompts",
+      "inteligencia artificial"
+    ],
+    "readingTime": 10,
+    "category": "marketing",
+    "prompts": [
+      "Ejemplo de prompt: ¿Cuáles son las estrategias de marketing digital de mis competidores en el sector de la tecnología?",
+      "Ejemplo de prompt: Crea un artículo de blog sobre los beneficios del uso de la inteligencia artificial en el marketing, incluyendo estadísticas y ejemplos prácticos.",
+      "Ejemplo de prompt: ¿Cuáles son las tendencias actuales en el mercado de la moda y cómo pueden influir en las decisiones de compra de los consumidores?",
+      "Ejemplo de prompt: ¿Cuáles son las palabras clave más relevantes para un sitio web de venta de productos electrónicos y cómo puedo incorporarlas en mi contenido?",
+      "Ejemplo de prompt: Crea una publicación en Facebook que promueva un nuevo producto y que incluya una llamada a la acción para que los seguidores visiten el sitio web.",
+      "Ejemplo de prompt: Crea un correo electrónico de bienvenida para nuevos suscriptores que incluya una oferta especial y una llamada a la acción para que exploren el sitio web.",
+      "Ejemplo de prompt: ¿Cuál es el sentimiento general de los clientes sobre nuestra marca en las redes sociales y cómo podemos mejorar nuestra reputación en línea?",
+      "Ejemplo de prompt: ¿Cuáles son los patrones de comportamiento de los clientes que compran productos electrónicos en nuestro sitio web y cómo podemos personalizar nuestra oferta para satisfacer sus necesidades?",
+      "Ejemplo de prompt: Crea un script que automáticamente publique contenido en nuestras redes sociales a una hora específica del día.",
+      "Ejemplo de prompt: ¿Cuál es el rendimiento de nuestra campaña de email marketing en términos de aperturas, clics y conversiones, y cómo podemos mejorar nuestros resultados?"
+    ]
+  },
+  {
     "slug": "2026-07-23-prompt-engineering.html",
     "title": "Prompt Engineering",
     "description": "Descubre trucos de prompt engineering para desarrolladores",
@@ -1734,24 +1759,6 @@
       "¿Cuál es el clima en Madrid hoy?",
       "¿Puedes recomendarme un restaurante italiano en Barcelona?",
       "¿Cuál es la definición de la palabra \"inteligencia artificial\"?"
-    ]
-  },
-  {
-    "slug": "2026-06-16-prompts-creativos.html",
-    "title": "Prompts Creativos",
-    "description": "Descubre los prompts más creativos para diseñadores gráficos",
-    "date": "2026-06-16",
-    "tags": [
-      "diseño gráfico",
-      "prompts",
-      "inteligencia artificial"
-    ],
-    "readingTime": 10,
-    "category": "general",
-    "prompts": [
-      "Diseña un empaque para un producto de alimentación saludable que se venderá en tiendas especializadas.",
-      "Crea un folleto informativo para una empresa de turismo que ofrece paquetes de viaje sostenibles.",
-      "Desarrolla un sitio web para una galería de arte que exhibe obras de artistas locales."
     ]
   }
 ]
