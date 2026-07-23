@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-07-23-asistente-personal.html",
+    "title": "Asistente Personal",
+    "description": "Construye un asistente personal con ChatGPT y prompts",
+    "date": "2026-07-23",
+    "tags": [
+      "ChatGPT",
+      "Asistente Personal",
+      "Inteligencia Artificial"
+    ],
+    "readingTime": 10,
+    "category": "personal",
+    "prompts": [
+      "¿Cuáles son las noticias más importantes de hoy?",
+      "Traduce \"Hello, how are you?\" al español",
+      "Genera un artículo sobre la importancia de la inteligencia artificial en la sociedad actual"
+    ]
+  },
+  {
     "slug": "2026-07-23-10-prompts-de-marketing.html",
     "title": "10 Prompts de Marketing",
     "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus estrategias",
@@ -1741,24 +1759,6 @@
       "Crear un plan de curso para un curso de introducción a la programación en Python para principiantes.",
       "Escribe un capítulo sobre la sintaxis básica de Python, incluyendo ejemplos y ejercicios prácticos.",
       "Crea un ejercicio de práctica sobre la creación de funciones en Python, que incluya 5 preguntas y respuestas."
-    ]
-  },
-  {
-    "slug": "2026-06-17-asistente-personal.html",
-    "title": "Asistente Personal",
-    "description": "Construye un asistente personal con ChatGPT y prompts",
-    "date": "2026-06-17",
-    "tags": [
-      "ChatGPT",
-      "Asistente Personal",
-      "Inteligencia Artificial"
-    ],
-    "readingTime": 10,
-    "category": "personal",
-    "prompts": [
-      "¿Cuál es el clima en Madrid hoy?",
-      "¿Puedes recomendarme un restaurante italiano en Barcelona?",
-      "¿Cuál es la definición de la palabra \"inteligencia artificial\"?"
     ]
   }
 ]
