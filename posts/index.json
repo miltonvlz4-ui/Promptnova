@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-07-23-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Descubre trucos de prompt engineering para desarrolladores",
+    "date": "2026-07-23",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo"
+    ],
+    "readingTime": 5,
+    "category": "general",
+    "prompts": [
+      "Ejemplo de prompt: \"Escribe un cuento corto sobre un viaje a la luna\"",
+      "Ejemplo de prompt: \"Resumen el siguiente texto en 50 palabras: 'El clima es un tema complejo que afecta a todo el planeta'\"",
+      "Ejemplo de prompt: \"Traduce el siguiente texto del inglés al español: 'The weather is nice today'\""
+    ]
+  },
+  {
     "slug": "2026-07-22-domina-chatgpt.html",
     "title": "Domina ChatGPT",
     "description": "Guía para dominar ChatGPT en tu trabajo diario y aumentar la productividad",
@@ -1734,24 +1752,6 @@
       "Diseña un empaque para un producto de alimentación saludable que se venderá en tiendas especializadas.",
       "Crea un folleto informativo para una empresa de turismo que ofrece paquetes de viaje sostenibles.",
       "Desarrolla un sitio web para una galería de arte que exhibe obras de artistas locales."
-    ]
-  },
-  {
-    "slug": "2026-06-16-imagenes-con-ia.html",
-    "title": "Imágenes con IA",
-    "description": "Aprende a crear imágenes perfectas con IA utilizando prompts",
-    "date": "2026-06-16",
-    "tags": [
-      "IA",
-      "Imágenes",
-      "Prompts"
-    ],
-    "readingTime": 10,
-    "category": "general",
-    "prompts": [
-      "Un paisaje de montaña con un lago en el centro, rodeado de árboles y flores",
-      "Una ciudad futurista con rascacielos y vehículos voladores, iluminada por luces neón",
-      "Un retrato de una persona sonriendo, con ojos azules y cabello castaño"
     ]
   }
 ]
