@@ -66,6 +66,37 @@ function classifyPost(title, tags = []) {
   return scores[0].score > 0 ? scores[0].cat : "general";
 }
 
+// ── EXTRACCIÓN DE PROMPTS ──
+// Busca bloques <pre><code>...</code></pre> dentro del HTML del artículo
+// y devuelve el texto plano de cada uno, listo para el botón "Copiar".
+function decodeEntities(str) {
+  return str
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;/g, "'")
+    .replace(/&amp;/g, "&");
+}
+
+// Groq a veces mete la etiqueta ("Ejemplo 1: Redacción de correos...") en su propio
+// bloque <pre><code>, separado del prompt real. Esto filtra esas etiquetas sueltas.
+function isJustALabel(text) {
+  const words = text.trim().split(/\s+/).length;
+  return /^ejemplo\s*\d*\s*[:.\-]?/i.test(text.trim()) && words <= 8;
+}
+
+function extractPrompts(html) {
+  if (!html) return [];
+  const regex = /<pre[^>]*>\s*<code[^>]*>([\s\S]*?)<\/code>\s*<\/pre>/gi;
+  const prompts = [];
+  let match;
+  while ((match = regex.exec(html)) !== null) {
+    const text = decodeEntities(match[1].replace(/<[^>]+>/g, "")).trim();
+    if (text && !isJustALabel(text)) prompts.push(text);
+  }
+  return prompts;
+}
+
 function slugify(text) {
   return text
     .toLowerCase()
@@ -175,20 +206,28 @@ function savePost(data, topic) {
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7965643620841539" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a href="./" class="logo">🪐 PromptNova</a>
-      <ul class="nav-links">
-        <li><a href="./">Inicio</a></li>
-        <li><a href="./#posts">Prompts</a></li>
-        <li><a href="./#categorias">Categorías</a></li>
-        <li><a href="./#blog" class="active">Blog</a></li>
-        <li><a href="./#sobre-mi">Sobre mí</a></li>
-        <li><a href="privacidad.html">Privacidad</a></li>
-      </ul>
-      <a href="./#posts" class="nav-cta">✨ Explorar</a>
+
+  <nav role="navigation" aria-label="Navegación principal">
+    <a href="./#inicio" class="nav-logo">🪐 Prompt<span>Nova</span></a>
+    <div class="nav-links">
+      <a href="./#inicio">Inicio</a>
+      <a href="./#posts">Prompts</a>
+      <a href="./#categorias">Categorías</a>
+      <a href="./#blog" class="active">Blog</a>
+      <a href="./privacidad.html" target="_blank" rel="noopener noreferrer">Privacidad</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
     </div>
   </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="./#inicio" onclick="closeMenu()">Inicio</a>
+    <a href="./#posts" onclick="closeMenu()">Prompts</a>
+    <a href="./#categorias" onclick="closeMenu()">Categorías</a>
+    <a href="./#blog" onclick="closeMenu()">Blog</a>
+    <a href="./privacidad.html" target="_blank" rel="noopener noreferrer">Privacidad</a>
+  </div>
 
   <main class="post-container">
     <div class="post-header">
@@ -210,7 +249,7 @@ function savePost(data, topic) {
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="./" class="logo">🪐 PromptNova</a>
+        <a href="./#inicio" class="nav-logo">🪐 Prompt<span>Nova</span></a>
         <p>Tu copiloto en el universo de la inteligencia artificial.</p>
       </div>
       <div class="footer-col">
@@ -223,8 +262,8 @@ function savePost(data, topic) {
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="privacidad.html">Política de Privacidad</a></li>
-          <li><a href="terminos.html">Términos de Uso</a></li>
+          <li><a href="./privacidad.html">Política de Privacidad</a></li>
+          <li><a href="./terminos.html">Términos de Uso</a></li>
         </ul>
       </div>
     </div>
@@ -232,6 +271,19 @@ function savePost(data, topic) {
       <span>© PromptNova ${new Date().getFullYear()} — Todos los derechos reservados.</span>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.querySelector('.hamburger');
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    function closeMenu() {
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
+    }
+  </script>
 </body>
 </html>`;
 
@@ -245,6 +297,9 @@ function savePost(data, topic) {
     index = JSON.parse(fs.readFileSync(indexPath, "utf8"));
   }
 
+  const prompts = extractPrompts(data.html);
+  console.log(`💬 Prompts extraídos: ${prompts.length}`);
+
   const exists = index.some((p) => p.slug === filename);
   if (!exists) {
     index.unshift({
@@ -254,7 +309,8 @@ function savePost(data, topic) {
       date,
       tags: data.tags,
       readingTime: data.readingTime,
-      category,                          // ← campo nuevo añadido
+      category,                          // ← campo añadido anteriormente
+      prompts,                           // ← campo nuevo: array de prompts listos para copiar
     });
   }
 

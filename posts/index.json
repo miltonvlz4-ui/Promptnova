@@ -10,7 +10,12 @@
       "Productividad"
     ],
     "readingTime": 5,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "¿Puedes redactar un correo electrónico para un cliente que ha solicitado información sobre nuestros productos?",
+      "¿Cuáles son las tendencias actuales en el mercado de la tecnología?",
+      "¿Puedes escribir un artículo sobre los beneficios de la meditación para la salud mental?"
+    ]
   },
   {
     "slug": "2026-07-22-prompts-creativos.html",
@@ -23,7 +28,13 @@
       "inteligencia artificial"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Diseña un logotipo para una empresa de tecnología que se especializa en inteligencia artificial. El logotipo debe ser moderno, minimalista y reflejar la esencia de la inteligencia artificial. Puedes utilizar colores como el azul y el blanco para darle un toque fresco y tecnológico.",
+      "Genera un prompt para un diseño de packaging para un nuevo producto de comida saludable. El prompt debe incluir descripciones de la forma, el color y el material del packaging, así como información sobre el público objetivo y la competencia en el mercado.",
+      "Diseña un sitio web para una empresa de moda sostenible. El sitio web debe ser moderno, responsivo y reflejar la esencia de la moda sostenible. Puedes utilizar colores como el verde y el azul para darle un toque fresco y ecológico.",
+      "Genera un prompt para un diseño de tarjeta de presentación para un profesional de la salud. El prompt debe incluir descripciones de la forma, el color y el material de la tarjeta, así como información sobre el profesional y su especialidad."
+    ]
   },
   {
     "slug": "2026-07-21-aprende-10-veces-mas-rapido.html",
@@ -36,7 +47,15 @@
       "prompt engineering"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Explica el concepto de inteligencia artificial y su relación con el aprendizaje automático.",
+      "Resumen el capítulo 3 del libro \"Aprendizaje Profundo\" de Ian Goodfellow, Yoshua Bengio y Aaron Courville.",
+      "Define el término \"red neuronal convolucional\" y proporciona un ejemplo de su aplicación en la visión por computadora.",
+      "Ejemplo de prompt específico: Explica el algoritmo de Dijkstra y su aplicación en la búsqueda de caminos en grafos.",
+      "Ejemplo de prompt con lenguaje natural: ¿Cuál es la diferencia entre un modelo de lenguaje basado en reglas y uno basado en aprendizaje profundo?",
+      "Ejemplo de prompt con contexto adicional: Considera un grafo con 10 nodos y 15 aristas. Explica cómo utilizar el algoritmo de Floyd-Warshall para encontrar el camino más corto entre dos nodos."
+    ]
   },
   {
     "slug": "2026-07-21-prompts-creativos.html",
@@ -49,7 +68,12 @@
       "Prompt Engineering"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Diseña un logo para una aplicación móvil de entrega de comida que se llama \"Delicioso\" y que ofrece opciones saludables y sostenibles.",
+      "Crear un diseño de packaging para una marca de productos de limpieza ecológicos que se llama \"Verde Limpio\" y que utiliza ingredientes naturales y biodegradables.",
+      "Desarrolla un concepto de diseño para un sitio web de una galería de arte que se especializa en exhibir obras de artistas emergentes y que se llama \"Arte Nuevo\"."
+    ]
   },
   {
     "slug": "2026-07-21-prompt-engineering.html",
@@ -62,7 +86,12 @@
       "desarrollo"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "prompt = \"Escribe un cuento corto sobre un viaje a la luna\"",
+      "prompt = \"Resumen el siguiente texto en 50 palabras: La inteligencia artificial es un campo en constante evolución, con aplicaciones en áreas como la medicina, la finanza y la educación\"",
+      "prompt = \"Traduce el siguiente texto del inglés al español: The quick brown fox jumps over the lazy dog\""
+    ]
   },
   {
     "slug": "2026-07-20-domina-chatgpt.html",
@@ -75,7 +104,13 @@
       "Productividad"
     ],
     "readingTime": 10,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "Ejemplo de prompt: \"Escribe un artículo sobre los beneficios del ejercicio físico para la salud\"",
+      "Ejemplo de prompt: \"Traduce al español el texto \"Hello, how are you?\"\"",
+      "Ejemplo de prompt: \"Resuelve la ecuación 2x + 5 = 11\"",
+      "Ejemplo de prompt: \"Escribe un resumen de este artículo sobre cómo dominar ChatGPT\""
+    ]
   },
   {
     "slug": "2026-07-19-prompt-engineering.html",
@@ -88,7 +123,12 @@
       "desarrollo"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Traducir el siguiente texto del inglés al español: \"The quick brown fox jumps over the lazy dog\"",
+      "Resumir el siguiente texto en 100 palabras: \"El libro de Harry Potter es una serie de novelas de fantasía escritas por J.K. Rowling. La serie sigue las aventuras de un joven mago llamado Harry Potter y sus amigos Ron Weasley y Hermione Granger en la escuela de magia de Hogwarts.\"",
+      "Generar un texto de 200 palabras sobre el tema de la inteligencia artificial: \"La inteligencia artificial es un campo de la informática que se enfoca en el desarrollo de sistemas y algoritmos que pueden realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la resolución de problemas y la toma de decisiones.\""
+    ]
   },
   {
     "slug": "2026-07-19-prompts-de-marketing.html",
@@ -101,7 +141,19 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "Generar 5 titulares para un anuncio de una nueva marca de ropa deportiva",
+      "Describe las características y beneficios de un nuevo modelo de teléfono inteligente",
+      "Crea un correo electrónico de marketing para promocionar una oferta especial de una tienda en línea",
+      "Genera 3 publicaciones para Instagram para promocionar un nuevo producto de belleza",
+      "Crea un informe de mercado para analizar las tendencias y oportunidades en el sector de la tecnología",
+      "Genera un artículo de blog sobre las tendencias actuales en el sector del marketing digital",
+      "Crea un guión para un video de marketing que promocione un nuevo servicio de streaming",
+      "Genera 5 correos electrónicos para una campaña de email marketing que promocione un nuevo producto de software",
+      "Crea un informe de análisis de competidores para evaluar la posición de una empresa en el mercado",
+      "Genera 3 anuncios para Facebook que promocionen un nuevo producto de electrónica"
+    ]
   },
   {
     "slug": "2026-07-19-crea-un-curso-online.html",
@@ -114,7 +166,16 @@
       "educación en línea"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Prompt: ¿Cuáles son los temas más populares en el ámbito de la educación en línea?\nRespuesta: Los temas más populares son programación, marketing digital y diseño gráfico.",
+      "Prompt: ¿Cuál es el objetivo principal de un curso de programación para principiantes?\nRespuesta: El objetivo principal es enseñar los conceptos básicos de la programación y proporcionar a los estudiantes las habilidades necesarias para crear sus propios proyectos.",
+      "Prompt: ¿Cuáles son los temas que se deben cubrir en un curso de programación para principiantes?\nRespuesta: Los temas que se deben cubrir son variables, tipos de datos, estructuras de control, funciones y objetos.",
+      "Prompt: ¿Cómo se puede explicar el concepto de variables en programación de manera sencilla?\nRespuesta: Se puede explicar mediante ejemplos y analogías, como comparar una variable con una caja donde se almacena un valor.",
+      "Prompt: ¿Cuál es un ejemplo de código en Python que demuestra el uso de variables?\nRespuesta: x = 5\ny = 10\nprint(x + y)",
+      "Prompt: ¿Cuál es un ejemplo de evaluación para un curso de programación para principiantes?\nRespuesta: Puedes pedirles a los estudiantes que creen un programa que resuelva un problema específico, como calcular el área de un rectángulo.",
+      "Prompt: ¿Cuáles son algunos ejercicios y proyectos que se pueden incluir en un curso de programación para principiantes?\nRespuesta: Puedes incluir ejercicios como crear un programa que imprima los números del 1 al 10, o un proyecto como crear un juego de adivinanza."
+    ]
   },
   {
     "slug": "2026-07-18-imagenes-con-ia.html",
@@ -127,7 +188,12 @@
       "Prompt Engineering"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Genera una imagen de un paisaje montañoso con un lago en el centro, rodeado de árboles verdes y un cielo azul con nubes blancas.",
+      "Crea una imagen de un retrato de una persona sonriente con ojos azules y cabello rubio, vestida con un traje formal y sentada en una silla de cuero.",
+      "Genera una imagen de una ciudad futurista con rascacielos iluminados y coches voladores en el cielo, con un fondo de estrellas y galaxias."
+    ]
   },
   {
     "slug": "2026-07-18-asistente-personal.html",
@@ -140,7 +206,12 @@
       "Inteligencia Artificial"
     ],
     "readingTime": 10,
-    "category": "personal"
+    "category": "personal",
+    "prompts": [
+      "¿Cuáles son las tareas pendientes de hoy?",
+      "¿Cuál es el clima en la ciudad de Madrid?",
+      "¿Puedes recordarme mi cumpleaños?"
+    ]
   },
   {
     "slug": "2026-07-18-ia-para-seo.html",
@@ -153,7 +224,15 @@
       "posicionamiento"
     ],
     "readingTime": 5,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "¿Cuáles son las palabras clave más relevantes para un sitio web de moda?",
+      "¿Cuál es un título atractivo para un artículo sobre tendencias de moda para el verano?",
+      "¿Cuál es una metadescripción efectiva para un sitio web de viajes que ofrece paquetes a Europa?",
+      "¿Cuál es un resumen conciso de un artículo sobre el impacto del cambio climático en la salud humana?",
+      "¿Cuál es un análisis detallado de las tendencias actuales en el mercado de la tecnología?",
+      "¿Cuáles son algunas ideas innovadoras para un nuevo producto de tecnología que pueda revolucionar la forma en que vivimos y trabajamos?"
+    ]
   },
   {
     "slug": "2026-07-17-aprende-rapido.html",
@@ -166,7 +245,14 @@
       "Prompt Engineering"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Explica el teorema de Pitágoras y proporciona un ejemplo práctico de su aplicación.",
+      "Describe los eventos clave de la Revolución Francesa y su impacto en la historia de Europa.",
+      "Explique el proceso de fotosíntesis en las plantas y su importancia para el medio ambiente.",
+      "Ejemplo de un prompt específico: Explica cómo funciona el motor de un automóvil, incluyendo los componentes principales y su función en el proceso de combustión.",
+      "Otro ejemplo: Describe las diferencias entre el aprendizaje supervisado y no supervisado en el contexto del aprendizaje automático, y proporciona un ejemplo de cada caso."
+    ]
   },
   {
     "slug": "2026-07-17-aprende-10-veces-mas-rapido.html",
@@ -179,7 +265,12 @@
       "prompt engineering"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Explica los eventos clave de la Revolución Francesa y su impacto en la historia de Europa.",
+      "Describe la teoría de la relatividad de Einstein y cómo cambió nuestra comprensión del espacio y el tiempo.",
+      "Proporciona un tutorial básico sobre cómo empezar a programar en Python, incluyendo la instalación y los primeros pasos."
+    ]
   },
   {
     "slug": "2026-07-16-prompts-infalibles.html",
@@ -192,7 +283,12 @@
       "IA"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Escribe un artículo sobre la importancia del ejercicio físico para la salud. Incluye beneficios como la reducción del estrés y la mejora de la función cardíaca.",
+      "Describe los beneficios y desventajas de utilizar energía solar como fuente de energía renovable. Incluye estadísticas y ejemplos concretos.",
+      "Escribe un poema sobre la belleza de la naturaleza. La poesía debe incluir imágenes vívidas y un ritmo constante."
+    ]
   },
   {
     "slug": "2026-07-16-crea-un-curso-online.html",
@@ -205,7 +301,12 @@
       "educación en línea"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "¿Cuáles son los temas clave que debemos cubrir en un curso sobre marketing digital?",
+      "Escribe un texto de introducción para un curso sobre marketing digital que explique la importancia de esta disciplina en la actualidad.",
+      "¿Cuáles son los pasos clave para optimizar una página web para motores de búsqueda?"
+    ]
   },
   {
     "slug": "2026-07-16-aprende-10-veces-mas-rapido.html",
@@ -218,7 +319,13 @@
       "productividad"
     ],
     "readingTime": 5,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Explica el concepto de inteligencia artificial en 50 palabras o menos.",
+      "Describe los pasos para resolver una ecuación cuadrática.",
+      "Enumera las ventajas y desventajas de utilizar un framework de machine learning en un proyecto de desarrollo de software.",
+      "Ejemplo de prompt para aprender sobre el análisis de datos: \"Describe los pasos para realizar un análisis de regresión lineal utilizando el lenguaje de programación Python.\""
+    ]
   },
   {
     "slug": "2026-07-15-domina-chatgpt.html",
@@ -231,7 +338,12 @@
       "Productividad"
     ],
     "readingTime": 10,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "\"Escribe un correo electrónico a un cliente para informarle sobre un retraso en la entrega de un producto. Asegúrate de incluir una disculpa y una fecha de entrega estimada.\"",
+      "\"Resumen del informe de ventas del segundo trimestre. Asegúrate de incluir los puntos clave y las conclusiones.\"",
+      "\"Traduce el siguiente texto del inglés al español: 'The company will launch a new product next month.'\""
+    ]
   },
   {
     "slug": "2026-07-15-imagenes-con-ia.html",
@@ -244,7 +356,15 @@
       "Imágenes Generadas"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Genera una imagen de un atardecer en una playa tropical con palmeras y un cielo naranja",
+      "Crea una imagen de un reloj de pulsera de lujo con un brazalete de cuero marrón y una esfera blanca",
+      "Genera una imagen de una mujer sonriente con el cabello rubio y ojos azules, vestida con un traje de negocios",
+      "Genera una imagen de un edificio de oficinas moderno con una fachada de vidrio y acero",
+      "Crea una imagen de un coche deportivo rojo con llantas de aleación y un interior de cuero negro",
+      "Genera una imagen de un plato de sushi con salmón y aguacate, sobre un fondo de madera"
+    ]
   },
   {
     "slug": "2026-07-14-errores-comunes-en-prompts.html",
@@ -257,7 +377,15 @@
       "errores comunes"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Escribe un cuento sobre un personaje",
+      "Escribe un cuento sobre un personaje femenino que vive en la ciudad de Nueva York",
+      "¿Cuál es la capital de Francia?",
+      "París es una ciudad hermosa",
+      "¿Cuál es la capital de Francia en el contexto de la geografía europea?",
+      "Escribe un resumen de 200 palabras sobre el tema de la inteligencia artificial en el siglo XXI"
+    ]
   },
   {
     "slug": "2026-07-14-ia-para-seo.html",
@@ -270,7 +398,12 @@
       "IA"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "¿Cuáles son las tendencias actuales en el mercado de la moda?",
+      "Describa los beneficios del ejercicio físico regular para la salud",
+      "¿Cómo puedo mejorar mi presencia en las redes sociales?"
+    ]
   },
   {
     "slug": "2026-07-13-aprende-10-veces-mas-rapido.html",
@@ -283,7 +416,12 @@
       "prompt engineering"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Explica el concepto de inteligencia artificial y su aplicación en la industria.",
+      "Resuelve el siguiente problema de matemáticas: 2x + 5 = 11. ¿Cuál es el valor de x?",
+      "Analiza el siguiente texto y resume sus principales puntos: \"La inteligencia artificial es una rama de la informática que se enfoca en el desarrollo de algoritmos y modelos que permiten a las máquinas aprender y tomar decisiones de manera autónoma.\""
+    ]
   },
   {
     "slug": "2026-07-13-prompts-creativos.html",
@@ -296,7 +434,15 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Diseña un logotipo para una empresa de tecnología que se especialice en inteligencia artificial, con un estilo minimalista y colores que reflejen la innovación y la modernidad.",
+      "Crea un cartel para una campaña publicitaria de una marca de ropa deportiva, con un enfoque en la actividad física y el bienestar, utilizando imágenes de personas realizando deportes extremos.",
+      "Genera un folleto para una empresa de viajes que ofrezca paquetes turísticos a destinos exóticos, con un diseño que refleje la aventura y la exploración, y que incluya mapas y fotos de los lugares turísticos.",
+      "Diseña un paquete de identidad visual para una empresa de alimentos saludables, que incluya un logotipo, un cartel y un folleto, con un estilo que refleje la salud y el bienestar.",
+      "Genera un diseño de página web para una empresa de servicios de marketing, con un enfoque en la innovación y la tecnología, y que incluya secciones para servicios, portfolio y contacto.",
+      "Crea un diseño de redes sociales para una marca de ropa de moda, con un enfoque en la creatividad y la expresión personal, y que incluya publicaciones y stories que muestren la última tendencia en moda."
+    ]
   },
   {
     "slug": "2026-07-13-errores-comunes-al-escribir-prompts.html",
@@ -309,7 +455,13 @@
       "errores comunes"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Escribe un cuento sobre un perro que se llama Max.",
+      "Escribe un cuento infantil sobre un perro llamado Max que se pierde en el bosque.",
+      "¿Cuál es la capital de Francia?",
+      "¿Cuál es la capital de Francia en la actualidad, considerando los cambios políticos y geográficos que han ocurrido en el país en los últimos siglos?"
+    ]
   },
   {
     "slug": "2026-07-12-asistente-personal.html",
@@ -322,7 +474,15 @@
       "Inteligencia Artificial"
     ],
     "readingTime": 5,
-    "category": "personal"
+    "category": "personal",
+    "prompts": [
+      "Escribe un correo electrónico a un amigo para invitarlo a cenar:",
+      "¿Cuál es la mejor forma de aprender un nuevo idioma?",
+      "Genera un resumen de un artículo sobre inteligencia artificial:",
+      "Utiliza un tono formal o informal según la situación:",
+      "Ajusta el nivel de detalle en las respuestas:",
+      "Utiliza un lenguaje específico o jerga según el contexto:"
+    ]
   },
   {
     "slug": "2026-07-12-errores-comunes-en-prompts.html",
@@ -335,7 +495,15 @@
       "errores comunes"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Escribe un cuento sobre un personaje que viaja en el tiempo",
+      "Escribe un cuento sobre un joven científico que viaja en el tiempo a la época de los dinosaurios y descubre un mundo desconocido",
+      "Describe la relación entre la inteligencia artificial y la sociedad",
+      "Describe los beneficios y desafíos de implementar la inteligencia artificial en la sociedad actual, y proporciona ejemplos concretos de cómo puede impactar en la vida diaria de las personas",
+      "Escribe un artículo sobre la importancia de la educación, pero hazlo de manera divertida y anecdótica",
+      "Escribe un artículo sobre la importancia de la educación, utilizando un tono formal y serio, y proporciona estadísticas y ejemplos concretos para respaldar tus argumentos"
+    ]
   },
   {
     "slug": "2026-07-12-10-prompts-de-marketing.html",
@@ -348,7 +516,19 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "Escribe un informe sobre las tendencias actuales en el mercado de la moda sostenible.",
+      "Crea un guión para un video explicativo sobre los beneficios de la tecnología de inteligencia artificial en la industria de la salud.",
+      "Enumera las 10 palabras clave más relevantes para un sitio web de ventas de productos de belleza natural.",
+      "Crea un mensaje de publicación para Instagram que promocione un nuevo producto de moda sostenible.",
+      "Crea un correo electrónico de bienvenida para nuevos suscriptores que ofrezca un descuento en su primera compra.",
+      "Analiza la estrategia de marketing de una competencia en el mercado de la tecnología de inteligencia artificial.",
+      "Crea una persona para un negocio de ventas de productos de belleza natural que se dirija a mujeres de 25 a 45 años.",
+      "Crea una estrategia de marketing para un negocio de ventas de productos de tecnología que se dirija a jóvenes de 18 a 30 años.",
+      "Enumera las 5 métricas clave para medir el éxito de una campaña de marketing en redes sociales.",
+      "Crea un concepto para una campaña de marketing que combine la realidad aumentada y la sostenibilidad."
+    ]
   },
   {
     "slug": "2026-07-11-prompts-infalibles.html",
@@ -361,7 +541,14 @@
       "IA"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Genera un resumen de la historia de la ciencia desde la antigüedad hasta la actualidad, incluyendo los principales descubrimientos y figuras clave.",
+      "Genera un poema que describa la belleza de la naturaleza, incluyendo la descripción de un paisaje y la emoción que evoca.",
+      "Crea un diálogo entre un personaje optimista y un personaje pesimista sobre el futuro de la humanidad, incluyendo argumentos y contraargumentos.",
+      "Resumen el artículo de noticias sobre el último descubrimiento científico, incluyendo los detalles clave y las implicaciones.",
+      "Genera un resumen de la historia de la música desde la antigüedad hasta la actualidad, incluyendo los principales géneros y figuras clave, y proporciona ejemplos de cómo la música ha evolucionado con el tiempo."
+    ]
   },
   {
     "slug": "2026-07-11-automatiza-tu-negocio.html",
@@ -374,7 +561,12 @@
       "prompts"
     ],
     "readingTime": 5,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "Escribe un correo electrónico de bienvenida para un nuevo cliente: \"Hola {nombre}, gracias por unirse a nuestra comunidad. Estamos emocionados de tenerlo a bordo. Por favor, no dude en hacernos saber si necesita algo.\"",
+      "Genera un informe de ventas para el mes de enero: \"El total de ventas para enero fue de {monto}. El producto más vendido fue {producto} con {cantidad} unidades vendidas.\"",
+      "Crea un plan de marketing para un nuevo producto: \"El objetivo del plan de marketing es aumentar la conciencia del producto y generar leads. Las estrategias incluyen publicidad en redes sociales, correo electrónico y contenido de blog.\""
+    ]
   },
   {
     "slug": "2026-07-11-prompts-para-emails.html",
@@ -387,7 +579,12 @@
       "emails profesionales"
     ],
     "readingTime": 10,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "Ejemplo 1: Solicitar una reunión\"Escribe un email para solicitar una reunión con el director de ventas para discutir las oportunidades de crecimiento en el mercado latinoamericano\"",
+      "Ejemplo 2: Presentar un nuevo producto\"Escribe un email para presentar nuestro nuevo producto de software de gestión de proyectos y explicar sus beneficios y características\"",
+      "Ejemplo 3: Pedir una referencia\"Escribe un email para pedir a un cliente satisfecho que nos proporcione una referencia o testimonio sobre nuestros servicios\""
+    ]
   },
   {
     "slug": "2026-07-10-prompts-infalibles.html",
@@ -400,7 +597,15 @@
       "IA"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Genera un texto de 500 palabras sobre la historia de la ciencia ficción, incluyendo los autores y obras más influyentes del género.",
+      "Escribe un texto divertido y sarcástico sobre la vida de un estudiante universitario, incluyendo las situaciones más absurdas y divertidas que pueden ocurrir en un campus.",
+      "Describe el día 6 de junio de 1944, cuando las fuerzas aliadas desembarcaron en Normandía durante la Segunda Guerra Mundial, incluyendo los detalles sobre las tropas involucradas, las armas utilizadas y las bajas sufridas.",
+      "Escribe un poema de 12 versos sobre la belleza de la naturaleza, incluyendo la descripción de un paisaje montañoso y la sensación de paz que se siente al estar en la cima de una montaña.",
+      "Describe a un personaje de ficción que es un detective privado en la ciudad de Nueva York en la década de 1940, incluyendo su apariencia, su personalidad y sus habilidades como detective.",
+      "Escribe la letra de una canción de rock sobre la libertad y la rebelión, incluyendo la descripción de un joven que se siente atrapado en una sociedad opresiva y busca escapar."
+    ]
   },
   {
     "slug": "2026-07-09-imagenes-con-ia.html",
@@ -413,7 +618,12 @@
       "Prompt Engineering"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Un paisaje de montaña con un lago en el centro, rodeado de árboles y con un cielo nublado.",
+      "Una ciudad futurista con rascacielos y vehículos voladores, iluminada por luces neón.",
+      "Un retrato de una mujer sonriente con el cabello largo y oscuro, y un vestido rojo."
+    ]
   },
   {
     "slug": "2026-07-09-escribiendo-emails-profesionales.html",
@@ -426,7 +636,15 @@
       "Prompt Engineering"
     ],
     "readingTime": 10,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "Escribe un email de presentación para un nuevo cliente, incluyendo una breve descripción de la empresa y los servicios que ofrecemos.",
+      "Escribe un email de follow-up para un cliente que no ha respondido a un email anterior, incluyendo una recordatoria de la propuesta y una oferta para discutir los detalles.",
+      "Escribe un email de agradecimiento para un cliente que ha realizado una compra, incluyendo una expresión de gratitud y una oferta para brindar soporte adicional.",
+      "Escribe un email de solicitud de información para un proveedor, incluyendo una descripción de la información necesaria y una fecha límite para la respuesta.",
+      "Escribe un email de confirmación para un cliente que ha realizado una reserva, incluyendo los detalles de la reserva y una confirmación de la fecha y hora.",
+      "Escribe un email de disculpa para un cliente que ha experimentado un problema con un producto o servicio, incluyendo una explicación del problema y una oferta para solucionarlo."
+    ]
   },
   {
     "slug": "2026-07-08-aprende-10-veces-mas-rapido.html",
@@ -439,7 +657,15 @@
       "prompts"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Explica el teorema de Pitágoras y proporciona un ejemplo de cómo se aplica en la vida real.",
+      "Describe el proceso de fotosíntesis y explica cómo afecta el medio ambiente.",
+      "Relata la historia de la Revolución Francesa y analiza sus causas y consecuencias.",
+      "Análiza el estilo de escritura de un autor en particular y explica cómo se relaciona con el contexto histórico en el que escribió.",
+      "Describe la evolución del estilo artístico de un pintor o escultor a lo largo de su carrera y explica cómo se relaciona con los movimientos artísticos de su época.",
+      "Explica el funcionamiento de un algoritmo en particular y proporciona un ejemplo de cómo se aplica en la programación."
+    ]
   },
   {
     "slug": "2026-07-07-prompt-engineering.html",
@@ -452,7 +678,15 @@
       "Prompt Engineering"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "¿Cuál es la capital de Francia?",
+      "Describa la ciudad de París, incluyendo sus monumentos más famosos y su historia.",
+      "Escribe un artículo sobre la importancia del ejercicio físico para la salud.",
+      "Escribe un artículo de 500 palabras sobre la importancia del ejercicio físico para la salud, incluyendo estadísticas y ejemplos de cómo el ejercicio puede mejorar la calidad de vida.",
+      "Traduce el siguiente texto del español al inglés: \"La casa es azul\".",
+      "Traduce el siguiente texto del español al inglés, manteniendo el tono y el estilo formal: \"La casa es azul y tiene un jardín grande\"."
+    ]
   },
   {
     "slug": "2026-07-06-prompt-engineering.html",
@@ -465,7 +699,13 @@
       "Desarrollo de Software"
     ],
     "readingTime": 10,
-    "category": "programacion"
+    "category": "programacion",
+    "prompts": [
+      "Describe el producto XYZ, incluyendo sus características y beneficios.",
+      "Describe el proceso de implementación de un sistema de gestión de inventario en una empresa de manufactura, incluyendo los pasos necesarios y los recursos requeridos.",
+      "Explica la diferencia entre un sistema de gestión de bases de datos relacionales y un sistema de gestión de bases de datos NoSQL, incluyendo los beneficios y desventajas de cada uno.",
+      "Describe las mejores prácticas para implementar un sistema de autenticación y autorización en una aplicación web, incluyendo los protocolos y tecnologías recomendadas."
+    ]
   },
   {
     "slug": "2026-07-06-prompts-perfectos.html",
@@ -478,7 +718,12 @@
       "IA"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "¿Cuáles son las ventajas y desventajas de utilizar inteligencia artificial en la toma de decisiones?",
+      "Describe un escenario en el que un robot tenga que tomar una decisión ética. ¿Qué factores debería considerar el robot al tomar su decisión?",
+      "¿Cómo se puede utilizar el aprendizaje automático para mejorar la eficiencia en la industria manufacturera? Proporciona ejemplos concretos de aplicaciones y resultados."
+    ]
   },
   {
     "slug": "2026-07-06-escribe-emails-profesionales-con-ia.html",
@@ -491,7 +736,12 @@
       "Prompt Engineering"
     ],
     "readingTime": 5,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "Escribe un email de presentación para una reunión de negocios: \"Estimado [nombre], me gustaría concertar una reunión para discutir oportunidades de colaboración entre nuestras empresas. ¿Qué días y horas te vienen bien la próxima semana?\"",
+      "Redacta un email de agradecimiento por una entrevista de trabajo: \"Querido [nombre], quiero expresar mi más sincero agradecimiento por la oportunidad de entrevistarme para el puesto de [puesto]. Estoy ansioso por saber sobre el resultado y aprender de su experiencia.\"",
+      "Crea un email de seguimiento para una solicitud de información: \"Hola [nombre], espero que estés bien. Quería seguir con mi solicitud de [información o documento] que te pedí hace [tiempo]. ¿Podrías proporcionarme una actualización sobre el estado de mi petición?\""
+    ]
   },
   {
     "slug": "2026-07-05-ideas-de-negocio-con-ia.html",
@@ -504,7 +754,13 @@
       "Innovación"
     ],
     "readingTime": 5,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "prompt: \"Genera una lista de 10 ideas de negocio relacionadas con la salud y el bienestar\"",
+      "prompt: \"Genera una lista de 5 ideas de negocio relacionadas con la tecnología y la innovación\"",
+      "prompt: \"Desarrolla un plan de negocio para una empresa de comercio electrónico especializada en productos sostenibles\"",
+      "prompt: \"Identifica 3 oportunidades de negocio en el sector de la educación en línea\""
+    ]
   },
   {
     "slug": "2026-07-05-errores-comunes-en-prompts.html",
@@ -517,7 +773,15 @@
       "errores comunes"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Escribe un cuento sobre un personaje que viaja en el tiempo.",
+      "Escribe un cuento sobre un personaje que viaja en el tiempo a la época de los dinosaurios y debe encontrar una forma de regresar a su época.",
+      "¿Cuál es la capital de Francia?",
+      "Genera un texto sobre la historia de Francia durante la Revolución Francesa, incluyendo los eventos clave y los personajes importantes.",
+      "¿Cuál es la mejor forma de gobierno: democracia o dictadura?",
+      "Comparar y contrastar las ventajas y desventajas de la democracia y la dictadura como formas de gobierno."
+    ]
   },
   {
     "slug": "2026-07-05-aprende-10-veces-mas-rapido.html",
@@ -530,7 +794,15 @@
       "prompts"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Explica el concepto de inteligencia artificial de manera sencilla",
+      "Proporciona un resumen detallado de la historia de la ciencia",
+      "Describe los pasos para aprender un nuevo idioma de manera efectiva",
+      "Proporciona un ejemplo de cómo aplicar el concepto de inteligencia artificial en la industria de la salud",
+      "Explica la diferencia entre inteligencia artificial y aprendizaje automático",
+      "Describe los posibles riesgos y beneficios del uso de inteligencia artificial en la sociedad"
+    ]
   },
   {
     "slug": "2026-07-04-prompts-creativos.html",
@@ -543,7 +815,12 @@
       "prompts"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Diseña un logotipo para una empresa de tecnología que se especializa en la creación de realidad virtual. El logotipo debe incluir elementos que reflejen la innovación y la creatividad de la empresa.",
+      "Crear un póster para una campaña publicitaria de una marca de ropa sostenible. El póster debe incluir elementos que reflejen la conciencia medioambiental y la responsabilidad social de la marca.",
+      "Diseñar un empaque para un producto de cosméticos que se destaque en el mercado. El empaque debe incluir elementos que reflejen la calidad y la elegancia del producto."
+    ]
   },
   {
     "slug": "2026-07-04-ideas-de-negocio-con-ia.html",
@@ -556,7 +833,12 @@
       "emprendimiento"
     ],
     "readingTime": 5,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "¿Qué tipo de negocio puedo crear que combine mis habilidades en marketing digital con mi pasión por la sostenibilidad?",
+      "Genera una lista de 10 ideas de negocio que puedan ser rentables en la industria de la salud y el bienestar.",
+      "¿Cuáles son las tendencias actuales en el mercado de la tecnología y cómo puedo crear un negocio que se beneficie de ellas?"
+    ]
   },
   {
     "slug": "2026-07-04-aprende-10-veces-mas-rapido.html",
@@ -569,7 +851,15 @@
       "prompt engineering"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Explica el teorema de Pitágoras y proporciona un ejemplo de cómo se aplica en la vida real.",
+      "Describe el proceso de fotosíntesis y cómo afecta el medio ambiente.",
+      "Resume la Revolución Francesa y sus consecuencias en la sociedad europea.",
+      "Explica el concepto de inteligencia artificial y cómo se aplica en la industria del automóvil.",
+      "Describe el proceso de creación de un modelo de lenguaje y cómo se entrena.",
+      "Analiza el impacto de la globalización en la economía y la sociedad."
+    ]
   },
   {
     "slug": "2026-07-03-automatiza-tu-negocio.html",
@@ -582,7 +872,13 @@
       "automatización"
     ],
     "readingTime": 10,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "Describe las ventajas de la automatización en un negocio, incluyendo la reducción de costos y el aumento de la eficiencia.",
+      "Genera un informe mensual que resuma las ventas y los ingresos de la empresa, incluyendo gráficos y tablas para ilustrar los datos.",
+      "Crea un anuncio publicitario para un nuevo producto, incluyendo una descripción del producto, sus características y beneficios, y un llamado a la acción para que los clientes lo compren.",
+      "Responde a la pregunta \"¿Cuál es el proceso de devolución de un producto?\", incluyendo los pasos que el cliente debe seguir y los plazos para la devolución."
+    ]
   },
   {
     "slug": "2026-07-03-prompts-de-marketing.html",
@@ -595,7 +891,19 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "Escribe un informe sobre la estrategia de marketing de la competencia X, incluyendo sus puntos fuertes y débiles.",
+      "Escribe un artículo sobre los beneficios del uso de la inteligencia artificial en el marketing, incluyendo ejemplos y estadísticas.",
+      "Identifica las 10 palabras clave más relevantes para la industria del marketing digital y crea un plan de contenido para optimizarlas.",
+      "Análiza los datos de tráfico web de la empresa X y crea un informe sobre las tendencias y patrones de comportamiento de los visitantes.",
+      "Crea un perfil de cliente para la empresa X, incluyendo información demográfica, preferencias y comportamientos de compra.",
+      "Desarrolla una estrategia de marketing para la empresa X, incluyendo objetivos, metas y planes de acción para el próximo año.",
+      "Crea un guión para un video de marketing que muestre los beneficios del uso de la inteligencia artificial en el marketing.",
+      "Análiza los datos de engagement de la empresa X en las redes sociales y crea un informe sobre las tendencias y patrones de comportamiento de los seguidores.",
+      "Crea un email de marketing que muestre los beneficios del uso de la inteligencia artificial en el marketing, incluyendo un llamado a la acción.",
+      "Mide el éxito de la campaña de marketing de la empresa X, incluyendo métricas como el tráfico web, el engagement y las conversiones."
+    ]
   },
   {
     "slug": "2026-07-02-prompt-engineering.html",
@@ -608,7 +916,12 @@
       "Desarrollo de Software"
     ],
     "readingTime": 5,
-    "category": "programacion"
+    "category": "programacion",
+    "prompts": [
+      "¿Cuáles son las ventajas y desventajas de utilizar un framework de desarrollo de software como React?",
+      "Genera un ejemplo de código en Python que demuestre cómo utilizar la biblioteca de machine learning scikit-learn para clasificar datos.",
+      "Describe los pasos para implementar un algoritmo de búsqueda en un grafo utilizando el algoritmo de Dijkstra."
+    ]
   },
   {
     "slug": "2026-07-02-asistente-personal.html",
@@ -621,7 +934,16 @@
       "Inteligencia Artificial"
     ],
     "readingTime": 10,
-    "category": "personal"
+    "category": "personal",
+    "prompts": [
+      "¿Cuál es el clima en Madrid hoy?",
+      "Recuerda que tengo una reunión con Juan a las 10 am mañana",
+      "Proporciona una lista de 5 tareas para hoy",
+      "Pregunta: ¿Cuál es el significado de la vida?",
+      "Respuesta: El significado de la vida es un tema filosófico que ha sido debatido durante siglos. Algunas personas creen que el significado de la vida es encontrar la felicidad y la realización personal, mientras que otras creen que es cumplir con un propósito mayor.",
+      "Pregunta: ¿Cuál es el mejor restaurante en la ciudad?",
+      "Respuesta: Hay varios restaurantes excelentes en la ciudad. Algunos de los más populares son el Restaurante A, el Restaurante B y el Restaurante C. ¿Te gustaría saber más sobre alguno de ellos?"
+    ]
   },
   {
     "slug": "2026-07-01-automatiza-tu-negocio.html",
@@ -634,7 +956,12 @@
       "prompt engineering"
     ],
     "readingTime": 10,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "\"Escribe un artículo de 500 palabras sobre los beneficios de la meditación para la salud mental\"",
+      "\"¿Cuál es el horario de atención al cliente de nuestra empresa?\"",
+      "\"Resumen el contenido del artículo 'La importancia de la innovación en la industria tecnológica' en 100 palabras\""
+    ]
   },
   {
     "slug": "2026-07-01-ideas-denegocio-con-ia.html",
@@ -647,7 +974,12 @@
       "Innovación"
     ],
     "readingTime": 5,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "¿Cuáles son las tendencias actuales en el mercado de la tecnología y cómo puedo crear un negocio que se beneficie de ellas?",
+      "Diseña un negocio que ofrezca soluciones sostenibles para reducir el impacto ambiental de la industria de la moda.",
+      "¿Cómo puedo crear un negocio que ayude a las pequeñas empresas a aumentar su presencia en línea y mejorar su marketing digital?"
+    ]
   },
   {
     "slug": "2026-07-01-ia-para-seo.html",
@@ -660,7 +992,12 @@
       "Inteligencia Artificial"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "¿Cuáles son las palabras clave más relevantes para mi negocio de marketing digital en México?",
+      "Genera un artículo de 500 palabras sobre los beneficios del SEO para las pequeñas empresas.",
+      "Analiza mi sitio web y proporciona recomendaciones para mejorar la velocidad de carga y la experiencia del usuario."
+    ]
   },
   {
     "slug": "2026-06-30-contenido-viral.html",
@@ -673,7 +1010,12 @@
       "redes sociales"
     ],
     "readingTime": 5,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "\"Escribe una descripción para una foto de un atardecer en la playa, incluyendo las emociones que evoca y los colores predominantes.\"",
+      "\"Crea un tuit que compare la vida antes y después de la pandemia, utilizando un tono reflexivo y con un toque de humor.\"",
+      "\"Desarrolla una historia sobre cómo una persona superó una adversidad, destacando los pasos que dio y las lecciones aprendidas.\""
+    ]
   },
   {
     "slug": "2026-06-30-asistente-personal-con-chatgpt.html",
@@ -686,7 +1028,15 @@
       "Inteligencia Artificial"
     ],
     "readingTime": 10,
-    "category": "personal"
+    "category": "personal",
+    "prompts": [
+      "¿Cuál es el clima en Madrid hoy?",
+      "Recuerdame mi próxima cita con el dentista",
+      "¿Qué es lo más importante que debo hacer hoy?",
+      "¿Cuáles son mis próximas citas en el calendario de Google?",
+      "Envía un mensaje de texto a mi amigo para recordarle nuestra cita de esta noche",
+      "¿Cuál es el estado del tráfico en mi ruta al trabajo?"
+    ]
   },
   {
     "slug": "2026-06-30-ideas-de-negocio-con-ia.html",
@@ -699,7 +1049,12 @@
       "Innovación"
     ],
     "readingTime": 5,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "¿Cuáles son las tendencias actuales en el mercado de la tecnología y cómo puedo crear un producto o servicio que se adapte a esas tendencias?",
+      "Genera una lista de 10 ideas de negocio que puedan ser viables en un mercado con una población en constante crecimiento y una economía en expansión.",
+      "¿Cuáles son las oportunidades de negocio en el sector de la salud y el bienestar que pueden ser abordadas con soluciones basadas en IA?"
+    ]
   },
   {
     "slug": "2026-06-29-contenido-viral.html",
@@ -712,7 +1067,13 @@
       "redes sociales"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "Escribe un título para un artículo sobre la importancia del ejercicio físico para la salud mental, utilizando palabras clave como 'salud mental' y 'ejercicio físico' y asegurándote de que sea atractivo y llamativo.",
+      "Escribe un artículo de 500 palabras sobre los beneficios del meditar, incluyendo ejemplos de cómo la meditación puede mejorar la salud mental y física, y proporcionando consejos prácticos para empezar a meditar.",
+      "Crea una imagen que represente la felicidad, utilizando colores brillantes y una composición atractiva, y asegurándote de que sea adecuada para ser compartida en redes sociales.",
+      "Crea un anuncio publicitario para un nuevo producto de belleza, utilizando un lenguaje atractivo y llamativo, e incluyendo imágenes y videos que muestren los beneficios del producto. Asegúrate de que el anuncio sea adecuado para ser compartido en redes sociales y de que incluya un llamado a la acción claro y directo."
+    ]
   },
   {
     "slug": "2026-06-29-ia-para-seo.html",
@@ -725,7 +1086,15 @@
       "Inteligencia Artificial"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "¿Cuáles son las palabras clave más relevantes para mi negocio?",
+      "Genera un título atractivo para mi artículo sobre \"mejora del rendimiento\"",
+      "¿Cuál es el mejor enlace interno para incluir en mi artículo sobre \"estrategias de marketing\"?",
+      "Ejemplo de prompt para generar un resumen de un artículo: \"Resumen del artículo sobre \"inteligencia artificial para SEO\"\"",
+      "Ejemplo de prompt para generar un título atractivo: \"Título atractivo para el artículo sobre \"mejora del rendimiento\"\"",
+      "Ejemplo de prompt para generar un meta descripción: \"Meta descripción para el artículo sobre \"estrategias de marketing\"\""
+    ]
   },
   {
     "slug": "2026-06-29-ia-para-negocios.html",
@@ -738,7 +1107,12 @@
       "emprendimiento"
     ],
     "readingTime": 5,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "prompt = \"Genera 5 ideas de negocio para una empresa de tecnología que se enfoca en la seguridad cibernética\"",
+      "prompt = \"Genera 3 ideas de negocio para una empresa de tecnología que se enfoca en la visión artificial\"",
+      "prompt = \"Genera 2 ideas de negocio para una empresa de tecnología que se enfoca en la sostenibilidad ambiental\""
+    ]
   },
   {
     "slug": "2026-06-28-prompts-avanzados.html",
@@ -751,7 +1125,15 @@
       "redes sociales"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "\"Escribe un título que combine la palabra 'verano' con una emoción positiva, utilizando un máximo de 10 palabras\"",
+      "\"Enumera 5 beneficios del ejercicio físico regular, utilizando viñetas y un lenguaje accesible\"",
+      "\"Cuenta la historia de un personaje que supera una adversidad, utilizando un máximo de 200 palabras y un tono inspirador\"",
+      "\"Describe un lugar imaginario donde la tecnología y la naturaleza coexisten en armonía, utilizando un máximo de 150 palabras\"",
+      "\"Explica el concepto de sostenibilidad ambiental de manera que un niño de 10 años pueda entenderlo, utilizando un lenguaje claro y conciso\"",
+      "\"Crea un personaje que represente la resiliencia y la determinación, utilizando un máximo de 100 palabras y un tono motivador\""
+    ]
   },
   {
     "slug": "2026-06-28-ideas-de-negocio-con-ia.html",
@@ -764,7 +1146,12 @@
       "emprendimiento"
     ],
     "readingTime": 10,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "prompt = \"Identificar oportunidades de negocio en el sector de la salud que puedan ser atendidas con tecnologías de inteligencia artificial\"",
+      "prompt = \"Desarrollar un plan de negocio para un startup de tecnología que se enfocque en la creación de soluciones de IA para la industria de la logística\"",
+      "prompt = \"Crear un modelo de negocio para un servicio de entrega de comida a domicilio que utilice drones para la entrega\""
+    ]
   },
   {
     "slug": "2026-06-27-imagenes-perfectas-con-ia.html",
@@ -777,7 +1164,15 @@
       "Imágenes"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Genera una imagen de un atardecer en una playa tropical con palmeras y un cielo naranja",
+      "Crea una imagen de una mujer sonriente con el cabello castaño y ojos verdes, vestida con un traje de negocios",
+      "Genera una imagen de un edificio moderno con líneas limpias y ventanas grandes, rodeado de un jardín verde",
+      "Genera una imagen de un producto de cuidado personal con un fondo blanco y un texto que diga \"Limpieza y frescura para tu piel\"",
+      "Crea una imagen de un paisaje surrealista con colores vibrantes y formas geométricas",
+      "Genera una imagen de un personaje de ciencia ficción con un traje espacial y un fondo de estrellas y planetas"
+    ]
   },
   {
     "slug": "2026-06-27-ia-para-seo.html",
@@ -790,7 +1185,15 @@
       "posicionamiento"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "Escribe un artículo sobre los beneficios del ejercicio físico para la salud, incluyendo estadísticas y estudios recientes.",
+      "Crear un contenido de blog sobre las tendencias actuales en el mercado de la moda, incluyendo imágenes y enlaces a fuentes relevantes.",
+      "Desarrollar un guión para un video sobre la importancia de la educación en línea, incluyendo entrevistas con expertos y estadísticas sobre el impacto de la educación en la sociedad.",
+      "Escribe un artículo sobre la importancia de la seguridad en línea, incluyendo consejos y recomendaciones para proteger la privacidad y la seguridad de los usuarios.",
+      "Crear un contenido de video sobre las últimas tendencias en tecnología, incluyendo entrevistas con expertos y demostraciones de productos.",
+      "Desarrollar un guión para un podcast sobre la salud mental, incluyendo entrevistas con expertos y consejos para mejorar la salud mental."
+    ]
   },
   {
     "slug": "2026-06-26-asistente-personal.html",
@@ -803,7 +1206,16 @@
       "Asistente Personal"
     ],
     "readingTime": 10,
-    "category": "personal"
+    "category": "personal",
+    "prompts": [
+      "¿Cuál es la definición de inteligencia artificial?",
+      "Proporciona una lista de 5 libros recomendados sobre machine learning.",
+      "Explica el concepto de aprendizaje profundo y su aplicación en la industria.",
+      "Escribe una respuesta amigable y casual a la pregunta sobre la inteligencia artificial.",
+      "Proporciona una respuesta formal y técnica sobre el concepto de aprendizaje profundo.",
+      "Programa una cita con mi asistente el próximo miércoles a las 10 am.",
+      "Envía un correo electrónico a mi jefe con el informe de ventas del mes."
+    ]
   },
   {
     "slug": "2026-06-26-crea-un-curso-online.html",
@@ -816,7 +1228,13 @@
       "creación de contenido"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "¿Cuáles son los temas más populares para un curso online?",
+      "Crear un plan de estudios para un curso de marketing digital",
+      "Crear un texto de introducción para un curso de marketing digital",
+      "Crear un ejercicio de evaluación para un curso de programación"
+    ]
   },
   {
     "slug": "2026-06-25-errores-comunes-en-prompts.html",
@@ -829,7 +1247,16 @@
       "errores comunes"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Escribe un artículo sobre perros",
+      "Escribe un artículo de 500 palabras sobre la historia y el comportamiento de los perros pastor alemanes",
+      "Explica el concepto de inteligencia artificial",
+      "Explica el concepto de inteligencia artificial para un público no técnico, enfocándote en sus aplicaciones y beneficios",
+      "Escribe un artículo sobre gatos",
+      "Escribe un artículo de 1000 palabras sobre la historia, el comportamiento y las características de los gatos, incluyendo su evolución, su papel en la sociedad y su relación con los humanos, y proporciona ejemplos y estadísticas para respaldar tus argumentos",
+      "Escribe un artículo de 500 palabras sobre la historia y el comportamiento de los gatos, incluyendo su evolución y su relación con los humanos"
+    ]
   },
   {
     "slug": "2026-06-25-crea-un-curso-online-con-chatgpt.html",
@@ -842,7 +1269,13 @@
       "educación en línea"
     ],
     "readingTime": 5,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "¿Cuáles son las tendencias actuales en el campo de la educación en línea?",
+      "Crear un esquema para un curso de introducción a la programación en Python",
+      "Explicar el concepto de la concurrencia en la programación en Python",
+      "Crear un ejercicio de práctica para la concurrencia en la programación en Python"
+    ]
   },
   {
     "slug": "2026-06-25-prompts-para-emails.html",
@@ -855,7 +1288,13 @@
       "Prompt Engineering"
     ],
     "readingTime": 10,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "Escribe un email de presentación para un nuevo cliente, destacando los servicios que ofrece nuestra empresa y solicitando una reunión para discutir oportunidades de colaboración.",
+      "Genera un email de seguimiento para un cliente que ha estado en contacto con nuestra empresa, solicitando actualizaciones sobre el estado de su proyecto y ofreciendo apoyo adicional si es necesario.",
+      "Crea un email de agradecimiento para un cliente que ha realizado una compra en nuestra tienda en línea, expresando gratitud por su confianza en nuestra marca y ofreciendo un descuento para su próxima compra.",
+      "Genera un email de ventas para un cliente que ha estado en contacto con nuestra empresa, destacando los beneficios de nuestro producto y ofreciendo un descuento exclusivo para su primera compra. El email debe ser amigable y persuasivo, con un tono que refleje la personalidad de nuestra marca."
+    ]
   },
   {
     "slug": "2026-06-24-prompt-engineering.html",
@@ -868,7 +1307,12 @@
       "desarrollo"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "¿Cuáles son las principales diferencias entre un gato y un perro?",
+      "Describinge un escenario en el que un objeto inanimado cobra vida. ¿Cómo se siente el objeto al comenzar a moverse y a interactuar con su entorno?",
+      "Supongamos que eres un turista en una ciudad desconocida. ¿Cómo encontrarías el lugar más famoso de la ciudad sin utilizar un mapa ni preguntar a nadie?"
+    ]
   },
   {
     "slug": "2026-06-24-crea-un-curso-online.html",
@@ -881,7 +1325,12 @@
       "creación de contenido"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "¿Cuáles son los pasos clave para definir el objetivo de un curso online sobre programación para principiantes?",
+      "¿Cómo puedo diseñar un plan de estudios para un curso online de 5 módulos sobre introducción a la programación en Python?",
+      "¿Cómo puedo crear un video explicativo de 10 minutos sobre la sintaxis básica de Python para principiantes?"
+    ]
   },
   {
     "slug": "2026-06-24-errores-comunes-en-prompts.html",
@@ -894,7 +1343,15 @@
       "Escribir Prompts"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Escribe un cuento sobre un personaje que vive en un lugar lejano.",
+      "Escribe un cuento sobre un personaje que vive en una isla desierta en el Pacífico.",
+      "¿Quién es el autor de la novela?",
+      "¿Quién es el autor de la novela \"Don Quijote de la Mancha\"?",
+      "Me gustaria saber sobre el clima en Madrid",
+      "Me gustaría saber sobre el clima en Madrid."
+    ]
   },
   {
     "slug": "2026-06-23-automatiza-tu-negocio.html",
@@ -907,7 +1364,15 @@
       "Negocios"
     ],
     "readingTime": 5,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "Escribe un artículo de 500 palabras sobre los beneficios de la automatización en los negocios.",
+      "¿Cuál es el horario de atención al cliente de nuestra empresa?",
+      "Traduce el siguiente texto del español al inglés: 'La automatización es clave para el éxito de cualquier negocio'.",
+      "Ejemplo de prompt para generar un informe de ventas: 'Genera un informe de ventas para el mes de enero, incluyendo los productos más vendidos y las regiones con mayor demanda'.",
+      "Ejemplo de prompt para crear un contenido de marketing: 'Crea un artículo de blog sobre los beneficios de la automatización en la industria de la salud, incluyendo estadísticas y ejemplos reales'.",
+      "Ejemplo de prompt para responder a preguntas frecuentes: '¿Cuál es el proceso de devolución de productos en nuestra empresa?'."
+    ]
   },
   {
     "slug": "2026-06-23-prompts-para-expertos.html",
@@ -920,7 +1385,15 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "Escribe un título atractivo para un artículo sobre los beneficios del marketing de contenidos",
+      "Describe las características y beneficios de un nuevo smartphone",
+      "Por ejemplo, un modelo de lenguaje podría generar el siguiente correo electrónico: 'Estimado suscriptor, tenemos una oferta especial solo para ti. Utiliza el código DESC15 para obtener un 15% de descuento en tu próxima compra'.4. Prompts para Redes SocialesLas redes sociales son fundamentales para conectarse con la audiencia objetivo. Un prompt para redes sociales podría ser:<code=Escribe un mensaje para Facebook para promocionar un nuevo producto",
+      "Por ejemplo, un modelo de lenguaje podría generar el siguiente artículo: 'El marketing de influencia es una forma efectiva de llegar a la audiencia objetivo. Los influencers pueden promocionar productos y servicios de manera auténtica y convincente, lo que puede generar un aumento en las ventas y la visibilidad de la marca'.6. Prompts para ReseñasLas reseñas son fundamentales para generar confianza con los clientes. Un prompt para reseñas podría ser:<code=Escribe una reseña para un producto de electrónica",
+      "Por ejemplo, un modelo de lenguaje podría generar la siguiente respuesta: 'El marketing de contenidos ofrece varios beneficios, incluyendo el aumento de la visibilidad de la marca, la generación de leads y la creación de una comunidad de seguidores leales'.8. Prompts para Historias de ÉxitoLas historias de éxito son fundamentales para generar confianza con los clientes. Un prompt para historias de éxito podría ser:<code=Escribe una historia de éxito sobre un cliente que utilizó nuestro producto",
+      "Por ejemplo, un modelo de lenguaje podría generar el siguiente análisis: 'Nuestro producto es líder en el mercado, con una participación del 30%. Sin embargo, nuestros competidores están ganando terreno, por lo que debemos seguir innovando y mejorando nuestro producto para mantener nuestra posición en el mercado'.10. Prompts para PrediccionesLas predicciones son fundamentales para generar contenido de calidad. Un prompt para predicciones podría ser:<code=Predice las tendencias del marketing para el próximo año"
+    ]
   },
   {
     "slug": "2026-06-23-domina-chatgpt.html",
@@ -933,7 +1406,12 @@
       "Productividad"
     ],
     "readingTime": 5,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "Genera un resumen de 100 palabras del texto siguiente: \"La inteligencia artificial es un campo en constante evolución...\"",
+      "Traduce el texto siguiente del inglés al español: \"Hello, how are you?\"",
+      "Genera 5 ideas para un proyecto de marketing para un nuevo producto"
+    ]
   },
   {
     "slug": "2026-06-22-aprende-10-veces-mas-rapido.html",
@@ -946,7 +1424,15 @@
       "prompts"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "¿Cuáles son los principales conceptos de la teoría de la relatividad de Einstein?",
+      "Explica la diferencia entre la fotosíntesis y la respiración celular.",
+      "Desarrolla un plan de estudio para aprender a programar en Python en 3 meses.",
+      "¿Cuál es el impacto del cambio climático en la biodiversidad de los ecosistemas terrestres?",
+      "Desarrolla un plan de acción para reducir la contaminación del aire en las ciudades.",
+      "Explica la relación entre la salud mental y el bienestar físico."
+    ]
   },
   {
     "slug": "2026-06-22-prompts-infalibles.html",
@@ -959,7 +1445,15 @@
       "Escribir Prompts"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Escribe un relato corto sobre un viaje a la luna en el que se describen los paisajes y la emocionalidad del viaje.",
+      "Describe el proceso de creación de un producto de software, desde la concepción hasta la entrega.",
+      "Explica el fenómeno de la fotosíntesis y su importancia en el ecosistema.",
+      "Escribe una crítica del libro \"Don Quijote de la Mancha\" de Miguel de Cervantes, analizando su estructura, personajes y temas.",
+      "Escribe un informe sobre el impacto del cambio climático en la economía global, considerando los datos más recientes y las tendencias actuales.",
+      "Escribe algo sobre la historia."
+    ]
   },
   {
     "slug": "2026-06-22-domina-chatgpt.html",
@@ -972,7 +1466,14 @@
       "Productividad"
     ],
     "readingTime": 10,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "¿Cuáles son las mejores prácticas para escribir un correo electrónico efectivo?",
+      "Resumen el artículo \"La importancia de la innovación en la empresa\" en 200 palabras.",
+      "¿Cuáles son las ventajas y desventajas de utilizar una herramienta de gestión de proyectos en línea?",
+      "¿Cuáles son las tendencias actuales en la industria de la tecnología?",
+      "Resumen el informe \"La situación actual de la economía global\" en 300 palabras."
+    ]
   },
   {
     "slug": "2026-06-21-asistente-personal.html",
@@ -985,7 +1486,12 @@
       "asistente personal"
     ],
     "readingTime": 10,
-    "category": "personal"
+    "category": "personal",
+    "prompts": [
+      "¿Cuál es la definición de inteligencia artificial?",
+      "Proporciona un resumen de las noticias más recientes sobre tecnología.",
+      "¿Cuáles son los mejores consejos para mejorar la productividad en el trabajo?"
+    ]
   },
   {
     "slug": "2026-06-21-aprende-10-veces-mas-rapido.html",
@@ -998,7 +1504,12 @@
       "prompts"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Define el concepto de inteligencia artificial y proporciona un ejemplo de su aplicación en la industria.",
+      "Explica el proceso de fotosíntesis en plantas y describe su importancia en el ecosistema.",
+      "Describe las diferencias entre un sistema operativo de código abierto y uno propietario, y proporciona ejemplos de cada tipo."
+    ]
   },
   {
     "slug": "2026-06-21-errores-comunes-al-escribir-prompts.html",
@@ -1011,7 +1522,12 @@
       "errores comunes"
     ],
     "readingTime": 5,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Ejemplo de prompt claro: \"Escribe un artículo de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, incluyendo estadísticas y estudios recientes.\"",
+      "Ejemplo de prompt específico: \"Escribe un artículo de 300 palabras sobre la importancia de la educación formal en la sociedad actual, incluyendo estadísticas sobre la tasa de graduación y el impacto en la economía.\"",
+      "Ejemplo de prompt neutro: \"Escribe un artículo de 400 palabras sobre el impacto del cambio climático en la economía global, incluyendo perspectivas de expertos y estadísticas objetivas.\""
+    ]
   },
   {
     "slug": "2026-06-20-automatiza-tu-negocio.html",
@@ -1024,7 +1540,15 @@
       "Negocios"
     ],
     "readingTime": 10,
-    "category": "emprendimiento"
+    "category": "emprendimiento",
+    "prompts": [
+      "\"Escribe un artículo de 500 palabras sobre los beneficios de la automatización de negocios\"",
+      "\"¿Cuál es el proceso de solicitud de un crédito para pequeñas empresas?\"",
+      "\"Clasifica los siguientes productos en categorías: electrónica, ropa, hogar\"",
+      "\"Escribe un informe de ventas para el tercer trimestre\"",
+      "\"Clasifica los siguientes clientes en categorías: VIP, estándar, básico\"",
+      "\"Genera un plan de marketing para el lanzamiento de un nuevo producto\""
+    ]
   },
   {
     "slug": "2026-06-20-prompts-creativos.html",
@@ -1037,7 +1561,12 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Diseña un logotipo para una empresa de tecnología que se especializa en inteligencia artificial. El logotipo debe incluir un elemento que represente la inteligencia artificial y otro que represente la innovación.",
+      "Crea un cartel para una campaña publicitaria de una marca de ropa sostenible. El cartel debe incluir una imagen que muestre la importancia de la sostenibilidad en la moda y un eslogan que refleje el compromiso de la marca con el medio ambiente.",
+      "Desarrolla un folleto para una empresa de viajes que ofrece paquetes turísticos ecológicos. El folleto debe incluir información sobre los destinos turísticos, las actividades que se pueden realizar y los beneficios de elegir paquetes ecológicos."
+    ]
   },
   {
     "slug": "2026-06-19-domina-chatgpt.html",
@@ -1050,7 +1579,12 @@
       "Inteligencia Artificial"
     ],
     "readingTime": 10,
-    "category": "trabajo"
+    "category": "trabajo",
+    "prompts": [
+      "Resumen del texto: \"La inteligencia artificial es una rama de la informática que se enfoca en el desarrollo de sistemas capaces de realizar tareas que normalmente requieren la inteligencia humana, como la comprensión del lenguaje, el reconocimiento de patrones y la toma de decisiones.\"",
+      "Genera un artículo sobre los beneficios de la meditación para la salud mental.",
+      "Traduce el texto \"La inteligencia artificial es una rama de la informática\" al francés."
+    ]
   },
   {
     "slug": "2026-06-19-prompts-creativos.html",
@@ -1063,7 +1597,12 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "¿Cómo sería un mundo donde la tecnología y la naturaleza coexisten en armonía? Genera una descripción de este mundo y crea un concepto visual que lo represente.",
+      "Diseña un sistema de transporte público que combine la eficiencia y la sostenibilidad. ¿Cómo podrías integrar la tecnología para hacer que este sistema sea más accesible y atractivo para los usuarios?",
+      "Crea un personaje que represente la fusión de la creatividad y la innovación. ¿Cuáles serían sus características y habilidades? ¿Cómo podría este personaje inspirar a otros a pensar de manera creativa y encontrar soluciones innovadoras?"
+    ]
   },
   {
     "slug": "2026-06-18-crea-un-curso-online.html",
@@ -1076,7 +1615,15 @@
       "educación en línea"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "¿Cuáles son los objetivos de aprendizaje más importantes para un curso sobre [tema] dirigido a [público objetivo]?",
+      "¿Cuáles son los objetivos de aprendizaje más importantes para un curso sobre marketing digital dirigido a empresarios?",
+      "Crea un plan de estudios para un curso sobre [tema] que cubra los siguientes objetivos de aprendizaje: [lista de objetivos de aprendizaje]",
+      "Crea un plan de estudios para un curso sobre marketing digital que cubra los siguientes objetivos de aprendizaje: entender los fundamentos del marketing digital, aprender a crear una estrategia de marketing digital efectiva, conocer las herramientas y plataformas de marketing digital más comunes",
+      "Crea un texto sobre [tema] que cubra los siguientes puntos: [lista de puntos]",
+      "Crea un texto sobre la importancia del marketing digital que cubra los siguientes puntos: definición de marketing digital, beneficios del marketing digital, estadísticas sobre el marketing digital"
+    ]
   },
   {
     "slug": "2026-06-18-aprende-10-veces-mas-rapido.html",
@@ -1089,7 +1636,15 @@
       "prompts"
     ],
     "readingTime": 10,
-    "category": "estudio"
+    "category": "estudio",
+    "prompts": [
+      "Describe los eventos clave de la Revolución Francesa y sus principales figuras.",
+      "Explica el principio de superposición en la mecánica cuántica y proporciona ejemplos.",
+      "Define la inteligencia artificial y describe sus aplicaciones en la industria actual.",
+      "Explica cómo funciona el sistema circulatorio en el cuerpo humano.",
+      "Describe las diferencias clave entre el modelo de aprendizaje supervisado y no supervisado en inteligencia artificial.",
+      "Proporciona un ejemplo de cómo aplicar el teorema de Pitágoras en la vida real."
+    ]
   },
   {
     "slug": "2026-06-18-errores-comunes-en-prompts.html",
@@ -1102,7 +1657,12 @@
       "errores comunes"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "¿Cuáles son las ventajas y desventajas de utilizar la inteligencia artificial en la industria de la salud?",
+      "Describe los pasos para crear un modelo de lenguaje desde cero, incluyendo la recopilación de datos, el preprocesamiento y el entrenamiento.",
+      "¿Cuál es el impacto de la inteligencia artificial en la economía global? Proporciona estadísticas y ejemplos concretos para respaldar tu respuesta."
+    ]
   },
   {
     "slug": "2026-06-17-escribe-prompts-infalibles.html",
@@ -1115,7 +1675,12 @@
       "IA"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Ejemplo 1: ¿Cuáles son las ventajas y desventajas de utilizar inteligencia artificial en la toma de decisiones?",
+      "Ejemplo 2: Genera un resumen de 200 palabras sobre el tema de la sostenibilidad en la industria del transporte.",
+      "Ejemplo 3: ¿Cómo puedo mejorar mi habilidad para escribir prompts efectivos?"
+    ]
   },
   {
     "slug": "2026-06-17-crea-un-curso-online-con-chatgpt.html",
@@ -1128,7 +1693,12 @@
       "creación de contenido"
     ],
     "readingTime": 5,
-    "category": "marketing"
+    "category": "marketing",
+    "prompts": [
+      "Crear un plan de curso para un curso de introducción a la programación en Python para principiantes.",
+      "Escribe un capítulo sobre la sintaxis básica de Python, incluyendo ejemplos y ejercicios prácticos.",
+      "Crea un ejercicio de práctica sobre la creación de funciones en Python, que incluya 5 preguntas y respuestas."
+    ]
   },
   {
     "slug": "2026-06-17-asistente-personal.html",
@@ -1141,7 +1711,12 @@
       "Inteligencia Artificial"
     ],
     "readingTime": 10,
-    "category": "personal"
+    "category": "personal",
+    "prompts": [
+      "¿Cuál es el clima en Madrid hoy?",
+      "¿Puedes recomendarme un restaurante italiano en Barcelona?",
+      "¿Cuál es la definición de la palabra \"inteligencia artificial\"?"
+    ]
   },
   {
     "slug": "2026-06-16-prompts-creativos.html",
@@ -1154,7 +1729,12 @@
       "inteligencia artificial"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Diseña un empaque para un producto de alimentación saludable que se venderá en tiendas especializadas.",
+      "Crea un folleto informativo para una empresa de turismo que ofrece paquetes de viaje sostenibles.",
+      "Desarrolla un sitio web para una galería de arte que exhibe obras de artistas locales."
+    ]
   },
   {
     "slug": "2026-06-16-imagenes-con-ia.html",
@@ -1167,6 +1747,11 @@
       "Prompts"
     ],
     "readingTime": 10,
-    "category": "general"
+    "category": "general",
+    "prompts": [
+      "Un paisaje de montaña con un lago en el centro, rodeado de árboles y flores",
+      "Una ciudad futurista con rascacielos y vehículos voladores, iluminada por luces neón",
+      "Un retrato de una persona sonriendo, con ojos azules y cabello castaño"
+    ]
   }
 ]
