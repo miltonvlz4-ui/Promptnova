@@ -1,5 +1,96 @@
 [
   {
+    "slug": "2026-07-22-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Guía para dominar ChatGPT en tu trabajo diario y aumentar la productividad",
+    "date": "2026-07-22",
+    "tags": [
+      "ChatGPT",
+      "Inteligencia Artificial",
+      "Productividad"
+    ],
+    "readingTime": 5,
+    "category": "trabajo"
+  },
+  {
+    "slug": "2026-07-22-prompts-creativos.html",
+    "title": "Prompts creativos",
+    "description": "Descubre los prompts más creativos para diseñadores gráficos y potencia tu imaginación",
+    "date": "2026-07-22",
+    "tags": [
+      "diseño gráfico",
+      "prompt engineering",
+      "inteligencia artificial"
+    ],
+    "readingTime": 5,
+    "category": "general"
+  },
+  {
+    "slug": "2026-07-21-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo acelerar tu aprendizaje con prompts efectivos",
+    "date": "2026-07-21",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompt engineering"
+    ],
+    "readingTime": 10,
+    "category": "estudio"
+  },
+  {
+    "slug": "2026-07-21-prompts-creativos.html",
+    "title": "Prompts Creativos",
+    "description": "Descubre los mejores prompts para diseñadores gráficos",
+    "date": "2026-07-21",
+    "tags": [
+      "Diseño Gráfico",
+      "Inteligencia Artificial",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
+    "slug": "2026-07-21-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para desarrolladores",
+    "date": "2026-07-21",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
+    "slug": "2026-07-20-domina-chatgpt.html",
+    "title": "Domina ChatGPT",
+    "description": "Aprende a utilizar ChatGPT en tu trabajo diario con nuestra guía práctica",
+    "date": "2026-07-20",
+    "tags": [
+      "ChatGPT",
+      "Inteligencia Artificial",
+      "Productividad"
+    ],
+    "readingTime": 10,
+    "category": "trabajo"
+  },
+  {
+    "slug": "2026-07-19-prompt-engineering.html",
+    "title": "Prompt Engineering",
+    "description": "Aprende trucos de prompt engineering para developers",
+    "date": "2026-07-19",
+    "tags": [
+      "prompt engineering",
+      "inteligencia artificial",
+      "desarrollo"
+    ],
+    "readingTime": 10,
+    "category": "general"
+  },
+  {
     "slug": "2026-07-19-prompts-de-marketing.html",
     "title": "Prompts de Marketing",
     "description": "Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas",
@@ -1077,96 +1168,5 @@
     ],
     "readingTime": 10,
     "category": "general"
-  },
-  {
-    "slug": "2026-06-15-ia-para-seo.html",
-    "title": "IA para SEO",
-    "description": "Aprende a mejorar tu posicionamiento en buscadores con IA y prompts",
-    "date": "2026-06-15",
-    "tags": [
-      "IA",
-      "SEO",
-      "Prompt Engineering"
-    ],
-    "readingTime": 10,
-    "category": "marketing"
-  },
-  {
-    "slug": "2026-06-15-errores-comunes-en-prompts.html",
-    "title": "Errores comunes en prompts",
-    "description": "Evita errores comunes al escribir prompts para IA",
-    "date": "2026-06-15",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "errores comunes"
-    ],
-    "readingTime": 5,
-    "category": "general"
-  },
-  {
-    "slug": "2026-06-15-ideas-de-negocio-con-ia.html",
-    "title": "Ideas de negocio con IA",
-    "description": "Aprende a generar ideas de negocio en minutos con inteligencia artificial",
-    "date": "2026-06-15",
-    "tags": [
-      "Inteligencia Artificial",
-      "Ideas de Negocio",
-      "Emprendimiento"
-    ],
-    "readingTime": 5,
-    "category": "emprendimiento"
-  },
-  {
-    "slug": "2026-06-14-prompt-engineering.html",
-    "title": "Prompt Engineering",
-    "description": "Descubre trucos de prompt engineering para developers",
-    "date": "2026-06-14",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "desarrollo de software"
-    ],
-    "readingTime": 10,
-    "category": "programacion"
-  },
-  {
-    "slug": "2026-06-14-errores-comunes-en-prompts.html",
-    "title": "Errores comunes en prompts",
-    "description": "Evita errores comunes al escribir prompts para IA",
-    "date": "2026-06-14",
-    "tags": [
-      "IA",
-      "prompt engineering",
-      "errores comunes"
-    ],
-    "readingTime": 5,
-    "category": "general"
-  },
-  {
-    "slug": "2026-06-14-domina-chatgpt.html",
-    "title": "Domina ChatGPT",
-    "description": "Aprende a usar ChatGPT en tu trabajo diario",
-    "date": "2026-06-14",
-    "tags": [
-      "ChatGPT",
-      "Inteligencia Artificial",
-      "Productividad"
-    ],
-    "readingTime": 10,
-    "category": "trabajo"
-  },
-  {
-    "slug": "2026-06-13-crear-contenido-viral.html",
-    "title": "Crear Contenido Viral",
-    "description": "Aprende a crear contenido viral en redes sociales con prompts avanzados",
-    "date": "2026-06-13",
-    "tags": [
-      "contenidoviral",
-      "redessociales",
-      "promptengineering"
-    ],
-    "readingTime": 5,
-    "category": "marketing"
   }
 ]
