@@ -1,5 +1,26 @@
 [
   {
+    "slug": "2026-07-24-automatiza-tu-negocio.html",
+    "title": "Automatiza tu negocio",
+    "description": "Aprende a automatizar procesos con inteligencia artificial y prompts",
+    "date": "2026-07-24",
+    "tags": [
+      "Inteligencia Artificial",
+      "Automatización",
+      "Negocios"
+    ],
+    "readingTime": 10,
+    "category": "emprendimiento",
+    "prompts": [
+      "Genera un informe detallado sobre las ventas del mes pasado, incluyendo gráficos y estadísticas.",
+      "Responde a los correos electrónicos de los clientes con una plantilla personalizada que incluya su nombre y la respuesta a su consulta.",
+      "Analiza los datos de ventas de los últimos 6 meses y proporciona recomendaciones para mejorar las ventas en el futuro.",
+      "Genera un plan de marketing para el próximo trimestre.",
+      "Analiza los datos de ventas y proporciona recomendaciones para mejorar las ventas.",
+      "Responde a los correos electrónicos de los clientes con una plantilla personalizada."
+    ]
+  },
+  {
     "slug": "2026-07-24-asistente-personal.html",
     "title": "Asistente Personal",
     "description": "Crea un asistente personal con ChatGPT y prompts",
@@ -1742,24 +1763,6 @@
       "Explica cómo funciona el sistema circulatorio en el cuerpo humano.",
       "Describe las diferencias clave entre el modelo de aprendizaje supervisado y no supervisado en inteligencia artificial.",
       "Proporciona un ejemplo de cómo aplicar el teorema de Pitágoras en la vida real."
-    ]
-  },
-  {
-    "slug": "2026-06-18-errores-comunes-en-prompts.html",
-    "title": "Errores comunes en prompts",
-    "description": "Evita errores comunes al escribir prompts para IA. Aprende a mejorar tus resultados con ejemplos prácticos.",
-    "date": "2026-06-18",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "errores comunes"
-    ],
-    "readingTime": 10,
-    "category": "general",
-    "prompts": [
-      "¿Cuáles son las ventajas y desventajas de utilizar la inteligencia artificial en la industria de la salud?",
-      "Describe los pasos para crear un modelo de lenguaje desde cero, incluyendo la recopilación de datos, el preprocesamiento y el entrenamiento.",
-      "¿Cuál es el impacto de la inteligencia artificial en la economía global? Proporciona estadísticas y ejemplos concretos para respaldar tu respuesta."
     ]
   }
 ]
