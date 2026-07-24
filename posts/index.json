@@ -1,5 +1,25 @@
 [
   {
+    "slug": "2026-07-24-escribiendo-emails-profesionales.html",
+    "title": "Escribiendo Emails Profesionales",
+    "description": "Aprende a escribir emails profesionales con IA utilizando los mejores prompts",
+    "date": "2026-07-24",
+    "tags": [
+      "IA",
+      "Emails Profesionales",
+      "Prompt Engineering"
+    ],
+    "readingTime": 10,
+    "category": "trabajo",
+    "prompts": [
+      "Ejemplo 1: \"Escribe un email de presentación para un nuevo cliente, incluyendo una breve descripción de nuestra empresa y nuestros servicios.\"",
+      "Ejemplo 2: \"Redacta un email de seguimiento para un cliente que no ha respondido a nuestro mensaje anterior, incluyendo una oferta especial para incentivarlo a responder.\"",
+      "Ejemplo 3: \"Crea un email de agradecimiento para un cliente que ha realizado una compra en nuestra tienda en línea, incluyendo un cupón de descuento para su próxima compra.\"",
+      "Ejemplo 4: \"Escribe un email de respuesta a una queja de un cliente, incluyendo una disculpa y una solución para resolver el problema.\"",
+      "Ejemplo 5: \"Crea un email de promoción para un nuevo producto, incluyendo una descripción del producto y una oferta especial para los clientes que lo compren en los próximos 7 días.\""
+    ]
+  },
+  {
     "slug": "2026-07-24-automatiza-tu-negocio.html",
     "title": "Automatiza tu negocio",
     "description": "Aprende a automatizar procesos con inteligencia artificial y prompts",
@@ -1742,27 +1762,6 @@
       "Crea un plan de estudios para un curso sobre marketing digital que cubra los siguientes objetivos de aprendizaje: entender los fundamentos del marketing digital, aprender a crear una estrategia de marketing digital efectiva, conocer las herramientas y plataformas de marketing digital más comunes",
       "Crea un texto sobre [tema] que cubra los siguientes puntos: [lista de puntos]",
       "Crea un texto sobre la importancia del marketing digital que cubra los siguientes puntos: definición de marketing digital, beneficios del marketing digital, estadísticas sobre el marketing digital"
-    ]
-  },
-  {
-    "slug": "2026-06-18-aprende-10-veces-mas-rapido.html",
-    "title": "Aprende 10 veces más rápido",
-    "description": "Descubre cómo los prompts pueden acelerar tu aprendizaje",
-    "date": "2026-06-18",
-    "tags": [
-      "aprendizaje",
-      "inteligencia artificial",
-      "prompts"
-    ],
-    "readingTime": 10,
-    "category": "estudio",
-    "prompts": [
-      "Describe los eventos clave de la Revolución Francesa y sus principales figuras.",
-      "Explica el principio de superposición en la mecánica cuántica y proporciona ejemplos.",
-      "Define la inteligencia artificial y describe sus aplicaciones en la industria actual.",
-      "Explica cómo funciona el sistema circulatorio en el cuerpo humano.",
-      "Describe las diferencias clave entre el modelo de aprendizaje supervisado y no supervisado en inteligencia artificial.",
-      "Proporciona un ejemplo de cómo aplicar el teorema de Pitágoras en la vida real."
     ]
   }
 ]
