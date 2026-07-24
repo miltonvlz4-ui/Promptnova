@@ -493,7 +493,109 @@
     </div>
   </div>
 
-  <div class="prompts-grid" id="prompts-grid"></div>
+  <div class="prompts-grid" id="prompts-grid">
+    <div class="prompt-card" onclick="openModal(1)">
+      <div class="prompt-top">
+        <span class="prompt-badge badge-trabajo">💼 Trabajo</span>
+        <div class="prompt-actions" onclick="event.stopPropagation()">
+          <button class="btn-icon" onclick="copyPrompt(1,this)" aria-label="Copiar prompt" title="Copiar">📋</button>
+          <button class="btn-icon btn-fav " onclick="toggleFav(1,this)" aria-label="Marcar como favorito" title="Favorito">🤍</button>
+        </div>
+      </div>
+      <h3>Redacta un email profesional persuasivo</h3>
+      <p>Genera emails de trabajo formales, claros y con llamada a la acción.</p>
+      <div class="prompt-text">Actúa como un experto en comunicación corporativa. Redacta un email profesional para [destinatario/cargo] sobre [tema]. El tono debe ser [formal/amigable/urgente]. El objetivo es [objetivo específico]. Incluye: asunto impactante, saludo personalizado, desarrollo del tema en 2-3 párrafos cortos, llamada a la acción clara y cierre profesional. El email no debe superar las 200 palabras.</div>
+      <div class="prompt-footer">
+        <div class="prompt-tools"><span class="tool-pill">ChatGPT</span><span class="tool-pill">Claude</span></div>
+        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(1,this)">📋 Copiar</button>
+      </div>
+    </div>
+  
+    <div class="prompt-card" onclick="openModal(2)">
+      <div class="prompt-top">
+        <span class="prompt-badge badge-marketing">📣 Marketing</span>
+        <div class="prompt-actions" onclick="event.stopPropagation()">
+          <button class="btn-icon" onclick="copyPrompt(2,this)" aria-label="Copiar prompt" title="Copiar">📋</button>
+          <button class="btn-icon btn-fav " onclick="toggleFav(2,this)" aria-label="Marcar como favorito" title="Favorito">🤍</button>
+        </div>
+      </div>
+      <h3>Crea un post viral para Instagram</h3>
+      <p>Genera captions con gancho, emojis y hashtags estratégicos.</p>
+      <div class="prompt-text">Eres un experto en marketing digital y contenido viral. Crea 3 variantes de caption para Instagram sobre [tema del post]. Cada caption debe incluir: gancho en la primera línea (que detenga el scroll), desarrollo del mensaje en 3-4 líneas, llamada a la acción, emojis relevantes y 15 hashtags estratégicos (mezcla de populares, nicho y marca). El tono es [alegre/inspirador/educativo/provocador].</div>
+      <div class="prompt-footer">
+        <div class="prompt-tools"><span class="tool-pill">ChatGPT</span><span class="tool-pill">Gemini</span></div>
+        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(2,this)">📋 Copiar</button>
+      </div>
+    </div>
+  
+    <div class="prompt-card" onclick="openModal(3)">
+      <div class="prompt-top">
+        <span class="prompt-badge badge-programacion">💻 Programación</span>
+        <div class="prompt-actions" onclick="event.stopPropagation()">
+          <button class="btn-icon" onclick="copyPrompt(3,this)" aria-label="Copiar prompt" title="Copiar">📋</button>
+          <button class="btn-icon btn-fav " onclick="toggleFav(3,this)" aria-label="Marcar como favorito" title="Favorito">🤍</button>
+        </div>
+      </div>
+      <h3>Revisa y mejora mi código</h3>
+      <p>Analiza código, encuentra bugs y sugiere optimizaciones.</p>
+      <div class="prompt-text">Eres un senior developer con 10 años de experiencia. Analiza el siguiente código [PEGAR CÓDIGO]: 1) Identifica bugs o errores potenciales, 2) Sugiere optimizaciones de rendimiento, 3) Propón mejoras de legibilidad y buenas prácticas, 4) Indica si hay problemas de seguridad, 5) Reescribe las partes críticas con las mejoras aplicadas. Explica cada cambio con su justificación.</div>
+      <div class="prompt-footer">
+        <div class="prompt-tools"><span class="tool-pill">Claude</span><span class="tool-pill">ChatGPT</span></div>
+        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(3,this)">📋 Copiar</button>
+      </div>
+    </div>
+  
+    <div class="prompt-card" onclick="openModal(4)">
+      <div class="prompt-top">
+        <span class="prompt-badge badge-estudio">📚 Estudio</span>
+        <div class="prompt-actions" onclick="event.stopPropagation()">
+          <button class="btn-icon" onclick="copyPrompt(4,this)" aria-label="Copiar prompt" title="Copiar">📋</button>
+          <button class="btn-icon btn-fav " onclick="toggleFav(4,this)" aria-label="Marcar como favorito" title="Favorito">🤍</button>
+        </div>
+      </div>
+      <h3>Explícame este concepto como si tuviera 10 años</h3>
+      <p>Simplifica conceptos complejos usando analogías y ejemplos.</p>
+      <div class="prompt-text">Eres un profesor experto en [materia] con habilidad para enseñar a cualquier nivel. Explícame [concepto] usando: una analogía con algo de la vida cotidiana, un ejemplo práctico y visual, los 3 puntos clave que debo recordar, y una pregunta de comprensión para verificar que lo entendí. Usa lenguaje simple, sin jerga técnica innecesaria. Al final, dime cómo se aplica esto en el mundo real.</div>
+      <div class="prompt-footer">
+        <div class="prompt-tools"><span class="tool-pill">Claude</span><span class="tool-pill">ChatGPT</span><span class="tool-pill">Gemini</span></div>
+        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(4,this)">📋 Copiar</button>
+      </div>
+    </div>
+  
+    <div class="prompt-card" onclick="openModal(5)">
+      <div class="prompt-top">
+        <span class="prompt-badge badge-emprendimiento">🚀 Emprendimiento</span>
+        <div class="prompt-actions" onclick="event.stopPropagation()">
+          <button class="btn-icon" onclick="copyPrompt(5,this)" aria-label="Copiar prompt" title="Copiar">📋</button>
+          <button class="btn-icon btn-fav " onclick="toggleFav(5,this)" aria-label="Marcar como favorito" title="Favorito">🤍</button>
+        </div>
+      </div>
+      <h3>Valida tu idea de negocio en 5 minutos</h3>
+      <p>Análisis rápido de viabilidad y puntos críticos de tu idea.</p>
+      <div class="prompt-text">Actúa como un mentor de startups con experiencia en venture capital. Voy a describirte mi idea de negocio: [DESCRIBIR IDEA]. Por favor analiza: 1) Problema real que resuelve y tamaño del mercado, 2) Propuesta de valor única vs competidores, 3) Modelo de negocio y fuentes de ingresos potenciales, 4) Los 3 mayores riesgos y cómo mitigarlos, 5) Próximos 3 pasos concretos para validar la idea. Sé directo y honesto, incluso si el feedback es negativo.</div>
+      <div class="prompt-footer">
+        <div class="prompt-tools"><span class="tool-pill">ChatGPT</span><span class="tool-pill">Claude</span></div>
+        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(5,this)">📋 Copiar</button>
+      </div>
+    </div>
+  
+    <div class="prompt-card" onclick="openModal(6)">
+      <div class="prompt-top">
+        <span class="prompt-badge badge-personal">❤️ Personal</span>
+        <div class="prompt-actions" onclick="event.stopPropagation()">
+          <button class="btn-icon" onclick="copyPrompt(6,this)" aria-label="Copiar prompt" title="Copiar">📋</button>
+          <button class="btn-icon btn-fav " onclick="toggleFav(6,this)" aria-label="Marcar como favorito" title="Favorito">🤍</button>
+        </div>
+      </div>
+      <h3>Crea tu plan de desarrollo personal</h3>
+      <p>Plan estructurado de crecimiento personal adaptado a tus metas.</p>
+      <div class="prompt-text">Eres un coach de vida certificado. Ayúdame a crear un plan de desarrollo personal de 90 días. Mis metas son: [METAS]. Mis recursos disponibles son: [TIEMPO/DINERO/HABILIDADES]. Crea un plan que incluya: objetivos SMART semanales, hábitos diarios a implementar (máx. 3), métricas para medir el progreso, libros/recursos recomendados y un sistema de rendición de cuentas. Presenta el plan en formato de tabla semana a semana.</div>
+      <div class="prompt-footer">
+        <div class="prompt-tools"><span class="tool-pill">Claude</span><span class="tool-pill">ChatGPT</span></div>
+        <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(6,this)">📋 Copiar</button>
+      </div>
+    </div>
+  </div>
 
   <div class="pagination" id="pagination">
     <button class="page-btn" id="prev-btn" onclick="changePage(-1)" aria-label="Página anterior">←</button>
@@ -514,7 +616,97 @@
   <div class="blog-filter-wrap" id="blog-filter-wrap" role="group" aria-label="Filtrar artículos">
   </div>
 
-  <div class="blog-grid" id="blog-grid"></div>
+  <div class="blog-grid" id="blog-grid"><!-- BLOG_GRID_STATIC_START -->
+      <a href="./posts/2026-07-22-domina-chatgpt.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(124,111,247,0.3),rgba(168,156,255,0.1))">
+          🧠
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat-badge">💼 Trabajo</span>
+            <span class="blog-date">2026-07-22</span>
+          </div>
+          <h3>Domina ChatGPT</h3>
+          <p>Guía para dominar ChatGPT en tu trabajo diario y aumentar la productividad</p>
+          <span class="blog-read">Leer artículo →</span>
+        </div>
+      </a>
+    
+      <a href="./posts/2026-07-22-prompts-creativos.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(244,200,74,0.2),rgba(251,146,60,0.1))">
+          ⚡
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat-badge">🌐 General</span>
+            <span class="blog-date">2026-07-22</span>
+          </div>
+          <h3>Prompts creativos</h3>
+          <p>Descubre los prompts más creativos para diseñadores gráficos y potencia tu imaginación</p>
+          <span class="blog-read">Leer artículo →</span>
+        </div>
+      </a>
+    
+      <a href="./posts/2026-07-21-aprende-10-veces-mas-rapido.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(45,212,191,0.2),rgba(74,222,128,0.1))">
+          🎨
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat-badge">📚 Estudio</span>
+            <span class="blog-date">2026-07-21</span>
+          </div>
+          <h3>Aprende 10 veces más rápido</h3>
+          <p>Descubre cómo acelerar tu aprendizaje con prompts efectivos</p>
+          <span class="blog-read">Leer artículo →</span>
+        </div>
+      </a>
+    
+      <a href="./posts/2026-07-21-prompts-creativos.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(244,114,182,0.2),rgba(168,85,247,0.1))">
+          📊
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat-badge">🌐 General</span>
+            <span class="blog-date">2026-07-21</span>
+          </div>
+          <h3>Prompts Creativos</h3>
+          <p>Descubre los mejores prompts para diseñadores gráficos</p>
+          <span class="blog-read">Leer artículo →</span>
+        </div>
+      </a>
+    
+      <a href="./posts/2026-07-21-prompt-engineering.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(251,146,60,0.2),rgba(244,200,74,0.1))">
+          🔧
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat-badge">🌐 General</span>
+            <span class="blog-date">2026-07-21</span>
+          </div>
+          <h3>Prompt Engineering</h3>
+          <p>Aprende trucos de prompt engineering para desarrolladores</p>
+          <span class="blog-read">Leer artículo →</span>
+        </div>
+      </a>
+    
+      <a href="./posts/2026-07-20-domina-chatgpt.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(74,222,128,0.2),rgba(45,212,191,0.1))">
+          🎓
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat-badge">💼 Trabajo</span>
+            <span class="blog-date">2026-07-20</span>
+          </div>
+          <h3>Domina ChatGPT</h3>
+          <p>Aprende a utilizar ChatGPT en tu trabajo diario con nuestra guía práctica</p>
+          <span class="blog-read">Leer artículo →</span>
+        </div>
+      </a>
+    <!-- BLOG_GRID_STATIC_END --></div>
 </section>
 </main>
 
@@ -617,10 +809,17 @@ let filteredPrompts = [...PROMPTS];
 
 // Update category counts on the categories section
 function updateCategoryCounts() {
-  const cats = [...new Set(PROMPTS.map(p => p.cat))];
-  cats.forEach(cat => {
+  // Antes solo contaba los 12 prompts fijos (PROMPTS), por eso el número nunca
+  // cambiaba aunque el bot publicara posts nuevos cada día. Ahora suma también
+  // BLOG_POSTS (que sí crece con cada post generado), para que el contador
+  // refleje el contenido real disponible por categoría.
+  const allCats = [...new Set([...PROMPTS.map(p => p.cat), ...BLOG_POSTS.map(p => p.category)])];
+  allCats.forEach(cat => {
     const el = document.getElementById('count-' + cat);
-    if (el) el.textContent = PROMPTS.filter(p => p.cat === cat).length + ' prompts';
+    if (!el) return;
+    const promptCount = PROMPTS.filter(p => p.cat === cat).length;
+    const blogCount = BLOG_POSTS.filter(p => p.category === cat).length;
+    el.textContent = (promptCount + blogCount) + ' contenidos';
   });
 }
 
@@ -787,8 +986,14 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
 
+// ── BLOG_POSTS embebido (evita depender de un fetch() de red para el contenido inicial) ──
+// Se regenera automáticamente en cada post nuevo por scripts/generate-post.js.
+// BLOG_POSTS_START
+const BLOG_POSTS = [{"slug":"2026-07-22-domina-chatgpt.html","title":"Domina ChatGPT","description":"Guía para dominar ChatGPT en tu trabajo diario y aumentar la productividad","date":"2026-07-22","tags":["ChatGPT","Inteligencia Artificial","Productividad"],"readingTime":5,"category":"trabajo"},{"slug":"2026-07-22-prompts-creativos.html","title":"Prompts creativos","description":"Descubre los prompts más creativos para diseñadores gráficos y potencia tu imaginación","date":"2026-07-22","tags":["diseño gráfico","prompt engineering","inteligencia artificial"],"readingTime":5,"category":"general"},{"slug":"2026-07-21-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo acelerar tu aprendizaje con prompts efectivos","date":"2026-07-21","tags":["aprendizaje","inteligencia artificial","prompt engineering"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-21-prompts-creativos.html","title":"Prompts Creativos","description":"Descubre los mejores prompts para diseñadores gráficos","date":"2026-07-21","tags":["Diseño Gráfico","Inteligencia Artificial","Prompt Engineering"],"readingTime":10,"category":"general"},{"slug":"2026-07-21-prompt-engineering.html","title":"Prompt Engineering","description":"Aprende trucos de prompt engineering para desarrolladores","date":"2026-07-21","tags":["prompt engineering","inteligencia artificial","desarrollo"],"readingTime":10,"category":"general"},{"slug":"2026-07-20-domina-chatgpt.html","title":"Domina ChatGPT","description":"Aprende a utilizar ChatGPT en tu trabajo diario con nuestra guía práctica","date":"2026-07-20","tags":["ChatGPT","Inteligencia Artificial","Productividad"],"readingTime":10,"category":"trabajo"},{"slug":"2026-07-19-prompt-engineering.html","title":"Prompt Engineering","description":"Aprende trucos de prompt engineering para developers","date":"2026-07-19","tags":["prompt engineering","inteligencia artificial","desarrollo"],"readingTime":10,"category":"general"},{"slug":"2026-07-19-prompts-de-marketing.html","title":"Prompts de Marketing","description":"Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas","date":"2026-07-19","tags":["marketing","prompts","inteligencia artificial"],"readingTime":10,"category":"marketing"},{"slug":"2026-07-19-crea-un-curso-online.html","title":"Crea un curso online","description":"Aprende a crear un curso online desde cero con ChatGPT","date":"2026-07-19","tags":["ChatGPT","curso online","educación en línea"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-18-imagenes-con-ia.html","title":"Imágenes con IA","description":"Genera imágenes perfectas con IA utilizando prompts efectivos","date":"2026-07-18","tags":["IA","Imágenes","Prompt Engineering"],"readingTime":10,"category":"general"},{"slug":"2026-07-18-asistente-personal.html","title":"Asistente Personal","description":"Construye un asistente personal con ChatGPT y prompts","date":"2026-07-18","tags":["ChatGPT","Asistente Personal","Inteligencia Artificial"],"readingTime":10,"category":"personal"},{"slug":"2026-07-18-ia-para-seo.html","title":"IA para SEO","description":"Aprende a utilizar la inteligencia artificial para mejorar tu posicionamiento en buscadores","date":"2026-07-18","tags":["IA","SEO","posicionamiento"],"readingTime":5,"category":"marketing"},{"slug":"2026-07-17-aprende-rapido.html","title":"Aprende Rápido","description":"Aprende cualquier cosa 10 veces más rápido con prompts","date":"2026-07-17","tags":["Inteligencia Artificial","Aprendizaje","Prompt Engineering"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-17-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre técnicas para aprender cualquier cosa de manera eficiente con prompts","date":"2026-07-17","tags":["aprendizaje","inteligencia artificial","prompt engineering"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-16-prompts-infalibles.html","title":"Prompts infalibles","description":"Aprende a escribir prompts efectivos para inteligencia artificial","date":"2026-07-16","tags":["prompt engineering","inteligencia artificial","IA"],"readingTime":10,"category":"general"},{"slug":"2026-07-16-crea-un-curso-online.html","title":"Crea un curso online","description":"Aprende a crear un curso online desde cero con ChatGPT","date":"2026-07-16","tags":["ChatGPT","curso online","educación en línea"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-16-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo los prompts pueden acelerar tu aprendizaje","date":"2026-07-16","tags":["aprendizaje","inteligencia artificial","productividad"],"readingTime":5,"category":"estudio"},{"slug":"2026-07-15-domina-chatgpt.html","title":"Domina ChatGPT","description":"Aprende a utilizar ChatGPT en tu trabajo diario con nuestra guía práctica","date":"2026-07-15","tags":["ChatGPT","Inteligencia Artificial","Productividad"],"readingTime":10,"category":"trabajo"},{"slug":"2026-07-15-imagenes-con-ia.html","title":"Imágenes con IA","description":"Descubre cómo crear imágenes perfectas con IA utilizando prompts efectivos","date":"2026-07-15","tags":["IA","Inteligencia Artificial","Imágenes Generadas"],"readingTime":10,"category":"general"},{"slug":"2026-07-14-errores-comunes-en-prompts.html","title":"Errores comunes en prompts","description":"Evita errores comunes al escribir prompts para IA y mejora tus resultados","date":"2026-07-14","tags":["prompt engineering","inteligencia artificial","errores comunes"],"readingTime":5,"category":"general"},{"slug":"2026-07-14-ia-para-seo.html","title":"IA para SEO","description":"Descubre cómo la inteligencia artificial puede mejorar tu posicionamiento en buscadores","date":"2026-07-14","tags":["SEO","Inteligencia Artificial","IA"],"readingTime":10,"category":"marketing"},{"slug":"2026-07-13-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo aprender cualquier cosa de manera eficiente con prompts","date":"2026-07-13","tags":["aprendizaje","inteligencia artificial","prompt engineering"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-13-prompts-creativos.html","title":"Prompts creativos","description":"Descubre los prompts más creativos para diseñadores gráficos","date":"2026-07-13","tags":["diseño gráfico","prompts","inteligencia artificial"],"readingTime":10,"category":"general"},{"slug":"2026-07-13-errores-comunes-al-escribir-prompts.html","title":"Errores comunes al escribir prompts","description":"Aprende a evitar errores comunes al escribir prompts para IA","date":"2026-07-13","tags":["prompt engineering","inteligencia artificial","errores comunes"],"readingTime":5,"category":"general"},{"slug":"2026-07-12-asistente-personal.html","title":"Asistente Personal","description":"Construye tu asistente personal con ChatGPT y prompts","date":"2026-07-12","tags":["ChatGPT","Asistente Personal","Inteligencia Artificial"],"readingTime":5,"category":"personal"},{"slug":"2026-07-12-errores-comunes-en-prompts.html","title":"Errores comunes en prompts","description":"Aprende a evitar errores comunes al escribir prompts para IA","date":"2026-07-12","tags":["prompt engineering","inteligencia artificial","errores comunes"],"readingTime":5,"category":"general"},{"slug":"2026-07-12-10-prompts-de-marketing.html","title":"10 Prompts de Marketing","description":"Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas","date":"2026-07-12","tags":["marketing","prompts","inteligencia artificial"],"readingTime":10,"category":"marketing"},{"slug":"2026-07-11-prompts-infalibles.html","title":"Prompts infalibles","description":"Aprende a escribir prompts efectivos para inteligencia artificial","date":"2026-07-11","tags":["prompt engineering","inteligencia artificial","IA"],"readingTime":5,"category":"general"},{"slug":"2026-07-11-automatiza-tu-negocio.html","title":"Automatiza tu negocio","description":"Aprende a automatizar tu negocio con prompts inteligentes y IA","date":"2026-07-11","tags":["automatización","inteligencia artificial","prompts"],"readingTime":5,"category":"emprendimiento"},{"slug":"2026-07-11-prompts-para-emails.html","title":"Prompts para Emails","description":"Aprende a escribir emails profesionales con IA y promts efectivos","date":"2026-07-11","tags":["IA","prompts","emails profesionales"],"readingTime":10,"category":"trabajo"},{"slug":"2026-07-10-prompts-infalibles.html","title":"Prompts infalibles","description":"Aprende a escribir prompts efectivos para IA con ejemplos prácticos","date":"2026-07-10","tags":["prompt engineering","inteligencia artificial","IA"],"readingTime":5,"category":"general"},{"slug":"2026-07-09-imagenes-con-ia.html","title":"Imágenes con IA","description":"Descubre cómo generar imágenes perfectas con IA usando prompts","date":"2026-07-09","tags":["IA","Imágenes","Prompt Engineering"],"readingTime":10,"category":"general"},{"slug":"2026-07-09-escribiendo-emails-profesionales.html","title":"Escribiendo Emails Profesionales","description":"Aprende a escribir emails profesionales con IA utilizando los mejores prompts","date":"2026-07-09","tags":["IA","Emails Profesionales","Prompt Engineering"],"readingTime":10,"category":"trabajo"},{"slug":"2026-07-08-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo los prompts pueden acelerar tu aprendizaje en cualquier tema","date":"2026-07-08","tags":["aprendizaje","inteligencia artificial","prompts"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-07-prompt-engineering.html","title":"Prompt Engineering","description":"Descubre trucos para desarrolladores en prompt engineering","date":"2026-07-07","tags":["Inteligencia Artificial","Desarrollo","Prompt Engineering"],"readingTime":10,"category":"general"},{"slug":"2026-07-06-prompt-engineering.html","title":"Prompt Engineering","description":"Aprende trucos de prompt engineering para developers","date":"2026-07-06","tags":["Inteligencia Artificial","Prompt Engineering","Desarrollo de Software"],"readingTime":10,"category":"programacion"},{"slug":"2026-07-06-prompts-perfectos.html","title":"Prompts Perfectos","description":"Aprende a escribir prompts efectivos para IA","date":"2026-07-06","tags":["prompt engineering","inteligencia artificial","IA"],"readingTime":10,"category":"general"},{"slug":"2026-07-06-escribe-emails-profesionales-con-ia.html","title":"Escribe emails profesionales con IA","description":"Aprende a escribir emails profesionales con inteligencia artificial y los mejores prompts para hacerlo","date":"2026-07-06","tags":["IA","Emails Profesionales","Prompt Engineering"],"readingTime":5,"category":"trabajo"},{"slug":"2026-07-05-ideas-de-negocio-con-ia.html","title":"Ideas de Negocio con IA","description":"Aprende a generar ideas de negocio en minutos con Inteligencia Artificial","date":"2026-07-05","tags":["Inteligencia Artificial","Ideas de Negocio","Innovación"],"readingTime":5,"category":"emprendimiento"},{"slug":"2026-07-05-errores-comunes-en-prompts.html","title":"Errores comunes en prompts","description":"Aprende a evitar errores comunes al escribir prompts para IA","date":"2026-07-05","tags":["prompt engineering","inteligencia artificial","errores comunes"],"readingTime":5,"category":"general"},{"slug":"2026-07-05-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo aprender cualquier cosa de manera rápida y efectiva con prompts","date":"2026-07-05","tags":["aprendizaje","inteligencia artificial","prompts"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-04-prompts-creativos.html","title":"Prompts Creativos","description":"Descubre los prompts más creativos para diseñadores gráficos","date":"2026-07-04","tags":["diseño gráfico","inteligencia artificial","prompts"],"readingTime":10,"category":"general"},{"slug":"2026-07-04-ideas-de-negocio-con-ia.html","title":"Ideas de negocio con IA","description":"Aprende a generar ideas de negocio en minutos con inteligencia artificial","date":"2026-07-04","tags":["inteligencia artificial","ideas de negocio","emprendimiento"],"readingTime":5,"category":"emprendimiento"},{"slug":"2026-07-04-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo aprender cualquier cosa de manera rápida y eficiente con prompts","date":"2026-07-04","tags":["aprendizaje","inteligencia artificial","prompt engineering"],"readingTime":10,"category":"estudio"},{"slug":"2026-07-03-automatiza-tu-negocio.html","title":"Automatiza tu negocio","description":"Aprende a automatizar procesos con prompts inteligentes","date":"2026-07-03","tags":["prompt engineering","inteligencia artificial","automatización"],"readingTime":10,"category":"emprendimiento"},{"slug":"2026-07-03-prompts-de-marketing.html","title":"Prompts de marketing","description":"Descubre los 10 prompts más usados por expertos en marketing para mejorar tus campañas","date":"2026-07-03","tags":["marketing","prompts","inteligencia artificial"],"readingTime":10,"category":"marketing"},{"slug":"2026-07-02-prompt-engineering.html","title":"Prompt Engineering","description":"Descubre trucos de prompt engineering para developers","date":"2026-07-02","tags":["Inteligencia Artificial","Prompt Engineering","Desarrollo de Software"],"readingTime":5,"category":"programacion"},{"slug":"2026-07-02-asistente-personal.html","title":"Asistente Personal","description":"Construye un asistente personal con ChatGPT y prompts","date":"2026-07-02","tags":["ChatGPT","Asistente Personal","Inteligencia Artificial"],"readingTime":10,"category":"personal"},{"slug":"2026-07-01-automatiza-tu-negocio.html","title":"Automatiza tu negocio","description":"Aprende a automatizar tu negocio con prompts inteligentes y IA","date":"2026-07-01","tags":["automatización","inteligencia artificial","prompt engineering"],"readingTime":10,"category":"emprendimiento"},{"slug":"2026-07-01-ideas-denegocio-con-ia.html","title":"Ideas deNegocio con IA","description":"Aprende a generar ideas de negocio con inteligencia artificial en minutos","date":"2026-07-01","tags":["IA","Negocios","Innovación"],"readingTime":5,"category":"emprendimiento"},{"slug":"2026-07-01-ia-para-seo.html","title":"IA para SEO","description":"Aprende a utilizar la inteligencia artificial para mejorar tu posición en buscadores","date":"2026-07-01","tags":["IA","SEO","Inteligencia Artificial"],"readingTime":10,"category":"marketing"},{"slug":"2026-06-30-contenido-viral.html","title":"Contenido Viral","description":"Crea contenido viral en redes sociales con prompts avanzados","date":"2026-06-30","tags":["prompts","contenido viral","redes sociales"],"readingTime":5,"category":"marketing"},{"slug":"2026-06-30-asistente-personal-con-chatgpt.html","title":"Asistente Personal con ChatGPT","description":"Construye un asistente personal con ChatGPT y prompts para aumentar tu productividad","date":"2026-06-30","tags":["ChatGPT","Asistente Personal","Inteligencia Artificial"],"readingTime":10,"category":"personal"},{"slug":"2026-06-30-ideas-de-negocio-con-ia.html","title":"Ideas de Negocio con IA","description":"Aprende a generar ideas de negocio en minutos con inteligencia artificial","date":"2026-06-30","tags":["IA","Negocios","Innovación"],"readingTime":5,"category":"emprendimiento"},{"slug":"2026-06-29-contenido-viral.html","title":"Contenido Viral","description":"Aprende a crear contenido viral con prompts avanzados","date":"2026-06-29","tags":["contenido viral","prompts avanzados","redes sociales"],"readingTime":10,"category":"marketing"},{"slug":"2026-06-29-ia-para-seo.html","title":"IA para SEO","description":"Aprende a utilizar la inteligencia artificial para mejorar el posicionamiento de tu contenido en los motores de búsqueda","date":"2026-06-29","tags":["IA","SEO","Inteligencia Artificial"],"readingTime":10,"category":"marketing"},{"slug":"2026-06-29-ia-para-negocios.html","title":"IA para negocios","description":"Aprende a generar ideas de negocio con inteligencia artificial","date":"2026-06-29","tags":["IA","negocios","emprendimiento"],"readingTime":5,"category":"emprendimiento"},{"slug":"2026-06-28-prompts-avanzados.html","title":"Prompts Avanzados","description":"Crea contenido viral con prompts avanzados en redes sociales","date":"2026-06-28","tags":["prompts","contenido viral","redes sociales"],"readingTime":10,"category":"marketing"},{"slug":"2026-06-28-ideas-de-negocio-con-ia.html","title":"Ideas de Negocio con IA","description":"Aprende a generar ideas de negocio con inteligencia artificial en minutos","date":"2026-06-28","tags":["inteligencia artificial","negocios","emprendimiento"],"readingTime":10,"category":"emprendimiento"},{"slug":"2026-06-27-imagenes-perfectas-con-ia.html","title":"Imágenes Perfectas con IA","description":"Descubre cómo crear imágenes perfectas con IA utilizando prompts","date":"2026-06-27","tags":["IA","Inteligencia Artificial","Imágenes"],"readingTime":10,"category":"general"},{"slug":"2026-06-27-ia-para-seo.html","title":"IA para SEO","description":"Mejora tu posicionamiento con prompts de IA","date":"2026-06-27","tags":["IA","SEO","posicionamiento"],"readingTime":10,"category":"marketing"},{"slug":"2026-06-26-asistente-personal.html","title":"Asistente Personal","description":"Construye un asistente personal con ChatGPT y prompts","date":"2026-06-26","tags":["ChatGPT","Inteligencia Artificial","Asistente Personal"],"readingTime":10,"category":"personal"},{"slug":"2026-06-26-crea-un-curso-online.html","title":"Crea un curso online","description":"Aprende a crear un curso online desde cero con ChatGPT","date":"2026-06-26","tags":["ChatGPT","curso online","creación de contenido"],"readingTime":10,"category":"marketing"},{"slug":"2026-06-25-errores-comunes-en-prompts.html","title":"Errores comunes en prompts","description":"Evita errores al escribir prompts para IA y mejora tus resultados","date":"2026-06-25","tags":["prompt engineering","inteligencia artificial","errores comunes"],"readingTime":5,"category":"general"},{"slug":"2026-06-25-crea-un-curso-online-con-chatgpt.html","title":"Crea un curso online con ChatGPT","description":"Aprende a crear un curso online desde cero con ChatGPT","date":"2026-06-25","tags":["ChatGPT","curso online","educación en línea"],"readingTime":5,"category":"estudio"},{"slug":"2026-06-25-prompts-para-emails.html","title":"Prompts para Emails","description":"Descubre los mejores prompts para escribir emails profesionales con IA","date":"2026-06-25","tags":["IA","Emails Profesionales","Prompt Engineering"],"readingTime":10,"category":"trabajo"},{"slug":"2026-06-24-prompt-engineering.html","title":"Prompt Engineering","description":"Aprende trucos de prompt engineering para desarrolladores","date":"2026-06-24","tags":["prompt engineering","inteligencia artificial","desarrollo"],"readingTime":10,"category":"general"},{"slug":"2026-06-24-crea-un-curso-online.html","title":"Crea un curso online","description":"Aprende a crear un curso online con ChatGPT desde cero","date":"2026-06-24","tags":["ChatGPT","curso online","creación de contenido"],"readingTime":10,"category":"marketing"},{"slug":"2026-06-24-errores-comunes-en-prompts.html","title":"Errores comunes en prompts","description":"Aprende a evitar errores al escribir prompts para IA","date":"2026-06-24","tags":["Inteligencia Artificial","Prompt Engineering","Escribir Prompts"],"readingTime":5,"category":"general"},{"slug":"2026-06-23-automatiza-tu-negocio.html","title":"Automatiza tu negocio","description":"Aprende a automatizar tu negocio con prompts inteligentes y IA","date":"2026-06-23","tags":["Inteligencia Artificial","Automatización","Negocios"],"readingTime":5,"category":"emprendimiento"},{"slug":"2026-06-23-prompts-para-expertos.html","title":"Prompts para Expertos","description":"Descubre los 10 prompts más usados por expertos en marketing para impulsar tus campañas","date":"2026-06-23","tags":["marketing","prompts","inteligencia artificial"],"readingTime":10,"category":"marketing"},{"slug":"2026-06-23-domina-chatgpt.html","title":"Domina ChatGPT","description":"Aprende a utilizar ChatGPT en tu trabajo diario con nuestra guía práctica","date":"2026-06-23","tags":["ChatGPT","Inteligencia Artificial","Productividad"],"readingTime":5,"category":"trabajo"},{"slug":"2026-06-22-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo aprender cualquier cosa de manera efectiva con prompts","date":"2026-06-22","tags":["aprendizaje","inteligencia artificial","prompts"],"readingTime":10,"category":"estudio"},{"slug":"2026-06-22-prompts-infalibles.html","title":"Prompts infalibles","description":"Aprende a escribir prompts efectivos para IA con ejemplos prácticos","date":"2026-06-22","tags":["Inteligencia Artificial","Prompt Engineering","Escribir Prompts"],"readingTime":5,"category":"general"},{"slug":"2026-06-22-domina-chatgpt.html","title":"Domina ChatGPT","description":"Aprende a utilizar ChatGPT en tu trabajo diario de manera efectiva","date":"2026-06-22","tags":["ChatGPT","Inteligencia Artificial","Productividad"],"readingTime":10,"category":"trabajo"},{"slug":"2026-06-21-asistente-personal.html","title":"Asistente Personal","description":"Construye un asistente personal con ChatGPT y prompts","date":"2026-06-21","tags":["ChatGPT","prompts","asistente personal"],"readingTime":10,"category":"personal"},{"slug":"2026-06-21-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo aprender cualquier cosa de manera rápida y efectiva con prompts personalizados","date":"2026-06-21","tags":["aprendizaje","inteligencia artificial","prompts"],"readingTime":10,"category":"estudio"},{"slug":"2026-06-21-errores-comunes-al-escribir-prompts.html","title":"Errores comunes al escribir prompts","description":"Aprende a evitar errores comunes al escribir prompts para IA","date":"2026-06-21","tags":["prompt engineering","inteligencia artificial","errores comunes"],"readingTime":5,"category":"general"},{"slug":"2026-06-20-automatiza-tu-negocio.html","title":"Automatiza tu negocio","description":"Aprende a automatizar tu negocio con prompts inteligentes y IA","date":"2026-06-20","tags":["Inteligencia Artificial","Automatización","Negocios"],"readingTime":10,"category":"emprendimiento"},{"slug":"2026-06-20-prompts-creativos.html","title":"Prompts Creativos","description":"Descubre los mejores prompts para diseñadores gráficos","date":"2026-06-20","tags":["diseño gráfico","prompt engineering","inteligencia artificial"],"readingTime":10,"category":"general"},{"slug":"2026-06-19-domina-chatgpt.html","title":"Domina ChatGPT","description":"Guía para dominar ChatGPT en tu trabajo diario y mejorar la productividad","date":"2026-06-19","tags":["ChatGPT","Productividad","Inteligencia Artificial"],"readingTime":10,"category":"trabajo"},{"slug":"2026-06-19-prompts-creativos.html","title":"Prompts Creativos","description":"Descubre los prompts más creativos para diseñadores gráficos y mejora tu habilidad para generar ideas innovadoras","date":"2026-06-19","tags":["diseño gráfico","prompt engineering","inteligencia artificial"],"readingTime":10,"category":"general"},{"slug":"2026-06-18-crea-un-curso-online.html","title":"Crea un curso online","description":"Aprende a crear un curso online desde cero con ChatGPT","date":"2026-06-18","tags":["ChatGPT","curso online","educación en línea"],"readingTime":10,"category":"estudio"},{"slug":"2026-06-18-aprende-10-veces-mas-rapido.html","title":"Aprende 10 veces más rápido","description":"Descubre cómo los prompts pueden acelerar tu aprendizaje","date":"2026-06-18","tags":["aprendizaje","inteligencia artificial","prompts"],"readingTime":10,"category":"estudio"},{"slug":"2026-06-18-errores-comunes-en-prompts.html","title":"Errores comunes en prompts","description":"Evita errores comunes al escribir prompts para IA. Aprende a mejorar tus resultados con ejemplos prácticos.","date":"2026-06-18","tags":["prompt engineering","inteligencia artificial","errores comunes"],"readingTime":10,"category":"general"},{"slug":"2026-06-17-escribe-prompts-infalibles.html","title":"Escribe Prompts Infalibles","description":"Aprende a escribir prompts efectivos para inteligencia artificial","date":"2026-06-17","tags":["prompt engineering","inteligencia artificial","IA"],"readingTime":10,"category":"general"},{"slug":"2026-06-17-crea-un-curso-online-con-chatgpt.html","title":"Crea un curso online con ChatGPT","description":"Aprende a crear un curso online desde cero con ChatGPT","date":"2026-06-17","tags":["ChatGPT","curso online","creación de contenido"],"readingTime":5,"category":"marketing"},{"slug":"2026-06-17-asistente-personal.html","title":"Asistente Personal","description":"Construye un asistente personal con ChatGPT y prompts","date":"2026-06-17","tags":["ChatGPT","Asistente Personal","Inteligencia Artificial"],"readingTime":10,"category":"personal"},{"slug":"2026-06-16-prompts-creativos.html","title":"Prompts Creativos","description":"Descubre los prompts más creativos para diseñadores gráficos","date":"2026-06-16","tags":["diseño gráfico","prompts","inteligencia artificial"],"readingTime":10,"category":"general"},{"slug":"2026-06-16-imagenes-con-ia.html","title":"Imágenes con IA","description":"Aprende a crear imágenes perfectas con IA utilizando prompts","date":"2026-06-16","tags":["IA","Imágenes","Prompts"],"readingTime":10,"category":"general"}];
+// BLOG_POSTS_END
+
 // Blog state
-let allBlogPosts = [];
+let allBlogPosts = [...BLOG_POSTS];
 let currentBlogFilter = 'todos';
 
 // Show toast message
@@ -852,28 +1057,15 @@ function renderBlogGrid() {
   }).join('');
 }
 
-// Fetch and render blog
+// Render blog (usa BLOG_POSTS embebido, sin red — más rápido y sin punto de fallo)
 function renderBlog() {
-  const grid = document.getElementById('blog-grid');
-
-  fetch('./posts/index.json')
-    .then(r => {
-      if (!r.ok) throw new Error('No se pudo cargar index.json');
-      return r.json();
-    })
-    .then(posts => {
-      if (!posts || posts.length === 0) {
-        grid.innerHTML = '<p style="color:var(--text3);text-align:center;grid-column:1/-1">Pronto nuevos artículos ✨</p>';
-        return;
-      }
-      allBlogPosts = posts;
-      buildBlogFilters(posts);
-      renderBlogGrid();
-    })
-    .catch(err => {
-      console.error('Error loading blog:', err);
-      grid.innerHTML = '<p style="color:var(--text3);text-align:center;grid-column:1/-1">Error al cargar artículos. Recargue la página.</p>';
-    });
+  if (!BLOG_POSTS || BLOG_POSTS.length === 0) {
+    document.getElementById('blog-grid').innerHTML = '<p style="color:var(--text3);text-align:center;grid-column:1/-1">Pronto nuevos artículos ✨</p>';
+    return;
+  }
+  allBlogPosts = [...BLOG_POSTS];
+  buildBlogFilters(BLOG_POSTS);
+  renderBlogGrid();
 }
 
 // Menu toggle
