@@ -1,5 +1,24 @@
 [
   {
+    "slug": "2026-07-24-aprende-10-veces-mas-rapido.html",
+    "title": "Aprende 10 veces más rápido",
+    "description": "Descubre cómo los prompts pueden acelerar tu aprendizaje",
+    "date": "2026-07-24",
+    "tags": [
+      "aprendizaje",
+      "inteligencia artificial",
+      "prompts"
+    ],
+    "readingTime": 10,
+    "category": "estudio",
+    "prompts": [
+      "\"Escribe una conversación entre dos personas en español sobre el clima.\"",
+      "\"Explica el principio de la relatividad de Einstein de manera sencilla.\"",
+      "\"Explica cómo funciona el algoritmo de búsqueda binaria en Python.\"",
+      "\"Explica el concepto de inteligencia artificial aplicado a la salud, incluyendo sus beneficios y desafíos, y proporciona al menos dos ejemplos de proyectos actuales.\""
+    ]
+  },
+  {
     "slug": "2026-07-23-asistente-personal.html",
     "title": "Asistente Personal",
     "description": "Construye un asistente personal con ChatGPT y prompts",
@@ -1741,24 +1760,6 @@
       "Ejemplo 1: ¿Cuáles son las ventajas y desventajas de utilizar inteligencia artificial en la toma de decisiones?",
       "Ejemplo 2: Genera un resumen de 200 palabras sobre el tema de la sostenibilidad en la industria del transporte.",
       "Ejemplo 3: ¿Cómo puedo mejorar mi habilidad para escribir prompts efectivos?"
-    ]
-  },
-  {
-    "slug": "2026-06-17-crea-un-curso-online-con-chatgpt.html",
-    "title": "Crea un curso online con ChatGPT",
-    "description": "Aprende a crear un curso online desde cero con ChatGPT",
-    "date": "2026-06-17",
-    "tags": [
-      "ChatGPT",
-      "curso online",
-      "creación de contenido"
-    ],
-    "readingTime": 5,
-    "category": "marketing",
-    "prompts": [
-      "Crear un plan de curso para un curso de introducción a la programación en Python para principiantes.",
-      "Escribe un capítulo sobre la sintaxis básica de Python, incluyendo ejemplos y ejercicios prácticos.",
-      "Crea un ejercicio de práctica sobre la creación de funciones en Python, que incluya 5 preguntas y respuestas."
     ]
   }
 ]
