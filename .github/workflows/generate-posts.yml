@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name "PromptNova Bot"
           git config user.email "bot@promptnova.com"
-          git add posts/ posts/index.json index.html
+          git add posts/ posts/index.json index.html sitemap.xml
           git diff --cached --quiet || git commit -m "✨ Auto-post: $(date +'%Y-%m-%d %H:%M')"
           git push
