@@ -401,7 +401,7 @@ function syncIndexHtml(index) {
 
 // ── SITEMAP ──
 // Regenera sitemap.xml con todos los posts actuales cada vez que se publica uno nuevo.
-const SITE_BASE = "https://miltonvlz4-ui.github.io/Promptnova";
+const SITE_BASE = "https://promptnova-ai.github.io/Promptnova";
 
 function syncSitemap(index) {
   const sitemapPath = path.join(process.cwd(), "sitemap.xml");
