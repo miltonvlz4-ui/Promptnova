@@ -399,6 +399,40 @@ function syncIndexHtml(index) {
   console.log("🔄 index.html sincronizado con el nuevo post");
 }
 
+// ── SITEMAP ──
+// Regenera sitemap.xml con todos los posts actuales cada vez que se publica uno nuevo.
+const SITE_BASE = "https://miltonvlz4-ui.github.io/Promptnova";
+
+function syncSitemap(index) {
+  const sitemapPath = path.join(process.cwd(), "sitemap.xml");
+  const today = new Date().toISOString().slice(0, 10);
+
+  const staticUrls = [
+    { loc: `${SITE_BASE}/`, priority: "1.0", lastmod: today },
+    { loc: `${SITE_BASE}/privacidad.html`, priority: "0.3", lastmod: today },
+    { loc: `${SITE_BASE}/terminos.html`, priority: "0.3", lastmod: today },
+  ];
+  const postUrls = index.map((p) => ({
+    loc: `${SITE_BASE}/posts/${p.slug}`,
+    priority: "0.6",
+    lastmod: p.date || today,
+  }));
+
+  const all = [...staticUrls, ...postUrls];
+  const xml =
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    all
+      .map(
+        (u) =>
+          `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.lastmod}</lastmod>\n    <priority>${u.priority}</priority>\n  </url>`
+      )
+      .join("\n") +
+    `\n</urlset>\n`;
+
+  fs.writeFileSync(sitemapPath, xml, "utf8");
+  console.log(`🗺️  sitemap.xml actualizado — ${all.length} URLs`);
+}
+
 async function main() {
   if (!GROQ_API_KEY) {
     throw new Error("Falta la variable de entorno GROQ_API_KEY");
@@ -410,6 +444,7 @@ async function main() {
   const data = await generatePost(topic);
   const updatedIndex = savePost(data, topic);
   syncIndexHtml(updatedIndex);
+  syncSitemap(updatedIndex);
 }
 
 main().catch((err) => {
