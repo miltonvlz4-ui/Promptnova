@@ -10,12 +10,12 @@
   <meta property="og:title" content="PromptNova — Los mejores prompts para ChatGPT, Claude y Gemini">
   <meta property="og:description" content="Descubre más de 100 prompts listos para usar en ChatGPT, Claude y Gemini.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://miltonvlz4-ui.github.io/Promptnova/">
-  <meta property="og:image" content="https://miltonvlz4-ui.github.io/Promptnova/og-image.jpg">
+  <meta property="og:url" content="https://promptnova-ai.github.io/Promptnova/">
+  <meta property="og:image" content="https://promptnova-ai.github.io/Promptnova/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PromptNova — Los mejores prompts para ChatGPT">
   <meta name="twitter:description" content="Descubre +100 prompts para IA. Resultados profesionales en segundos.">
-  <link rel="canonical" href="https://miltonvlz4-ui.github.io/Promptnova/">
+  <link rel="canonical" href="https://promptnova-ai.github.io/Promptnova/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🪐</text></svg>">
   <title>PromptNova — Los mejores prompts para ChatGPT, Claude y Gemini</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -896,6 +896,16 @@ function filterCategory(cat, btn) {
   document.querySelectorAll('.filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
   renderPrompts();
+
+  // Sincroniza también el filtro del Blog con la misma categoría, para que el
+  // número que se muestra en la tarjeta ("X contenidos") corresponda con lo
+  // que el usuario ve al hacer click (antes solo filtraba los 12 prompts fijos).
+  currentBlogFilter = cat;
+  document.querySelectorAll('#blog-filter-wrap .filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.cat === cat);
+  });
+  renderBlogGrid();
+
   document.getElementById('posts').scrollIntoView({behavior:'smooth'});
 }
 
@@ -1010,8 +1020,8 @@ function buildBlogFilters(posts) {
   const wrap = document.getElementById('blog-filter-wrap');
   if (!wrap) return;
 
-  wrap.innerHTML = `<button class="filter-btn active" onclick="filterBlog('todos', this)">Todos</button>` +
-    cats.map(cat => `<button class="filter-btn" onclick="filterBlog('${cat}', this)">${CAT_LABELS[cat] || cat}</button>`).join('');
+  wrap.innerHTML = `<button class="filter-btn active" data-cat="todos" onclick="filterBlog('todos', this)">Todos</button>` +
+    cats.map(cat => `<button class="filter-btn" data-cat="${cat}" onclick="filterBlog('${cat}', this)">${CAT_LABELS[cat] || cat}</button>`).join('');
 }
 
 // Filter blog posts by category
