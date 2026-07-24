@@ -317,6 +317,86 @@ function savePost(data, topic) {
   if (index.length > 90) index = index.slice(0, 90);
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2), "utf8");
   console.log(`📋 index.json actualizado — ${index.length} posts en total`);
+
+  return index;
+}
+
+// ── SINCRONIZAR index.html ──
+// Mantiene el array BLOG_POSTS embebido y la grilla estática de las primeras 6
+// tarjetas del blog en index.html, para que el contenido esté visible sin
+// depender de JavaScript ni de una petición de red aparte (requisito para que
+// AdSense no marque la portada como "pantalla sin contenido del editor").
+const CAT_LABELS_SYNC = {
+  trabajo: "💼 Trabajo", marketing: "📣 Marketing", programacion: "💻 Programación",
+  estudio: "📚 Estudio", personal: "❤️ Personal", emprendimiento: "🚀 Emprendimiento", general: "🌐 General",
+};
+const EMOJIS_SYNC = ["🧠", "⚡", "🎨", "📊", "🔧", "🎓", "🚀", "💡", "✨", "🤖"];
+const GRADIENTS_SYNC = [
+  "linear-gradient(135deg,rgba(124,111,247,0.3),rgba(168,156,255,0.1))",
+  "linear-gradient(135deg,rgba(244,200,74,0.2),rgba(251,146,60,0.1))",
+  "linear-gradient(135deg,rgba(45,212,191,0.2),rgba(74,222,128,0.1))",
+  "linear-gradient(135deg,rgba(244,114,182,0.2),rgba(168,85,247,0.1))",
+  "linear-gradient(135deg,rgba(251,146,60,0.2),rgba(244,200,74,0.1))",
+  "linear-gradient(135deg,rgba(74,222,128,0.2),rgba(45,212,191,0.1))",
+];
+
+function renderBlogGridStatic(list) {
+  return list
+    .map((p, i) => {
+      const htmlFile = `./posts/${encodeURIComponent(p.slug)}`;
+      const catBadge = p.category ? (CAT_LABELS_SYNC[p.category] || p.category) : (p.tags?.[0] || "IA");
+      return `
+      <a href="${htmlFile}" class="blog-card" style="text-decoration:none;">
+        <div class="blog-thumb" style="background:${GRADIENTS_SYNC[i % GRADIENTS_SYNC.length]}">
+          ${EMOJIS_SYNC[i % EMOJIS_SYNC.length]}
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat-badge">${catBadge}</span>
+            <span class="blog-date">${p.date || ""}</span>
+          </div>
+          <h3>${p.title}</h3>
+          <p>${p.description}</p>
+          <span class="blog-read">Leer artículo →</span>
+        </div>
+      </a>
+    `;
+    })
+    .join("");
+}
+
+function syncIndexHtml(index) {
+  const indexHtmlPath = path.join(process.cwd(), "index.html");
+  if (!fs.existsSync(indexHtmlPath)) {
+    console.log("⚠️  No se encontró index.html en la raíz, se omite la sincronización");
+    return;
+  }
+  let html = fs.readFileSync(indexHtmlPath, "utf8");
+
+  // Solo los campos que el cliente necesita (sin `prompts`, no se usa en index.html)
+  const slim = index.map(({ slug, title, description, date, tags, readingTime, category }) => ({
+    slug, title, description, date, tags, readingTime, category,
+  }));
+
+  // 1) Reemplazar el array BLOG_POSTS embebido
+  const blogPostsRegex = /(\/\/ BLOG_POSTS_START\s*\n\s*const BLOG_POSTS = )[\s\S]*?(;\s*\n\s*\/\/ BLOG_POSTS_END)/;
+  if (blogPostsRegex.test(html)) {
+    html = html.replace(blogPostsRegex, `$1${JSON.stringify(slim)}$2`);
+  } else {
+    console.log("⚠️  No se encontraron los marcadores BLOG_POSTS_START/END en index.html — se omite ese paso");
+  }
+
+  // 2) Reemplazar la grilla estática pre-renderizada (primeras 6 tarjetas)
+  const staticGridRegex = /(<!-- BLOG_GRID_STATIC_START -->)[\s\S]*?(<!-- BLOG_GRID_STATIC_END -->)/;
+  if (staticGridRegex.test(html)) {
+    const newStaticHtml = renderBlogGridStatic(slim.slice(0, 6));
+    html = html.replace(staticGridRegex, `$1${newStaticHtml}$2`);
+  } else {
+    console.log("⚠️  No se encontraron los marcadores BLOG_GRID_STATIC_START/END en index.html — se omite ese paso");
+  }
+
+  fs.writeFileSync(indexHtmlPath, html, "utf8");
+  console.log("🔄 index.html sincronizado con el nuevo post");
 }
 
 async function main() {
@@ -328,7 +408,8 @@ async function main() {
   console.log(`🤖 Generando post sobre: "${topic}"`);
 
   const data = await generatePost(topic);
-  savePost(data, topic);
+  const updatedIndex = savePost(data, topic);
+  syncIndexHtml(updatedIndex);
 }
 
 main().catch((err) => {
