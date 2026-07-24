@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-07-24-asistente-personal.html",
+    "title": "Asistente Personal",
+    "description": "Crea un asistente personal con ChatGPT y prompts",
+    "date": "2026-07-24",
+    "tags": [
+      "ChatGPT",
+      "Asistente Personal",
+      "Inteligencia Artificial"
+    ],
+    "readingTime": 10,
+    "category": "personal",
+    "prompts": [
+      "Ejemplo 1: ¿Cuáles son las noticias más importantes de hoy?",
+      "Ejemplo 2: Planea un itinerario de viaje para mí para visitar París durante 5 días. Incluye recomendaciones de restaurantes y lugares para visitar.",
+      "Ejemplo 3: Escribe un correo electrónico para mi jefe solicitando un día de vacaciones. Incluye una explicación de por qué necesito el día de vacaciones y agradece su consideración."
+    ]
+  },
+  {
     "slug": "2026-07-24-aprende-10-veces-mas-rapido.html",
     "title": "Aprende 10 veces más rápido",
     "description": "Descubre cómo los prompts pueden acelerar tu aprendizaje",
@@ -1742,24 +1760,6 @@
       "¿Cuáles son las ventajas y desventajas de utilizar la inteligencia artificial en la industria de la salud?",
       "Describe los pasos para crear un modelo de lenguaje desde cero, incluyendo la recopilación de datos, el preprocesamiento y el entrenamiento.",
       "¿Cuál es el impacto de la inteligencia artificial en la economía global? Proporciona estadísticas y ejemplos concretos para respaldar tu respuesta."
-    ]
-  },
-  {
-    "slug": "2026-06-17-escribe-prompts-infalibles.html",
-    "title": "Escribe Prompts Infalibles",
-    "description": "Aprende a escribir prompts efectivos para inteligencia artificial",
-    "date": "2026-06-17",
-    "tags": [
-      "prompt engineering",
-      "inteligencia artificial",
-      "IA"
-    ],
-    "readingTime": 10,
-    "category": "general",
-    "prompts": [
-      "Ejemplo 1: ¿Cuáles son las ventajas y desventajas de utilizar inteligencia artificial en la toma de decisiones?",
-      "Ejemplo 2: Genera un resumen de 200 palabras sobre el tema de la sostenibilidad en la industria del transporte.",
-      "Ejemplo 3: ¿Cómo puedo mejorar mi habilidad para escribir prompts efectivos?"
     ]
   }
 ]
